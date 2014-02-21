@@ -19,7 +19,7 @@
     'author': 'Vizucom Oy',
     'website': 'http://www.vizucom.com',
     'depends': ['crm'],
-    'description': "Allows partners to belong to multiple companies as suppliers or customers",
+    'description': "Allows partners to belong to multiple companies as a supplier and/or a customer",
     'installable': True,
     'data': ['res_partner.xml']
 }
