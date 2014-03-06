@@ -10,11 +10,10 @@
 				<xpath expr="//notebook/page/group/group[1]/field[@name='company_id']" position="replace" />
 				
 				<xpath expr="//notebook/page[5]" position="inside">
-				    <label for="customer_of" />
-					<field name="customer_of" help="Which companies does the customer belong to" widget="many2many_tags" />
-					
-					<label for="supplier_of" />
-					<field name="supplier_of" help="Which companies does the supplier belong to" widget="many2many_tags" />
+				    <group>
+						<field name="customer_of" help="Which companies does the customer belong to" widget="many2many_tags" />
+						<field name="supplier_of" help="Which companies does the supplier belong to" widget="many2many_tags" />
+					</group>
 				</xpath>
 		    </field>
 		</record>
