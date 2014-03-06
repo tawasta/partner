@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: OpenERP Server 7.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-03-06 07:36+0000\n"
-"PO-Revision-Date: 2014-03-06 09:38+0200\n"
+"PO-Revision-Date: 2014-03-06 09:41+0200\n"
 "Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 #: field:res.partner,customer_of:0
 #, python-format
 msgid "Customer of"
-msgstr "Asiakkaana yritytyksissä"
+msgstr "Asiakkaana yrityksissä"
 
 #. module: res_partner_multicompany
 #: model:ir.model,name:res_partner_multicompany.model_res_partner
