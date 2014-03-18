@@ -15,11 +15,14 @@
 {
     'name': 'Partner Roles',
     'category': 'Sales',
-    'version': '0.1',
+    'version': '0.2',
     'author': 'Vizucom Oy',
     'website': 'http://www.vizucom.com',
     'depends': ['crm'],
     'description': "Adds tag-like roles for partners depending on if they are companies or contacts",
     'installable': True,
-    'data': ['view/res_partner.xml']
+    'data': [ 
+        'view/res_partner.xml',
+        'security/ir.model.access.csv',
+     ]
 }
