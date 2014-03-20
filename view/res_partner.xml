@@ -12,8 +12,8 @@
             <field name="arch" type="xml">
             
                 <field name="email" position="after">
-                    <field name="company_roles" attrs="{'invisible':[('is_company','!=',True)]}"/>
-                    <field name="contact_roles" attrs="{'invisible':[('is_company','=',True)]}"/>
+                    <field name="company_roles"/>
+                    <field name="contact_roles"/>
                 </field>
                             
             </field>
