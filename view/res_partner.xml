@@ -2,7 +2,7 @@
 <openerp>
     <data>
    
-        <menuitem name='Role config' id="menu_role_config" parent="base.menu_base_config" sequence="7"/>
+        <menuitem name='Role config' id="menu_role_config" parent="base.menu_base_config" sequence="40"/>
    
         <record id="view_tree_partner" model="ir.ui.view">
             <field name="name">res.partner.tree.inherit</field>
