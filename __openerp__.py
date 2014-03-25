@@ -21,5 +21,5 @@
     'depends': ['crm'],
     'description': "Allows partners to belong to multiple companies as a supplier and/or a customer",
     'installable': True,
-    'data': ['res_partner.xml']
+    'data': ['view/res_partner.xml']
 }
