@@ -1,5 +1,5 @@
 from openerp.osv import osv, fields
-from openerptools.translate import _
+from openerp.tools.translate import _
 
 class res_partner_contact_role(osv.osv):
 
