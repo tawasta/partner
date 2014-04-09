@@ -25,16 +25,22 @@
             <field name="inherit_id" ref="base.view_partner_form" />
             <field name="arch" type="xml">
 
+                <field name='is_company' position='attributes'>
+                    <attribute name="on_change">is_company_change(is_company)</attribute>    
+                </field>
+
                 <field name="category_id" position="after">
-                    <field name="company_roles" attrs="{'invisible':[('is_company','=',False)]}" widget='many2many_tags' placeholder='Company roles'/>
+                    <field name="company_roles_visible" invisible='1' />
+                    <field name="company_roles" attrs="{'invisible':[('is_company','=','False')]}" widget='many2many_tags' placeholder='Company roles'/>
                 </field>
 
                 <field name="company_roles" position="after">
-                    <field name="contact_roles" attrs="{'invisible':[('is_company','=',True)]}" widget='many2many_tags' placeholder='Contact roles'/>
+                    <field name="contact_roles_visible" invisible='1' />
+                    <field name="contact_roles" attrs="{'invisible':[('is_company','=','True')]}" widget='many2many_tags' placeholder='Contact roles'/>
                 </field>
                 
-                <field name="contact_roles" position="after">>
-                    <field name="contact_server_roles" attrs="{'invisible':[('is_company','=',True)]}" widget='many2many_tags' placeholder='Contact server roles'/>
+                <field name="contact_roles" position="after">
+                    <field name="contact_server_roles" attrs="{'invisible':[('is_company','=','True')]}" widget='many2many_tags' placeholder='Contact server roles'/>
                 </field>
                 
                 <field name="category_id" position="replace" />

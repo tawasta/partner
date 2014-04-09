@@ -1,5 +1,5 @@
 from openerp.osv import osv, fields
-from tools.translate import _
+from openerptools.translate import _
 
 class res_partner_contact_role(osv.osv):
 
@@ -74,6 +74,10 @@ class res_partner(osv.osv):
             string=_('Contact roles'),
             help='Contact roles for contact grouping and searching'
         ),
+        'contact_roles_visible': fields.boolean(string='Contact role visibility'),
+    }
+    _defaults = {
+        'contact_roles_visible': True,
     }
 res_partner()
 
