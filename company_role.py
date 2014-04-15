@@ -74,11 +74,8 @@ class res_partner(osv.osv):
             string=_('Company roles'),
             help='Company roles for company grouping and searching'
         ),
-        'company_roles_visible': fields.boolean(string='Company role visibility'),
     }
-    _defaults = {
-        'company_roles_visible': True,
-    }
+
 res_partner()
 
 class res_partner_company_role_update(osv.Model):

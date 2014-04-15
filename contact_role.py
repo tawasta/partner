@@ -74,10 +74,6 @@ class res_partner(osv.osv):
             string=_('Contact roles'),
             help='Contact roles for contact grouping and searching'
         ),
-        'contact_roles_visible': fields.boolean(string='Contact role visibility'),
-    }
-    _defaults = {
-        'contact_roles_visible': True,
     }
 res_partner()
 
