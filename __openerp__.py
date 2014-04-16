@@ -15,7 +15,7 @@
 {
     'name': 'Partner Roles',
     'category': 'Sales',
-    'version': '0.3',
+    'version': '0.4',
     'author': 'Vizucom Oy',
     'website': 'http://www.vizucom.com',
     'depends': ['crm'],

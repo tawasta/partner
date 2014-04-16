@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 7.0\n"
+"Project-Id-Version: OpenERP Server 8.0dev-20140326-000101\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-20 13:11+0000\n"
-"PO-Revision-Date: 2014-03-20 15:12+0200\n"
+"POT-Creation-Date: 2014-04-16 13:00+0000\n"
+"PO-Revision-Date: 2014-04-16 16:01+0200\n"
 "Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,80 +17,39 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 
 #. module: res_partner_roles
-#: help:res.partner,contact_server_roles:0
-msgid "Contact server roles for finding the right contact for a server issue"
-msgstr "Kontaktin palvelinroolit oikean yhteyshenkilön löytämiseks"
+#: field:res.partner.company.role,active:0
+#: field:res.partner.contact.role,active:0
+#: field:res.partner.contact.server.role,active:0
+msgid "Active"
+msgstr "Aktiviinen"
 
 #. module: res_partner_roles
-#: field:res.partner.company.role,partner_ids:0
-#: field:res.partner.contact.role,partner_ids:0
-#: field:res.partner.contact.server.role,partner_ids:0
-msgid "Partners"
-msgstr "Kumppanit"
+#: field:res.partner.company.role,child_ids:0
+#: field:res.partner.contact.role,child_ids:0
+#: field:res.partner.contact.server.role,child_ids:0
+msgid "Child Roles"
+msgstr "Alatason roolit"
 
 #. module: res_partner_roles
-#: help:res.partner,company_roles:0
-msgid "Company roles for company grouping and searching"
-msgstr "Yrityksen roolit yritysten ryhmittelyä ja hakua varten"
+#: model:ir.actions.act_window,help:res_partner_roles.action_partner_company_role_form
+msgid "Click to create a new company role."
+msgstr "Klikkaa luodaksesi uuden yritysroolin"
 
 #. module: res_partner_roles
-#: constraint:res.partner.company.role:0 constraint:res.partner.contact.role:0
-#: constraint:res.partner.contact.server.role:0
-msgid "Error ! You can not create recursive categories."
-msgstr "Virhe ! Et voi tehdä rekursiivisia kategorioita."
+#: model:ir.actions.act_window,help:res_partner_roles.action_partner_contact_role_form
+msgid "Click to create a new contact role."
+msgstr "Klikkaa luodaksesi uuden kontaktiroolin"
 
 #. module: res_partner_roles
-#: field:res.partner.company.role,parent_left:0
-#: field:res.partner.contact.role,parent_left:0
-#: field:res.partner.contact.server.role,parent_left:0
-msgid "Left parent"
-msgstr "Vasen ylätaso"
-
-#. module: res_partner_roles
-#: model:ir.ui.menu,name:res_partner_roles.menu_role_config
-msgid "Role config"
-msgstr "Roolien asetukset"
+#: model:ir.actions.act_window,help:res_partner_roles.action_partner_contact_server_role_form
+msgid "Click to create a new contact server role."
+msgstr "Klikkaa luodaksesi uuden palvelinroolin"
 
 #. module: res_partner_roles
 #: model:ir.model,name:res_partner_roles.model_res_partner_company_role
 #: view:res.partner.company.role:0
 msgid "Company Roles"
 msgstr "Yrityksen roolit"
-
-#. module: res_partner_roles
-#: model:ir.model,name:res_partner_roles.model_res_partner_contact_role
-#: view:res.partner.contact.role:0
-msgid "Contact Roles"
-msgstr "Kontaktin roolit"
-
-#. module: res_partner_roles
-#: field:res.partner.company.role,name:0 field:res.partner.contact.role,name:0
-#: field:res.partner.contact.server.role,name:0
-msgid "Role Name"
-msgstr "Roolin nimi"
-
-#. module: res_partner_roles
-#: help:res.partner.company.role,active:0
-#: help:res.partner.contact.role,active:0
-#: help:res.partner.contact.server.role,active:0
-msgid "The active field allows you to hide the category without removing it."
-msgstr ""
-"Kenttä 'aktiivinen' mahdollistaa kategorian piilottamisen poistamatta sitä."
-
-#. module: res_partner_roles
-#: code:addons/res_partner_roles/contact_server_role.py:74
-#: model:ir.actions.act_window,name:res_partner_roles.action_partner_contact_server_role_form
-#: model:ir.ui.menu,name:res_partner_roles.menu_contact_server_role
-#: view:res.partner:0 field:res.partner,contact_server_roles:0
-#: view:res.partner.contact.server.role:0
-#, python-format
-msgid "Contact server roles"
-msgstr "Kontaktin palvelinroolit"
-
-#. module: res_partner_roles
-#: help:res.partner,contact_roles:0
-msgid "Contact roles for contact grouping and searching"
-msgstr "Kontaktin roolit kontaktien ryhmittelyä ja hakua varten"
 
 #. module: res_partner_roles
 #: code:addons/res_partner_roles/company_role.py:74
@@ -102,44 +61,15 @@ msgid "Company roles"
 msgstr "Yrityksen roolit"
 
 #. module: res_partner_roles
-#: field:res.partner.company.role,active:0
-#: field:res.partner.contact.role,active:0
-#: field:res.partner.contact.server.role,active:0
-msgid "Active"
-msgstr "Aktiviinen"
+#: help:res.partner,company_roles:0
+msgid "Company roles for company grouping and searching"
+msgstr "Yrityksen roolit yritysten ryhmittelyä ja hakua varten"
 
 #. module: res_partner_roles
-#: model:ir.model,name:res_partner_roles.model_res_partner
-msgid "Partner"
-msgstr "Kumppani"
-
-#. module: res_partner_roles
-#: field:res.partner.company.role,child_ids:0
-#: field:res.partner.contact.role,child_ids:0
-#: field:res.partner.contact.server.role,child_ids:0
-msgid "Child Roles"
-msgstr "Alatason roolit"
-
-#. module: res_partner_roles
-#: field:res.partner.company.role,parent_id:0
-#: field:res.partner.contact.role,parent_id:0
-#: field:res.partner.contact.server.role,parent_id:0
-msgid "Parent Role"
-msgstr "Ylätason rooli"
-
-#. module: res_partner_roles
-#: field:res.partner.company.role,complete_name:0
-#: field:res.partner.contact.role,complete_name:0
-#: field:res.partner.contact.server.role,complete_name:0
-msgid "Full Name"
-msgstr "Koko nimi"
-
-#. module: res_partner_roles
-#: field:res.partner.company.role,parent_right:0
-#: field:res.partner.contact.role,parent_right:0
-#: field:res.partner.contact.server.role,parent_right:0
-msgid "Right parent"
-msgstr "Oikea ylätaso"
+#: model:ir.model,name:res_partner_roles.model_res_partner_contact_role
+#: view:res.partner.contact.role:0
+msgid "Contact Roles"
+msgstr "Kontaktin roolit"
 
 #. module: res_partner_roles
 #: code:addons/res_partner_roles/contact_role.py:74
@@ -149,3 +79,94 @@ msgstr "Oikea ylätaso"
 #, python-format
 msgid "Contact roles"
 msgstr "Kontaktin roolit"
+
+#. module: res_partner_roles
+#: help:res.partner,contact_roles:0
+msgid "Contact roles for contact grouping and searching"
+msgstr "Kontaktin roolit kontaktien ryhmittelyä ja hakua varten"
+
+#. module: res_partner_roles
+#: code:addons/res_partner_roles/contact_server_role.py:74
+#: model:ir.actions.act_window,name:res_partner_roles.action_partner_contact_server_role_form
+#: model:ir.model,name:res_partner_roles.model_res_partner_contact_server_role
+#: model:ir.ui.menu,name:res_partner_roles.menu_contact_server_role
+#: view:res.partner:0 field:res.partner,contact_server_roles:0
+#: view:res.partner.contact.server.role:0
+#, python-format
+msgid "Contact server roles"
+msgstr "Kontaktin palvelinroolit"
+
+#. module: res_partner_roles
+#: help:res.partner,contact_server_roles:0
+msgid "Contact server roles for finding the right contact for a server issue"
+msgstr "Kontaktin palvelinroolit oikean yhteyshenkilön löytämiseks"
+
+#. module: res_partner_roles
+#: constraint:res.partner.company.role:0 constraint:res.partner.contact.role:0
+#: constraint:res.partner.contact.server.role:0
+msgid "Error ! You can not create recursive categories."
+msgstr "Virhe ! Et voi tehdä rekursiivisia kategorioita."
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,complete_name:0
+#: field:res.partner.contact.role,complete_name:0
+#: field:res.partner.contact.server.role,complete_name:0
+msgid "Full Name"
+msgstr "Koko nimi"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,parent_left:0
+#: field:res.partner.contact.role,parent_left:0
+#: field:res.partner.contact.server.role,parent_left:0
+msgid "Left parent"
+msgstr "Vasen ylätaso"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,parent_id:0
+#: field:res.partner.contact.role,parent_id:0
+#: field:res.partner.contact.server.role,parent_id:0
+msgid "Parent Role"
+msgstr "Ylätason rooli"
+
+#. module: res_partner_roles
+#: model:ir.model,name:res_partner_roles.model_res_partner
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,partner_ids:0
+#: field:res.partner.contact.role,partner_ids:0
+#: field:res.partner.contact.server.role,partner_ids:0
+msgid "Partners"
+msgstr "Kumppanit"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,parent_right:0
+#: field:res.partner.contact.role,parent_right:0
+#: field:res.partner.contact.server.role,parent_right:0
+msgid "Right parent"
+msgstr "Oikea ylätaso"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,name:0 field:res.partner.contact.role,name:0
+#: field:res.partner.contact.server.role,name:0
+msgid "Role Name"
+msgstr "Roolin nimi"
+
+#. module: res_partner_roles
+#: model:ir.ui.menu,name:res_partner_roles.menu_role_config
+msgid "Role config"
+msgstr "Roolien asetukset"
+
+#. module: res_partner_roles
+#: field:res.partner,partner_roles:0
+msgid "Roles"
+msgstr "Roolit"
+
+#. module: res_partner_roles
+#: help:res.partner.company.role,active:0
+#: help:res.partner.contact.role,active:0
+#: help:res.partner.contact.server.role,active:0
+msgid "The active field allows you to hide the category without removing it."
+msgstr ""
+"Kenttä 'aktiivinen' mahdollistaa kategorian piilottamisen poistamatta sitä."

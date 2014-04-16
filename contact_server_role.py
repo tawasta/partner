@@ -75,6 +75,7 @@ class res_partner(osv.osv):
             help='Contact server roles for finding the right contact for a server issue'
         ),
     }
+    
 res_partner()
 
 class res_partner_contact_server_role_update(osv.Model):

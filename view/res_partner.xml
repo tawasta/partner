@@ -12,8 +12,7 @@
             <field name="arch" type="xml">
             
                 <field name="email" position="after">
-                    <field name="company_roles"/>
-                    <field name="contact_roles"/>
+                    <field name="partner_roles"/>
                 </field>
                             
             </field>
