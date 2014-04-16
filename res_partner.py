@@ -23,7 +23,7 @@ class ResPartner(osv.Model):
                 partner_roles.append(role_name)
                 
             partner_string = "\n".join(partner_roles)
-            result[record.id] = str(partner_string)
+            result[record.id] = partner_string.encode('utf-8')
         return result
     
     _columns = {
