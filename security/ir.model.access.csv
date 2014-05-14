@@ -1,4 +1,4 @@
 "id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
-"access_company_role_perm","access_company_role_perm","model_res_partner_company_role","base.group_partner_manager",1,1,1,1
-"access_contact_role_perm","access_contact_role_perm","model_res_partner_contact_role","base.group_partner_manager",1,1,1,1
-"access_contact_server_role_perm","access_contact_server_role_perm","model_res_partner_contact_server_role","base.group_partner_manager",1,1,1,1
+"access_company_role_perm","access_company_role_perm","model_res_partner_company_role","base.group_partner_manager",1,0,0,0
+"access_contact_role_perm","access_contact_role_perm","model_res_partner_contact_role","base.group_partner_manager",1,0,0,0
+"access_contact_server_role_perm","access_contact_server_role_perm","model_res_partner_contact_server_role","base.group_partner_manager",1,0,0,0
