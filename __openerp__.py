@@ -15,10 +15,10 @@
 {
     'name': 'Partner Multicompany Extension',
     'category': 'CRM',
-    'version': '0.4',
+    'version': '0.5',
     'author': 'Vizucom Oy',
     'website': 'http://www.vizucom.com',
-    'depends': ['crm'],
+    'depends': ['sale_basic_extensions'],
     'description': "Allows partners to belong to multiple companies as a supplier and/or a customer",
     'installable': True,
     'data': ['view/res_partner.xml']
