@@ -7,7 +7,7 @@ class res_partner_contact_server_role(osv.osv):
         if context is None:
             context = {}
         if context.get('partner_category_display') == 'short':
-            return super(res_partner_category, self).name_get(cr, uid, ids, context=context)
+            return super(res_partner_contact_server_role, self).name_get(cr, uid, ids, context=context)
         if isinstance(ids, (int, long)):
             ids = [ids]
         reads = self.read(cr, uid, ids, ['name', 'parent_id'], context=context)
@@ -40,7 +40,7 @@ class res_partner_contact_server_role(osv.osv):
     _description = 'Contact server roles'
     _name = 'res.partner.contact.server.role'
     _columns = {
-        'name': fields.char('Role Name', required=True, size=64, translate=True),
+        'name': fields.char('Role Name', required=True, size=64),
         'parent_id': fields.many2one('res.partner.contact.server.role', 'Parent Role', select=True, ondelete='cascade'),
         'complete_name': fields.function(_name_get_fnc, type="char", string='Full Name'),
         'child_ids': fields.one2many('res.partner.contact.server.role', 'parent_id', 'Child Roles'),
