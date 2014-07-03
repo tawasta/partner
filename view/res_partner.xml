@@ -24,7 +24,7 @@
             <field name="inherit_id" ref="base.view_partner_form" />
             <field name="arch" type="xml">
                 <field name="category_id" position="after">
-                    <field name="company_roles" attrs="{'invisible':[('is_company','=',False)]}" widget='many2many_tags' placeholder='Company roles'/>
+                    <field name="company_roles" attrs="{'invisible':['|', ('is_company','=',False), ('type', '=', 'einvoice') ]}" widget='many2many_tags' placeholder='Company roles'/>
                 </field>
 
                 <field name="company_roles" position="after">
