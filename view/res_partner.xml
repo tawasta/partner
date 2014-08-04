@@ -8,8 +8,7 @@
 		    <field name="arch" type="xml">
 
 				<xpath expr="//notebook/page/group/group[1]/field[@name='company_id']" position="replace" />
-				
-				<xpath expr="//notebook/page[6]" position="inside">
+				<xpath expr="//notebook/page[contains(@string, 'Sale')]" position="inside">
 				    <group>
 						<field name="customer_of" help="Which companies does the customer belong to" widget="many2many_tags" />
 						<field name="supplier_of" help="Which companies does the supplier belong to" widget="many2many_tags" />
