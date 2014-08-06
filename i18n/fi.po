@@ -1,13 +1,13 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* res_partner_roles
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 8.0dev-20140326-000101\n"
+"Project-Id-Version: Odoo Server 8.0rc1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-04-16 13:00+0000\n"
-"PO-Revision-Date: 2014-04-16 16:01+0200\n"
+"POT-Creation-Date: 2014-08-06 11:51+0000\n"
+"PO-Revision-Date: 2014-08-06 14:52+0200\n"
 "Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -46,13 +46,20 @@ msgid "Click to create a new contact server role."
 msgstr "Klikkaa luodaksesi uuden palvelinroolin"
 
 #. module: res_partner_roles
+#: field:res.partner.company.role,company_id:0
+#: field:res.partner.contact.role,company_id:0
+#: field:res.partner.contact.server.role,company_id:0
+msgid "Company"
+msgstr "Yritys"
+
+#. module: res_partner_roles
 #: model:ir.model,name:res_partner_roles.model_res_partner_company_role
 #: view:res.partner.company.role:0
 msgid "Company Roles"
 msgstr "Yrityksen roolit"
 
 #. module: res_partner_roles
-#: code:addons/res_partner_roles/company_role.py:74
+#: code:addons/res_partner_roles/company_role.py:81
 #: model:ir.actions.act_window,name:res_partner_roles.action_partner_company_role_form
 #: model:ir.ui.menu,name:res_partner_roles.menu_company_role
 #: view:res.partner:0 field:res.partner,company_roles:0
@@ -72,7 +79,7 @@ msgid "Contact Roles"
 msgstr "Kontaktin roolit"
 
 #. module: res_partner_roles
-#: code:addons/res_partner_roles/contact_role.py:74
+#: code:addons/res_partner_roles/contact_role.py:80
 #: model:ir.actions.act_window,name:res_partner_roles.action_partner_contact_role_form
 #: model:ir.ui.menu,name:res_partner_roles.menu_contact_role
 #: view:res.partner:0 field:res.partner,contact_roles:0
@@ -86,7 +93,7 @@ msgid "Contact roles for contact grouping and searching"
 msgstr "Kontaktin roolit kontaktien ryhmittelyä ja hakua varten"
 
 #. module: res_partner_roles
-#: code:addons/res_partner_roles/contact_server_role.py:74
+#: code:addons/res_partner_roles/contact_server_role.py:79
 #: model:ir.actions.act_window,name:res_partner_roles.action_partner_contact_server_role_form
 #: model:ir.model,name:res_partner_roles.model_res_partner_contact_server_role
 #: model:ir.ui.menu,name:res_partner_roles.menu_contact_server_role
@@ -102,6 +109,20 @@ msgid "Contact server roles for finding the right contact for a server issue"
 msgstr "Kontaktin palvelinroolit oikean yhteyshenkilön löytämiseks"
 
 #. module: res_partner_roles
+#: field:res.partner.company.role,create_uid:0
+#: field:res.partner.contact.role,create_uid:0
+#: field:res.partner.contact.server.role,create_uid:0
+msgid "Created by"
+msgstr "Luoja"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,create_date:0
+#: field:res.partner.contact.role,create_date:0
+#: field:res.partner.contact.server.role,create_date:0
+msgid "Created on"
+msgstr "Luontiaika"
+
+#. module: res_partner_roles
 #: constraint:res.partner.company.role:0 constraint:res.partner.contact.role:0
 #: constraint:res.partner.contact.server.role:0
 msgid "Error ! You can not create recursive categories."
@@ -113,6 +134,26 @@ msgstr "Virhe ! Et voi tehdä rekursiivisia kategorioita."
 #: field:res.partner.contact.server.role,complete_name:0
 msgid "Full Name"
 msgstr "Koko nimi"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,id:0 field:res.partner.contact.role,id:0
+#: field:res.partner.contact.server.role,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,write_uid:0
+#: field:res.partner.contact.role,write_uid:0
+#: field:res.partner.contact.server.role,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,write_date:0
+#: field:res.partner.contact.role,write_date:0
+#: field:res.partner.contact.server.role,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
 
 #. module: res_partner_roles
 #: field:res.partner.company.role,parent_left:0
