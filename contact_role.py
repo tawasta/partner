@@ -10,10 +10,14 @@ class res_partner_contact_role(osv.osv):
             return super(res_partner_contact_role, self).name_get(cr, uid, ids, context=context)
         if isinstance(ids, (int, long)):
             ids = [ids]
-        reads = self.read(cr, uid, ids, ['name', 'parent_id'], context=context)
+        reads = self.read(cr, uid, ids, ['name', 'parent_id', 'company_id'], context=context)
         res = []
         for record in reads:
-            name = record['name']
+            if not record['parent_id']:
+                name = record['company_id'][1] + ' / ' + record['name']
+            else:
+                name = record['name']
+            
             if record['parent_id']:
                 name = record['parent_id'][1] + ' / ' + name
             res.append((record['id'], name))
@@ -42,6 +46,7 @@ class res_partner_contact_role(osv.osv):
     _order = 'name'
     _columns = {
         'name': fields.char('Role Name', required=True, size=64),
+        'company_id': fields.many2one('res.company', 'Company'),
         'parent_id': fields.many2one('res.partner.contact.role', 'Parent Role', select=True, ondelete='cascade'),
         'complete_name': fields.function(_name_get_fnc, type="char", string='Full Name'),
         'child_ids': fields.one2many('res.partner.contact.role', 'parent_id', 'Child Roles'),
