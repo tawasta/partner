@@ -15,7 +15,7 @@ class res_partner_company_role(osv.osv):
         reads = self.read(cr, uid, ids, ['name', 'parent_id', 'company_id'], context=context)
         res = []
         for record in reads:
-            if not record['parent_id']:
+            if not record['parent_id'] and record['company_id']:
                 name = record['company_id'][1] + ' / ' + record['name']
             else:
                 name = record['name']
