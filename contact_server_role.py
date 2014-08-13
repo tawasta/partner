@@ -43,6 +43,8 @@ class res_partner_contact_server_role(osv.osv):
 
     _description = 'Contact server roles'
     _name = 'res.partner.contact.server.role'
+    _order = 'company_id name'
+    
     _columns = {
         'name': fields.char('Role Name', required=True, size=64),
         'company_id': fields.many2one('res.company', 'Company'),
