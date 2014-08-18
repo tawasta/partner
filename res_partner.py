@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
+import logging
 from openerp.osv import osv, fields
 from openerp.tools.translate import _
+_logger = logging.getLogger(__name__)
     
 class ResPartner(osv.Model):
     _inherit = "res.partner"
@@ -21,7 +23,7 @@ class ResPartner(osv.Model):
             for role in record.contact_server_roles:
                 role_name = role.name_get()[0][1]
                 partner_roles.append(role_name)
-                
+            
             partner_string = "\n".join(partner_roles)
             result[record.id] = partner_string.encode('utf-8')
         return result
