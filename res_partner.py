@@ -13,7 +13,7 @@ class ResPartner(osv.Model):
         )
 
     _columns = {
-        'referenceright': fields.selection( _get_selection, 'Reference right' )
+        'referenceright': fields.property( type='selection', selection=_get_selection, string='Reference right' ),
     }
     
     _defaults = {
