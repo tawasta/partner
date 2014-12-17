@@ -1,13 +1,13 @@
-# Translation of OpenERP Server.
+# Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # 	* res_partner_referenceright
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenERP Server 7.0\n"
+"Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-03-06 11:07+0000\n"
-"PO-Revision-Date: 2014-03-06 13:09+0200\n"
+"POT-Creation-Date: 2014-12-17 07:47+0000\n"
+"PO-Revision-Date: 2014-12-17 09:49+0200\n"
 "Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -17,29 +17,93 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 
 #. module: res_partner_referenceright
-#: model:ir.model,name:res_partner_referenceright.model_res_partner
-msgid "Partner"
-msgstr "Yhteistyökumppani"
+#: code:addons/res_partner_referenceright/reference_right.py:14
+#, python-format
+msgid "Allowed"
+msgstr "Sallittu"
 
 #. module: res_partner_referenceright
-#: code:addons/res_partner_referenceright/res_partner.py:12
+#: code:addons/res_partner_referenceright/reference_right.py:15
 #, python-format
-msgid "Not allowed"
+msgid "Ask"
+msgstr "Kysyttävä erikseen"
+
+#. module: res_partner_referenceright
+#: model:ir.actions.act_window,help:res_partner_referenceright.action_partner_reference_rights
+msgid "Click to create a new reference right"
+msgstr "Klikkaa luodaksesi uuden referenssioikeuden"
+
+#. module: res_partner_referenceright
+#: field:res.partner.reference_right,code:0
+msgid "Code"
+msgstr "Koodi"
+
+#. module: res_partner_referenceright
+#: field:res.partner.reference_right,company_id:0
+msgid "Company"
+msgstr "Yritys"
+
+#. module: res_partner_referenceright
+#: field:res.partner.reference_right,create_uid:0
+msgid "Created by"
+msgstr "Luoja"
+
+#. module: res_partner_referenceright
+#: field:res.partner.reference_right,create_date:0
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: res_partner_referenceright
+#: field:res.partner.reference_right,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: res_partner_referenceright
+#: field:res.partner.reference_right,write_uid:0
+msgid "Last Updated by"
+msgstr "Viimeisin päivittäjä"
+
+#. module: res_partner_referenceright
+#: field:res.partner.reference_right,write_date:0
+msgid "Last Updated on"
+msgstr "Viimeisin päivitys"
+
+#. module: res_partner_referenceright
+#: code:addons/res_partner_referenceright/reference_right.py:16
+#, python-format
+msgid "No Right"
 msgstr "Ei oikeutta"
 
 #. module: res_partner_referenceright
+#: model:ir.model,name:res_partner_referenceright.model_res_partner
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: res_partner_referenceright
+#: field:res.partner.reference_right,partner_ids:0
+msgid "Partners"
+msgstr "Partnerit"
+
+#. module: res_partner_referenceright
+#: code:addons/res_partner_referenceright/res_partner.py:18
 #: field:res.partner,referenceright:0
+#, python-format
 msgid "Reference right"
 msgstr "Referenssioikeus"
 
 #. module: res_partner_referenceright
-#: code:addons/res_partner_referenceright/res_partner.py:11
-#, python-format
-msgid "Confirm by case"
-msgstr "Sovittava erikseen"
+#: model:ir.actions.act_window,name:res_partner_referenceright.action_partner_reference_rights
+#: model:ir.ui.menu,name:res_partner_referenceright.menu_reference_rights
+#: view:res.partner.reference_right:res_partner_referenceright.view_reference_right_tree
+msgid "Reference rights"
+msgstr "Referenssioikeudet"
 
 #. module: res_partner_referenceright
-#: code:addons/res_partner_referenceright/res_partner.py:10
-#, python-format
-msgid "Allowed"
-msgstr "Sallittu"
+#: field:res.partner.reference_right,name:0
+msgid "Reference_right"
+msgstr "Reference_right"
+
+#. module: res_partner_referenceright
+#: sql_constraint:res.partner.reference_right:0
+msgid "This company already has a reference right with this code."
+msgstr "Tällä yrityksellä on jo referenssioikeus tällä koodilla"
