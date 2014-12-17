@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Initialize reference rights for all companies upon module installation -->
+        <function model="res.partner.reference_right" name="_init_reference_rights"/>
+    </data>
+</openerp>

@@ -1,19 +1,22 @@
 from openerp.osv import osv, fields
 from openerp.tools.translate import _
+import logging
+_logger = logging.getLogger(__name__)
 
 class ResPartner(osv.Model):
-    _name = "res.partner"
     _inherit = "res.partner"
-
-    def _get_selection(self, cursor, user_id, context=None):
-        return (
-            ('allowed', _('Allowed')),
-            ('ask', _('Confirm by case')),
-            ('no', _('Not allowed'))
-        )
-
+    
+    def onchange_referenceright(self, cr, uid, ids, refrights, context=None):
+        _logger.warn(refrights)
+    
     _columns = {
-        'referenceright': fields.property( type='selection', selection=_get_selection, string='Reference right' ),
+        'referenceright': fields.many2many(
+            'res.partner.reference_right',
+            'res_partner_reference_right_rel'
+            '',
+            'id',
+            string=_('Reference right'),
+        ),    
     }
     
     _defaults = {

@@ -21,5 +21,10 @@
     'depends': [],
     'description': "Adds a reference right field for partners (customers)",
     'installable': True,
-    'data': ['view/res_partner.xml']
+    'data': [
+         'data/reference_rights.xml',
+         'view/res_partner.xml',
+         'view/reference_right.xml',
+         'security/ir.model.access.csv',
+     ]
 }

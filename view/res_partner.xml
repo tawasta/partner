@@ -8,7 +8,7 @@
 		    <field name="arch" type="xml">
 
                 <field name="email" position="after">
-                    <field name="referenceright" />
+                    <field name="referenceright" widget='many2many_tags' on_change="onchange_referenceright(referenceright)"/>
                 </field>
 
 		    </field>
