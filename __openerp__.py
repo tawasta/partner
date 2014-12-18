@@ -15,7 +15,7 @@
 {
     'name': 'Partner reference right',
     'category': 'Sales',
-    'version': '0.1',
+    'version': '0.2',
     'author': 'Vizucom Oy',
     'website': 'http://www.vizucom.com',
     'depends': [],
