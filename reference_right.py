@@ -62,12 +62,18 @@ class Reference_right(osv.Model):
             for refright in refrights:
                 company_ids.append(refright.company_id.id)
             
-            args = [['company_id', 'not in', company_ids]]
+            args = [('company_id', 'not in', company_ids)]
+
+        if context and context.get('uid') and context.get('uid') is not 1:
+            company_id = self.pool.get('res.users').browse(cr, uid, context.get('uid'), context).company_id.id
+            args.append( ('company_id', '=', company_id) )
+
+        _logger.warn(args)
 
         return super(Reference_right, self).search(cr, uid, args, offset, limit, order, context=context, count=count)
     
     _columns = {
-        'name': fields.char(string='Reference_right', size=128),          
+        'name': fields.char(string='Reference_right', size=128, translate=True),          
         'code': fields.char(string='Code', size=128),          
         'company_id': fields.many2one('res.company', 'Company'),
         'partner_ids': fields.many2many('res.partner', id1='referenceright', id2='partner_id', string='Partners'),
