@@ -54,7 +54,7 @@ class Reference_right(osv.Model):
         return self.name_get(cr, uid, ids, context)
     
     def search(self, cr, uid, args, offset=0, limit=None, order=None, context=None, count=False):
-        if args:
+        if args and 0 in args and 2 in args[0]:
             refright_ids = args[0][2]
             refrights = self.browse(cr, uid, refright_ids, context)
             
