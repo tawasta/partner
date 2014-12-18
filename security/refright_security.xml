@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="0">
+	
+	    <record model="ir.rule" id="sale_report_rule">
+	        <field name="name">Reference right: multi-company</field>
+	        <field name="model_id" ref="res_partner_referenceright.model_res_partner_reference_right"/>
+	        <field name="global" eval="True"/>
+	        <field name="domain_force">['|', ('company_id', '=', False), ('company_id', 'child_of', [user.company_id.id])]</field>
+	    </record>
+	    
+	</data>
+</openerp>

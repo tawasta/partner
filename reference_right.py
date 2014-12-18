@@ -54,15 +54,15 @@ class Reference_right(osv.Model):
         return self.name_get(cr, uid, ids, context)
     
     def search(self, cr, uid, args, offset=0, limit=None, order=None, context=None, count=False):
-        _logger.warn(args)
-        refright_ids = args[0][2]
-        refrights = self.browse(cr, uid, refright_ids, context)
-        
-        company_ids = []
-        for refright in refrights:
-            company_ids.append(refright.company_id.id)
-        
-        args = [['company_id', 'not in', company_ids]]
+        if args:
+            refright_ids = args[0][2]
+            refrights = self.browse(cr, uid, refright_ids, context)
+            
+            company_ids = []
+            for refright in refrights:
+                company_ids.append(refright.company_id.id)
+            
+            args = [['company_id', 'not in', company_ids]]
 
         return super(Reference_right, self).search(cr, uid, args, offset, limit, order, context=context, count=count)
     

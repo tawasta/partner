@@ -25,6 +25,7 @@
          'data/reference_rights.xml',
          'view/res_partner.xml',
          'view/reference_right.xml',
+         #'security/refright_security.xml',
          'security/ir.model.access.csv',
      ]
 }
