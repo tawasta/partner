@@ -68,8 +68,6 @@ class Reference_right(osv.Model):
             company_id = self.pool.get('res.users').browse(cr, uid, context.get('uid'), context).company_id.id
             args.append( ('company_id', '=', company_id) )
 
-        _logger.warn(args)
-
         return super(Reference_right, self).search(cr, uid, args, offset, limit, order, context=context, count=count)
     
     _columns = {
