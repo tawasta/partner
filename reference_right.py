@@ -43,6 +43,20 @@ class Reference_right(osv.Model):
         return res
     
     def name_search(self, cr, uid, name, args=None, operator='ilike', context=None, limit=20):
+        if args:
+            try:
+                refright_ids = args[0][2]
+                refrights = self.browse(cr, uid, refright_ids, context)
+            
+                company_ids = []
+                for refright in refrights:
+                    company_ids.append(refright.company_id.id)
+                
+                args = [('company_id', 'not in', company_ids)]
+            except IndexError:
+                # No refright ids
+                pass
+        
         if not args:
             args = []
         if not context:
@@ -51,6 +65,7 @@ class Reference_right(osv.Model):
             ids = self.search(cr, uid, ['|',('name', operator, name),('company_id.name', operator, name)] + args, limit=limit, context=context)
         else:
             ids = self.search(cr, uid, args, limit=limit, context=context)
+            
         return self.name_get(cr, uid, ids, context)
     
     def search(self, cr, uid, args, offset=0, limit=None, order=None, context=None, count=False):
@@ -63,10 +78,6 @@ class Reference_right(osv.Model):
                 company_ids.append(refright.company_id.id)
             
             args = [('company_id', 'not in', company_ids)]
-
-        if context and context.get('uid') and context.get('uid') is not 1:
-            company_id = self.pool.get('res.users').browse(cr, uid, context.get('uid'), context).company_id.id
-            args.append( ('company_id', '=', company_id) )
 
         return super(Reference_right, self).search(cr, uid, args, offset, limit, order, context=context, count=count)
     
