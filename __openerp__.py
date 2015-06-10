@@ -24,7 +24,7 @@
 ''',
     'data': [
          'view/res_partner.xml',
-         'view/note.xml',
+         'view/partner_note.xml',
          'security/ir.model.access.csv',
      ]
 }
