@@ -8,7 +8,7 @@
 		    <field name="model">res.partner.note</field>
 		    <field name="type">tree</field>
 		    <field name="arch" type="xml" >
-		    	<tree string="Internal notes">
+		    	<tree string="Internal notes" delete="false">
 		            <field name="create_date" widget='date'/>
 		            <field name="name" />
 		            <field name="note" />
