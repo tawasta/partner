@@ -3,12 +3,12 @@
     <data>
 
 		<!--  Tree view -->
-		<record model="ir.ui.view" id="res_partner_note_tree">
+		<record id="res_partner_note_tree" model="ir.ui.view">
 		    <field name="name">Partner Note Tree</field>
 		    <field name="model">res.partner.note</field>
 		    <field name="type">tree</field>
 		    <field name="arch" type="xml" >
-		    	<tree string="Internal notes" delete="false">
+		    	<tree string="Internal notes">
 		            <field name="create_date" widget='date'/>
 		            <field name="name" />
 		            <field name="note" />
