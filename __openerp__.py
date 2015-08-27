@@ -18,13 +18,14 @@
     'version': '0.1',
     'author': 'Oy Tawasta Technologies Ltd.',
     'website': 'http://www.tawasta.fi',
-    'depends': ['crm'],
+    'depends': [
+        'crm',
+    ],
     'description': '''
 Partner Recursion
 ==================
 
 Adds a recursive partner search for the partner
-
 
 ''',
     'data': [
