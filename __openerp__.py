@@ -21,9 +21,9 @@
 {
     'name': 'Partner Multicompany Extension',
     'category': 'CRM',
-    'version': '8.0.0.5.1',
+    'version': '8.0.0.5.2',
     'author': 'Oy Tawasta Technologies Ltd.',
     'website': 'http://www.tawasta.fi',
     'depends': ['crm'],
-    'data': ['view/res_partner.xml']
+    'data': ['views/res_partner.xml']
 }
