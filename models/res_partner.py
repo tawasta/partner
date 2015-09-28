@@ -1,25 +1,9 @@
-from openerp.osv import osv, fields
-from openerp.tools.translate import _
+# -*- coding: utf-8 -*-
+from openerp import models, api
 
-class ResPartner(osv.Model):
-    _name = "res.partner"
+
+class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    _columns = {
-        'customer_of': fields.many2many(
-            'res.company',
-            'res_company_customer_rel'
-            '',
-            'id',
-            string=_('Customer of')
-        ),
-        'supplier_of': fields.many2many(
-            'res.company',
-            'res_company_supplier_rel'
-            '',
-            'id',
-            string=_('Supplier of')
-        ),
-    }
-    
-ResPartner()
+    customer_of = fields.Many2many('res.company', string='Customer of')
+    supplier_of = fields.Many2many('res.company', string='Supplier of')
