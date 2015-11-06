@@ -21,7 +21,7 @@
 {
     'name': 'Partner Reference Right',
     'category': 'Sales',
-    'version': '8.0.0.2.5',
+    'version': '8.0.0.2.6',
     'author': '''
 Vizucom Oy,
 Oy Tawasta OS Technologies Ltd.
