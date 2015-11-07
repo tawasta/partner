@@ -10,7 +10,9 @@
                 <field name="email" position="after">
 					<separator />
 					<separator />
-                    <field name="referenceright" widget='many2many_tags' on_change="onchange_referenceright(referenceright)"/>
+                    <field name="referenceright"
+						   options='{"no_create": True, "no_open": True}'
+                           widget='many2many_tags'/>
                 </field>
 
 		    </field>
