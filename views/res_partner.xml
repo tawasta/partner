@@ -8,11 +8,16 @@
             <field name="arch" type="xml">
 
         		<field name="comment" position='replace'>
-        			<group>
-	        			<field name="comment" string='Internal comments'/>
-	        			<field name="note_ids"/>
-        			</group>
-        		</field> 
+                    <label for="comment" string='Internal comment' />
+                    <field name="comment" />
+
+                    <label for="note_ids" />
+                    <field name="note_ids" />
+        		</field>
+
+                <page name="internal_notes" position="attributes">
+                    <attribute name="string">Notes</attribute>
+                </page>
 
             </field>
         </record>

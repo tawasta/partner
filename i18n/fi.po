@@ -1,19 +1,21 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* res_partner_internal_notes_extension
+# 	* res_partner_internal_notes_extension
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-27 07:55+0000\n"
-"PO-Revision-Date: 2015-07-27 07:55+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2015-11-17 09:17+0000\n"
+"PO-Revision-Date: 2015-11-17 11:17+0200\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.7.5\n"
 
 #. module: res_partner_internal_notes_extension
 #: field:res.partner.note,active:0
@@ -42,8 +44,8 @@ msgstr "ID"
 
 #. module: res_partner_internal_notes_extension
 #: view:res.partner:res_partner_internal_notes_extension.res_partner_internal_notes
-msgid "Internal comments"
-msgstr "Sisäiset kommentit"
+msgid "Internal comment"
+msgstr "Sisäinen kommentti"
 
 #. module: res_partner_internal_notes_extension
 #: view:res.partner:res_partner_internal_notes_extension.note_filters
@@ -69,6 +71,11 @@ msgid "Note"
 msgstr "Muistio"
 
 #. module: res_partner_internal_notes_extension
+#: view:res.partner:res_partner_internal_notes_extension.res_partner_internal_notes
+msgid "Notes"
+msgstr "Muistiinpanot"
+
+#. module: res_partner_internal_notes_extension
 #: model:ir.model,name:res_partner_internal_notes_extension.model_res_partner
 #: field:res.partner.note,partner_id:0
 msgid "Partner"
@@ -78,4 +85,3 @@ msgstr "Kumppani"
 #: field:res.partner.note,name:0
 msgid "Title"
 msgstr "Otsikko"
-
