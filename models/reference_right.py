@@ -4,7 +4,8 @@ from openerp.tools.translate import _
 import logging
 _logger = logging.getLogger(__name__)
 
-class Reference_right(osv.Model):
+
+class reference_right(osv.Model):
     _name = "res.partner.reference_right"
     _order = "company_id, code"
     
@@ -79,7 +80,7 @@ class Reference_right(osv.Model):
             
             args = [('company_id', 'not in', company_ids)]
 
-        return super(Reference_right, self).search(cr, uid, args, offset, limit, order, context=context, count=count)
+        return super(reference_right, self).search(cr, uid, args, offset, limit, order, context=context, count=count)
     
     _columns = {
         'name': fields.char(string='Reference_right', size=128, translate=True),          
@@ -91,5 +92,3 @@ class Reference_right(osv.Model):
     _sql_constraints = [
         ('company_code_unique', 'unique(company_id, code)', 'This company already has a reference right with this code.')
     ]
-    
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

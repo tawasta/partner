@@ -22,5 +22,3 @@ class ResPartner(osv.Model):
     _defaults = {
         'referenceright': False,             
     }
-    
-ResPartner()
