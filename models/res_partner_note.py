@@ -11,7 +11,7 @@ class InternalNote(models.Model):
     note = fields.Text("Note")
     partner_id = fields.Many2one("res.partner", "Partner")
 
-    @api.multi
+    @api.one
     def unlink(self):
         ''' Deactivates the note instead of deleting '''
 
