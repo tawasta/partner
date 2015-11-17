@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="res_partner_referenceright">
+		    <field name="name">res.partner.form.referenceright</field>
+		    <field name="model">res.partner</field>
+		    <field name="inherit_id" ref="base.view_partner_form" />
+		    <field name="arch" type="xml">
+
+                <field name="email" position="after">
+					<separator />
+					<separator />
+                    <field name="referenceright"
+						   options='{"no_create": True, "no_open": True}'
+                           widget='many2many_tags'/>
+                </field>
+
+		    </field>
+		</record>
+	</data>
+</openerp>
