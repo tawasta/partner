@@ -5,15 +5,21 @@
 		    <field name="name">res.partner.form.referenceright</field>
 		    <field name="model">res.partner</field>
 		    <field name="inherit_id" ref="base.view_partner_form" />
+			<field name="priority" eval="15" />
 		    <field name="arch" type="xml">
 
-                <field name="email" position="after">
-					<separator />
-					<separator />
-                    <field name="referenceright"
-						   options='{"no_create": True, "no_open": True}'
-                           widget='many2many_tags'/>
-                </field>
+                <page name="internal_notes" position="inside">
+                    <group>
+                        <div name="referenceright">
+                            <group>
+                                <field name="referenceright" widget="many2many_tags" />
+                            </group>
+                        </div>
+                        <div>
+
+                        </div>
+                    </group>
+                </page>
 
 		    </field>
 		</record>

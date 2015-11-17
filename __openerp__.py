@@ -21,7 +21,7 @@
 {
     'name': 'Partner Reference Right',
     'category': 'Sales',
-    'version': '8.0.0.2.7',
+    'version': '8.0.0.2.8',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
