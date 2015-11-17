@@ -5,15 +5,20 @@
             <field name="name">Parnter Internal Note</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="priority" eval="20" />
             <field name="arch" type="xml">
 
-        		<field name="comment" position='replace'>
-                    <label for="comment" string='Internal comment' />
-                    <field name="comment" />
+        		<field name="comment" position='replace' />
 
-                    <label for="note_ids" />
-                    <field name="note_ids" />
-        		</field>
+                <page name="internal_notes" position="inside">
+                    <div name="internal_notes">
+                        <label for="comment" string='Internal comment' />
+                        <field name="comment" />
+
+                        <label for="note_ids" />
+                        <field name="note_ids" />
+                    </div>
+        		</page>
 
                 <page name="internal_notes" position="attributes">
                     <attribute name="string">Notes</attribute>
