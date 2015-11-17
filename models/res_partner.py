@@ -3,11 +3,9 @@ from openerp.tools.translate import _
 import logging
 _logger = logging.getLogger(__name__)
 
+
 class ResPartner(osv.Model):
     _inherit = "res.partner"
-    
-    def onchange_referenceright(self, cr, uid, ids, refrights, context=None):
-        pass
     
     _columns = {
         'referenceright': fields.many2many(

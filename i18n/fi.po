@@ -6,27 +6,28 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-18 09:28+0000\n"
-"PO-Revision-Date: 2014-12-18 11:28+0200\n"
+"POT-Creation-Date: 2015-11-17 09:56+0000\n"
+"PO-Revision-Date: 2015-11-17 11:57+0200\n"
 "Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 1.5.4\n"
+"Language: fi\n"
+"X-Generator: Poedit 1.7.5\n"
 
 #. module: res_partner_referenceright
-#: code:addons/res_partner_referenceright/reference_right.py:14
+#: code:addons/res_partner_referenceright/models/reference_right.py:15
 #, python-format
 msgid "Allowed"
 msgstr "Sallittu"
 
 #. module: res_partner_referenceright
-#: code:addons/res_partner_referenceright/reference_right.py:15
+#: code:addons/res_partner_referenceright/models/reference_right.py:16
 #, python-format
 msgid "Ask"
-msgstr "Kysyttävä erikseen"
+msgstr "Kysy"
 
 #. module: res_partner_referenceright
 #: model:ir.actions.act_window,help:res_partner_referenceright.action_partner_reference_rights
@@ -69,7 +70,7 @@ msgid "Last Updated on"
 msgstr "Viimeisin päivitys"
 
 #. module: res_partner_referenceright
-#: code:addons/res_partner_referenceright/reference_right.py:16
+#: code:addons/res_partner_referenceright/models/reference_right.py:17
 #, python-format
 msgid "No Right"
 msgstr "Ei oikeutta"
@@ -85,7 +86,7 @@ msgid "Partners"
 msgstr "Partnerit"
 
 #. module: res_partner_referenceright
-#: code:addons/res_partner_referenceright/res_partner.py:18
+#: code:addons/res_partner_referenceright/models/res_partner.py:16
 #: field:res.partner,referenceright:0
 #, python-format
 msgid "Reference right"
