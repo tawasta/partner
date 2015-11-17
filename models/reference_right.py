@@ -30,11 +30,15 @@ class reference_right(osv.Model):
         return True
     
     def name_get(self, cr, uid, ids, context=None):
+        # Decide if there is more than one company
+        company_obj = self.pool.get('res.company')
+        company_count = company_obj.search_count(cr, SUPERUSER_ID, [])
+
         res = []
         for record in self.browse(cr, uid, ids, context):
             name = ''
             
-            if record.company_id.name:
+            if record.company_id.name and company_count > 1:
                 name += '%s - ' % (record.company_id.name)
             
             name += '%s' % (record.name)
