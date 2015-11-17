@@ -21,7 +21,7 @@
 {
     'name': 'Partner Internal Note Extension',
     'category': 'CRM',
-    'version': '8.0.0.3.1',
+    'version': '8.0.0.3.2',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
@@ -31,8 +31,8 @@
         'crm'
     ],
     'data': [
-         'view/res_partner.xml',
-         'view/partner_note.xml',
+         'views/res_partner.xml',
+         'views/partner_note.xml',
          'security/ir.model.access.csv',
      ]
 }
