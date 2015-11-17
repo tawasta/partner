@@ -21,7 +21,7 @@
 {
     'name': 'Partner Reference Right',
     'category': 'Sales',
-    'version': '8.0.0.2.1',
+    'version': '8.0.0.2.2',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
@@ -29,8 +29,8 @@
     'installable': True,
     'data': [
          'data/reference_rights.xml',
-         'view/res_partner.xml',
-         'view/reference_right.xml',
+         'views/res_partner.xml',
+         'views/reference_right.xml',
          #'security/refright_security.xml',
          'security/ir.model.access.csv',
      ]
