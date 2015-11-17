@@ -87,7 +87,7 @@ class reference_right(osv.Model):
         return super(reference_right, self).search(cr, uid, args, offset, limit, order, context=context, count=count)
     
     _columns = {
-        'name': fields.char(string='Reference_right', size=128, translate=True),          
+        'name': fields.char(string='Reference right', size=128, translate=True),
         'code': fields.char(string='Code', size=128),          
         'company_id': fields.many2one('res.company', 'Company'),
         'partner_ids': fields.many2many('res.partner', id1='referenceright', id2='partner_id', string='Partners'),
