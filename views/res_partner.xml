@@ -12,7 +12,10 @@
                     <group>
                         <div name="referenceright">
                             <group>
-                                <field name="referenceright" widget="many2many_tags" />
+                                <field name="referenceright"
+                                       widget="many2many_tags"
+                                       options='{"no_create": True, "no_open": True}'
+                                />
                             </group>
                         </div>
                         <div>
