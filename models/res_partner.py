@@ -20,3 +20,12 @@ class ResPartner(models.Model):
                 child_ids += self._get_recursive_child_ids(child)
 
         return child_ids
+
+    @api.one
+    def _get_recursive_parent(self):
+        if self.parent_id:
+            res = self.parent_id._get_recursive_parent()[0]
+        else:
+            res = self
+
+        return res

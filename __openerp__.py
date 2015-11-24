@@ -15,7 +15,7 @@
 {
     'name': 'Partner Recursion',
     'category': 'CRM',
-    'version': '0.1',
+    'version': '8.0.0.2.0',
     'author': 'Oy Tawasta Technologies Ltd.',
     'website': 'http://www.tawasta.fi',
     'depends': [
