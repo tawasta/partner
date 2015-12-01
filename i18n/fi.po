@@ -1,0 +1,60 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* res_partner_invoice_transmit_types
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-12-01 17:11+0000\n"
+"PO-Revision-Date: 2015-12-01 19:15+0200\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.7.5\n"
+
+#. module: res_partner_invoice_transmit_types
+#: help:res.partner,invoice_transmit_type:0
+msgid ""
+"Default value for how the invoice is sent to the recipient.\n"
+"This can be overriden for each invoice as needed.\n"
+"\n"
+"Manual - No automated sendin. The invoice has to be sent via mail or email.\n"
+"eInvoice - Electronic invoice. Can be sent only to companies.\n"
+"Printed eInvoice - Electronic invoice printed to paper at the post office. Can be sent to individuals and companies."
+msgstr ""
+"Oletusarvo laskun lähetystavalle.\n"
+"Tämä voidaan muuttaa kullakin laskulla tarvittaessa.\n"
+"\n"
+"Manuaalinen - Ei automaattista lähetystä. Lasku pitää lähettää postilla tai sähköpostilla.\n"
+"Verkkolasku - Sähköinen lasku. Voidaan lähettää vain yrityksille\n"
+"Tulostuspalvelu - Sähköinen lasku, joka tulostetaan paperiseksi laskunvälityspalvelussa. Voidaan lähettää yksityishenkilöille ja yrityksille."
+
+#. module: res_partner_invoice_transmit_types
+#: field:res.partner,invoice_transmit_type:0
+msgid "Invoice transmit"
+msgstr "Invoice transmit"
+
+#. module: res_partner_invoice_transmit_types
+#: selection:res.partner,invoice_transmit_type:0
+msgid "Manual"
+msgstr "Manuaalinen"
+
+#. module: res_partner_invoice_transmit_types
+#: model:ir.model,name:res_partner_invoice_transmit_types.model_res_partner
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: res_partner_invoice_transmit_types
+#: selection:res.partner,invoice_transmit_type:0
+msgid "Printed eInvoice"
+msgstr "Tulostuspalvelu"
+
+#. module: res_partner_invoice_transmit_types
+#: selection:res.partner,invoice_transmit_type:0
+msgid "eInvoice"
+msgstr "Verkkolasku"
