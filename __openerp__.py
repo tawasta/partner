@@ -21,7 +21,7 @@
 
 {
     'name': 'Partner Invoice Transmit Types',
-    'version': '8.0.0.1.0',
+    'version': '8.0.0.2.0',
     'category': 'Accounting & Finance',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -33,5 +33,6 @@
         'sale',
     ],
     'data': [
+        'views/res_partner.xml',
     ],
 }

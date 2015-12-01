@@ -20,6 +20,19 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     # 2. Fields declaration
+    invoice_transmit_type = fields.Selection([
+           ('manual', 'Manual'),
+           ('einvoice', 'eInvoice'),
+           ('paper', 'Printed eInvoice'),
+          ],
+          'Invoice transmit',
+          help='Default value for how the invoice is sent to the recipient.' + '\n' +
+               'This can be overriden for each invoice as needed.' + '\n\n' +
+
+               'Manual - No automated sendin. The invoice has to be sent via mail or email.' + '\n' +
+               'eInvoice - Electronic invoice. Can be sent only to companies.' + '\n' +
+               'Printed eInvoice - Electronic invoice printed to paper at the post office.' + ' ' +
+               'Can be sent to individuals and companies.')
 
     # 3. Default methods
 
