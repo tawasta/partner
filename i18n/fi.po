@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-01 17:11+0000\n"
-"PO-Revision-Date: 2015-12-01 19:15+0200\n"
+"POT-Creation-Date: 2015-12-02 11:36+0000\n"
+"PO-Revision-Date: 2015-12-02 13:39+0200\n"
 "Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -23,26 +23,47 @@ msgid ""
 "Default value for how the invoice is sent to the recipient.\n"
 "This can be overriden for each invoice as needed.\n"
 "\n"
-"Manual - No automated sendin. The invoice has to be sent via mail or email.\n"
+"Manual - No automated sending. The invoice has to be sent via mail or email.\n"
 "eInvoice - Electronic invoice. Can be sent only to companies.\n"
 "Printed eInvoice - Electronic invoice printed to paper at the post office. Can be sent to individuals and companies."
 msgstr ""
-"Oletusarvo laskun lähetystavalle.\n"
-"Tämä voidaan muuttaa kullakin laskulla tarvittaessa.\n"
+"Miten lasku lähetetään vastaanottajalle oletusarvoisesti.\n"
+"Voidaan vaihtaa laskukohtaisesti.\n"
 "\n"
 "Manuaalinen - Ei automaattista lähetystä. Lasku pitää lähettää postilla tai sähköpostilla.\n"
-"Verkkolasku - Sähköinen lasku. Voidaan lähettää vain yrityksille\n"
-"Tulostuspalvelu - Sähköinen lasku, joka tulostetaan paperiseksi laskunvälityspalvelussa. Voidaan lähettää yksityishenkilöille ja yrityksille."
+"Verkkolasku - Sähköinen lasku. Voidaan lähettää vain yrityksille.\n"
+"Tulostettu verkkolasku - Sähköinen lasku, joka tulostetaan paperilla laskunvälittäjällä. Voidaan lähettää yrityksille ja yksityishenkilöille."
 
 #. module: res_partner_invoice_transmit_types
+#: model:ir.model,name:res_partner_invoice_transmit_types.model_account_invoice
+msgid "Invoice"
+msgstr "Lasku"
+
+#. module: res_partner_invoice_transmit_types
+#: field:account.invoice,invoice_transmit_type:0
 #: field:res.partner,invoice_transmit_type:0
+#: field:sale.order,invoice_transmit_type:0
 msgid "Invoice transmit"
-msgstr "Invoice transmit"
+msgstr "Laskun lähetys"
 
 #. module: res_partner_invoice_transmit_types
+#: selection:account.invoice,invoice_transmit_type:0
 #: selection:res.partner,invoice_transmit_type:0
+#: selection:sale.order,invoice_transmit_type:0
 msgid "Manual"
 msgstr "Manuaalinen"
+
+#. module: res_partner_invoice_transmit_types
+#: help:account.invoice,invoice_transmit_type:0
+#: help:sale.order,invoice_transmit_type:0
+msgid ""
+"Manual - No automated sending. The invoice has to be sent via mail or email.\n"
+"eInvoice - Electronic invoice. Can be sent only to companies.\n"
+"Printed eInvoice - Electronic invoice printed to paper at the post office. Can be sent to individuals and companies."
+msgstr ""
+"Manuaalinen - Ei automaattista lähetystä. Lasku pitää lähettää postilla tai sähköpostilla.\n"
+"Verkkolasku - Sähköinen lasku. Voidaan lähettää vain yrityksille.\n"
+"Tulostettu verkkolasku - Sähköinen lasku, joka tulostetaan paperilla laskunvälittäjällä. Voidaan lähettää yrityksille ja yksityishenkilöille."
 
 #. module: res_partner_invoice_transmit_types
 #: model:ir.model,name:res_partner_invoice_transmit_types.model_res_partner
@@ -50,11 +71,20 @@ msgid "Partner"
 msgstr "Kumppani"
 
 #. module: res_partner_invoice_transmit_types
+#: selection:account.invoice,invoice_transmit_type:0
 #: selection:res.partner,invoice_transmit_type:0
+#: selection:sale.order,invoice_transmit_type:0
 msgid "Printed eInvoice"
 msgstr "Tulostuspalvelu"
 
 #. module: res_partner_invoice_transmit_types
+#: model:ir.model,name:res_partner_invoice_transmit_types.model_sale_order
+msgid "Sales Order"
+msgstr "Myyntitilaus"
+
+#. module: res_partner_invoice_transmit_types
+#: selection:account.invoice,invoice_transmit_type:0
 #: selection:res.partner,invoice_transmit_type:0
+#: selection:sale.order,invoice_transmit_type:0
 msgid "eInvoice"
 msgstr "Verkkolasku"
