@@ -19,17 +19,26 @@ class SaleOrder(models.Model):
     # 1. Private attributes
     _inherit = 'sale.order'
 
+    _FIELD_STATES = {
+        'draft': [('readonly', False)],
+        'sent': [('readonly', False)],
+        'manual': [('readonly', False)],
+    }
+
     # 2. Fields declaration
     invoice_transmit_type = fields.Selection([
-           ('manual', 'Manual'),
-           ('einvoice', 'eInvoice'),
-           ('paper', 'Printed eInvoice'),
-          ],
-          'Invoice transmit',
-          help='Manual - No automated sending. The invoice has to be sent via mail or email.' + '\n' +
-               'eInvoice - Electronic invoice. Can be sent only to companies.' + '\n' +
-               'Printed eInvoice - Electronic invoice printed to paper at the post office.' + ' ' +
-               'Can be sent to individuals and companies.')
+            ('manual', 'Manual'),
+            ('einvoice', 'eInvoice'),
+            ('paper', 'Printed eInvoice'),
+        ],
+        'Invoice transmit',
+        help='Manual - No automated sending. The invoice has to be sent via mail or email.' + '\n' +
+        'eInvoice - Electronic invoice. Can be sent only to companies.' + '\n' +
+        'Printed eInvoice - Electronic invoice printed to paper at the post office.' + ' ' +
+        'Can be sent to individuals and companies.',
+        readonly=True,
+        states=_FIELD_STATES,
+    )
 
     # 3. Default methods
 
