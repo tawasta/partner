@@ -6,6 +6,7 @@
 
 # 3. Odoo imports (openerp):
 from openerp import api, fields, models
+from openerp import _
 
 # 4. Imports from Odoo modules:
 
@@ -27,7 +28,8 @@ class AccountInvoice(models.Model):
     invoice_transmit_type = fields.Selection(
         'get_invoice_transmit_types',
         'Invoice transmit',
-        help='Manual - No automated sending. The invoice has to be sent via mail or email.' + '\n' +
+        help='Manual - No automated sending. The invoice has to be sent via mail.' + '\n' +
+        'Email - No automated sending. The invoice has to be sent via email.' + '\n' +
         'eInvoice - Electronic invoice. Can be sent only to companies.' + '\n' +
         'Printed eInvoice - Electronic invoice printed to paper at the post office.' + ' ' +
         'Can be sent to individuals and companies.',
@@ -40,10 +42,10 @@ class AccountInvoice(models.Model):
     # 4. Compute and search fields, in the same order that fields declaration
     def get_invoice_transmit_types(self):
         invoice_transmit_types = [
-            ('manual', 'Manual'),
-            ('email', 'Email'),
-            ('einvoice', 'eInvoice'),
-            ('paper', 'Printed eInvoice'),
+            ('manual', _('Manual')),
+            ('email', _('Email')),
+            ('einvoice', _('eInvoice')),
+            ('paper', _('Printed eInvoice')),
         ]
 
         return invoice_transmit_types
