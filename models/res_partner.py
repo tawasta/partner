@@ -20,23 +20,22 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     # 2. Fields declaration
-    invoice_transmit_type = fields.Selection([
-           ('manual', 'Manual'),
-           ('einvoice', 'eInvoice'),
-           ('paper', 'Printed eInvoice'),
-          ],
-          'Invoice transmit',
-          help='Default value for how the invoice is sent to the recipient.' + '\n' +
-               'This can be overriden for each invoice as needed.' + '\n\n' +
+    invoice_transmit_type = fields.Selection(
+        'get_invoice_transmit_types',
+        'Invoice transmit',
+        help='Default value for how the invoice is sent to the recipient.' + '\n' +
+        'This can be overriden for each invoice as needed.' + '\n\n' +
 
-               'Manual - No automated sending. The invoice has to be sent via mail or email.' + '\n' +
-               'eInvoice - Electronic invoice. Can be sent only to companies.' + '\n' +
-               'Printed eInvoice - Electronic invoice printed to paper at the post office.' + ' ' +
-               'Can be sent to individuals and companies.')
+        'Manual - No automated sending. The invoice has to be sent via mail or email.' + '\n' +
+        'eInvoice - Electronic invoice. Can be sent only to companies.' + '\n' +
+        'Printed eInvoice - Electronic invoice printed to paper at the post office.' + ' ' +
+        'Can be sent to individuals and companies.')
 
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
+    def get_invoice_transmit_types(self):
+        return self.env['account.invoice'].get_invoice_transmit_types()
 
     # 5. Constraints and onchanges
 

@@ -24,11 +24,8 @@ class AccountInvoice(models.Model):
     }
 
     # 2. Fields declaration
-    invoice_transmit_type = fields.Selection([
-            ('manual', 'Manual'),
-            ('einvoice', 'eInvoice'),
-            ('paper', 'Printed eInvoice'),
-        ],
+    invoice_transmit_type = fields.Selection(
+        'get_invoice_transmit_types',
         'Invoice transmit',
         help='Manual - No automated sending. The invoice has to be sent via mail or email.' + '\n' +
         'eInvoice - Electronic invoice. Can be sent only to companies.' + '\n' +
@@ -41,8 +38,22 @@ class AccountInvoice(models.Model):
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
+    def get_invoice_transmit_types(self):
+        invoice_transmit_types = [
+            ('manual', 'Manual'),
+            ('email', 'Email'),
+            ('einvoice', 'eInvoice'),
+            ('paper', 'Printed eInvoice'),
+        ]
+
+        return invoice_transmit_types
 
     # 5. Constraints and onchanges
+    @api.one
+    @api.depends('partner_id')
+    @api.onchange('partner_shipping_id')
+    def onchange_partner_shipping_id(self):
+        self.invoice_transmit_type = self.partner_id.invoice_transmit_type
 
     # 6. CRUD methods
 
