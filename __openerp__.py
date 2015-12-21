@@ -28,5 +28,9 @@
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
-    'installable': True
+    'installable': True,
+    'data': [
+        'views/business_segment.xml',
+        'security/ir.model.access.csv'
+    ]
 }
