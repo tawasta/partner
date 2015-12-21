@@ -13,15 +13,15 @@ from openerp import api, fields, models
 
 # 6. Unknown third party imports:
 
-class BusinessSegmentCategory(models.Model):
+class BusinessSizeCategory(models.Model):
     
     # 1. Private attributes
-    _name = 'business_segment.category'
+    _name = 'business_size.category'
 
-    name = fields.Char(string="Segment category")
+    name = fields.Char(string="Business size")
 
     # 2. Fields declaration
-    Business_segment = fields.Char(string='Business Segment')
+    Business_size = fields.Char(string='Business Size')
 
 
     # 3. Default methods
@@ -37,14 +37,14 @@ class BusinessSegmentCategory(models.Model):
     # 8. Business methods
     
 
-class BusinessSegment(models.Model):
+class BusinessSize(models.Model):
 
     # 1. Private attributes
-    _name = "business_segment.segment"
+    _name = "business_size.size"
 
     # 2. Fields declaration
-    name = fields.Char(string='Business Segment')
-    category = fields.Many2one('business_segment.category', string='Segment Category')
+    name = fields.Char(string='Business Size')
+    category = fields.Many2one('business_size.category', string='Size Category')
 
 
     # 3. Default methods

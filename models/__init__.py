@@ -1,1 +1,1 @@
-import business_segment, res_partner
+import business_segment, business_size, res_partner

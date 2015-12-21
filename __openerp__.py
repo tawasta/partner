@@ -31,6 +31,7 @@
     'installable': True,
     'data': [
         'data/business_segment.xml',
+        'data/business_size.xml',
         'views/business_segment.xml',
         'security/ir.model.access.csv'
     ]

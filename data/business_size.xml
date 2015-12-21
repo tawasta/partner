@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="bsize_cat_sizes" model="business_size.category">
+            <field name="name">Sizes</field>
+        </record>
+
+        <record id="bsize_size_p" model="business_size.size">
+            <field name="name">Pienet yritykset</field>
+			<field name="category" ref="bsize_cat_sizes"/>
+        </record>
+        
+        <record id="bsize_size_k" model="business_size.size">
+            <field name="name">Keskisuuret yritykset</field>
+            <field name="category" ref="bsize_cat_sizes"/>
+        </record>
+
+        <record id="bsize_size_s" model="business_size.size">
+            <field name="name">Suuret yritykset</field>
+            <field name="category" ref="bsize_cat_sizes"/>
+        </record>
+        
+        <record id="bsize_size_u" model="business_size.size">
+            <field name="name">Ulkomaalaiset sivuliikkeet</field>
+            <field name="category" ref="bsize_cat_sizes"/>
+        </record>
+    </data>
+</openerp>
