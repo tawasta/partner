@@ -30,6 +30,7 @@
     'application': False,
     'installable': True,
     'data': [
+        'data/business_segment.xml',
         'views/business_segment.xml',
         'security/ir.model.access.csv'
     ]

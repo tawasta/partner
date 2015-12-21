@@ -19,7 +19,7 @@ class Partner(models.Model):
     _inherit = 'res.partner'
 
     # 2. Fields declaration
-    Business_segment = fields.Many2one('business_segment.segment', string='Business Segment')
+    business_segment = fields.Many2one('business_segment.segment', string='Business Segment')
 
 
     # 3. Default methods
