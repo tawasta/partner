@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<!-- Extend membership form view -->
+        <record id="view_partner_form_inherited" model="ir.ui.view">
+            <field name="name">view.partner.form.inherited</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+            	<field name="title" position="after">
+            		<field name="Business_segment" widget="selection" />
+            	</field>
+            </field>
+        </record>
+
+	</data>
+</openerp>
