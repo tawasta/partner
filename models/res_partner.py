@@ -20,7 +20,7 @@ class Partner(models.Model):
 
     # 2. Fields declaration
     business_segment = fields.Many2one('business_segment.segment', string='Business Segment')
-
+    business_size = fields.Many2one('business_size.size', string='Business Size')
 
     # 3. Default methods
 

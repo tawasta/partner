@@ -2,7 +2,7 @@
 <openerp>
 	<data>
 
-		<!-- Extend membership form view -->
+		<!-- Extend partner form view -->
         <record id="view_partner_form_inherited" model="ir.ui.view">
             <field name="name">view.partner.form.inherited</field>
             <field name="model">res.partner</field>
@@ -10,17 +10,20 @@
             <field name="arch" type="xml">
             	<field name="title" position="after">
             		<field name="business_segment" widget="selection" />
+                    <field name="business_size" widget="selection" />
             	</field>
             </field>
         </record>
 
+        <!-- Open tree-view -->
         <record id="business_segment_tree_act" model="ir.actions.act_window">
             <field name="name">Business Segments</field>
             <field name="res_model">business_segment.segment</field>
-            <field name="view_type">tree</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
         </record>
 
-
+        <!-- Menuitem for business segments -->
         <menuitem action="business_segment_tree_act" id="segment_config" parent="base.menu_base_config" sequence="200" groups="base.group_no_one"/>
 
 	</data>
