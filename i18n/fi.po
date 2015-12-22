@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-21 11:21+0000\n"
-"PO-Revision-Date: 2015-12-21 13:24+0200\n"
+"POT-Creation-Date: 2015-12-22 13:56+0000\n"
+"PO-Revision-Date: 2015-12-22 15:58+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -79,9 +79,19 @@ msgid "Last Updated on"
 msgstr "Viimeksi muokattu"
 
 #. module: res_partner_business_segment
+#: view:res.partner:res_partner_business_segment.view_res_partner_member_filter
+msgid "Membership Partners"
+msgstr "Jäsenyyskumppanit"
+
+#. module: res_partner_business_segment
 #: model:ir.model,name:res_partner_business_segment.model_res_partner
 msgid "Partner"
 msgstr "Kumppani"
+
+#. module: res_partner_business_segment
+#: view:res.partner:res_partner_business_segment.view_res_partner_member_filter
+msgid "Segment"
+msgstr "Yrityssegmentti"
 
 #. module: res_partner_business_segment
 #: field:business_segment.segment,category:0
@@ -92,6 +102,11 @@ msgstr "Segmentin kategoria"
 #: field:business_segment.category,name:0
 msgid "Segment category"
 msgstr "Segmentin kategoria"
+
+#. module: res_partner_business_segment
+#: view:res.partner:res_partner_business_segment.view_res_partner_member_filter
+msgid "Size"
+msgstr "Yrityksen koko"
 
 #. module: res_partner_business_segment
 #: field:business_size.size,category:0
