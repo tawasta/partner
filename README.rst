@@ -19,8 +19,7 @@ Configuration
 
 Usage
 =====
-\-
-
+This module adds two fields to partners form view called Business segment and business size. These fields are dropdowns in which companies can determine their segment and company size, which will be used for search purposes. Business segment has also a menuitem under Configuration menuitem in Sales.
 Known issues / Roadmap
 ======================
 \-
