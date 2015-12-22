@@ -29,6 +29,10 @@
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
+    'depends': [
+        'product',
+        'membership_extension'
+    ],
     'data': [
         'data/business_segment.xml',
         'data/business_size.xml',
