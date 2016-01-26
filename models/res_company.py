@@ -45,7 +45,7 @@ class ResCompany(models.Model):
     def _get_recursive_name(self, record):
         # Returns a recursive partner name
 
-        if record.parent_id:
+        if record.parent_id and record.parent_id.id != 1:
             record.display_name = "%s, %s"\
                 % (self._get_recursive_name(record.parent_id), record.name)
         else:
