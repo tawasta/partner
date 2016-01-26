@@ -14,13 +14,28 @@ from openerp import api, fields, models
 # 6. Unknown third party imports:
 
 
-class PlainModel(models.Model):
-    
+class ResPartner(models.Model):
+
     # 1. Private attributes
-    _name = 'plain.model'
-    _inherit = 'plain.model'
+    _inherit = 'res.partner'
 
     # 2. Fields declaration
+    guardians = fields.Many2many(
+        'res.partner',
+        'res_partner_guardian_relation',
+        'guardians',
+        'wards',
+        string="Ward of",
+        domain=[('is_company', '=', False), ('customer', '=', True)]
+    )
+    wards = fields.Many2many(
+        'res.partner',
+        'res_partner_guardian_relation',
+        'wards',
+        'guardians',
+        string="Guardian of",
+        domain=[('is_company', '=', False), ('customer', '=', True)]
+    )
 
     # 3. Default methods
 
