@@ -11,10 +11,27 @@
 
                 <xpath expr="//group[@name='personal_information_group']">
                     <field name="guardians"
-                           context="{'tree_view_ref': 'partner_contact_guardians.view_partner_guardian_tree'}" />
+
+                           context="{'tree_view_ref': 'partner_contact_guardians.view_partner_guardian_tree',
+	                        	'default_type': 'contact',
+	                        	'default_is_company': False,
+	                        	'default_personal_customer': True,
+	                        	'default_street': street,
+	                        	'default_street2': street2,
+	                        	'default_zip': zip,
+	                        	'default_city': city,
+                           }" />
 
                     <field name="wards"
-                           context="{'tree_view_ref': 'partner_contact_guardians.view_partner_guardian_tree'}" />
+                           context="{'tree_view_ref': 'partner_contact_guardians.view_partner_guardian_tree',
+	                        	'default_type': 'contact',
+	                        	'default_is_company': False,
+	                        	'default_personal_customer': True,
+	                        	'default_street': street,
+	                        	'default_street2': street2,
+	                        	'default_zip': zip,
+	                        	'default_city': city,
+                           }" />
                 </xpath>
 
 			</field>
