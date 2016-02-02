@@ -20,10 +20,6 @@ class AccountInvoice(models.Model):
     # 1. Private attributes
     _inherit = 'account.invoice'
 
-    _FIELD_STATES = {
-        'draft': [('readonly', False)],
-    }
-
     # 2. Fields declaration
     invoice_transmit_type = fields.Selection(
         'get_invoice_transmit_types',
@@ -33,8 +29,6 @@ class AccountInvoice(models.Model):
         'eInvoice - Electronic invoice. Can be sent only to companies.' + '\n' +
         'Printed eInvoice - Electronic invoice printed to paper at the post office.' + ' ' +
         'Can be sent to individuals and companies.',
-        readonly=True,
-        states=_FIELD_STATES,
     )
 
     # 3. Default methods
