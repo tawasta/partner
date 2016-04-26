@@ -1,0 +1,87 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* res_partner_internal_notes_extension
+# Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-17 07:35+0000\n"
+"PO-Revision-Date: 2016-03-17 09:36+0200\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>\n"
+"Language-Team: Finnish <>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+
+#. module: res_partner_internal_notes_extension
+#: field:res.partner.note,active:0
+msgid "Active"
+msgstr "Aktiivinen"
+
+#. module: res_partner_internal_notes_extension
+#: view:res.partner:res_partner_internal_notes_extension.note_filters
+msgid "Companies"
+msgstr "Yritykset"
+
+#. module: res_partner_internal_notes_extension
+#: field:res.partner.note,create_uid:0
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: res_partner_internal_notes_extension
+#: field:res.partner.note,create_date:0
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: res_partner_internal_notes_extension
+#: field:res.partner.note,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: res_partner_internal_notes_extension
+#: view:res.partner:res_partner_internal_notes_extension.res_partner_internal_notes
+msgid "Internal comment"
+msgstr "Sisäinen kommentti"
+
+#. module: res_partner_internal_notes_extension
+#: view:res.partner:res_partner_internal_notes_extension.note_filters
+#: field:res.partner,note_ids:0
+#: view:res.partner.note:res_partner_internal_notes_extension.res_partner_note_form
+#: view:res.partner.note:res_partner_internal_notes_extension.res_partner_note_tree
+msgid "Internal notes"
+msgstr "Sisäiset muistiinpanot"
+
+#. module: res_partner_internal_notes_extension
+#: field:res.partner.note,write_uid:0
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: res_partner_internal_notes_extension
+#: field:res.partner.note,write_date:0
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: res_partner_internal_notes_extension
+#: field:res.partner.note,note:0
+msgid "Note"
+msgstr "Muistio"
+
+#. module: res_partner_internal_notes_extension
+#: view:res.partner:res_partner_internal_notes_extension.res_partner_internal_notes
+msgid "Notes"
+msgstr "Muistiinpanot"
+
+#. module: res_partner_internal_notes_extension
+#: model:ir.model,name:res_partner_internal_notes_extension.model_res_partner
+#: field:res.partner.note,partner_id:0
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: res_partner_internal_notes_extension
+#: field:res.partner.note,name:0
+msgid "Title"
+msgstr "Otsikko"

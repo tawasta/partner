@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="res_partner_internal_notes">
+            <field name="name">Parnter Internal Note</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="priority" eval="20" />
+            <field name="arch" type="xml">
+
+        		<field name="comment" position='replace' />
+
+                <page name="internal_notes" position="inside">
+                    <div name="internal_notes">
+                        <label for="comment" string='Internal comment' />
+                        <field name="comment" />
+
+                        <label for="note_ids" />
+                        <field name="note_ids" />
+                    </div>
+        		</page>
+
+                <page name="internal_notes" position="attributes">
+                    <attribute name="string">Notes</attribute>
+                </page>
+
+            </field>
+        </record>
+        
+		<!-- Filters view -->
+      	<record id="note_filters" model="ir.ui.view">
+            <field name="name">res.partner.internal.note.filters</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter"/>
+            <field name="arch" type="xml">
+            
+            	<filter string="Companies" position="after">
+           			<field name="note_ids" string="Internal notes" filter_domain="['|', ('note_ids.name','ilike',self), ('note_ids.note', 'ilike', self)]"/>
+           		</filter>
+            	
+            </field>
+      	</record> 
+    </data>
+</openerp>
