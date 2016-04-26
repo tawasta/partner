@@ -1,0 +1,2 @@
+import reference_right
+import res_partner
