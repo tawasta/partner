@@ -1,0 +1,213 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* res_partner_roles
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0rc1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-08-06 11:51+0000\n"
+"PO-Revision-Date: 2014-08-06 14:52+0200\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,active:0
+#: field:res.partner.contact.role,active:0
+#: field:res.partner.contact.server.role,active:0
+msgid "Active"
+msgstr "Aktiviinen"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,child_ids:0
+#: field:res.partner.contact.role,child_ids:0
+#: field:res.partner.contact.server.role,child_ids:0
+msgid "Child Roles"
+msgstr "Alatason roolit"
+
+#. module: res_partner_roles
+#: model:ir.actions.act_window,help:res_partner_roles.action_partner_company_role_form
+msgid "Click to create a new company role."
+msgstr "Klikkaa luodaksesi uuden yritysroolin"
+
+#. module: res_partner_roles
+#: model:ir.actions.act_window,help:res_partner_roles.action_partner_contact_role_form
+msgid "Click to create a new contact role."
+msgstr "Klikkaa luodaksesi uuden kontaktiroolin"
+
+#. module: res_partner_roles
+#: model:ir.actions.act_window,help:res_partner_roles.action_partner_contact_server_role_form
+msgid "Click to create a new contact server role."
+msgstr "Klikkaa luodaksesi uuden palvelinroolin"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,company_id:0
+#: field:res.partner.contact.role,company_id:0
+#: field:res.partner.contact.server.role,company_id:0
+msgid "Company"
+msgstr "Yritys"
+
+#. module: res_partner_roles
+#: model:ir.model,name:res_partner_roles.model_res_partner_company_role
+#: view:res.partner.company.role:0
+msgid "Company Roles"
+msgstr "Yrityksen roolit"
+
+#. module: res_partner_roles
+#: code:addons/res_partner_roles/company_role.py:81
+#: model:ir.actions.act_window,name:res_partner_roles.action_partner_company_role_form
+#: model:ir.ui.menu,name:res_partner_roles.menu_company_role
+#: view:res.partner:0 field:res.partner,company_roles:0
+#, python-format
+msgid "Company roles"
+msgstr "Yrityksen roolit"
+
+#. module: res_partner_roles
+#: help:res.partner,company_roles:0
+msgid "Company roles for company grouping and searching"
+msgstr "Yrityksen roolit yritysten ryhmittelyä ja hakua varten"
+
+#. module: res_partner_roles
+#: model:ir.model,name:res_partner_roles.model_res_partner_contact_role
+#: view:res.partner.contact.role:0
+msgid "Contact Roles"
+msgstr "Kontaktin roolit"
+
+#. module: res_partner_roles
+#: code:addons/res_partner_roles/contact_role.py:80
+#: model:ir.actions.act_window,name:res_partner_roles.action_partner_contact_role_form
+#: model:ir.ui.menu,name:res_partner_roles.menu_contact_role
+#: view:res.partner:0 field:res.partner,contact_roles:0
+#, python-format
+msgid "Contact roles"
+msgstr "Kontaktin roolit"
+
+#. module: res_partner_roles
+#: help:res.partner,contact_roles:0
+msgid "Contact roles for contact grouping and searching"
+msgstr "Kontaktin roolit kontaktien ryhmittelyä ja hakua varten"
+
+#. module: res_partner_roles
+#: code:addons/res_partner_roles/contact_server_role.py:79
+#: model:ir.actions.act_window,name:res_partner_roles.action_partner_contact_server_role_form
+#: model:ir.model,name:res_partner_roles.model_res_partner_contact_server_role
+#: model:ir.ui.menu,name:res_partner_roles.menu_contact_server_role
+#: view:res.partner:0 field:res.partner,contact_server_roles:0
+#: view:res.partner.contact.server.role:0
+#, python-format
+msgid "Contact server roles"
+msgstr "Kontaktin palvelinroolit"
+
+#. module: res_partner_roles
+#: help:res.partner,contact_server_roles:0
+msgid "Contact server roles for finding the right contact for a server issue"
+msgstr "Kontaktin palvelinroolit oikean yhteyshenkilön löytämiseks"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,create_uid:0
+#: field:res.partner.contact.role,create_uid:0
+#: field:res.partner.contact.server.role,create_uid:0
+msgid "Created by"
+msgstr "Luoja"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,create_date:0
+#: field:res.partner.contact.role,create_date:0
+#: field:res.partner.contact.server.role,create_date:0
+msgid "Created on"
+msgstr "Luontiaika"
+
+#. module: res_partner_roles
+#: constraint:res.partner.company.role:0 constraint:res.partner.contact.role:0
+#: constraint:res.partner.contact.server.role:0
+msgid "Error ! You can not create recursive categories."
+msgstr "Virhe ! Et voi tehdä rekursiivisia kategorioita."
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,complete_name:0
+#: field:res.partner.contact.role,complete_name:0
+#: field:res.partner.contact.server.role,complete_name:0
+msgid "Full Name"
+msgstr "Koko nimi"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,id:0 field:res.partner.contact.role,id:0
+#: field:res.partner.contact.server.role,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,write_uid:0
+#: field:res.partner.contact.role,write_uid:0
+#: field:res.partner.contact.server.role,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,write_date:0
+#: field:res.partner.contact.role,write_date:0
+#: field:res.partner.contact.server.role,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,parent_left:0
+#: field:res.partner.contact.role,parent_left:0
+#: field:res.partner.contact.server.role,parent_left:0
+msgid "Left parent"
+msgstr "Vasen ylätaso"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,parent_id:0
+#: field:res.partner.contact.role,parent_id:0
+#: field:res.partner.contact.server.role,parent_id:0
+msgid "Parent Role"
+msgstr "Ylätason rooli"
+
+#. module: res_partner_roles
+#: model:ir.model,name:res_partner_roles.model_res_partner
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,partner_ids:0
+#: field:res.partner.contact.role,partner_ids:0
+#: field:res.partner.contact.server.role,partner_ids:0
+msgid "Partners"
+msgstr "Kumppanit"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,parent_right:0
+#: field:res.partner.contact.role,parent_right:0
+#: field:res.partner.contact.server.role,parent_right:0
+msgid "Right parent"
+msgstr "Oikea ylätaso"
+
+#. module: res_partner_roles
+#: field:res.partner.company.role,name:0 field:res.partner.contact.role,name:0
+#: field:res.partner.contact.server.role,name:0
+msgid "Role Name"
+msgstr "Roolin nimi"
+
+#. module: res_partner_roles
+#: model:ir.ui.menu,name:res_partner_roles.menu_role_config
+msgid "Role config"
+msgstr "Roolien asetukset"
+
+#. module: res_partner_roles
+#: field:res.partner,partner_roles:0
+msgid "Roles"
+msgstr "Roolit"
+
+#. module: res_partner_roles
+#: help:res.partner.company.role,active:0
+#: help:res.partner.contact.role,active:0
+#: help:res.partner.contact.server.role,active:0
+msgid "The active field allows you to hide the category without removing it."
+msgstr ""
+"Kenttä 'aktiivinen' mahdollistaa kategorian piilottamisen poistamatta sitä."

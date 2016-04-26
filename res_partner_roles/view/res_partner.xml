@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+   
+        <menuitem name='Role config' id="menu_role_config" parent="base.menu_base_config" groups="base.group_erp_manager" sequence="40"/>
+   
+        <record id="view_tree_partner" model="ir.ui.view">
+            <field name="name">res.partner.tree.inherit</field>
+            <field name="model">res.partner</field>
+            <field eval="1" name="priority"/>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+            
+                <field name="email" position="after">
+                    <field name="partner_roles"/>
+                </field>
+                            
+            </field>
+        </record>
+   
+        <record model="ir.ui.view" id="res_partner_partner_role">
+            <field name="name">res.partner.form.partner.role</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <field name="category_id" position="after">
+                    <field name="company_roles" attrs="{'invisible':['|', ('is_company','=',False), ('type', '=', 'einvoice') ]}" widget='many2many_tags' placeholder='Company roles'/>
+                </field>
+
+                <field name="company_roles" position="after">
+                    <field name="contact_roles" attrs="{'invisible':[('is_company','=',True)]}" widget='many2many_tags' placeholder='Contact roles'/>
+                </field>
+                
+                <field name="contact_roles" position="after">
+                    <field name="contact_server_roles" attrs="{'invisible':[('is_company','=',True)]}" widget='many2many_tags' placeholder='Contact server roles'/>
+                </field>
+                
+                <field name="category_id" position="replace" />
+
+            </field>
+        </record>
+        
+       <!--  Company roles -->
+       <record id="view_partner_company_role_form" model="ir.ui.view">
+            <field name="name">Company Roles</field>
+            <field name="model">res.partner.company.role</field>
+            <field name="arch" type="xml">
+                <form string="Company Roles" version="7.0">
+                    <group col="4">
+                        <field name="name"/>
+                        <field name="company_id"/>
+                        <field name="parent_id"/>
+                        <field name="active"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="view_partner_company_role_list" model="ir.ui.view">
+            <field name="name">Company Roles</field>
+            <field name="model">res.partner.company.role</field>
+            <field eval="6" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Company Roles">
+                    <field name="complete_name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_partner_company_role_tree" model="ir.ui.view">
+            <field name="name">res.partner.company.role.tree</field>
+            <field name="model">res.partner.company.role</field>
+            <field name="field_parent">child_ids</field>
+            <field name="arch" type="xml">
+                <tree toolbar="1" string="Company Roles">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_partner_company_role_form" model="ir.actions.act_window">
+            <field name="name">Company roles</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner.company.role</field>
+            <field name="view_type">form</field>
+            <field name="help">Click to create a new company role.</field>
+        </record>
+
+        <menuitem action="action_partner_company_role_form" id="menu_company_role" parent="menu_role_config" sequence="1"/>
+        
+       <!--  Contact roles -->
+       <record id="view_partner_contact_role_form" model="ir.ui.view">
+            <field name="name">Contact Roles</field>
+            <field name="model">res.partner.contact.role</field>
+            <field name="arch" type="xml">
+                <form string="Contact Roles" version="7.0">
+                    <group col="4">
+                        <field name="name"/>
+                        <field name="company_id"/>
+                        <field name="parent_id"/>
+                        <field name="active"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="view_partner_contact_role_list" model="ir.ui.view">
+            <field name="name">Contact Roles</field>
+            <field name="model">res.partner.contact.role</field>
+            <field eval="6" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Contact Roles">
+                    <field name="complete_name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_partner_contact_role_tree" model="ir.ui.view">
+            <field name="name">res.partner.contact.role.tree</field>
+            <field name="model">res.partner.contact.role</field>
+            <field name="field_parent">child_ids</field>
+            <field name="arch" type="xml">
+                <tree toolbar="1" string="Contact Roles">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_partner_contact_role_form" model="ir.actions.act_window">
+            <field name="name">Contact roles</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner.contact.role</field>
+            <field name="view_type">form</field>
+            <field name="help">Click to create a new contact role.</field>
+        </record>
+
+        <menuitem action="action_partner_contact_role_form" id="menu_contact_role" parent="menu_role_config" sequence="2"/>
+        
+      <!--  Contact server roles -->
+       <record id="view_partner_contact_server_role_form" model="ir.ui.view">
+            <field name="name">Contact server roles</field>
+            <field name="model">res.partner.contact.server.role</field>
+            <field name="arch" type="xml">
+                <form string="Contact server roles" version="7.0">
+                    <group col="4">
+                        <field name="name"/>
+                        <field name="company_id"/>
+                        <field name="parent_id"/>
+                        <field name="active"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+        <record id="view_partner_contact_server_role_list" model="ir.ui.view">
+            <field name="name">Contact server roles</field>
+            <field name="model">res.partner.contact.server.role</field>
+            <field eval="6" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Contact server roles">
+                    <field name="complete_name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="view_partner_contact_server_role_tree" model="ir.ui.view">
+            <field name="name">res.partner.contact.server.role.tree</field>
+            <field name="model">res.partner.contact.server.role</field>
+            <field name="field_parent">child_ids</field>
+            <field name="arch" type="xml">
+                <tree toolbar="1" string="Contact server roles">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_partner_contact_server_role_form" model="ir.actions.act_window">
+            <field name="name">Contact server roles</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.partner.contact.server.role</field>
+            <field name="view_type">form</field>
+            <field name="help">Click to create a new contact server role.</field>
+        </record>
+
+        <menuitem action="action_partner_contact_server_role_form" id="menu_contact_server_role" parent="menu_role_config" sequence="3"/>
+
+    </data>
+</openerp>
+
