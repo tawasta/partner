@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-22 13:56+0000\n"
-"PO-Revision-Date: 2015-12-22 15:58+0200\n"
+"POT-Creation-Date: 2016-05-06 06:47+0000\n"
+"PO-Revision-Date: 2016-05-06 09:48+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"Language: fi_FI\n"
-"X-Generator: Poedit 1.7.5\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #. module: res_partner_business_segment
 #: field:business_segment.category,Business_segment:0
@@ -30,8 +30,8 @@ msgid "Business Segments"
 msgstr "Yrityssegmentit"
 
 #. module: res_partner_business_segment
-#: field:business_size.category,Business_size:0
-#: field:business_size.size,name:0 field:res.partner,business_size:0
+#: field:business_size.category,Business_size:0 field:business_size.size,name:0
+#: field:res.partner,business_size:0
 msgid "Business Size"
 msgstr "Yrityksen koko"
 
@@ -57,10 +57,26 @@ msgid "Created on"
 msgstr "Luotu"
 
 #. module: res_partner_business_segment
+#: field:business_segment.category,display_name:0
+#: field:business_segment.segment,display_name:0
+#: field:business_size.category,display_name:0
+#: field:business_size.size,display_name:0
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: res_partner_business_segment
 #: field:business_segment.category,id:0 field:business_segment.segment,id:0
 #: field:business_size.category,id:0 field:business_size.size,id:0
 msgid "ID"
 msgstr "Tunniste"
+
+#. module: res_partner_business_segment
+#: field:business_segment.category,__last_update:0
+#: field:business_segment.segment,__last_update:0
+#: field:business_size.category,__last_update:0
+#: field:business_size.size,__last_update:0
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
 
 #. module: res_partner_business_segment
 #: field:business_segment.category,write_uid:0
