@@ -35,7 +35,7 @@
             <field name="arch" type="xml">
             
             	<filter string="Companies" position="after">
-           			<field name="note_ids" string="Internal notes" filter_domain="['|', ('note_ids.name','ilike',self), ('note_ids.note', 'ilike', self)]"/>
+           			<field name="note_ids" string="Internal notes" filter_domain="['|', ('note_ids.name','ilike',self), ('note_ids.note', 'ilike', self)]" />
            		</filter>
             	
             </field>
