@@ -6,6 +6,7 @@
 
 # 3. Odoo imports (openerp):
 from openerp import api, fields, models
+from openerp import _
 
 # 4. Imports from Odoo modules:
 
@@ -30,7 +31,23 @@ class ResPartner(models.Model):
     # 6. CRUD methods
     @api.multi
     def write(self, values):
-        print values
+        user = self.user_id.browse([self._uid]).partner_id
+
+        for field in values:
+
+            if isinstance(values[field], str):
+                field_name = self.fields_get()[field]['string']
+
+                msg = "<p>"
+                msg += "<b>%s</b> " % user.name
+                msg += _("changed value for")
+                msg += " <b>%s</b>:<br/>" % field_name
+                msg += _("from")
+                msg += " <b>%s</b><br/>" % getattr(self, field)
+                msg += _("to")
+                msg += " <b>%s</b> " % values[field]
+
+                self.message_post(msg)
 
         result = super(ResPartner, self).write(values)
 
