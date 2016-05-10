@@ -28,6 +28,13 @@ class ResPartner(models.Model):
     # 5. Constraints and onchanges
 
     # 6. CRUD methods
+    @api.multi
+    def write(self, values):
+        print values
+
+        result = super(ResPartner, self).write(values)
+
+        return result
 
     # 7. Action methods
 

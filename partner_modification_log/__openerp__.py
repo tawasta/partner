@@ -35,7 +35,7 @@
     },
     'depends': [
         'crm',
-        'mail_thread',
+        'mail',
     ],
     'data': [
     ],
