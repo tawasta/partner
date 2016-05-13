@@ -35,6 +35,9 @@ class ResPartner(models.Model):
 
         for field in values:
 
+            print field
+            print values[field]
+
             if isinstance(values[field], str):
                 field_name = self.fields_get()[field]['string']
 
