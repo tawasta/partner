@@ -34,10 +34,12 @@ class ResPartner(models.Model):
         user = self.user_id.browse([self._uid]).partner_id
 
         for field in values:
-            field_name = self.fields_get()[field]['string']
+            this_field = self.fields_get()[field]
+            field_name = this_field['string']
+            field_type = this_field['type']
+
             old_value = getattr(self, field)
             new_value = values[field]
-            empty_msg = _("(empty)")
 
             from_value = ''
             to_value = ''
@@ -48,17 +50,24 @@ class ResPartner(models.Model):
                 new_list = old_value.browse(new_value[0][-1])
                 to_value = ', '.join([row.display_name for row in new_list])
 
-            # Booleans
-            elif isinstance(new_value, bool):
+            elif field_type == 'boolean':
+                # Booleans
                 booleans = {False: _('No'), True: _('Yes')}
                 from_value = booleans[old_value]
                 to_value = booleans[new_value]
 
-            elif isinstance(new_value, str) or isinstance(field_name, str) or field_name.isnumeric:
+            elif field_type in ('char', 'text', 'html', 'integer', 'float'):
                 # String-like fields
+                empty_msg = _("(empty)")
+
                 from_value = getattr(self, field) or empty_msg
                 to_value = new_value or empty_msg
 
+            elif field_type == 'selection':
+                #from_value = dict(self._columns['sec_catoegory'].selection).get(categ)
+                print dict(this_field['selection'])
+                from_value = dict(this_field['selection'])[old_value]
+                to_value = dict(this_field['selection'])[new_value]
 
             msg = '<p>'
             msg += '<b>%s</b> ' % user.name
