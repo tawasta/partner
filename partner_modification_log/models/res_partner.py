@@ -35,19 +35,19 @@ class ResPartner(models.Model):
 
         for field in values:
 
-            print field
-            print values[field]
 
             if isinstance(values[field], str):
                 field_name = self.fields_get()[field]['string']
+                empty_msg = _("(empty)")
+
+                # Don't print "False"
+                from_value = getattr(self, field) or empty_msg
 
                 msg = '<p>'
                 msg += '<b>%s</b> ' % user.name
                 msg += _('changed value for')
                 msg += ' <b>%s</b>:<br/>' % field_name
-                msg += _('from')
-                msg += ' <b>%s</b><br/>' % getattr(self, field) or ''
-                msg += _('to')
+                msg += ' <b>%s</b> &#8594; ' % from_value
                 msg += ' <b>%s</b> ' % values[field]
 
                 self.message_post(msg)
