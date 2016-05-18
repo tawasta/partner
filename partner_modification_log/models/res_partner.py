@@ -48,10 +48,17 @@ class ResPartner(models.Model):
                 new_list = old_value.browse(new_value[0][-1])
                 to_value = ', '.join([row.display_name for row in new_list])
 
-            # String-like fields
-            elif isinstance(values[field], str) or isinstance(field_name, str) or field_name.isnumeric:
+            # Booleans
+            elif isinstance(new_value, bool):
+                booleans = {False: _('No'), True: _('Yes')}
+                from_value = booleans[old_value]
+                to_value = booleans[new_value]
+
+            elif isinstance(new_value, str) or isinstance(field_name, str) or field_name.isnumeric:
+                # String-like fields
                 from_value = getattr(self, field) or empty_msg
-                to_value = values[field] or empty_msg
+                to_value = new_value or empty_msg
+
 
             msg = '<p>'
             msg += '<b>%s</b> ' % user.name
