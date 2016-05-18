@@ -34,23 +34,33 @@ class ResPartner(models.Model):
         user = self.user_id.browse([self._uid]).partner_id
 
         for field in values:
+            field_name = self.fields_get()[field]['string']
+            old_value = getattr(self, field)
+            new_value = values[field]
+            empty_msg = _("(empty)")
 
+            from_value = ''
+            to_value = ''
 
-            if isinstance(values[field], str):
-                field_name = self.fields_get()[field]['string']
-                empty_msg = _("(empty)")
+            if isinstance(new_value, dict) or isinstance(new_value, list):
+                # Dicts and lists
+                from_value = ', '.join([row.display_name for row in old_value])
+                new_list = old_value.browse(new_value[0][-1])
+                to_value = ', '.join([row.display_name for row in new_list])
 
-                # Don't print "False"
+            # String-like fields
+            elif isinstance(values[field], str) or isinstance(field_name, str) or field_name.isnumeric:
                 from_value = getattr(self, field) or empty_msg
+                to_value = values[field] or empty_msg
 
-                msg = '<p>'
-                msg += '<b>%s</b> ' % user.name
-                msg += _('changed value for')
-                msg += ' <b>%s</b>:<br/>' % field_name
-                msg += ' <b>%s</b> &#8594; ' % from_value
-                msg += ' <b>%s</b> ' % values[field]
+            msg = '<p>'
+            msg += '<b>%s</b> ' % user.name
+            msg += _('changed value for')
+            msg += ' <b>%s</b>:<br/>' % field_name
+            msg += ' <b style="color: #aaa;">%s</b>&#8594;<br/>' % from_value
+            msg += ' <b>%s</b> ' % to_value
 
-                self.message_post(msg)
+            self.message_post(msg)
 
         result = super(ResPartner, self).write(values)
 
