@@ -58,16 +58,22 @@ class ResPartner(models.Model):
 
             elif field_type in ('char', 'text', 'html', 'integer', 'float'):
                 # String-like fields
-                empty_msg = _("(empty)")
-
-                from_value = getattr(self, field) or empty_msg
-                to_value = new_value or empty_msg
+                from_value = getattr(self, field)
+                to_value = new_value
 
             elif field_type == 'selection':
-                #from_value = dict(self._columns['sec_catoegory'].selection).get(categ)
-                print dict(this_field['selection'])
+                # Selection fields
                 from_value = dict(this_field['selection'])[old_value]
                 to_value = dict(this_field['selection'])[new_value]
+
+            elif field_type == 'many2one':
+                from_value = old_value.display_name
+                to_value = old_value.browse([new_value]).display_name
+
+            # Prevent Odoo from printing "False"
+            empty_msg = _("(empty)")
+            from_value = from_value or empty_msg
+            to_value = to_value or empty_msg
 
             msg = '<p>'
             msg += '<b>%s</b> ' % user.name
