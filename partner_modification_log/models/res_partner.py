@@ -44,7 +44,7 @@ class ResPartner(models.Model):
             from_value = ''
             to_value = ''
 
-            if isinstance(new_value, dict) or isinstance(new_value, list):
+            if field_type == 'many2many':
                 # Dicts and lists
                 from_value = ', '.join([row.display_name for row in old_value])
                 new_list = old_value.browse(new_value[0][-1])
@@ -67,8 +67,14 @@ class ResPartner(models.Model):
                 to_value = dict(this_field['selection'])[new_value]
 
             elif field_type == 'many2one':
+                # Many2one
                 from_value = old_value.display_name
                 to_value = old_value.browse([new_value]).display_name
+
+            elif field_type == 'one2many':
+                # One2many
+                from_value = ', '.join([row.display_name for row in old_value])
+                to_value = _('(See "%s")') % field_name
 
             # Prevent Odoo from printing "False"
             empty_msg = _("(empty)")
