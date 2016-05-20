@@ -88,7 +88,7 @@ class ResPartner(models.Model):
             msg += ' <b style="color: #aaa;">%s</b>&#8594;<br/>' % from_value
             msg += ' <b>%s</b> ' % to_value
 
-            self.message_post(msg)
+            self.message_post(body=msg)
 
         result = super(ResPartner, self).write(values)
 
