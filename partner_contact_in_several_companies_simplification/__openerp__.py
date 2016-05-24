@@ -22,7 +22,7 @@
 {
     'name': 'Contacts in several partners simplification',
     'summary': 'Simplifies contacts in several partners simplification views',
-    'version': '8.0.0.1.0',
+    'version': '8.0.0.2.0',
     'category': 'CRM',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -34,9 +34,10 @@
         'bin': [],
     },
     'depends': [
-        ' partner_contact_in_several_companies ',
+        'partner_contact_in_several_companies',
     ],
     'data': [
+        'views/res_partner.xml',
     ],
     'demo': [
     ],

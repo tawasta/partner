@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record id="view_partner_form_inherit" model="ir.ui.view">
+			<field name="name">view_partner_form_inherit_simplified</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="partner_contact_in_several_companies.view_partner_form_inherit" />
+			<field name="arch" type="xml">
+
+                    <field name="other_contact_ids" position="replace">
+                        <field name="other_contact_ids"
+                               context="{
+                               'default_contact_id': active_id,
+                               'default_name': name,
+                               'default_street': street,
+                               'default_street2': street2,
+                               'default_city': city,
+                               'default_state_id': state_id,
+                               'default_zip': zip,
+                               'default_country_id': country_id,
+                               'default_supplier': supplier,
+                               'default_use_parent_address': True
+                               }" mode="tree">
+
+                            <tree string="Positions">
+                                <field name='parent_id' />
+                                <field name='function' />
+                                <field name='phone' />
+                                <field name='email' />
+                                <field name='category_id' />
+                            </tree>
+
+                            <form string="Contact" version="7.0">
+                                <sheet>
+                                    <field name="image" widget='image' class="oe_avatar oe_left" options='{"preview_image": "image_medium"}'/>
+                                    <div class="oe_title">
+                                        <label for="name" class="oe_edit_only"/>
+                                        <h1><field name="name" style="width: 70%%"/></h1>
+                                    </div>
+                                    <group>
+                                        <!-- inherited part -->
+                                        <field name="category_id" widget="many2many_tags" placeholder="Tags..." style="width: 70%%"/>
+                                        <field name="parent_id" placeholder="Company" domain="[('is_company','=',True)]"/>
+                                        <!-- inherited part end -->
+                                        <field name="function" placeholder="e.g. Sales Director"/>
+                                        <field name="email"/>
+                                        <field name="phone"/>
+                                        <field name="mobile"/>
+                                    </group>
+                                    <div>
+                                        <field name="use_parent_address"/><label for="use_parent_address"/>
+                                    </div>
+                                    <group>
+                                        <field name="type" invisible="1"/>
+                                        <label for="street" string="Address" attrs="{'invisible': [('use_parent_address','=', True)]}"/>
+                                        <div attrs="{'invisible': [('use_parent_address','=', True)]}" name="div_address">
+                                            <field name="street" placeholder="Street..."/>
+                                            <field name="street2"/>
+                                            <div class="address_format">
+                                                <field name="zip" placeholder="ZIP" style="width: 20%%"/>
+                                                <field name="city" placeholder="City" style="width: 40%%"/>
+                                                <field name="country_id" placeholder="Country" class="oe_no_button" options='{"no_open": True}' style="width: 40%%"/>
+                                            </div>
+                                        </div>
+                                    </group>
+                                    <field name="supplier" invisible="True"/>
+                                </sheet>
+                            </form>
+                        </field>
+                    </field>
+
+			</field>
+		</record> 
+
+	</data>
+</openerp>
