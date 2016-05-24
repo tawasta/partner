@@ -8,6 +8,7 @@ Available addons
 **Addon** | **Summary**
 --- | ---
 [partner_contact_guardians](partner_contact_guardians/) | Allows partner to have guardians
+[partner_contact_in_several_companies_simplification](partner_contact_in_several_companies_simplification/) | Simplifies contacts in several partners simplification views
 [partner_modification_log](partner_modification_log/) | Logs all changes to a partner to messages
 [res_partner_business_segment](res_partner_business_segment/) | Business Segment for Partners
 [res_partner_internal_notes_extension](res_partner_internal_notes_extension/) | Partner Internal Note Extension
