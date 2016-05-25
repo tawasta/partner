@@ -6,7 +6,10 @@
 Partner info modification log
 =============================
 
-Logs all changes to a partner to messages
+Logs all changes to a partner to messages.
+
+NOTE: This will slow down the partner writes significantly,
+as each field write will be logged.
 
 Installation
 ============
