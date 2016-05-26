@@ -28,9 +28,23 @@ class ResPartner(models.Model):
     # 5. Constraints and onchanges
     @api.onchange('name')
     def onchange_name(self):
-        self.other_contact_ids.write({'name': self.name})
+        if self.contact_id:
+            # Update the main contact (if modifying child)
+            self.contact_id.name = self.name
+
+        if self.other_contact_ids:
+            # Update child contact (if modifying parent)
+            self.other_contact_ids.write({'name': self.name})
 
     # 6. CRUD methods
+    @api.multi
+    def write(self, values):
+        for record in self:
+            # Update parents children contact names
+            if record.other_contact_ids and 'name' in values:
+                record.other_contact_ids.write({'name': values['name']})
+
+        return super(ResPartner, self).write(values)
 
     # 7. Action methods
 

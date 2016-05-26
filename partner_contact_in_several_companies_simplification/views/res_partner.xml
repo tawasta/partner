@@ -24,6 +24,7 @@
                                }" mode="tree">
 
                             <tree string="Positions">
+                                <field name='name' />
                                 <field name='parent_id' />
                                 <field name='function' />
                                 <field name='phone' />
