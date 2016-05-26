@@ -7,16 +7,26 @@
 			<field name="model">res.partner</field>
 			<field name="inherit_id" ref="base.view_partner_tree" />
 			<field name="arch" type="xml">
-                <field name="parent_id" position="after">
-                    <field name="other_contact_roles" />
+                <field name="email" position="after">
+                    <field name="other_contact_role" />
                 </field>
 
+                <!-- Replace function with other functions -->
                 <field name="function" position="attributes">
                     <attribute name="invisible">1</attribute>
                 </field>
 
                 <field name="function" position="after">
-                    <field name="other_contact_functions" />
+                    <field name="other_contact_function" />
+                </field>
+
+                <!-- Replace phone with other phone -->
+                <field name="phone" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+
+                <field name="phone" position="after">
+                    <field name="other_contact_phone" />
                 </field>
             </field>
         </record>

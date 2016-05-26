@@ -20,14 +20,15 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     # 2. Fields declaration
-    other_contact_roles = fields.Char('Positions', compute='_compute_other_contact_roles')
-    other_contact_functions = fields.Char('Functions', compute='_compute_other_contact_functions')
+    other_contact_role = fields.Char('Positions', compute='_compute_other_contact_role')
+    other_contact_function = fields.Char('Function', compute='_compute_other_contact_function')
+    other_contact_phone = fields.Char('Phone', compute='_compute_other_contact_phone')
 
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
     @api.multi
-    def _compute_other_contact_roles(self):
+    def _compute_other_contact_role(self):
         for record in self:
             result = ''
 
@@ -38,7 +39,7 @@ class ResPartner(models.Model):
                 result += "%s" % contact_name
 
                 if len(contact.category_id) != 0 and contact.parent_id:
-                    result += ": "
+                    result += " - "
 
                 first = True
                 for category in contact.category_id:
@@ -50,10 +51,10 @@ class ResPartner(models.Model):
                     result += ', %s' % category.name
 
                 result += "\n"
-            record.other_contact_roles = result
+            record.other_contact_role = result
 
     @api.multi
-    def _compute_other_contact_functions(self):
+    def _compute_other_contact_function(self):
         for record in self:
             result = ''
 
@@ -64,9 +65,25 @@ class ResPartner(models.Model):
                     continue
 
                 contact_name = contact.parent_id.name or contact.name
-                result += "%s: %s\n" % (contact_name, contact.function)
+                result += "%s - %s\n" % (contact_name, contact.function)
 
-            record.other_contact_functions = result
+            record.other_contact_function = result
+
+    @api.multi
+    def _compute_other_contact_phone(self):
+        for record in self:
+            result = ''
+
+            contacts = record + record.other_contact_ids
+
+            for contact in contacts:
+                if not contact.function:
+                    continue
+
+                contact_name = contact.parent_id.name or contact.name
+                result += "%s - %s\n" % (contact_name, contact.function)
+
+            record.other_contact_phone = result
 
     # 5. Constraints and onchanges
     @api.onchange('name')
