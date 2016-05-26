@@ -23,6 +23,7 @@ class ResPartner(models.Model):
     other_contact_role = fields.Char('Positions', compute='_compute_other_contact_role')
     other_contact_function = fields.Char('Function', compute='_compute_other_contact_function')
     other_contact_phone = fields.Char('Phone', compute='_compute_other_contact_phone')
+    other_contact_email = fields.Char('Email', compute='_compute_other_contact_email')
 
     # 3. Default methods
 
@@ -56,34 +57,31 @@ class ResPartner(models.Model):
     @api.multi
     def _compute_other_contact_function(self):
         for record in self:
-            result = ''
-
-            contacts = record + record.other_contact_ids
-
-            for contact in contacts:
-                if not contact.function:
-                    continue
-
-                contact_name = contact.parent_id.name or contact.name
-                result += "%s - %s\n" % (contact_name, contact.function)
-
-            record.other_contact_function = result
+            record.other_contact_function = record._compute_other_contact_field('function')
 
     @api.multi
     def _compute_other_contact_phone(self):
         for record in self:
-            result = ''
+            record.other_contact_phone = record._compute_other_contact_field('phone')
 
-            contacts = record + record.other_contact_ids
+    @api.multi
+    def _compute_other_contact_email(self):
+        for record in self:
+            record.other_contact_email = record._compute_other_contact_field('email')
 
-            for contact in contacts:
-                if not contact.function:
-                    continue
+    def _compute_other_contact_field(self, field):
+        result = ''
 
-                contact_name = contact.parent_id.name or contact.name
-                result += "%s - %s\n" % (contact_name, contact.function)
+        contacts = self + self.other_contact_ids
 
-            record.other_contact_phone = result
+        for contact in contacts:
+            if not getattr(contact, field):
+                continue
+
+            contact_name = contact.parent_id.name or contact.name
+            result += "%s - %s\n" % (contact_name, getattr(contact, field))
+
+        return result
 
     # 5. Constraints and onchanges
     @api.onchange('name')

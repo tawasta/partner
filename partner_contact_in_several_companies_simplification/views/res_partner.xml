@@ -28,6 +28,15 @@
                 <field name="phone" position="after">
                     <field name="other_contact_phone" />
                 </field>
+
+                <!-- Replace email with other email -->
+                <field name="email" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+
+                <field name="email" position="after">
+                    <field name="other_contact_email" />
+                </field>
             </field>
         </record>
 
