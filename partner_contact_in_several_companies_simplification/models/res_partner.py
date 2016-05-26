@@ -21,6 +21,7 @@ class ResPartner(models.Model):
 
     # 2. Fields declaration
     other_contact_roles = fields.Char('Positions', compute='_compute_other_contact_roles')
+    other_contact_functions = fields.Char('Functions', compute='_compute_other_contact_functions')
 
     # 3. Default methods
 
@@ -28,31 +29,44 @@ class ResPartner(models.Model):
     @api.multi
     def _compute_other_contact_roles(self):
         for record in self:
-            other_roles = ''
+            result = ''
 
             contacts = record + record.other_contact_ids
 
             for contact in contacts:
                 contact_name = contact.parent_id.name or ''
-                other_roles += "%s" % contact_name
-
-                if contact.function:
-                    other_roles += " - %s " % contact.function
+                result += "%s" % contact_name
 
                 if len(contact.category_id) != 0 and contact.parent_id:
-                    other_roles += ": "
+                    result += ": "
 
                 first = True
                 for category in contact.category_id:
                     if first:
-                        other_roles += '%s' % category.name
+                        result += '%s' % category.name
                         first = False
                         continue
 
-                    other_roles += ', %s' % category.name
+                    result += ', %s' % category.name
 
-                other_roles += "\n\n"
-            record.other_contact_roles = other_roles
+                result += "\n"
+            record.other_contact_roles = result
+
+    @api.multi
+    def _compute_other_contact_functions(self):
+        for record in self:
+            result = ''
+
+            contacts = record + record.other_contact_ids
+
+            for contact in contacts:
+                if not contact.function:
+                    continue
+
+                contact_name = contact.parent_id.name or contact.name
+                result += "%s: %s\n" % (contact_name, contact.function)
+
+            record.other_contact_functions = result
 
     # 5. Constraints and onchanges
     @api.onchange('name')
