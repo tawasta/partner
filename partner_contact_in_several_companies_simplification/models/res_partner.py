@@ -30,17 +30,26 @@ class ResPartner(models.Model):
         for record in self:
             other_roles = ''
 
-            for contact in record.other_contact_ids:
-                other_roles += "%s" % contact.parent_id.name
+            contacts = record + record.other_contact_ids
+
+            for contact in contacts:
+                contact_name = contact.parent_id.name or ''
+                other_roles += "%s" % contact_name
 
                 if contact.function:
                     other_roles += " - %s " % contact.function
 
-                if len(contact.category_id) <> 0:
+                if len(contact.category_id) != 0 and contact.parent_id:
                     other_roles += ": "
 
+                first = True
                 for category in contact.category_id:
-                    other_roles += '%s ' % category.name
+                    if first:
+                        other_roles += '%s' % category.name
+                        first = False
+                        continue
+
+                    other_roles += ', %s' % category.name
 
                 other_roles += "\n\n"
             record.other_contact_roles = other_roles
