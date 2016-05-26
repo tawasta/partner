@@ -2,7 +2,19 @@
 <openerp>
 	<data>
 
-		<record id="view_partner_form_inherit" model="ir.ui.view">
+		<record id="view_partner_tree" model="ir.ui.view">
+			<field name="name">view.partner.tree.other.roles</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_tree" />
+			<field name="arch" type="xml">
+                <field name="parent_id" position="after">
+                    <field name="other_contact_roles" />
+                </field>
+            </field>
+        </record>
+
+
+        <record id="view_partner_form_inherit" model="ir.ui.view">
 			<field name="name">view_partner_form_inherit_simplified</field>
 			<field name="model">res.partner</field>
 			<field name="inherit_id" ref="partner_contact_in_several_companies.view_partner_form_inherit" />

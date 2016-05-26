@@ -20,10 +20,30 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     # 2. Fields declaration
+    other_contact_roles = fields.Char('Positions', compute='_compute_other_contact_roles')
 
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
+    @api.multi
+    def _compute_other_contact_roles(self):
+        for record in self:
+            other_roles = ''
+
+            for contact in record.other_contact_ids:
+                other_roles += "%s" % contact.parent_id.name
+
+                if contact.function:
+                    other_roles += " - %s " % contact.function
+
+                if len(contact.category_id) <> 0:
+                    other_roles += ": "
+
+                for category in contact.category_id:
+                    other_roles += '%s ' % category.name
+
+                other_roles += "\n\n"
+            record.other_contact_roles = other_roles
 
     # 5. Constraints and onchanges
     @api.onchange('name')
