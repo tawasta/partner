@@ -64,7 +64,7 @@
 
                             <tree string="Positions">
                                 <field name='name' />
-                                <field name='parent_id' />
+                                <field name='parent_id' domain="{('is_company', '=', True)}"/>
                                 <field name='function' />
                                 <field name='phone' />
                                 <field name='email' />
