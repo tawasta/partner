@@ -30,7 +30,7 @@ class ResPartner(models.Model):
     # 4. Compute and search fields, in the same order that fields declaration
     @api.multi
     def _compute_other_contact_role(self):
-        for record in self:
+        for record in self.sorted(key=lambda r: r.parent_id):
             result = ''
 
             contacts = record + record.other_contact_ids
@@ -43,7 +43,7 @@ class ResPartner(models.Model):
                     result += " - "
 
                 first = True
-                for category in contact.category_id:
+                for category in contact.category_id.sorted(key=lambda r: r.name):
                     if first:
                         result += '%s' % category.name
                         first = False
@@ -56,17 +56,17 @@ class ResPartner(models.Model):
 
     @api.multi
     def _compute_other_contact_function(self):
-        for record in self:
+        for record in self.sorted(key=lambda r: r.parent_id):
             record.other_contact_function = record._compute_other_contact_field('function')
 
     @api.multi
     def _compute_other_contact_phone(self):
-        for record in self:
+        for record in self.sorted(key=lambda r: r.parent_id):
             record.other_contact_phone = record._compute_other_contact_field('phone')
 
     @api.multi
     def _compute_other_contact_email(self):
-        for record in self:
+        for record in self.sorted(key=lambda r: r.parent_id):
             record.other_contact_email = record._compute_other_contact_field('email')
 
     def _compute_other_contact_field(self, field):
