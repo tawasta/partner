@@ -65,8 +65,13 @@ class ResPartner(models.Model):
 
                 elif field_type == 'selection':
                     # Selection fields
-                    from_value = dict(this_field['selection'])[old_value]
-                    to_value = dict(this_field['selection'])[new_value]
+                    from_value = False
+                    to_value = False
+
+                    if old_value:
+                        from_value = dict(this_field['selection'])[old_value]
+                    if new_value:
+                        to_value = dict(this_field['selection'])[new_value]
 
                 elif field_type == 'many2one':
                     # Many2one
