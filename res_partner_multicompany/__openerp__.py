@@ -21,7 +21,7 @@
 {
     'name': 'Partner Multi-company',
     'category': 'CRM',
-    'version': '8.0.1.1.2',
+    'version': '8.0.1.1.3',
     'author': 'Oy Tawasta Technologies Ltd.',
     'website': 'http://www.tawasta.fi',
     'depends': ['crm'],
