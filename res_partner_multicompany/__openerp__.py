@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    Author: Jarmo Kortetjärvi
+#    Author: Oy Tawasta OS Technologies Ltd.
 #    Copyright 2015 Oy Tawasta OS Technologies Ltd.
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -21,9 +21,12 @@
 {
     'name': 'Partner Multi-company',
     'category': 'CRM',
-    'version': '8.0.1.1.1',
+    'version': '8.0.1.1.2',
     'author': 'Oy Tawasta Technologies Ltd.',
     'website': 'http://www.tawasta.fi',
     'depends': ['crm'],
-    'data': ['views/res_partner.xml']
+    'data': [
+        'views/res_partner.xml',
+        'views/res_partner_search.xml',
+    ]
 }
