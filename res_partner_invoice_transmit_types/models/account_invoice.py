@@ -52,6 +52,15 @@ class AccountInvoice(models.Model):
         self.invoice_transmit_type = self.partner_id.invoice_transmit_type
 
     # 6. CRUD methods
+    @api.model
+    def create(self, values):
+        if 'invoice_transmit_type' not in values and 'partner_id' in values:
+            partner = self.env['res.partner'].browse([values['partner_id']])
+            values['invoice_transmit_type'] = partner.invoice_transmit_type
+
+        res = super(AccountInvoice, self).create(values)
+
+        return res
 
     # 7. Action methods
 
