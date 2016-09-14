@@ -22,7 +22,7 @@
 {
     'name': 'Partner invoice transmit types to stock',
     'summary': 'Show invoice transmit type from res_partner_invoice_transmit_types in stock',
-    'version': '8.0.0.1.0',
+    'version': '8.0.0.2.0',
     'category': 'Manufacturing',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -37,38 +37,8 @@
         'res_partner_invoice_transmit_types',
     ],
     'data': [
+        'views/stock_picking_tree.xml',
     ],
     'demo': [
     ],
 }
-
-##############################################################################
-#
-#    AVAILABLE CATEGORIES
-#
-#    Account Charts
-#    Accounting & Finance
-#    Association
-#    Administration
-#    CRM
-#    Events
-#    Extra Rights
-#    Human Resources
-#    Inventory
-#    Invoicing & Payments
-#    Lead Automation
-#    Localization
-#    Manufacturing
-#    Mass Mailing
-#    Other Extra Rights
-#    Point of Sale
-#    Project
-#    Purchases
-#    Sales
-#    Specific Industry Applications
-#    Survey
-#    Technical Settings
-#    Theme
-#    Website
-#
-##############################################################################
