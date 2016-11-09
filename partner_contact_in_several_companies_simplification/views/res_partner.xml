@@ -109,5 +109,18 @@
 			</field>
 		</record> 
 
+        <record id="view_partner_simple_contact_tree" model="ir.ui.view">
+			<field name="name">view_partner_simple_contact_tree_roles</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="crm_address_simplification.view_partner_simple_contact_tree" />
+			<field name="arch" type="xml">
+
+                <field name="parent_id" position="before">
+                    <field name="other_contact_role" />
+                </field>
+
+            </field>
+        </record>
+
 	</data>
 </openerp>

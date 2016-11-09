@@ -51,7 +51,8 @@ class ResPartner(models.Model):
 
                     result += ', %s' % category.name
 
-                result += "\n"
+                if not first:
+                    result += "\n"
             record.other_contact_role = result
 
     @api.multi
