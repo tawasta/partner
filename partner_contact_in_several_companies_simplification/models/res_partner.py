@@ -25,6 +25,8 @@ class ResPartner(models.Model):
     other_contact_phone = fields.Char('Phone', compute='_compute_other_contact_phone')
     other_contact_email = fields.Char('Email', compute='_compute_other_contact_email')
 
+    contact_id_street = fields.Char('Street')
+
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
