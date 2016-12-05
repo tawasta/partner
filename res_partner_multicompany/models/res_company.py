@@ -26,11 +26,16 @@ class ResCompany(models.Model):
     @api.multi
     @api.depends('name', 'parent_id')
     def name_get(self):
+
         # Use display name instead of name
         res = []
 
         for record in self:
-            name = record.display_name
+            if record.display_name:
+                name = record.display_name
+            else:
+                name = record.name
+
             res.append((record.id, name))
 
         return res
@@ -38,14 +43,10 @@ class ResCompany(models.Model):
     @api.model
     def name_search(self, name, args=None, operator='ilike', limit=100):
 
-        args = args or []
-        recs = self.browse()
         if name:
-            recs = self.search(
-                (args + ['|', ('name', operator, name), ('parent_id.name', operator, name)]), limit=limit
-            )
+            args = (args or []) + ['|', ('parent_id.name', operator, name)]
 
-        return recs.name_get()
+        return super(ResCompany, self).name_search()
 
     # 4. Compute and search fields, in the same order that fields declaration
     @api.one
