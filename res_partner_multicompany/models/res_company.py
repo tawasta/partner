@@ -40,6 +40,16 @@ class ResCompany(models.Model):
 
         return res
 
+    @api.model
+    def name_search(self, name, args=None, operator='ilike', limit=100):
+
+        if name:
+            args = (args or []) + ['|', ('name', operator, name), ('parent_id.name', operator, name)]
+
+        res = super(ResCompany, self).name_search(name=name, args=args, operator=operator)
+
+        return res
+
     # 4. Compute and search fields, in the same order that fields declaration
     @api.one
     @api.depends('name', 'parent_id.name')
