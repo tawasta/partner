@@ -1,0 +1,2 @@
+import newsletter_print
+import res_partner

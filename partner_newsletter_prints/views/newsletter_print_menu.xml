@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+        <record id="action_newsletter_prints" model="ir.actions.act_window">
+            <field name="name">Newsletter prints</field>
+            <field name="res_model">newsletter.print</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+            <field name="help">Click to create a new newsletter print row.</field>
+        </record>
+
+        <menuitem  id="menu_newsletter_prints"
+				   parent="base.menu_sales"
+				   action="action_newsletter_prints"
+				   groups="base.group_sale_salesman"
+				   sequence="100"
+		/>
+
+	</data>
+</openerp>

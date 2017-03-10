@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+		<record id="view_newsletter_print_form" model="ir.ui.view">
+			<field name="name">Newsletter prints form</field>
+			<field name="model">newsletter.print</field>
+	        <field name="arch" type="xml">
+	            <form string="Newsletters">
+	                <header>
+	                </header>
+					<sheet string="Form">
+						<group>
+							<field name="partner" />
+							<field name="amount" />
+							<field name="contact" />
+						</group>
+					</sheet>
+				</form>
+
+			</field>
+		</record> 
+
+	</data>
+</openerp>
