@@ -10,7 +10,11 @@
 				<tree string="Newsletter prints" editable="top">
 					<field name="partner" />
 					<field name="amount" />
-					<field name="contact" />
+					<field name="contact_name" />
+					<field name="contact_street" />
+					<field name="contact_zip" />
+					<field name="contact_city" />
+					<field name="contact_country" />
 				</tree>
 
 			</field>
