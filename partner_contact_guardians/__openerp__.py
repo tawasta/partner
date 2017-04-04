@@ -22,7 +22,7 @@
 {
     'name': 'Partner Guardians',
     'summary': 'Allows partner to have guardians',
-    'version': '8.0.0.2.3',
+    'version': '8.0.0.2.4',
     'category': 'CRM',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
