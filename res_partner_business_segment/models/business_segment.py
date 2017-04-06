@@ -24,6 +24,13 @@ class BusinessSegment(models.Model):
     name = fields.Char(string='Business Segment')
     category = fields.Many2one('business_segment.category', string='Segment Category')
 
+    parent = fields.Many2one('business_segment.segment', string='Business segment parent')
+    children = fields.One2many(
+        'business_segment.segment',
+        'parent',
+        string='Business segment parent'
+    )
+
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration

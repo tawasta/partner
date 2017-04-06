@@ -6,7 +6,7 @@
 Business segments for partners
 ==============================
 
-Add two levels of business segments for partners.
+Add multilayer business segments for partners.
 
 Installation
 ============

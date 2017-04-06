@@ -9,8 +9,17 @@
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
             	<field name="title" position="after">
-            		<field name="business_segment" widget="selection" attrs="{'invisible': [('is_company','=',False)]}"/>
-                    <field name="business_size" widget="selection" attrs="{'invisible': [('is_company','=',False)]}"/>
+            		<field name="business_segment"
+                           domain="[('parent', '=', False)]"
+                           widget="selection"
+                           attrs="{'invisible': [('is_company','=',False)]}"
+                    />
+                    <field name="business_segment_subsegment"
+                           domain="[('parent', '=', business_segment)]"
+                           widget="selection"
+                           attrs="{'invisible': [('is_company','=',False)]}"
+                    />
+                    <!--<field name="business_size" widget="selection" attrs="{'invisible': [('is_company','=',False)]}"/>-->
             	</field>
             </field>
         </record>
@@ -24,7 +33,6 @@
                 <search string="Membership Partners">
                     <field name="business_segment" string="Segment" filter_domain="[('business_segment','ilike',self)]" />
                     <field name="business_size" string="Size" filter_domain="[('business_size','ilike',self)]" />
-
                 </search>
             </field>
         </record>
