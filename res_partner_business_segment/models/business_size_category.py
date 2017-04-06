@@ -14,15 +14,14 @@ from openerp import api, fields, models
 # 6. Unknown third party imports:
 
 
-class BusinessSegment(models.Model):
-
+class BusinessSizeCategory(models.Model):
+    
     # 1. Private attributes
-    _name = 'business_segment.segment'
-    _order = 'name'
+    _name = 'business_size.category'
 
     # 2. Fields declaration
-    name = fields.Char(string='Business Segment')
-    category = fields.Many2one('business_segment.category', string='Segment Category')
+    name = fields.Char(string="Business size")
+    business_size = fields.Char(string='Business Size')
 
     # 3. Default methods
 

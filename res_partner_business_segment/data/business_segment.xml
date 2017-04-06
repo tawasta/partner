@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
-    <data>
+    <data noupdate="1">
         <record id="bsegment_cat_segments" model="business_segment.category">
-            <field name="name">Segmentit</field>
+            <field name="name">Segments</field>
         </record>
 
         <record id="bsegment_seg_v" model="business_segment.segment">
