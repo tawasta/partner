@@ -25,6 +25,7 @@
         </record>
 
         <!-- Search field for partners, search suggestions -->
+        <!--
         <record id="view_res_partner_member_filter" model="ir.ui.view">
             <field name="name">res.partner.select</field>
             <field name="model">res.partner</field>
@@ -36,6 +37,7 @@
                 </search>
             </field>
         </record>
+        -->
 
         <!-- Open tree-view -->
         <record id="business_segment_tree_act" model="ir.actions.act_window">
