@@ -11,7 +11,8 @@ Available addons
 [partner_contact_in_several_companies_simplification](partner_contact_in_several_companies_simplification/) | Simplifies contacts in several partners simplification views
 [partner_invoice_transmit_types_stock](partner_invoice_transmit_types_stock/) | Show invoice transmit type from res_partner_invoice_transmit_types in stock
 [partner_modification_log](partner_modification_log/) | Logs all changes to a partner to messages
-[res_partner_business_segment](res_partner_business_segment/) | Business Segment for Partners
+[partner_newsletter_prints](partner_newsletter_prints/) | Manage how many newsletters are sent to each partner company
+[res_partner_business_segment](res_partner_business_segment/) | Add multilayer business segments for partners
 [res_partner_internal_notes_extension](res_partner_internal_notes_extension/) | Partner Internal Note Extension
 [res_partner_invoice_transmit_types](res_partner_invoice_transmit_types/) | Partner Invoice Transmit Types
 [res_partner_multicompany](res_partner_multicompany/) | Partner Multi-company
