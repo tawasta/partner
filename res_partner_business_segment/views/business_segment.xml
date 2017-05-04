@@ -14,6 +14,7 @@
                            attrs="{'invisible': [('is_company','=',False)]}"
                     />
                     <field name="business_segment_subsegment"
+                           domain="['|',('parent', '!=', False), ('parent', '=', business_segment)]"
                            attrs="{'invisible': [('is_company','=',False)]}"
                     />
                     <!--<field name="business_size" widget="selection" attrs="{'invisible': [('is_company','=',False)]}"/>-->
