@@ -37,6 +37,19 @@
         </record>
         -->
 
+	    <!-- Tree View -->
+	    <record model="ir.ui.view" id="business_segments_tree">
+	        <field name="name">Business segments tree view</field>
+	        <field name="model">business_segment.segment</field>
+	        <field name="arch" type="xml">
+	            <tree string="Business segments">
+	                <field name="name" />
+					<field name="category"/>
+					<field name="parent"/>
+	            </tree>
+	        </field>
+	    </record>
+
         <!-- Open tree-view -->
         <record id="business_segment_tree_act" model="ir.actions.act_window">
             <field name="name">Business Segments</field>
