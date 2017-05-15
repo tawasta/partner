@@ -6,7 +6,8 @@
 Partner Guardians
 =================
 
-Allows partner to have guardians
+Allows partner to have other partners guardians.
+The main purpose of this is to keep track of parent/guardian-children relationships.
 
 Installation
 ============
