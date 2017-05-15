@@ -6,7 +6,7 @@
 Partner Reference Right
 =======================
 
-Adds a multi-company compatible reference right field for partners (customers)
+Adds a multi-company compatible reference right field for partners
 
 Installation
 ============

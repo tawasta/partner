@@ -20,8 +20,9 @@
 ##############################################################################
 {
     'name': 'Partner Reference Right',
+    'description': 'Adds a multi-company compatible reference right field for partners',
     'category': 'Sales',
-    'version': '8.0.0.2.9',
+    'version': '8.0.1.0.0',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
@@ -31,7 +32,7 @@
          'data/reference_rights.xml',
          'views/res_partner.xml',
          'views/reference_right.xml',
-         #'security/refright_security.xml',
+         #  'security/refright_security.xml',
          'security/ir.model.access.csv',
      ]
 }
