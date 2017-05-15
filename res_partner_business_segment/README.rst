@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==============================
-Business segments for partners
-==============================
+=========================
+Partner business segments
+=========================
 
 Add multilayer business segments for partners.
 
@@ -19,10 +19,13 @@ Configuration
 
 Usage
 =====
-This module adds two fields to partners form view called Business segment and business size. These fields are dropdowns in which companies can determine their segment and company size, which will be used for search purposes. Business segment has also a menuitem under Configuration menuitem in Sales.
+This module adds two fields to partners form view called Business segment and business size.
+These fields are dropdowns in which companies can determine their segment and company size,
+which will be used for search purposes. Business segment has also a menu item under Configuration menu item in Sales.
+
 Known issues / Roadmap
 ======================
-\-
+- Add a default sub-segementation
 
 Credits
 =======

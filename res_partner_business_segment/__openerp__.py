@@ -22,7 +22,7 @@
 {
     'name': 'Business Segments',
     'summary': 'Add multilayer business segments for partners',
-    'version': '8.0.0.4.2',
+    'version': '8.0.1.0.0',
     'category': 'Account',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -31,8 +31,6 @@
     'installable': True,
     'depends': [
         'crm',
-        # 'product',
-        # 'membership_extension'
     ],
     'data': [
         'data/business_segment.xml',
