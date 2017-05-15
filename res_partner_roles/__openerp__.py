@@ -22,7 +22,7 @@
 {
     'name': 'Partner Roles',
     'summary': 'Adds tag-like roles for partners depending on if they are companies or contacts',
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.0.1',
     'category': 'CRM',
     'website': 'https://github.com/Tawasta/partner',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -37,7 +37,7 @@
         'crm',
     ],
     'data': [
-        'view/res_partner.xml',
+        'views/res_partner.xml',
         'security/ir.model.access.csv',
     ],
     'demo': [
