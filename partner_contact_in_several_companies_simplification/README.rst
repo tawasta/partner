@@ -6,7 +6,8 @@
 Contacts in several partners simplification
 ===========================================
 
-Simplifies contacts in several partners simplification views.
+Simplifies contacts in several partners-model views and adds helper fields.
+Allows seeing other roles from the list view without going deeper into the partner hierarchy.
 
 Installation
 ============
