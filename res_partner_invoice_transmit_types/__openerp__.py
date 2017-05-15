@@ -21,9 +21,10 @@
 
 {
     'name': 'Partner Invoice Transmit Types',
-    'version': '8.0.0.4.7',
+    'description': 'Adds generic invoice transmit types for partner, sale and invoice',
+    'version': '8.0.1.0.0',
     'category': 'Accounting & Finance',
-    'website': 'http://www.tawasta.fi',
+    'website': 'https://github.com/Tawasta/partner',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
