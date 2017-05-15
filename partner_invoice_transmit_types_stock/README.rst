@@ -6,7 +6,7 @@
 Partner invoice transmit types to stock
 =======================================
 
-Show invoice transmit type from res_partner_invoice_transmit_types in stock.
+Show invoice transmit type in stock picking
 
 Installation
 ============

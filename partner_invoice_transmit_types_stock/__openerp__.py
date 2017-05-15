@@ -21,8 +21,8 @@
 
 {
     'name': 'Partner invoice transmit types to stock',
-    'summary': 'Show invoice transmit type from res_partner_invoice_transmit_types in stock',
-    'version': '8.0.0.2.0',
+    'summary': 'Show invoice transmit type in stock picking',
+    'version': '8.0.1.0.0',
     'category': 'Manufacturing',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -35,6 +35,7 @@
     },
     'depends': [
         'res_partner_invoice_transmit_types',
+        'stock',
     ],
     'data': [
         'views/stock_picking_tree.xml',
