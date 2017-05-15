@@ -6,10 +6,7 @@
 Partner info modification log
 =============================
 
-Logs all changes to a partner to messages.
-
-NOTE: This will slow down the partner writes significantly,
-as each field write will be logged.
+Logs all changes to a partner in messages thread.
 
 Installation
 ============
@@ -26,7 +23,8 @@ Usage
 
 Known issues / Roadmap
 ======================
-\-
+- This may slow down the partner writes significantly, as each field write will be logged.
+- Not fully tested. Production usage not recommended
 
 Credits
 =======

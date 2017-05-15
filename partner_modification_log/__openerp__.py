@@ -21,8 +21,8 @@
 
 {
     'name': 'Partner info modification log',
-    'summary': 'Logs all changes to a partner to messages',
-    'version': '8.0.0.7.2',
+    'summary': 'Logs all changes to a partner in messages thread',
+    'version': '8.0.1.0.0',
     'category': 'CRM',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
