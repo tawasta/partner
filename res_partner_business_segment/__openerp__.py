@@ -24,7 +24,7 @@
     'summary': 'Add multilayer business segments for partners',
     'version': '8.0.1.0.0',
     'category': 'Account',
-    'website': 'http://www.tawasta.fi',
+    'website': 'https://github.com/Tawasta/partner',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,

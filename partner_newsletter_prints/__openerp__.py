@@ -24,7 +24,7 @@
     'summary': 'Manage how many newsletters are sent to each partner company',
     'version': '8.0.1.0.0',
     'category': 'CRM',
-    'website': 'http://www.tawasta.fi',
+    'website': 'https://github.com/Tawasta/partner',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
