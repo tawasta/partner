@@ -19,12 +19,18 @@
 #
 ##############################################################################
 {
-    'name': 'Partner Multi-company',
-    'category': 'CRM',
+    'name': 'Partner Multi-company tags',
+    'description': 'Allows tagging a partner to multiple companies ',
     'version': '8.0.1.1.6',
+    'category': 'CRM',
+    'website': 'https://github.com/Tawasta/partner',
     'author': 'Oy Tawasta Technologies Ltd.',
-    'website': 'http://www.tawasta.fi',
-    'depends': ['crm'],
+    'license': 'AGPL-3',
+    'application': False,
+    'installable': True,
+    'depends': [
+        'crm'
+    ],
     'data': [
         'views/res_partner.xml',
         'views/res_partner_search.xml',
