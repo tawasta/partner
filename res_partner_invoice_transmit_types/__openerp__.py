@@ -21,7 +21,7 @@
 
 {
     'name': 'Partner Invoice Transmit Types',
-    'description': 'Adds generic invoice transmit types for partner, sale and invoice',
+    'summary': 'Adds generic invoice transmit types for partner, sale and invoice',
     'version': '8.0.1.0.0',
     'category': 'Accounting & Finance',
     'website': 'https://github.com/Tawasta/partner',

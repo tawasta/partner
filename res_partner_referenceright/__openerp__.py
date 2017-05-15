@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Partner Reference Right',
-    'description': 'Adds a multi-company compatible reference right field for partners',
+    'summary': 'Adds a multi-company compatible reference right field for partners',
     'category': 'Sales',
     'version': '8.0.1.0.0',
     'website': 'http://www.tawasta.fi',
