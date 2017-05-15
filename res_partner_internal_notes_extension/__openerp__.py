@@ -20,9 +20,10 @@
 ##############################################################################
 {
     'name': 'Partner Internal Note Extension',
+    'description': 'Allows using multiple internal notes with note titles and creator and editor information.',
     'category': 'CRM',
-    'version': '8.0.0.3.5',
-    'website': 'http://www.tawasta.fi',
+    'version': '8.0.1.0.0',
+    'website': 'https://github.com/Tawasta/partner',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
