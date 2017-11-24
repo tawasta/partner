@@ -22,7 +22,7 @@
 {
     'name': 'Partner invoice transmit method',
     'summary': 'Adds generic invoice transmit methods for partner, sale and invoice',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.0.1',
     'category': 'Accounting & Finance',
     'website': 'https://github.com/Tawasta/partner',
     'author': 'Oy Tawasta Technologies Ltd.',

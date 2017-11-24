@@ -22,7 +22,8 @@ class SaleOrder(models.Model):
         'Email - No automated sending. The invoice has to be sent manually via email.' + '\n' +
         'eInvoice - Electronic invoice. The recipient must have a valid eInvoice address.' + '\n' +
         'Printed eInvoice - Electronic invoice printed to paper at the post office.' + ' ' +
-        'Can be sent to individuals and companies.',        readonly=True,
+        'Can be sent to individuals and companies.',
+        readonly=True,
         states=_FIELD_STATES,
         default=lambda self: self.env['account.invoice'].get_default_invoice_transmit_method(),
     )

@@ -23,33 +23,33 @@ class AccountInvoice(models.Model):
     # 3. Default methods
     @api.multi
     def get_default_invoice_transmit_method(self):
-        #  TODO: create configureable default transmit type
+        #  TODO: create configurable default transmit method
         return 'email'
 
     # 4. Compute and search fields, in the same order that fields declaration
     def get_invoice_transmit_methods(self):
-        invoice_transmit_types = [
+        invoice_transmit_methods = [
             ('manual', _('Manual print')),
             ('email', _('Email')),
             ('einvoice', _('eInvoice')),
             ('paper', _('Printed eInvoice')),
         ]
 
-        return invoice_transmit_types
+        return invoice_transmit_methods
 
     # 5. Constraints and onchanges
     @api.one
     @api.depends('partner_id')
     @api.onchange('partner_shipping_id')
     def onchange_partner_shipping_id(self):
-        self.invoice_transmit_type = self.partner_id.invoice_transmit_type
+        self.invoice_transmit_method = self.partner_id.invoice_transmit_method
 
     # 6. CRUD methods
     @api.model
     def create(self, values):
-        if 'invoice_transmit_type' not in values and 'partner_id' in values:
+        if 'invoice_transmit_method' not in values and 'partner_id' in values:
             partner = self.env['res.partner'].browse([values['partner_id']])
-            values['invoice_transmit_type'] = partner.invoice_transmit_type
+            values['invoice_transmit_method'] = partner.invoice_transmit_method
 
         res = super(AccountInvoice, self).create(values)
 
