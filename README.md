@@ -7,4 +7,4 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
-[partner_invoice_transmit_method](partner_invoice_transmit_method/) | 10.0.1.0.0 | Adds generic invoice transmit methods for partner, sale and invoice
+[res_partner_recursion](res_partner_recursion/) | 10.0.1.0.0 | Adds a recursive partner search
