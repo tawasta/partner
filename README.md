@@ -13,6 +13,7 @@ Available addons
 [partner_modification_log](partner_modification_log/) | Logs all changes to a partner in messages thread
 [partner_newsletter_prints](partner_newsletter_prints/) | Manage how many newsletters are sent to each partner company
 [res_partner_business_segment](res_partner_business_segment/) | Add multilayer business segments for partners
+[res_partner_database_id](res_partner_database_id/) | Show the partner's Odoo database ID
 [res_partner_internal_notes_extension](res_partner_internal_notes_extension/) | Allows using multiple internal notes with note titles and creator and editor information.
 [res_partner_invoice_transmit_types](res_partner_invoice_transmit_types/) | Adds generic invoice transmit types for partner, sale and invoice
 [res_partner_multicompany](res_partner_multicompany/) | Partner Multi-company tags
