@@ -117,7 +117,7 @@
                    'default_supplier': supplier,
                    'default_customer': customer,
                    'default_lang': lang,
-                   'default_type': 'contact'
+                   'default_type': 'contact',
                    }"
                 />
             </field>
@@ -137,7 +137,8 @@
                            'default_supplier': supplier,
                            'default_customer': customer,
                            'default_lang': lang,
-                           'default_type': 'invoice'
+                           'default_type': 'invoice',
+                           'default_is_company': 'true',
                            }"
                     />
                 </page>
