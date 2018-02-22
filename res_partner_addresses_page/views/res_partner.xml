@@ -75,6 +75,7 @@
 
             <tree delete="false">
                 <field name='name' />
+                <field name='type' />
                 <field name='street' />
                 <field name='zip' />
                 <field name='city' />
