@@ -6,10 +6,9 @@ class ResPartner(models.Model):
 
     _inherit = 'res.partner'
 
-    ''' NOTE: this function might be pretty heavy to
-    run with large customer bases '''
+    # NOTE: this function might be pretty heavy to run with large customer bases
 
-    ''' TODO: optimization '''
+    # TODO: optimization
     def _get_recursive_child_ids(self, record):
         child_ids = []
 
@@ -21,8 +20,9 @@ class ResPartner(models.Model):
 
         return child_ids
 
-    @api.one
     def _get_recursive_parent(self):
+        self.ensure_one()
+
         if self.parent_id:
             res = self.parent_id._get_recursive_parent()[0]
         else:
