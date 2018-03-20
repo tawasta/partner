@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
-from odoo import models, api
+from odoo import models
 
 
 class ResPartner(models.Model):
 
     _inherit = 'res.partner'
 
-    # NOTE: this function might be pretty heavy to run with large customer bases
-
+    # NOTE: this method might be pretty heavy to run with large customer bases
     # TODO: optimization
     def _get_recursive_child_ids(self, record):
         child_ids = []
