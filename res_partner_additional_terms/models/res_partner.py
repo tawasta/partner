@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
-from openerp import models, fields, api, _
+from odoo import models, fields
 
 
 class ResPartner(models.Model):
 
     _inherit = 'res.partner'
 
-    additional_term_id = fields.Many2one('res_partner_additional_terms.term', 'Additional Terms')
+    additional_term_id = fields.Many2one(
+        comodel_name='res_partner_additional_terms.term',
+        string='Additional Terms'
+    )

@@ -37,7 +37,7 @@
         'product',
     ],
     'data': [
-        'security/ir.model.access.csv',        
+        'security/ir.model.access.csv',
         'views/additional_term.xml',
         'views/res_partner.xml',
     ],
