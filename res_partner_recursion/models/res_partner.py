@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models
+from odoo import models, api
 
 
 class ResPartner(models.Model):
@@ -19,6 +19,7 @@ class ResPartner(models.Model):
 
         return child_ids
 
+    @api.one
     def _get_recursive_parent(self):
         self.ensure_one()
 
