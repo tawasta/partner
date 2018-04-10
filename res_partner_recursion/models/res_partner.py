@@ -19,7 +19,7 @@ class ResPartner(models.Model):
 
         return child_ids
 
-    @api.one
+    @api.multi
     def _get_recursive_parent(self):
         self.ensure_one()
 
