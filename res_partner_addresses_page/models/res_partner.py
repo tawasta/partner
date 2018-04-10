@@ -5,7 +5,7 @@
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from odoo import fields, models, api
+from odoo import fields, models
 
 # 4. Imports from Odoo modules:
 
@@ -82,4 +82,3 @@ class ResPartner(models.Model):
             vals['company_type'] = 'person'
 
         return vals
-
