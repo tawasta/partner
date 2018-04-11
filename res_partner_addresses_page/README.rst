@@ -12,6 +12,7 @@ By default "Contacts & Addresses" is one page.
 This module will split them to "Contacts" and "Addresses"
 
 The default view will be tree instead of kanban
+The "main company only"-default filter is removed.
 
 Configuration
 =============
