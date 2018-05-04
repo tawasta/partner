@@ -22,7 +22,7 @@
 {
     'name': 'Split partner addresses to separate pages',
     'summary': 'Split partner (company) addresses to separate pages',
-    'version': '10.0.1.2.0',
+    'version': '10.0.1.3.0',
     'category': 'CRM',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

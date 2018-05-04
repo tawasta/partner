@@ -1,5 +1,5 @@
 .. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+:target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
 =========================================
@@ -13,6 +13,14 @@ This module will split them to "Contacts" and "Addresses"
 
 The default view will be tree instead of kanban
 The "main company only"-default filter is removed.
+
+Simplifies partner type/company_type logic down to four variants (type, company_type):
+
+* Contact (contact, person)
+* Invoice (invoice, person)
+* Delivery (delivery, person)
+* Company (other, company)
+
 
 Configuration
 =============
@@ -38,7 +46,7 @@ Maintainer
 ----------
 
 .. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
-   :alt: Oy Tawasta OS Technologies Ltd.
+:alt: Oy Tawasta OS Technologies Ltd.
    :target: http://tawasta.fi/
 
 This module is maintained by Oy Tawasta OS Technologies Ltd.

@@ -21,7 +21,9 @@ class ResPartner(models.Model):
 
     # 2. Fields declaration
     type = fields.Selection(
-        selection_add=[('contact', 'Contact/Company')],
+        selection_add=[
+            ('other', 'Company'),
+        ],
     )
 
     contact_ids = fields.One2many(
@@ -77,6 +79,9 @@ class ResPartner(models.Model):
             if has_vat:
                 vals['is_company'] = True
                 vals['company_type'] = 'company'
+        elif address_type == 'other':
+            vals['is_company'] = True
+            vals['company_type'] = 'company'
         else:
             vals['is_company'] = False
             vals['company_type'] = 'person'

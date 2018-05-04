@@ -1,41 +1,24 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* res_partner_addresses_page
+#	* res_partner_addresses_page
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-22 04:08+0000\n"
-"PO-Revision-Date: 2018-02-22 06:09+0200\n"
+"POT-Creation-Date: 2018-05-04 08:48+0000\n"
+"PO-Revision-Date: 2018-05-04 08:48+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"Language: fi\n"
-"X-Generator: Poedit 1.8.7.1\n"
-
-#. module: res_partner_addresses_page
-#: model:ir.ui.view,arch_db:res_partner_addresses_page.view_partner_form_child_ids
-msgid "Address"
-msgstr "Osoite"
 
 #. module: res_partner_addresses_page
 #: model:ir.ui.view,arch_db:res_partner_addresses_page.view_partner_form
 msgid "Addresses"
 msgstr "Osoitteet"
-
-#. module: res_partner_addresses_page
-#: model:ir.ui.view,arch_db:res_partner_addresses_page.view_partner_form_child_ids
-msgid "City"
-msgstr "Kaupunki"
-
-#. module: res_partner_addresses_page
-#: model:ir.ui.view,arch_db:res_partner_addresses_page.view_partner_form_child_ids
-msgid "Contact Name"
-msgstr "Yhteystiedon nimi"
 
 #. module: res_partner_addresses_page
 #: model:ir.model.fields,field_description:res_partner_addresses_page.field_res_partner_address_ids
@@ -47,46 +30,12 @@ msgid "Contacts"
 msgstr "Yhteystiedot"
 
 #. module: res_partner_addresses_page
-#: model:ir.ui.view,arch_db:res_partner_addresses_page.view_partner_form_child_ids
-msgid "Country"
-msgstr "Maa"
-
-#. module: res_partner_addresses_page
 #: model:ir.model,name:res_partner_addresses_page.model_res_partner
 msgid "Partner"
 msgstr "Kumppani"
 
 #. module: res_partner_addresses_page
-#: model:ir.ui.view,arch_db:res_partner_addresses_page.view_partner_form_child_ids
-msgid "State"
-msgstr "Osavaltio/Maakunta"
+#: model:ir.model,name:res_partner_addresses_page.model_res_partner
+msgid "Company"
+msgstr "Yritys"
 
-#. module: res_partner_addresses_page
-#: model:ir.ui.view,arch_db:res_partner_addresses_page.view_partner_form_child_ids
-msgid "Street 2..."
-msgstr "Katuosoite 2..."
-
-#. module: res_partner_addresses_page
-#: model:ir.ui.view,arch_db:res_partner_addresses_page.view_partner_form_child_ids
-msgid "Street..."
-msgstr "Katu..."
-
-#. module: res_partner_addresses_page
-#: model:ir.ui.view,arch_db:res_partner_addresses_page.view_partner_form_child_ids
-msgid "ZIP"
-msgstr "Postinumero"
-
-#. module: res_partner_addresses_page
-#: model:ir.ui.view,arch_db:res_partner_addresses_page.view_partner_form_child_ids
-msgid "e.g. Mr."
-msgstr "esim. Mr."
-
-#. module: res_partner_addresses_page
-#: model:ir.ui.view,arch_db:res_partner_addresses_page.view_partner_form_child_ids
-msgid "e.g. Sales Director"
-msgstr "esim. Myyntijohtaja"
-
-#. module: res_partner_addresses_page
-#: model:ir.ui.view,arch_db:res_partner_addresses_page.view_partner_form_child_ids
-msgid "internal note..."
-msgstr "sisäinen kommentti..."

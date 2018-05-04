@@ -46,8 +46,9 @@
 
             <field name="type" position="replace" />
 
+            <!-- This is simplified. We don't need the company type -->
             <field name="company_type" position="attributes">
-                <attribute name="attrs">{'invisible': [('type','!=', 'contact')]}</attribute>
+                <attribute name="invisible">1</attribute>
             </field>
 
             <div name="button_box" position="before" >
