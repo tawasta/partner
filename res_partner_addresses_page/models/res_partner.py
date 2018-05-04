@@ -5,7 +5,7 @@
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from odoo import fields, models
+from odoo import fields, models, api
 
 # 4. Imports from Odoo modules:
 
@@ -54,6 +54,13 @@ class ResPartner(models.Model):
     # 4. Compute and search fields
 
     # 5. Constraints and onchanges
+    @api.onchange('type')
+    def onchange_type_update_company_type(self):
+        for record in self:
+            if record.type != 'contact':
+                record.company_type = 'company'
+            elif record.type == 'contact' and record.parent_id:
+                record.company_type = 'person'
 
     # 6. CRUD methods
     def create(self, vals):
