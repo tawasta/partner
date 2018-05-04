@@ -14,12 +14,13 @@ This module will split them to "Contacts" and "Addresses"
 The default view will be tree instead of kanban
 The "main company only"-default filter is removed.
 
-Simplifies partner type/company_type logic down to four variants (type, company_type):
+Simplifies partner type/company_type logic down to five variants (type, company_type):
 
+* (Parent) Company (contact, company)
 * Contact (contact, person)
 * Invoice (invoice, person)
 * Delivery (delivery, person)
-* Company (other, company)
+* (Child) Company (other, company)
 
 
 Configuration
