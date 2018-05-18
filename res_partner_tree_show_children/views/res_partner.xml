@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- Override partner filters to remove ('parent_id', '=', False) constraint -->
+    <record id="view_res_partner_filter" model="ir.ui.view">
+        <field name="name">view_res_partner_filter_full</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+
+            <filter name="customer" position="attributes">
+                <attribute name="domain">[('customer','=',1)]</attribute>
+            </filter>
+
+            <filter name="supplier" position="attributes">
+                <attribute name="domain">[('supplier','=',1)]</attribute>
+            </filter>
+
+        </field>
+    </record>
+
+</odoo>
