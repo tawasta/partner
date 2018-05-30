@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_zip_group,access_zip_group,model_res_zip_group,base.group_user,1,1,1,1
+access_zip_group_range,access_zip_group_range,model_res_zip_group_range,base.group_user,1,1,1,1

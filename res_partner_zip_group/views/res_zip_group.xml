@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="res_partner_zip_group_group_tree" model="ir.ui.view">
+            <field name="name">res.partner.zip.group.group.tree</field>
+            <field name="model">res.zip.group</field>
+            <field name="arch" type="xml">
+                <tree string="Zip Code Group">
+                    <field name="name"/>
+                    <field name="country_id"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="res_partner_zip_group_group_form" model="ir.ui.view">
+            <field name="name">res.partner.zip.group.group.form</field>
+            <field name="model">res.zip.group</field>
+            <field name="arch" type="xml">
+                <form string="Zip Code Group">
+                    <group>
+                        <field name="name"/>
+                        <field name="country_id"/>
+                        <field name="description"/>
+                    </group>
+
+                    <notebook>
+                        <page string="Zip Ranges">
+                            <p class="oe_grey">
+                                Numeric zip code ranges with optional leading zeros, e.g. 00100 - 00980 or 33100 - 33500.
+                            </p>
+                            <field name="zip_range_ids">
+                                <tree editable="bottom">
+                                    <field name="start"/>
+                                    <field name="end"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="action_zip_group" model="ir.actions.act_window">
+            <field name="name">Zip Code Group</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">res.zip.group</field>
+            <field name="view_type">form</field>
+            <field name="help">Display and manage the list of all zip groups.</field>
+        </record>
+
+        <menuitem action="action_zip_group" id="menu_zip_group" name="Zip Code Groups" parent="base.menu_localisation" sequence="2"/>
+
+    </data>
+</openerp>
