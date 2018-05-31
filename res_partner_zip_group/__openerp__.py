@@ -22,7 +22,7 @@
 {
     'name': 'Zip code ranges',
     'summary': 'Manage postal code ranges for reporting purposes',
-    'version': '8.0.0.1.0',
+    'version': '8.0.2.0.0',
     'category': 'CRM',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
