@@ -89,7 +89,7 @@ class ResPartner(models.Model):
     # 8. Business methods
     def _get_address_type(self, vals):
         address_type = vals.get('type', False)
-        has_vat = bool(self.vat) or 'vat' in vals
+        has_vat = bool(self.vat) or 'vat' in vals and vals['vat']
 
         if address_type == 'contact':
             if has_vat:
