@@ -1,0 +1,105 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* res_partner_profession
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-07 12:39+0000\n"
+"PO-Revision-Date: 2018-11-07 14:48+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: res_partner_profession
+#: model:ir.model.fields,field_description:res_partner_profession.field_res_profession_create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: res_partner_profession
+#: model:ir.model.fields,field_description:res_partner_profession.field_res_profession_create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: res_partner_profession
+#: model:ir.model.fields,field_description:res_partner_profession.field_res_profession_display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: res_partner_profession
+#: model:ir.model.fields,field_description:res_partner_profession.field_res_profession_id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: res_partner_profession
+#: model:ir.model.fields,field_description:res_partner_profession.field_res_profession___last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: res_partner_profession
+#: model:ir.model.fields,field_description:res_partner_profession.field_res_profession_write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: res_partner_profession
+#: model:ir.model.fields,field_description:res_partner_profession.field_res_profession_write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: res_partner_profession
+#: model:ir.model.fields,field_description:res_partner_profession.field_res_profession_name
+#: model:ir.ui.view,arch_db:res_partner_profession.res_profession_form
+msgid "Name"
+msgstr "Nimi"
+
+#. module: res_partner_profession
+#: model:ir.model,name:res_partner_profession.model_res_partner
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: res_partner_profession
+#: model:ir.model.fields,field_description:res_partner_profession.field_res_profession_partner_ids
+#: model:ir.ui.view,arch_db:res_partner_profession.res_profession_form
+msgid "Partners"
+msgstr "Kumppanit"
+
+#. module: res_partner_profession
+#: model:ir.model.fields,help:res_partner_profession.field_res_profession_partner_ids
+msgid "Partners with this profession"
+msgstr "Kumppanit, joilla on tämä ammatti"
+
+#. module: res_partner_profession
+#: sql_constraint:res.profession:0
+msgid "Please use unique profession names"
+msgstr "Ole hyvä ja käytä uniikkeja ammattinimiä"
+
+#. module: res_partner_profession
+#: model:ir.ui.view,arch_db:res_partner_profession.res_profession_form
+msgid "Profession"
+msgstr "Ammatti"
+
+#. module: res_partner_profession
+#: model:ir.actions.act_window,name:res_partner_profession.res_profession_action
+#: model:ir.model.fields,field_description:res_partner_profession.field_res_partner_profession_ids
+#: model:ir.model.fields,field_description:res_partner_profession.field_res_users_profession_ids
+#: model:ir.ui.menu,name:res_partner_profession.res_profession_menu
+#: model:ir.ui.view,arch_db:res_partner_profession.res_profession_tree
+msgid "Professions"
+msgstr "Ammatit"
+
+#. module: res_partner_profession
+#: model:ir.model.fields,help:res_partner_profession.field_res_partner_profession_ids
+#: model:ir.model.fields,help:res_partner_profession.field_res_users_profession_ids
+msgid "Professions for partner"
+msgstr "Kumppanin ammatit"
+
+#. module: res_partner_profession
+#: model:ir.model,name:res_partner_profession.model_res_profession
+msgid "res.profession"
+msgstr "res.profession"
