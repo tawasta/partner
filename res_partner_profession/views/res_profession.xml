@@ -38,6 +38,9 @@
                             <field name="name" default_focus="1" placeholder="Name"/>
                         </h1>
                     </div>
+                    <group name="other_fields">
+                        <field name="sequence"/>
+                    </group>
                     <group name="group_partner_ids" string="Partners">
                         <field name="partner_ids" widget="many2many" nolabel="1">
                             <tree>

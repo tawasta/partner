@@ -18,7 +18,7 @@ class ResProfession(models.Model):
 
     # 1. Private attributes
     _name = 'res.profession'
-    _order = 'name'
+    _order = 'sequence,name'
 
     # 2. Fields declaration
     name = fields.Char(
@@ -31,6 +31,10 @@ class ResProfession(models.Model):
         relation='res_partner_res_profession_rel',
         string='Partners',
         help='Partners with this profession',
+    )
+    sequence = fields.Integer(
+        string='Sequence',
+        default=10,
     )
 
     # 3. Default methods
