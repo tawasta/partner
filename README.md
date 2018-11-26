@@ -17,6 +17,7 @@ addon | version | summary
 [res_partner_addresses_simple_transmit_method](res_partner_addresses_simple_transmit_method/) | 10.0.1.0.0 | Add transmit method to simple address tree view
 [res_partner_company_by_default](res_partner_company_by_default/) | 10.0.0.1.0 | New partners are companies by default
 [res_partner_full_name](res_partner_full_name/) | 10.0.1.0.0 | Adds a full recursive name for partners
+[res_partner_name_extension](res_partner_name_extension/) | 10.0.1.0.0 | Adds a new field "Name extension" to partners and invoices.
 [res_partner_payment_term_hide_unused](res_partner_payment_term_hide_unused/) | 10.0.1.0.0 | Hide payment term if partner is not a customer/supplier
 [res_partner_profession](res_partner_profession/) | 10.0.1.2.0 | Adds professions to partners
 [res_partner_recursion](res_partner_recursion/) | 10.0.1.0.0 | Adds a recursive partner search
