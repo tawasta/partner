@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from openerp.osv import osv, fields
-from openerp.tools.translate import _
+from odoo import models, fields
+from odoo.tools.translate import _
 
-class account_analytic_account(osv.osv):
+class account_analytic_account(models.Model):
 
     _inherit = "account.analytic.account"
 

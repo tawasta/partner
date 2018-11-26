@@ -1,8 +1,8 @@
 
-from openerp.osv import orm, fields
-from openerp.tools.translate import _
+from odoo import models, fields
+from odoo.tools.translate import _
 
-class account_invoice(orm.Model):
+class account_invoice(models.Model):
 
     _inherit = "account.invoice"
 
@@ -25,6 +25,4 @@ class account_invoice(orm.Model):
 
         return res
 
-    _columns = {
-        'name_extension': fields.char('Name extension', size=128)
-    }
+    name_extension = fields.Char('Name extension', size=128)

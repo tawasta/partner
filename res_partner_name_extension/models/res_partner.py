@@ -1,11 +1,10 @@
 
-from openerp.osv import orm, fields
-from openerp.tools.translate import _
+from odoo import models, fields
+from odoo.tools.translate import _
 
-class partner(orm.Model):
+class partner(models.Model):
 
     _inherit = "res.partner"
 
-    _columns = {
-        'name_extension': fields.char('Name extension', size=128)
-    }
+
+    name_extension = fields.Char('Name extension', size=128)
