@@ -35,13 +35,13 @@ class reference_right(models.Model):
         
         return True
     @api.model
-    def name_get(self, context=None):
+    def name_get(self):
         # Decide if there is more than one company
         company_obj = self.env['res.company']
         company_count = company_obj.sudo().search_count([])
 
         res = []
-        for record in self.browse([context]):
+        for record in self.browse([]):
             name = ''
             
             if record.company_id.name and company_count > 1:
@@ -71,20 +71,18 @@ class reference_right(models.Model):
         
         if not args:
             args = []
-        if not context:
-            context = {}
         if name:
-            ids = self.search(['|', ('name', operator, name), ('company_id.name', operator, name)] + args, limit=limit, context=context)
+            ids = self.search(['|', ('name', operator, name), ('company_id.name', operator, name)] + args, limit=limit)
         else:
-            ids = self.search([] + args, limit=limit, context=context)
+            ids = self.search([] + args, limit=limit)
             
-        return self.name_get(ids, context)
+        return self.name_get(ids)
     
     @api.model
-    def search(self, args, offset=0, limit=None, order=None, context=None, count=False):
+    def search(self, args, offset=0, limit=None, order=None, count=False):
         if args and 0 in args and 2 in args[0]:
             refright_ids = args[0][2]
-            refrights = self.browse([refright_ids, context])
+            refrights = self.browse([refright_ids])
             
             company_ids = []
             for refright in refrights:
@@ -92,7 +90,7 @@ class reference_right(models.Model):
             
             args = [('company_id', 'not in', company_ids)]
 
-        return super(reference_right, self).search([] + args, offset, limit, order, context=context, count=count)
+        return super(reference_right, self).search([] + args, offset, limit, order, count=count)
     
     _sql_constraints = [
         ('company_code_unique', 'unique(company_id, code)', 'This company already has a reference right with this code.')

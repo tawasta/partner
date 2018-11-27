@@ -21,7 +21,7 @@
             <field name="help">Click to create a new reference right</field>
         </record>
         
-        <menuitem action="action_partner_reference_rights" id="menu_reference_rights" parent="base.menu_config_address_book" sequence="50"/>
+        <menuitem action="action_partner_reference_rights" id="menu_reference_rights" parent="contacts.menu_contacts" sequence="50"/>
         
     </data>
 </odoo>

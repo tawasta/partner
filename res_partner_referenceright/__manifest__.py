@@ -30,6 +30,7 @@
     'installable': True,
     'depends': [
         'base',
+        'contacts',
     ],
     'data': [
          'data/reference_rights.xml',
