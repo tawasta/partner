@@ -28,6 +28,9 @@
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
+    'depends': [
+        'base',
+    ],
     'data': [
          'data/reference_rights.xml',
          'views/res_partner.xml',

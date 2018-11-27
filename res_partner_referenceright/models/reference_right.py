@@ -9,30 +9,35 @@ class reference_right(models.Model):
     _name = "res.partner.reference_right"
     _order = "company_id, code"
     
+
+    name = fields.Char(string='Reference right', size=128, translate=True)
+    code = fields.Char(string='Code', size=128)
+    company_id = fields.Many2one('res.company', 'Company')
+    partner_ids = fields.Many2many('res.partner', id1='referenceright', id2='partner_id', string='Partners')
     ''' When module is installed, fetch all companies and create reference rights '''
     @api.model
-    def _init_reference_rights(self, context=None):
+    def _init_reference_rights(self):
         ref_rights = {
             'reference_right_allowed': _('Allowed'),
             'reference_right_ask': _('Ask'),
             'reference_right_no': _('No Right'),
         }
 
-        company_obj = self.env.get('res.company')
-        refright_obj = self.env.get('res.partner.reference_right')
+        company_obj = self.env['res.company']
+        refright_obj = self.env['res.partner.reference_right']
         
-        company_ids = company_obj.sudo().search([], order='id')
+        companies = company_obj.sudo().search([], order='id')
         
-        for company in company_obj.sudo().browse([], company_ids):
+        for company in companies:
             for key, value in ref_rights.iteritems():
                 vals = {'code': key, 'name': value, 'company_id': company.id}
-                refright_obj.sudo().create(vals, context)
+                refright_obj.sudo().create(vals)
         
         return True
     @api.model
     def name_get(self, context=None):
         # Decide if there is more than one company
-        company_obj = self.env.get('res.company')
+        company_obj = self.env['res.company']
         company_count = company_obj.sudo().search_count([])
 
         res = []
@@ -88,11 +93,6 @@ class reference_right(models.Model):
             args = [('company_id', 'not in', company_ids)]
 
         return super(reference_right, self).search([] + args, offset, limit, order, context=context, count=count)
-    
-        name = fields.Char(string='Reference right', size=128, translate=True),
-        code = fields.Char(string='Code', size=128),          
-        company_id = fields.Many2one('res.company', 'Company'),
-        partner_ids = fields.Many2many('res.partner', id1='referenceright', id2='partner_id', string='Partners'),
     
     _sql_constraints = [
         ('company_code_unique', 'unique(company_id, code)', 'This company already has a reference right with this code.')
