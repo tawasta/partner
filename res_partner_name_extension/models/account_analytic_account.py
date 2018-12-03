@@ -11,10 +11,11 @@ class account_analytic_account(models.Model):
         # and then add some
         # additional ones
         res = super(account_analytic_account,
-            self)._prepare_invoice_data(contract)
-        
+                    self)._prepare_invoice_data(contract)
+
         res.update({
-            'name_extension': contract.partner_id.name_extension,
+            'name_extension':
+            contract.partner_id.name_extension,
         })
-        
+
         return res
