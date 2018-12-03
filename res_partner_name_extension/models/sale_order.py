@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields
-from odoo.tools.translate import _
+from odoo import models
+
 
 class sale_order(models.Model):
 
     _inherit = 'sale.order'
 
-    def _make_invoice(self, order, lines, context=None):
+    def _make_invoice(self, order, lines):
 
-        res = super(sale_order, self)._make_invoice(order, lines)        
+        res = super(sale_order, self)._make_invoice(order, lines)
 
         invoice_obj = self.env['account.invoice']
         values = {
