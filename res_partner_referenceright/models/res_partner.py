@@ -13,6 +13,7 @@ from odoo import fields, models
 
 # 6. Unknown third party imports:
 
+
 class ResPartner(models.Model):
 
     # 1. Private attributes

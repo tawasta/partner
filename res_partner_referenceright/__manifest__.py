@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Partner Reference Right',
-    'summary': 'Adds a multi-company compatible reference right field for partners',
+    'summary': 'Adds a reference right field for partners',
     'category': 'Sales',
     'version': '10.0.1.0.0',
     'website': 'http://www.tawasta.fi',
@@ -33,10 +33,10 @@
         'contacts',
     ],
     'data': [
-         'data/reference_rights.xml',
-         'views/res_partner.xml',
-         'views/reference_right.xml',
-         #  'security/refright_security.xml',
-         'security/ir.model.access.csv',
-     ]
+        'data/reference_rights.xml',
+        'views/res_partner.xml',
+        'views/reference_right.xml',
+        #  'security/refright_security.xml',
+        'security/ir.model.access.csv',
+    ]
 }
