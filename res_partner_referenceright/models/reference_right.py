@@ -95,7 +95,7 @@ class ReferenceRight(models.Model):
             args = [('company_id', 'not in', company_ids)]
 
         return super(ReferenceRight, self).search([] + args, offset, limit,
-                                                   order, count=count)
+                                                  order, count=count)
 
     _sql_constraints = [
         ('company_code_unique', 'unique(company_id, code)',
