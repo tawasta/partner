@@ -21,7 +21,7 @@ addon | version | summary
 [res_partner_payment_term_hide_unused](res_partner_payment_term_hide_unused/) | 10.0.1.0.0 | Hide payment term if partner is not a customer/supplier
 [res_partner_profession](res_partner_profession/) | 10.0.1.2.0 | Adds professions to partners
 [res_partner_recursion](res_partner_recursion/) | 10.0.1.0.0 | Adds a recursive partner search
-[res_partner_referenceright](res_partner_referenceright/) | 10.0.1.0.0 | Adds a multi-company compatible reference right field for partners
+[res_partner_referenceright](res_partner_referenceright/) | 10.0.1.0.0 | Adds a reference right field for partners
 [res_partner_transmit_method_hide_unused](res_partner_transmit_method_hide_unused/) | 10.0.1.0.0 | Hide transmit_method if partner is not a customer/supplier
 [res_partner_tree_show_children](res_partner_tree_show_children/) | 10.0.1.0.0 | Show children in partner tree view
 
