@@ -11,7 +11,7 @@ class sale_order(models.Model):
 
         res = super(sale_order, self)._make_invoice(order, lines)        
 
-        invoice_obj = self.pool.get('account.invoice')
+        invoice_obj = self.env['account.invoice']
         values = {
             'name_extension': order.partner_id.name_extension,
         }

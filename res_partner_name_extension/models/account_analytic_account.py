@@ -16,3 +16,4 @@ class account_analytic_account(models.Model):
         })
         
         return res
+        
