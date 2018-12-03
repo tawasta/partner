@@ -2,7 +2,7 @@
 from odoo import models
 
 
-class account_analytic_account(models.Model):
+class AccountAnalyticAccount(models.Model):
 
     _inherit = "account.analytic.account"
 
@@ -10,7 +10,7 @@ class account_analytic_account(models.Model):
         # Call super to get the invoice values provided by core modules,
         # and then add some
         # additional ones
-        res = super(account_analytic_account,
+        res = super(AccountAnalyticAccount,
                     self)._prepare_invoice_data(contract)
 
         res.update({

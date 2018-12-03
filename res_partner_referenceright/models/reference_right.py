@@ -4,7 +4,7 @@ import logging
 _logger = logging.getLogger(__name__)
 
 
-class reference_right(models.Model):
+class ReferenceRight(models.Model):
     _name = "res.partner.reference_right"
     _order = "company_id, code"
 
@@ -93,7 +93,7 @@ class reference_right(models.Model):
 
             args = [('company_id', 'not in', company_ids)]
 
-        return super(reference_right, self).search([] + args, offset, limit,
+        return super(ReferenceRight, self).search([] + args, offset, limit,
                                                    order, count=count)
 
     _sql_constraints = [
