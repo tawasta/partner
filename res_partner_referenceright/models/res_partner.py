@@ -15,7 +15,6 @@ from odoo import fields, models
 
 class ResPartner(models.Model):
 
-
     # 1. Private attributes
     _inherit = 'res.partner'
 
@@ -28,7 +27,6 @@ class ResPartner(models.Model):
         string='Reference right',
         default=False,
     )
-
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration

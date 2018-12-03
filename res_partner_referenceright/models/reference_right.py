@@ -12,8 +12,9 @@ class reference_right(models.Model):
     code = fields.Char(string='Code', size=128)
     company_id = fields.Many2one('res.company', 'Company')
     partner_ids = fields.Many2many('res.partner', id1='referenceright',
-        id2='partner_id', string='Partners')
-    ''' When module is installed, fetch all companies and create reference rights '''
+                                   id2='partner_id', string='Partners')
+    # When module is installed, fetch all companies and create reference rights
+
     @api.model
     def _init_reference_rights(self):
         ref_rights = {
@@ -33,6 +34,7 @@ class reference_right(models.Model):
                 refright_obj.sudo().create(vals)
 
         return True
+
     @api.model
     def name_get(self):
         # Decide if there is more than one company
@@ -71,7 +73,9 @@ class reference_right(models.Model):
         if not args:
             args = []
         if name:
-            ids = self.search(['|', ('name', operator, name), ('company_id.name', operator, name)] + args, limit=limit)
+            ids = self.search(['|', ('name', operator, name),
+                               ('company_id.name', operator, name)] +
+                              args, limit=limit)
         else:
             ids = self.search([] + args, limit=limit)
 
@@ -89,8 +93,10 @@ class reference_right(models.Model):
 
             args = [('company_id', 'not in', company_ids)]
 
-        return super(reference_right, self).search([] + args, offset, limit, order, count=count)
+        return super(reference_right, self).search([] + args, offset, limit,
+                                                   order, count=count)
 
     _sql_constraints = [
-        ('company_code_unique', 'unique(company_id, code)','This company already has a reference right with this code.')
+        ('company_code_unique', 'unique(company_id, code)',
+         'This company already has a reference right with this code.')
     ]
