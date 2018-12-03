@@ -2,7 +2,7 @@
 from odoo import models, fields
 
 
-class account_invoice(models.Model):
+class AccountInvoice(models.Model):
 
     _inherit = "account.invoice"
 
@@ -13,7 +13,7 @@ class account_invoice(models.Model):
                             date_invoice=False, payment_term=False,
                             partner_bank_id=False, company_id=False):
 
-        res = super(account_invoice, self).onchange_partner_id
+        res = super(AccountInvoice, self).onchange_partner_id
         (type, partner_id, date_invoice,
          payment_term, partner_bank_id, company_id)
 
