@@ -8,8 +8,13 @@
 
             <notebook position="inside">
                 <page name="tasks" string="Tasks">
+                    <field name="project_ids"
+                           readonly="1"
+                           attrs="{'invisible': [('project_ids', '=', [])]}"
+                    />
                     <field name="task_ids"
-                           options="{'no_quick_create': True, 'no_create_edit' : True}"
+                           readonly="1"
+                           attrs="{'invisible': [('task_ids', '=', [])]}"
                     />
                 </page>
             </notebook>
