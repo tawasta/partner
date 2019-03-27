@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <odoo>
-    <record id="partner_breakdown_tree" model="ir.ui.view">
-        <field name="name">Partner breakdown tree</field>
+    <record id="partner_breakdown_search" model="ir.ui.view">
+        <field name="name">Partner breakdown search</field>
         <field name="model">res.partner.breakdown</field>
         <field name="arch" type="xml">
 
             <search string="Partner breakdown">
-                <field name="partner_id"/>
+                <field name="partner_id" string="Partner"/>
 
                 <separator/>
                 <group expand="0" string="Group By" name="group_by">
