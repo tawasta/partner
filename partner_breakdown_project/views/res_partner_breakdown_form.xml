@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="partner_breakdown_form" model="ir.ui.view">
+        <field name="name">Partner breakdown form project</field>
+        <field name="model">res.partner.breakdown</field>
+        <field name="inherit_id" ref="partner_breakdown.partner_breakdown_form"/>
+        <field name="arch" type="xml">
+
+            <notebook position="inside">
+                <page name="tasks" string="Tasks">
+                    <field name="task_ids"
+                           options="{'no_quick_create': True, 'no_create_edit' : True}"
+                    />
+                </page>
+            </notebook>
+
+        </field>
+    </record>
+
+</odoo>
