@@ -22,7 +22,7 @@
 {
     'name': 'Partner breakdown',
     'summary': 'Base for partner breakdown view',
-    'version': '10.0.1.1.2',
+    'version': '10.0.1.1.3',
     'category': 'CRM',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

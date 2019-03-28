@@ -18,7 +18,6 @@
                     <div id="o_partner_breakdown_container">
                         <div id="o_partner_breakdown_main">
                             <div class="oe_title">
-                                <label for="partner_id" class="oe_edit_only" string="Partner"/>
                                 <h1>
                                     <field name="partner_id"
                                            placeholder="Partner"
