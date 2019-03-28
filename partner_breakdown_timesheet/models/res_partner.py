@@ -8,6 +8,13 @@ class ResPartner(models.Model):
 
     timesheet_ids = fields.One2many(
         comodel_name='account.analytic.line',
-        related='task_ids.timesheet_ids',
+        compute='_compute_timesheet_ids',
         string='Timesheets',
     )
+
+    def _compute_timesheet_ids(self):
+        AnalyticLine = self.env['account.analytic.line']
+        for record in self:
+            record.timesheet_ids = AnalyticLine.search([
+                ('task_id', 'in', record.task_ids.ids),
+            ])
