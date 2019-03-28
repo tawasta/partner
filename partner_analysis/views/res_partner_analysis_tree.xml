@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="partner_analysis_tree" model="ir.ui.view">
+        <field name="name">Partner analysis tree</field>
+        <field name="model">res.partner.analysis</field>
+        <field name="arch" type="xml">
+
+            <tree string="Partner analysis">
+                <field name="partner_id" string="Partner"/>
+            </tree>
+
+        </field>
+    </record>
+
+</odoo>

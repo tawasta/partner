@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="partner_analysis_form" model="ir.ui.view">
+        <field name="name">Partner analysis form timesheets</field>
+        <field name="model">res.partner.analysis</field>
+        <field name="inherit_id" ref="partner_analysis.partner_analysis_form"/>
+        <field name="arch" type="xml">
+
+            <notebook position="inside">
+                <page name="timesheets" string="Timesheets">
+                    <field name="timesheet_ids"
+                           readonly="1"
+                           attrs="{'invisible': [('timesheet_ids', '=', [])]}"
+                           context="{
+                           'tree_view_ref': 'hr_timesheet.hr_timesheet_line_tree',
+                           }"
+                    />
+
+                    <p attrs="{'invisible': [('timesheet_ids', '!=', [])]}">
+                        No timesheets
+                    </p>
+                </page>
+            </notebook>
+
+        </field>
+    </record>
+
+</odoo>

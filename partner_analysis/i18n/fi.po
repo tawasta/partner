@@ -1,0 +1,1181 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * partner_analysis
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-28 14:31+0000\n"
+"PO-Revision-Date: 2019-03-28 16:32+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_meeting_count
+msgid "# Meetings"
+msgstr "Tapaamisten lkm"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_task_count
+msgid "# Tasks"
+msgstr "# Tehtävää"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_supplier_invoice_count
+msgid "# Vendor Bills"
+msgstr "# Toimittajien laskut"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_purchase_order_count
+msgid "# of Purchase Order"
+msgstr "Ostotilauksen numero"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_sale_order_count
+msgid "# of Sales Order"
+msgstr "Myyntitilauksen numero"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_associate_member
+msgid "A member with whom you want to associate your membership. It will consider the membership state of the associated member."
+msgstr "Jäsen, johon haluat liittää jäsenyyden. Jäsenyydessä huomioidaan liittyvän jäsenen tila."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_property_account_payable_id
+msgid "Account Payable"
+msgstr "Ostovelat"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_property_account_receivable_id
+msgid "Account Receivable"
+msgstr "Myyntisaamiset"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_message_needaction
+msgid "Action Needed"
+msgstr "Vaatii toimenpiteitä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_active
+msgid "Active"
+msgstr "Aktiivinen"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_activities_count
+msgid "Activities"
+msgstr "Toiminnot"
+
+#. module: partner_analysis
+#: model:ir.actions.act_window,help:partner_analysis.open_partner_analysis
+msgid "Add a new analysis"
+msgstr "Add a new analysis"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_type
+msgid "Address Type"
+msgstr "Osoitteen tyyppi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_address_ids
+msgid "Addresses"
+msgstr "Osoitteet"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_associate_member
+msgid "Associate Member"
+msgstr "Liittyvä jäsen"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_partner_id
+msgid "Automatically created field to link to parent res.partner"
+msgstr "Automaattisesti luotu kenttä ylätason kumppaniin linkitystä varten"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_bank_account_count
+msgid "Bank"
+msgstr "Pankki"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_bank_ids
+msgid "Banks"
+msgstr "Pankit"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_barcode
+msgid "Barcode"
+msgstr "Viivakoodi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_birthdate
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_birthdate_date
+msgid "Birthdate"
+msgstr "Syntymäaika"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_message_bounce
+msgid "Bounce"
+msgstr "Viestin palautus"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_business_id
+msgid "Business ID"
+msgstr "Y-tunnus"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_membership_cancel
+msgid "Cancel Membership Date"
+msgstr "Jäsenyyden peruuttamispäivä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_channel_ids
+msgid "Channels"
+msgstr "Kanavat"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "Valitse tämä valinta, mikäli kyseessä on yritys, muutoin kyseessä on henkilö"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_customer
+msgid "Check this box if this contact is a customer."
+msgstr "Valitse tämä valintalaatikko, mikäli kontakti on asiakas."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_supplier
+msgid "Check this box if this contact is a vendor. If it's not checked, purchase people will not see it when encoding a purchase order."
+msgstr "Valitse tämä, jos kontakti on toimittaja. Jos tämä ei ole valittuna, kontakti ei ole näkyvissä ostohenkilöstölle ostotilausta täytettäessä."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_employee
+msgid "Check this box if this contact is an Employee."
+msgstr "Valitse tämä, jos kontakti on työntekijä."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_city
+msgid "City"
+msgstr "Kaupunki"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_color
+msgid "Color Index"
+msgstr "Väri-indeksi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_commercial_partner_id
+msgid "Commercial Entity"
+msgstr "Kaupallinen yksikkö"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_ref_company_ids
+msgid "Companies that refers to partner"
+msgstr "Yritykset, jotka viittaavat kumppaniin"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_company_id
+msgid "Company"
+msgstr "Yritys"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_company_name
+msgid "Company Name"
+msgstr "Yrityksen nimi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_commercial_company_name
+msgid "Company Name Entity"
+msgstr "Company Name Entity"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_company_type
+msgid "Company Type"
+msgstr "Yrityksen tyyppi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_contact_address
+msgid "Complete Address"
+msgstr "Täydellinen osoite"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_child_ids
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_contact_ids
+msgid "Contacts"
+msgstr "Yhteystiedot"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_contract_count
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_contract_ids
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_contracts_count
+msgid "Contracts"
+msgstr "Sopimukset"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_payment_token_count
+msgid "Count Payment Token"
+msgstr "Count Payment Token"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr "Counter of the number of bounced emails for this contact"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_country_id
+msgid "Country"
+msgstr "Maa"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_credit_limit
+msgid "Credit Limit"
+msgstr "Luottoraja"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_currency_id
+msgid "Currency"
+msgstr "Valuutta"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_membership_state
+msgid "Current Membership Status"
+msgstr "Jäsenyyden tila"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_customer_invoice_transmit_method_id
+msgid "Customer Invoice Transmission Method"
+msgstr "Laskun lähetystapa"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_customer_invoice_transmit_method_code
+msgid "Customer Invoice Transmission Method Code"
+msgstr "Laskun lähetystavan koodi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_property_stock_customer
+msgid "Customer Location"
+msgstr "Asiakkaan paikka"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_customer_payment_mode_id
+msgid "Customer Payment Mode"
+msgstr "Customer Payment Mode"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr "Asiakkaan maksuehdot"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_date
+msgid "Date"
+msgstr "Päivämäärä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_membership_start
+msgid "Date from which membership becomes active."
+msgstr "Päivä, jolloin jäsenyys astuu voimaan."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_message_last_post
+msgid "Date of the last message posted on the record."
+msgstr "Viimeisen viestin päivämäärä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_membership_cancel
+msgid "Date on which membership has been cancelled"
+msgstr "Päivä jolloin jäsenyys on peruutettu"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_membership_stop
+msgid "Date until which membership remains active."
+msgstr "Päivä johon asti jäsenyys pysyy voimassa."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_overdue_interest
+msgid "Default overdue interest rate % for customer invoices"
+msgstr "Oletusviivästyskorko-% myyntilaskuille"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_trust
+msgid "Degree of trust you have in this debtor"
+msgstr "Kuinka vahvasti luotat tähän maksajaan"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_customer_invoice_transmit_method_code
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_supplier_invoice_transmit_method_code
+msgid "Do not modify the code of an existing Transmit Method because it may be used to identify a particular transmit method."
+msgstr "Älä muokkaa olemassaolevan laskutustavan koodia, sillä sitä saatetaan käyttää tietyn lähetystavan tunnistamiseen."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_edicode
+msgid "Edicode"
+msgstr "Verkkolaskuosoite"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_partner_share
+msgid "Either customer (no user), either shared user. Indicated the current partner is a customer without access or with a limited access created for sharing data."
+msgstr "Either customer (no user), either shared user. Indicated the current partner is a customer without access or with a limited access created for sharing data."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_email
+msgid "Email"
+msgstr "Sähköposti"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_notify_email
+msgid "Email Messages and Notifications"
+msgstr "Lähetä viestit ja ilmoitukset sähköpostitse"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_email_bounced
+msgid "Email bounced"
+msgstr "Sähköposti palautunut"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_email_score
+msgid "Email score"
+msgstr "Sähköpostipisteet"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_employee
+msgid "Employee"
+msgstr "Työntekijä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_fax
+msgid "Fax"
+msgstr "Faksi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_firstname
+msgid "First name"
+msgstr "First name"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_property_account_position_id
+msgid "Fiscal Position"
+msgstr "Verokanta"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_message_follower_ids
+msgid "Followers"
+msgstr "Seuraajat"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Seuraajat (kanavat)"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Seuraajat (kumppanit)"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr "Format email address \"Name <email@domain>\""
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_email_formatted
+msgid "Formatted Email"
+msgstr "Formatted Email"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_free_member
+msgid "Free Member"
+msgstr "Vapaa jäsen"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_full_name
+msgid "Full name"
+msgstr "Koko nimi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_gender
+msgid "Gender"
+msgstr "Sukupuoli"
+
+#. module: partner_analysis
+#: model:ir.ui.view,arch_db:partner_analysis.partner_analysis_search
+msgid "Group By"
+msgstr "Ryhmittely"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_has_unreconciled_entries
+msgid "Has unreconciled entries"
+msgstr "On täsmäyttämättömiä kirjauksia"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_im_status
+msgid "IM Status"
+msgstr "Pikaviestimen tila"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_id_numbers
+msgid "Identification Numbers"
+msgstr "Identification Numbers"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_message_unread
+msgid "If checked new messages require your attention."
+msgstr "Jos valittu, uudet viestit vaativat huomiosi."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Jos valittu, uudet viestit vaativat huomiotasi."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_opt_out
+msgid "If opt-out is checked, this contact has refused to receive emails for mass mailing and marketing campaign. Filter 'Available for Mass Mailing' allows users to filter the partners when performing mass mailing."
+msgstr "Jos 'Jätä pois' on valittu, niin tämä kontakti on kieltäytynyt ottamasta vastaan joukkokirjeitä ja markkinointikampanjoita. Suodatin 'Voi lähettää joukkokirjeitä' mahdollistaa kumppanien  suodattamisen joukkokirjeitä tehtäessä."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_team_id
+msgid "If set, sale team used notably for sales and assignations related to this partner"
+msgstr "Jos asetettu, myyntitiimiä käytetään erityisesti tähän kumppaniin liittyvään myyntiin"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_lang
+msgid "If the selected language is loaded in the system, all documents related to this contact will be printed in this language. If not, it will be English."
+msgstr "Jos valittu kieli on tuotu ja asennettu järjestelmään, kaikki tämän kontaktin dokumentit tulostetaan tällä kielellä. Jos kieltä ei ole asennettu, niin tulostus tapahtuu englanniksi."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_image
+msgid "Image"
+msgstr "Kuva"
+
+#. module: partner_analysis
+#: model:ir.ui.view,arch_db:partner_analysis.partner_analysis_form
+msgid "Info"
+msgstr "Info"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_ref
+msgid "Internal Reference"
+msgstr "Sisäinen viite"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_comment
+msgid "Internal note"
+msgstr "Internal note"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_invoice_warn
+msgid "Invoice"
+msgstr "Lasku"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_invoice_import_ids
+msgid "Invoice Import Configuration"
+msgstr "Invoice Import Configuration"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_invoice_ids
+msgid "Invoices"
+msgstr "Laskut"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_message_is_follower
+msgid "Is Follower"
+msgstr "On seuraaja"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_is_company
+msgid "Is a Company"
+msgstr "On yritys"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_customer
+msgid "Is a Customer"
+msgstr "Asiakas"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_supplier
+msgid "Is a Vendor"
+msgstr "Toimittaja"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_membership_state
+msgid ""
+"It indicates the membership state.\n"
+"-Non Member: A partner who has not applied for any membership.\n"
+"-Cancelled Member: A member who has cancelled his membership.\n"
+"-Old Member: A member whose membership date has expired.\n"
+"-Waiting Member: A member who has applied for the membership and whose invoice is going to be created.\n"
+"-Invoiced Member: A member whose invoice has been created.\n"
+"-Paying member: A member who has paid the membership fee."
+msgstr ""
+"Määrittää jäsenyyden tilan.\n"
+"- Ei jäsen: kumppani joka ei ole hakenut jäsenyyttä.\n"
+"- Peruttu jäsen: jäsen joka on perunut jäsenyytensä.\n"
+"- Vanha jäsen: jäsen jonka jäsenyys on vanhentunut.\n"
+"- Odottava jäsen: jäsen joka on hakenut jäsenyyttä, mutta laskua ei ole vielä luotu.\n"
+"- Maksava jäsen: jäsen joka on maksanut jäsenmaksun. "
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_function
+msgid "Job Position"
+msgstr "Tehtävänimike"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_issued_total
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_journal_item_count
+msgid "Journal Items"
+msgstr "Päiväkirjan tapahtumat"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_lang
+msgid "Language"
+msgstr "Kieli"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_message_last_post
+msgid "Last Message Date"
+msgstr "Viimeinen viestipvm"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis___last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_last_website_so_id
+msgid "Last Online Sale Order"
+msgstr "Last Online Sale Order"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_lastname
+msgid "Last name"
+msgstr "Last name"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_calendar_last_notif_ack
+msgid "Last notification marked as read from base Calendar"
+msgstr "Peruskalenterin viimeinen ilmoitus on merkitty luetuksi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_last_time_entries_checked
+msgid "Last time the invoices & payments matching was performed for this partner. It is set either if there's not at least an unreconciled debit and an unreconciled credit or if you click the \"Done\" button."
+msgstr "Aika jolloin kumppanin maksujen seuranta on viimeksi tehty. Se asetetaan jos täsmäyttämättömiä tapahtumia ei ole tai jos painat \"Tehty\" -painiketta."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr "Latest Invoices & Payments Matching Date"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_mass_mailing_contacts_count
+msgid "Mailing list number"
+msgstr "Mailing list number"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_mass_mailing_contact_ids
+msgid "Mailing lists"
+msgstr "Mailing lists"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_mass_mailing_stats
+msgid "Mass mailing stats"
+msgstr "Mass mailing stats"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_mass_mailing_stats_count
+msgid "Mass mailing stats number"
+msgstr "Mass mailing stats number"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_image_medium
+msgid "Medium-sized image"
+msgstr "Keskikokoinen kuva"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_image_medium
+msgid "Medium-sized image of this contact. It is automatically resized as a 128x128px image, with aspect ratio preserved. Use this field in form views or some kanban views."
+msgstr "Tämän kontaktin keskikokoinen kuva. Automaattisesti muutetaan kokoon 128x128px kuvasuhde säilyttäen. Käytä tätä kenttää lomake- ja kanban-näkymissä."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_meeting_ids
+msgid "Meetings"
+msgstr "Tapaamiset"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_member_lines
+msgid "Membership"
+msgstr "Jäsenyys"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_membership_amount
+msgid "Membership Amount"
+msgstr "Jäsenyyden hinta"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_membership_stop
+msgid "Membership End Date"
+msgstr "Jäsenyyden päättymispäivä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_membership_start
+msgid "Membership Start Date"
+msgstr "Jäsenyyden alkupäivä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_invoice_warn_msg
+msgid "Message for Invoice"
+msgstr "Viesti laskulle"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_purchase_warn_msg
+msgid "Message for Purchase Order"
+msgstr "Viesti ostotilaukselle"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_sale_warn_msg
+msgid "Message for Sales Order"
+msgstr "Viesti myyntitilaukselle"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr "Varoitus varastokeräilylle"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_message_ids
+msgid "Messages"
+msgstr "Viestit"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_mobile
+msgid "Mobile"
+msgstr "Matkapuhelin"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_name
+msgid "Name"
+msgstr "Nimi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_message_needaction_counter
+msgid "Number of Actions"
+msgstr "Toimenpiteiden määrä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_invoice_import_count
+msgid "Number of Invoice Import Configurations"
+msgstr "Number of Invoice Import Configurations"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Toimenpiteitä vaativien viestien määrä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_message_unread_counter
+msgid "Number of unread messages"
+msgstr "Lukemattomia viestejä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_einvoice_operator_identifier
+msgid "Operator ID"
+msgstr "Operaattorin tunniste"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_opportunity_ids
+msgid "Opportunities"
+msgstr "Mahdollisuudet"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_opportunity_count
+msgid "Opportunity"
+msgstr "Mahdollisuus"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_opt_out
+msgid "Opt-Out"
+msgstr "Jättäydy pois"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_overdue_interest
+msgid "Overdue interest (%)"
+msgstr "Viivästyskorko (%)"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_parent_name
+msgid "Parent name"
+msgstr "Ylätason nimi"
+
+#. module: partner_analysis
+#: model:ir.ui.view,arch_db:partner_analysis.partner_analysis_form
+#: model:ir.ui.view,arch_db:partner_analysis.partner_analysis_search
+#: model:ir.ui.view,arch_db:partner_analysis.partner_analysis_tree
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: partner_analysis
+#: model:ir.actions.act_window,name:partner_analysis.open_partner_analysis
+#: model:ir.ui.menu,name:partner_analysis.menu_open_partner_analysis
+#: model:ir.ui.view,arch_db:partner_analysis.partner_analysis_form
+#: model:ir.ui.view,arch_db:partner_analysis.partner_analysis_search
+#: model:ir.ui.view,arch_db:partner_analysis.partner_analysis_tree
+msgid "Partner analysis"
+msgstr "Kumppanianalyysi"
+
+#. module: partner_analysis
+#: model:ir.actions.act_window,help:partner_analysis.open_partner_analysis
+msgid ""
+"Partner analysis can help you to get a quick overview about\n"
+"                your customers, vendors or other partners."
+msgstr ""
+"Kumppanianalyysit helpottavat nopean yhteenvedon tekemistä\n"
+"                asiakkaista, toimittajista ja muista kumppaneista."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_debit_limit
+msgid "Payable Limit"
+msgstr "Ostovelkaraja"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_payment_token_ids
+msgid "Payment Tokens"
+msgstr "Payment Tokens"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_phone
+msgid "Phone"
+msgstr "Puhelin"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_notify_email
+msgid ""
+"Policy to receive emails for new messages pushed to your personal Inbox:\n"
+"- Never: no emails are sent\n"
+"- All Messages: for every notification you receive in your Inbox"
+msgstr ""
+"Toimintatapa vastaanottaa uusia viestejä jotka ovat tulleet Saapuneet kansioosi:\n"
+"- Ei koskaan: sähköpostiviestejä ei lähetetä\n"
+"- Kaikki viestit: jokaisesta ilmoituksesta jonka vastaanotat Saapuneet kansioosi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_purchase_warn
+msgid "Purchase Order"
+msgstr "Ostotilaus"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_parent_id
+msgid "Related Company"
+msgstr "Liittyvä yritys"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_property_product_pricelist
+msgid "Sale Pricelist"
+msgstr "Myyntihinnasto"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_sale_order_ids
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_sale_warn
+msgid "Sales Order"
+msgstr "Myyntitilaus"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_team_id
+msgid "Sales Team"
+msgstr "Myyntitiimi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_user_id
+msgid "Salesperson"
+msgstr "Myyjä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_sanitized_vat
+msgid "Sanitized TIN"
+msgstr "Sanitized TIN"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_free_member
+msgid "Select if you want to give free membership."
+msgstr "Valitse jos haluat antaa ilmaisen jäsenyyden."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_customer_payment_mode_id
+msgid "Select the default payment mode for this customer."
+msgstr "Select the default payment mode for this customer."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_supplier_payment_mode_id
+msgid "Select the default payment mode for this supplier."
+msgstr "Select the default payment mode for this supplier."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_invoice_warn
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_picking_warn
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_purchase_warn
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_sale_warn
+msgid "Selecting the \"Warning\" option will notify user with the message, Selecting \"Blocking Message\" will throw an exception with the message and block the flow. The Message has to be written in the next field."
+msgstr ""
+"Valittaessa vaihtoehto:\n"
+"  \"Varoitusviesti\", käyttäjälle näytetään varoitusviesti\n"
+"  \"Estoviesti, käyttäjälle näytetään poikkeusviesti ja toimenpide estetään.\n"
+"Kirjoita näytettävä viesti seuraavaan kenttään."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_self
+msgid "Self"
+msgstr "Self"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_partner_share
+msgid "Share Partner"
+msgstr "Share Partner"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_signup_type
+msgid "Signup Token Type"
+msgstr "Rekisteröitymisavaimen tyyppi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_signup_valid
+msgid "Signup Token is Valid"
+msgstr "Kirjautumisavain kelpaa"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_signup_url
+msgid "Signup URL"
+msgstr "Rekisteröitymisen osoite"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_signup_expiration
+msgid "Signup expiration"
+msgstr "Signup expiration"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_signup_token
+msgid "Signup token"
+msgstr "Signup token"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_image_small
+msgid "Small-sized image"
+msgstr "Pienikokoinen kuva"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_image_small
+msgid "Small-sized image of this contact. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Pienikokoinen kuva kontaktista. Liian suuret kuvat skaalataan automaattisesti 64x64px kokoisiksi kuvasuhde säilyttäen. Käytä tätä kenttää aina kun tarvitaan pientä kuvaa."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_state_id
+msgid "State"
+msgstr "Osavaltio/Maakunta"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_picking_warn
+msgid "Stock Picking"
+msgstr "Varastokeräily"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_street
+msgid "Street"
+msgstr "Katuosoite"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_street2
+msgid "Street2"
+msgstr "Katuosoite2"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_property_purchase_currency_id
+msgid "Supplier Currency"
+msgstr "Toimittajan valuutta"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_supplier_payment_mode_id
+msgid "Supplier Payment Mode"
+msgstr "Supplier Payment Mode"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_vat
+msgid "TIN"
+msgstr "VAT nro"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_sanitized_vat
+msgid "TIN in uppercase without spaces nor special caracters."
+msgstr "TIN in uppercase without spaces nor special caracters."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_category_id
+msgid "Tags"
+msgstr "Tunnisteet"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_task_ids
+msgid "Tasks"
+msgstr "Tehtävät"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_vat
+msgid "Tax Identification Number. Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+msgstr "Tax Identification Number. Fill it if the company is subjected to taxes. Used by the some of the legal statements."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_property_account_position_id
+msgid "The fiscal position will determine taxes and accounts used for the partner."
+msgstr "The fiscal position will determine taxes and accounts used for the partner."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_website_url
+msgid "The full URL to access the document through the website."
+msgstr "Dokumentin URL-osoite verkkosivustolla."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_user_id
+msgid "The internal user that is in charge of communicating with this contact if any."
+msgstr "Sisäinen käyttäjä (jos sellainen on valittu), joka vastaa yhteydenpidosta tähän kontaktiin."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_has_unreconciled_entries
+msgid "The partner has at least one unreconciled debit and credit since last time the invoices & payments matching was performed."
+msgstr "Kumppanilla on vähintään yksi täsmäyttämätön debit/kredit kirjaus edellisen maksujentarkistuksen jälkeen."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_tz
+msgid "The partner's timezone, used to output proper date and time values inside printed reports. It is important to set a value for this field. You should use the same timezone that is otherwise used to pick and render date and time values: your computer's timezone."
+msgstr "The partner's timezone, used to output proper date and time values inside printed reports. It is important to set a value for this field. You should use the same timezone that is otherwise used to pick and render date and time values: your computer's timezone."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_membership_amount
+msgid "The price negotiated by the partner"
+msgstr "Kumppanin neuvottelema hinta"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_property_account_payable_id
+msgid "This account will be used instead of the default one as the payable account for the current partner"
+msgstr "Tätä tiliä käytetään oletustilin sijasta ostovelkoina tälle kumppanille."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_property_account_receivable_id
+msgid "This account will be used instead of the default one as the receivable account for the current partner"
+msgstr "Tätä tiliä käytetään oletustilin sijasta tämän kumppanin saataville."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_property_purchase_currency_id
+msgid "This currency will be used, instead of the default one, for purchases from the current partner"
+msgstr "This currency will be used, instead of the default one, for purchases from the current partner"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_image
+msgid "This field holds the image used as avatar for this contact, limited to 1024x1024px"
+msgstr "Tässä kentässä säilytetään kuvaa, jota käytetään avattarena tälle kontaktille. Kuvan suurin koko on 1024x1024px."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_property_supplier_payment_term_id
+msgid "This payment term will be used instead of the default one for purchase orders and vendor bills"
+msgstr "This payment term will be used instead of the default one for purchase orders and vendor bills"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_property_payment_term_id
+msgid "This payment term will be used instead of the default one for sale orders and customer invoices"
+msgstr "Tätä maksuehtoa käytetään oletuehdon asemasta myyntitilauksilla ja myyntilaskuilla."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_property_product_pricelist
+msgid "This pricelist will be used, instead of the default one, for sales to the current partner"
+msgstr "Tätä hintalistaa käytetään oletusarvon sijasta myyntiin nykyiselle yhteistyökumppanille"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_property_stock_customer
+msgid "This stock location will be used, instead of the default one, as the destination location for goods you send to this partner"
+msgstr "Tätä varastopaikkaa käytetään oletuksen asemasta kohdepaikkana kun lähetät tavaraa tälle kumppanille"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_property_stock_supplier
+msgid "This stock location will be used, instead of the default one, as the source location for goods you receive from the current partner"
+msgstr "Kun vastaanotat tavaraa kumppanilta käytetään tässä määritettyä lähdepaikkaa oletuksen asemasta"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_tz
+msgid "Timezone"
+msgstr "Aikavyöhyke"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_tz_offset
+msgid "Timezone offset"
+msgstr "Aikavyöhykkeen aikaero"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_title
+msgid "Title"
+msgstr "Titteli"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_total_invoiced
+msgid "Total Invoiced"
+msgstr "Laskutettu yhteensä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_debit
+msgid "Total Payable"
+msgstr "Maksettavat yhteensä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_credit
+msgid "Total Receivable"
+msgstr "Saatavat yhteensä"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_credit
+msgid "Total amount this customer owes you."
+msgstr "Asiakkaan kokonaisvelan määrä."
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_debit
+msgid "Total amount you have to pay to this vendor."
+msgstr "Total amount you have to pay to this vendor."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_tracking_emails_count
+msgid "Tracking emails count"
+msgstr "Tracking emails count"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_message_unread
+msgid "Unread Messages"
+msgstr "Lukemattomat viestit"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Lukemattomien viestien laskuri"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_type
+msgid "Used to select automatically the right address according to the context in sales and purchases documents."
+msgstr "Käytetään oikean osoitteen automaattiseen valintaan asiayhteydestä riippuen myynnin ja ostojen dokumenteissa."
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_user_ids
+msgid "Users"
+msgstr "Käyttäjät"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_currency_id
+msgid "Utility field to express amount currency"
+msgstr "Utility field to express amount currency"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_supplier_invoice_transmit_method_id
+msgid "Vendor Invoice Reception Method"
+msgstr "Toimittajan laskun vastaanottotapa"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_supplier_invoice_transmit_method_code
+msgid "Vendor Invoice Reception Method Code"
+msgstr "Toimittajan laskun vastaanottotavan koodi"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_property_stock_supplier
+msgid "Vendor Location"
+msgstr "Toimittajan paikka"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr "Toimittajan maksuehto"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_website_published
+msgid "Visible in Website"
+msgstr "Näkyvillä verkkosivustolla"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_website
+msgid "Website"
+msgstr "Verkkosivu"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_website_description
+msgid "Website Partner Full Description"
+msgstr "Verkkosivukumppanin laaja kuvaus"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_website_short_description
+msgid "Website Partner Short Description"
+msgstr "Verkkosivukumppanin lyhyt kuvaus"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_website_url
+msgid "Website URL"
+msgstr "Verkkosivuston osoite"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_website_meta_description
+msgid "Website meta description"
+msgstr "Verkkosivuston metakuvaus"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_website_meta_keywords
+msgid "Website meta keywords"
+msgstr "Verkkosivuston meta avainsanat"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_website_meta_title
+msgid "Website meta title"
+msgstr "Verkkosivuston metaotsikko"
+
+#. module: partner_analysis
+#: model:ir.model.fields,help:partner_analysis.field_res_partner_analysis_website
+msgid "Website of Partner or Company"
+msgstr "Kumppanin tai yhtiön verkkosivu"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_zip
+msgid "Zip"
+msgstr "Postinumero"
+
+#. module: partner_analysis
+#: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_einvoice_operator
+msgid "eInvoice Operator"
+msgstr "Verkkolaskuoperaattori"
+
+#. module: partner_analysis
+#: model:ir.model,name:partner_analysis.model_res_partner_analysis
+msgid "res.partner.analysis"
+msgstr "res.partner.analysis"
