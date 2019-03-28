@@ -1,1 +1,2 @@
 account-invoicing https://github.com/OCA/account-invoicing
+partner https://github.com/Tawasta/partner

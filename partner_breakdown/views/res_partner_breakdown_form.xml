@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="partner_breakdown_form" model="ir.ui.view">
+        <field name="name">Partner breakdown form</field>
+        <field name="model">res.partner.breakdown</field>
+        <field name="arch" type="xml">
+
+            <form string="Partner breakdown">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object"
+                                class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button"
+                                   options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+
+                    <div id="o_partner_breakdown_container">
+                        <div id="o_partner_breakdown_main">
+                            <div class="oe_title">
+                                <h1>
+                                    <field name="partner_id"
+                                           placeholder="Partner"
+                                           string="Partner"
+                                           required="True"
+                                    />
+                                </h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <notebook>
+                        <page name="partner" string="Info">
+                            <group>
+                                <field name='phone' readonly="1" />
+                                <field name='email' readonly="1" />
+                                <field name='website' readonly="1" />
+                                <field name='street' readonly="1" />
+                                <field name='street2' readonly="1" />
+                                <field name='zip' readonly="1" />
+                                <field name='city' readonly="1" />
+                                <field name='country_id' readonly="1" />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+
+        </field>
+    </record>
+
+</odoo>
