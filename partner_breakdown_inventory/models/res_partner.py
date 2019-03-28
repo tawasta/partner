@@ -15,5 +15,12 @@ class ResPartner(models.Model):
     quant_ids = fields.One2many(
         comodel_name='stock.quant',
         string='Quants',
-        related='location_ids.quant_ids',
+        compute='_compute_quant_ids',
     )
+
+    def _compute_quant_ids(self):
+        StockQuant = self.env['stock.quant']
+        for record in self:
+            record.quant_ids = StockQuant.search([
+                ('location_id', 'in', record.location_ids.ids),
+            ])
