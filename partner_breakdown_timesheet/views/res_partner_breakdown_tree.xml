@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="partner_breakdown_tree" model="ir.ui.view">
+        <field name="name">Partner breakdown tree timesheets</field>
+        <field name="model">res.partner.breakdown</field>
+        <field name="inherit_id" ref="partner_breakdown.partner_breakdown_tree"/>
+        <field name="arch" type="xml">
+
+            <field name="partner_id" position="after">
+                <field name="timesheet_ids" />
+            </field>
+
+        </field>
+    </record>
+
+</odoo>
