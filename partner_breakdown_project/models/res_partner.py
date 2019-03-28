@@ -2,9 +2,9 @@
 from odoo import fields, models
 
 
-class ResPartnerBreakdown(models.Model):
+class ResPartner(models.Model):
 
-    _inherit = 'res.partner.breakdown'
+    _inherit = 'res.partner'
 
     project_ids = fields.One2many(
         comodel_name='project.project',

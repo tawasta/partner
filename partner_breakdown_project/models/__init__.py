@@ -1,1 +1,1 @@
-from . import res_partner_breakdown
+from . import res_partner

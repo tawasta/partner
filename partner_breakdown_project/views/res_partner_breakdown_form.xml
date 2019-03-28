@@ -7,15 +7,24 @@
         <field name="arch" type="xml">
 
             <notebook position="inside">
-                <page name="tasks" string="Tasks">
+                <page name="projects" string="Projects">
                     <field name="project_ids"
                            readonly="1"
+                           mode="kanban"
                            attrs="{'invisible': [('project_ids', '=', [])]}"
                     />
+                    <p attrs="{'invisible': [('project_ids', '!=', [])]}">
+                        No projects
+                    </p>
+
+                    <label for="task_ids" string="Tasks" />
                     <field name="task_ids"
                            readonly="1"
                            attrs="{'invisible': [('task_ids', '=', [])]}"
                     />
+                    <p attrs="{'invisible': [('task_ids', '!=', [])]}">
+                        No tasks
+                    </p>
                 </page>
             </notebook>
 
