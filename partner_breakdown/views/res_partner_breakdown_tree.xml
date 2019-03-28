@@ -6,7 +6,7 @@
         <field name="arch" type="xml">
 
             <tree string="Partner breakdown">
-                <field name="partner_id"/>
+                <field name="partner_id" string="Partner"/>
             </tree>
 
         </field>
