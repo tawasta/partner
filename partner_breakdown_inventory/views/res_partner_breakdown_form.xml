@@ -15,11 +15,18 @@
                                widget="many2many_tags"
                         />
                     </group>
+                    <p attrs="{'invisible': [('location_ids', '!=', [])]}">
+                        No locations
+                    </p>
+
                     <label for="quant_ids" string="Quantity in locations"/>
                     <field name="quant_ids"
                            readonly="1"
                            attrs="{'invisible': [('quant_ids', '=', [])]}"
                     />
+                    <p attrs="{'invisible': [('location_ids', '!=', [])]}">
+                        No products in locations
+                    </p>
                 </page>
             </notebook>
 

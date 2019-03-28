@@ -22,7 +22,7 @@
 {
     'name': 'Partner breakdown: Inventory',
     'summary': 'Inventory (locations) to partner breakdown view',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.0.1',
     'category': 'CRM',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
