@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-03-28 14:31+0000\n"
-"PO-Revision-Date: 2019-03-28 16:32+0200\n"
+"PO-Revision-Date: 2019-03-29 11:52+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -75,7 +75,7 @@ msgstr "Toiminnot"
 #. module: partner_analysis
 #: model:ir.actions.act_window,help:partner_analysis.open_partner_analysis
 msgid "Add a new analysis"
-msgstr "Add a new analysis"
+msgstr "Lisää uusi analyysi"
 
 #. module: partner_analysis
 #: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_type
@@ -485,7 +485,7 @@ msgstr "Sisäinen viite"
 #. module: partner_analysis
 #: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_comment
 msgid "Internal note"
-msgstr "Internal note"
+msgstr "Sisäinen kommentti"
 
 #. module: partner_analysis
 #: model:ir.model.fields,field_description:partner_analysis.field_res_partner_analysis_invoice_warn
