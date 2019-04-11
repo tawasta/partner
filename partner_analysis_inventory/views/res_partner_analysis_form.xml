@@ -8,13 +8,18 @@
 
             <notebook position="inside">
                 <page name="locations" string="Locations">
-                    <group name="locations">
-                        <field name="location_ids"
-                               readonly="1"
-                               attrs="{'invisible': [('location_ids', '=', [])]}"
-                               widget="many2many_tags"
-                        />
-                    </group>
+
+                    <field name="property_stock_customer" invisible="1"/>
+                    <label for="location_ids" string="Locations"/>
+                    <field name="location_ids"
+                           attrs="{'invisible': [('location_ids', '=', [])]}"
+                           context="{
+                            'default_location_id': property_stock_customer,
+                            'default_usage': 'customer',
+                            'default_partner_id': partner_id,
+                           }"
+                    />
+
                     <p attrs="{'invisible': [('location_ids', '!=', [])]}">
                         No locations
                     </p>
