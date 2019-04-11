@@ -11,6 +11,8 @@
 
                     <field name="property_stock_customer" invisible="1"/>
                     <label for="location_ids" string="Locations"/>
+
+                    <separator />
                     <field name="location_ids"
                            attrs="{'invisible': [('location_ids', '=', [])]}"
                            context="{
@@ -25,6 +27,16 @@
                     </p>
 
                     <label for="quant_ids" string="Quantity in locations"/>
+
+                    <button name="action_open_quants"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-th-list"
+                            help="Show quantities">
+                        <field name="quant_count" widget="statinfo" string="Show quantities"/>
+                    </button>
+
+                    <separator />
                     <field name="quant_ids"
                            readonly="1"
                            attrs="{'invisible': [('quant_ids', '=', [])]}"
