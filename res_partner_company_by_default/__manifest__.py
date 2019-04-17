@@ -22,7 +22,7 @@
 {
     'name': 'Company as default partner type',
     'summary': 'New partners are companies by default',
-    'version': '10.0.0.1.0',
+    'version': '0.1.0',
     'category': 'CRM',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

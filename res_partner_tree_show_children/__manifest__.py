@@ -22,7 +22,7 @@
 {
     'name': 'Show children in parent tree view',
     'summary': 'Show children in partner tree view',
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'CRM',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

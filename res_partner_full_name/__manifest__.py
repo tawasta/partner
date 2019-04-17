@@ -22,7 +22,7 @@
 {
     'name': 'Full recursive name for partners',
     'summary': 'Adds a full recursive name for partners',
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'CRM',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

@@ -22,7 +22,7 @@
 {
     'name': 'Partner analysis',
     'summary': 'Base for partner analysis view',
-    'version': '10.0.1.1.4',
+    'version': '1.1.4',
     'category': 'CRM',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

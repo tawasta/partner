@@ -22,7 +22,7 @@
 {
     'name': 'Partner recursion',
     'summary': 'Adds a recursive partner search',
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'CRM',
     'website': 'https://github.com/Tawasta/partner',
     'author': 'Oy Tawasta Technologies Ltd.',

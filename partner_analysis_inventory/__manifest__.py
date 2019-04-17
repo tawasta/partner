@@ -22,7 +22,7 @@
 {
     'name': 'Partner analysis: Inventory',
     'summary': 'Inventory (locations) to partner analysis view',
-    'version': '10.0.1.0.4',
+    'version': '1.0.4',
     'category': 'CRM',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

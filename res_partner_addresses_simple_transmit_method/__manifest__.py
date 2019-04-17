@@ -22,7 +22,7 @@
 {
     'name': 'Add transmit method to simple address tree view',
     'summary': 'Add transmit method to simple address tree view',
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'CRM',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

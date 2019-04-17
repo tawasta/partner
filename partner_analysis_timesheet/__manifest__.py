@@ -22,7 +22,7 @@
 {
     'name': 'Partner analysis: Timesheets',
     'summary': 'Task timesheets to partner analysis view',
-    'version': '10.0.1.0.1',
+    'version': '1.0.1',
     'category': 'CRM',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
