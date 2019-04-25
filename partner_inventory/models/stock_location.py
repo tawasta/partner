@@ -16,6 +16,7 @@ class StockLocation(models.Model):
         )
 
         action.update(
+            target='new',
             context=dict(
                 self.env.context,
             ),

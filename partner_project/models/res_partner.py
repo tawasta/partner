@@ -22,8 +22,10 @@ class ResPartner(models.Model):
         )
 
         action.update(
+            target='new',
             context=dict(
                 self.env.context,
+                search_default_Stage=True,
             ),
             domain=[('project_id', 'in', self.project_ids.ids)],
         )

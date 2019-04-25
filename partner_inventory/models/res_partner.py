@@ -44,6 +44,7 @@ class ResPartner(models.Model):
         )
 
         action.update(
+            target='new',
             context=dict(
                 self.env.context,
                 search_default_locationgroup=True,
