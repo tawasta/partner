@@ -22,7 +22,7 @@
 {
     'name': 'Professions for partners',
     'summary': 'Adds professions to partners',
-    'version': '10.0.1.2.0',
+    'version': '10.0.1.2.1',
     'category': 'CRM',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -33,6 +33,8 @@
         'base',
     ],
     'data': [
+        'security/ir.model.access.csv',
+
         'views/res_profession.xml',
         'views/res_partner.xml',
     ],
