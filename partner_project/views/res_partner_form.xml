@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">Partner form project</field>
+        <field name="model">res.partner</field>
+        <field eval="20" name="priority"/>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <notebook position="inside">
+                <page name="projects" string="Projects">
+                    <field name="project_ids"
+                           readonly="1"
+                           mode="kanban"
+                           attrs="{'invisible': [('project_ids', '=', [])]}"
+                    />
+                    <p attrs="{'invisible': [('project_ids', '!=', [])]}">
+                        No projects
+                    </p>
+
+                    <label for="task_ids" string="Tasks" />
+
+                    <button name="action_open_tasks"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-tasks"
+                            string="Show tasks"
+                            help="Show tasks" />
+
+                    <separator />
+
+                    <field name="task_ids"
+                           readonly="1"
+                           attrs="{'invisible': [('task_ids', '=', [])]}"
+                    />
+                    <p attrs="{'invisible': [('task_ids', '!=', [])]}">
+                        No tasks
+                    </p>
+                </page>
+            </notebook>
+
+        </field>
+    </record>
+
+</odoo>

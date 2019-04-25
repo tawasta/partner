@@ -1,0 +1,50 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_project
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-25 08:51+0000\n"
+"PO-Revision-Date: 2019-04-25 11:52+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: partner_project
+#: model:ir.ui.view,arch_db:partner_project.view_partner_form
+msgid "No projects"
+msgstr "Ei projekteja"
+
+#. module: partner_project
+#: model:ir.ui.view,arch_db:partner_project.view_partner_form
+msgid "No tasks"
+msgstr "Ei tehtäviä"
+
+#. module: partner_project
+#: model:ir.model,name:partner_project.model_res_partner
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: partner_project
+#: model:ir.model.fields,field_description:partner_project.field_res_partner_project_ids
+#: model:ir.model.fields,field_description:partner_project.field_res_users_project_ids
+#: model:ir.ui.view,arch_db:partner_project.view_partner_form
+msgid "Projects"
+msgstr "Projektit"
+
+#. module: partner_project
+#: model:ir.ui.view,arch_db:partner_project.view_partner_form
+msgid "Show tasks"
+msgstr "Näytä tehtävät"
+
+#. module: partner_project
+#: model:ir.ui.view,arch_db:partner_project.view_partner_form
+msgid "Tasks"
+msgstr "Tehtävät"

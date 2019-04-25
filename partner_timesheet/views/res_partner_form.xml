@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">Partner form timesheets</field>
+        <field name="model">res.partner</field>
+        <field eval="20" name="priority"/>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <notebook position="inside">
+                <page name="timesheets" string="Timesheets">
+                    <button name="action_open_timesheets"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-calendar"
+                            string="Show timesheets" />
+
+                    <separator />
+
+                    <field name="timesheet_ids"
+                           readonly="1"
+                           attrs="{'invisible': [('timesheet_ids', '=', [])]}"
+                           context="{
+                           'tree_view_ref': 'hr_timesheet.hr_timesheet_line_tree',
+                           }"
+                    />
+
+                    <p attrs="{'invisible': [('timesheet_ids', '!=', [])]}">
+                        No timesheets
+                    </p>
+                </page>
+            </notebook>
+
+        </field>
+    </record>
+
+</odoo>

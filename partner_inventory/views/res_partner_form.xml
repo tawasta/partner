@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">Partner form locations</field>
+        <field name="model">res.partner</field>
+        <field eval="20" name="priority"/>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <notebook position="inside">
+                <page name="locations" string="Locations">
+
+                    <field name="property_stock_customer" invisible="1"/>
+                    <separator />
+                    <field name="location_ids"
+                           attrs="{'invisible': [('location_ids', '=', [])]}"
+                           context="{
+                            'default_location_id': property_stock_customer,
+                            'default_usage': 'customer',
+                            'default_partner_id': active_id,
+                           }"
+                    />
+
+                    <p attrs="{'invisible': [('location_ids', '!=', [])]}">
+                        No locations
+                    </p>
+
+                    <label for="quant_ids" string="Quantity in locations"/>
+
+                    <button name="action_open_quants"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-th-list"
+                            string="Show quantities" />
+
+                    <separator />
+                    <field name="quant_ids"
+                           readonly="1"
+                           attrs="{'invisible': [('quant_ids', '=', [])]}"
+                    />
+                    <p attrs="{'invisible': [('location_ids', '!=', [])]}">
+                        No products in locations
+                    </p>
+                </page>
+            </notebook>
+
+        </field>
+    </record>
+
+</odoo>
