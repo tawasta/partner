@@ -8,7 +8,7 @@ class AccountInvoice(models.Model):
     # Pull name extension suggestion from partner info
     name_extension = fields.Char('Name extension', size=128)
 
-    def onchange_partner_id(self, type, partner_id,
+    def onchange_partner_id(self, invoice_type, partner_id,
                             date_invoice=False, payment_term=False,
                             partner_bank_id=False, company_id=False):
 
@@ -17,7 +17,7 @@ class AccountInvoice(models.Model):
         # payment_term, partner_bank_id, company_id)
 
         # Only do this for customer invoices, not supplier invoices
-        if type == 'out_invoice':
+        if invoice_type == 'out_invoice':
 
             partner_model = self.env['res.partner']
 
