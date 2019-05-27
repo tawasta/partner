@@ -32,6 +32,7 @@
         'base',
     ],
     'data': [
+        'security/ir.model.access.csv',
         'views/res_profession.xml',
         'views/res_partner.xml',
     ],
