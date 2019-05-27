@@ -13,8 +13,8 @@ class AccountInvoice(models.Model):
                             partner_bank_id=False, company_id=False):
 
         res = super(AccountInvoice, self).onchange_partner_id
-        (type, partner_id, date_invoice,
-         payment_term, partner_bank_id, company_id)
+        # (type, partner_id, date_invoice,
+        # payment_term, partner_bank_id, company_id)
 
         # Only do this for customer invoices, not supplier invoices
         if type == 'out_invoice':
