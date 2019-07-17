@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<odoo>
+<openerp>
+    <data>
 
     <report
         id="partner_open_invoices"
@@ -77,5 +78,5 @@
             </div>
         </t>
     </template>
-
-</odoo>
+    </data>
+</openerp>
