@@ -47,6 +47,8 @@
                 </div>
 
                 <t t-set="invoices" t-value="partner.invoice_ids.filtered(lambda i: i.state == 'open')" />
+                <t t-set="total_amount" t-value="0.00" />
+                <t t-set="total_residual" t-value="0.00" />
 
                 <table t-if="invoices" class="table table-condensed mt32">
                     <thead>
@@ -54,22 +56,33 @@
                             <th>Invoice number</th>
                             <th>Source document</th>
                             <th>Due date</th>
-                            <th>Amount</th>
-                            <th>Amount due</th>
+                            <th class="text-right">Amount</th>
+                            <th class="text-right">Amount due</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr t-foreach="invoices" t-as="invoice">
+                            <t t-set="multiplier" t-value="-1 if invoice.type=='out_refund' else 1" />
+                            <t t-set="total_amount" t-value="total_amount + invoice.amount_total * multiplier" />
+                            <t t-set="total_residual" t-value="total_residual + invoice.residual * multiplier" />
+
                             <td><span t-field="invoice.number" /></td>
                             <td><span t-field="invoice.origin" /></td>
                             <td><span t-field="invoice.date_due" /></td>
-                            <td><span t-field="invoice.amount_total" /></td>
-                            <td><span t-field="invoice.residual" /></td>
+                            <td class="text-right"><span t-if="multiplier==-1">-</span><span t-field="invoice.amount_total" /></td>
+                            <td class="text-right"><span t-if="multiplier==-1">-</span><span t-field="invoice.residual" /></td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th></th>
+                            <th class="text-right"><span t-esc="'%.2f'% total_amount" /></th>
+                            <th class="text-right"><span t-esc="'%.2f'% total_residual" /></th>
                         </tr>
                     </tbody>
                 </table>
-                <div t-else="">
-                    <h2>This customer has no open invoices</h2>
+                <div class="mt32" t-else="">
+                    <p>This customer has no open invoices</p>
                 </div>
 
                 <!-- Page break -->
