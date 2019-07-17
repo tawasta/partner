@@ -69,7 +69,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <div t-else="">
+                <div t-if="not invoices">
                     <h2>This customer has no open invoices</h2>
                 </div>
 
