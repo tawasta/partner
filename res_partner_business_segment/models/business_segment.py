@@ -22,9 +22,15 @@ class BusinessSegment(models.Model):
 
     # 2. Fields declaration
     name = fields.Char(string='Business Segment')
-    category = fields.Many2one('business_segment.category', string='Segment Category')
+    category = fields.Many2one(
+            'business_segment.category',
+            string='Segment Category'
+    )
 
-    parent = fields.Many2one('business_segment.segment', string='Business segment parent')
+    parent = fields.Many2one(
+            'business_segment.segment',
+            string='Business segment parent'
+    )
     children = fields.One2many(
         'business_segment.segment',
         'parent',
