@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data noupdate="1">
+        <record id="bsegment_cat_segments" model="business_segment.category">
+            <field name="name">Segments</field>
+        </record>
+
+        <record id="bsegment_seg_v" model="business_segment.segment">
+            <field name="name">Valtiohallinto</field>
+			<field name="category" ref="bsegment_cat_segments"/>
+        </record>
+
+        <record id="bsegment_seg_st" model="business_segment.segment">
+            <field name="name">Sairaalat, terveys</field>
+            <field name="category" ref="bsegment_cat_segments"/>
+        </record>
+
+        <record id="bsegment_seg_j" model="business_segment.segment">
+            <field name="name">Järjestöt, liitot</field>
+            <field name="category" ref="bsegment_cat_segments"/>
+        </record>
+
+        <record id="bsegment_seg_k" model="business_segment.segment">
+            <field name="name">Kunnat</field>
+            <field name="category" ref="bsegment_cat_segments"/>
+        </record>
+
+        <record id="bsegment_seg_o" model="business_segment.segment">
+            <field name="name">Oppilaitokset</field>
+            <field name="category" ref="bsegment_cat_segments"/>
+        </record>
+    </data>
+</odoo>
