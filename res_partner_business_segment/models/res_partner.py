@@ -21,8 +21,8 @@ class ResPartner(models.Model):
 
     # 2. Fields declaration
     business_segment = fields.Many2one(
-            'business_segment.segment',
-            string='Business Segment'
+        'business_segment.segment',
+        string='Business Segment'
     )
 
     business_segment_subsegment = fields.Many2one(
@@ -32,8 +32,8 @@ class ResPartner(models.Model):
     )
 
     business_size = fields.Many2one(
-            'business_size.size',
-            string='Business Size'
+        'business_size.size',
+        string='Business Size'
     )
 
     # 3. Default methods
@@ -67,7 +67,7 @@ class ResPartner(models.Model):
                 continue
 
             record.business_segment = \
-                    record.business_segment_subsegment.parent.id
+                record.business_segment_subsegment.parent.id
 
     # 6. CRUD methods
 
