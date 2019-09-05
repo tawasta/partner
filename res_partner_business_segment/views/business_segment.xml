@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <odoo>
-	<data>
+    <data>
 
-		<!-- Extend partner form view -->
+        <!-- Extend partner form view -->
         <record id="view_partner_form_inherited" model="ir.ui.view">
             <field name="name">view.partner.form.inherited</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-            	<field name="title" position="after">
-            		<field name="business_segment"
+                <field name="title" position="after">
+                    <field name="business_segment"
                            domain="[('parent', '=', False)]"
                            attrs="{'invisible': [('is_company','=',False)]}"
                     />
@@ -19,7 +19,7 @@
                            attrs="{'invisible': [('is_company','=',False)]}"
                     />
                     <!--<field name="business_size" widget="selection" attrs="{'invisible': [('is_company','=',False)]}"/>-->
-            	</field>
+                </field>
             </field>
         </record>
 
@@ -38,18 +38,18 @@
         </record>
         -->
 
-	    <!-- Tree View -->
-	    <record model="ir.ui.view" id="business_segments_tree">
-	        <field name="name">Business segments tree view</field>
-	        <field name="model">business_segment.segment</field>
-	        <field name="arch" type="xml">
-	            <tree string="Business segments">
-	                <field name="name" />
-					<field name="category"/>
-					<field name="parent"/>
-	            </tree>
-	        </field>
-	    </record>
+        <!-- Tree View -->
+        <record model="ir.ui.view" id="business_segments_tree">
+            <field name="name">Business segments tree view</field>
+            <field name="model">business_segment.segment</field>
+            <field name="arch" type="xml">
+                <tree string="Business segments">
+                    <field name="name" />
+                    <field name="category"/>
+                    <field name="parent"/>
+                </tree>
+            </field>
+        </record>
 
         <!-- Open tree-view -->
         <record id="business_segment_tree_act" model="ir.actions.act_window">
@@ -60,11 +60,11 @@
         </record>
 
         <!-- Menuitem for business segments -->
-	<menuitem action="business_segment_tree_act"
-		id="segment_config"
-		parent="sales_team.menu_config_address_book"
-		sequence="4"
-		groups="sales_team.group_sale_manager"/>
+    <menuitem action="business_segment_tree_act"
+        id="segment_config"
+        parent="sales_team.menu_config_address_book"
+        sequence="4"
+        groups="sales_team.group_sale_manager"/>
 
-	</data>
+    </data>
 </odoo>
