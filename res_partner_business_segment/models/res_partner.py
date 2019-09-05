@@ -20,14 +20,21 @@ class ResPartner(models.Model):
     _inherit = 'res.partner'
 
     # 2. Fields declaration
-    business_segment = fields.Many2one('business_segment.segment', string='Business Segment')
+    business_segment = fields.Many2one(
+            'business_segment.segment',
+            string='Business Segment'
+    )
+
     business_segment_subsegment = fields.Many2one(
         'business_segment.segment',
         string='Business sub-segment',
         domain=[('parent', '!=', False)],
     )
 
-    business_size = fields.Many2one('business_size.size', string='Business Size')
+    business_size = fields.Many2one(
+            'business_size.size',
+            string='Business Size'
+    )
 
     # 3. Default methods
 
@@ -38,7 +45,8 @@ class ResPartner(models.Model):
     @api.onchange("business_segment")
     def onchange_business_segement_clear_subsegment(self):
         for record in self:
-            if record.business_segment_subsegment.parent != record.business_segment:
+            if record.business_segment_subsegment.parent != \
+                    record.business_segment:
                 record.business_segment_subsegment = False
 
     @api.multi
@@ -58,7 +66,8 @@ class ResPartner(models.Model):
             if not record.business_segment_subsegment:
                 continue
 
-            record.business_segment = record.business_segment_subsegment.parent.id
+            record.business_segment = \
+                    record.business_segment_subsegment.parent.id
 
     # 6. CRUD methods
 
