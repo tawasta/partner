@@ -23,8 +23,8 @@ class BusinessSize(models.Model):
     # 2. Fields declaration
     name = fields.Char(string='Business Size')
     category = fields.Many2one(
-            'business_size.category',
-            string='Size Category'
+        'business_size.category',
+        string='Size Category'
     )
 
     # 3. Default methods
