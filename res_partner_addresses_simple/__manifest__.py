@@ -22,7 +22,7 @@
 {
     'name': 'Simplify partner address management',
     'summary': 'Simplify partner address management',
-    'version': '10.0.1.2.0',
+    'version': '10.0.1.3.0',
     'category': 'CRM',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
