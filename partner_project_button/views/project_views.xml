@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Add tree view to project dashboard. Target removed so breadcrumbs aren't lost. -->
+    <record id="project.open_view_project_all" model="ir.actions.act_window">
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="target"></field>
+    </record>
+</odoo>
