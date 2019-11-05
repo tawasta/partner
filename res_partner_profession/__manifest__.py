@@ -21,7 +21,7 @@
 {
     'name': 'Professions for partners',
     'summary': 'Adds professions to partners',
-    'version': '1.2.0',
+    'version': '12.0.1.2.0',
     'category': 'CRM',
     'website': 'https://github.com/Tawasta/partner',
     'author': 'Oy Tawasta Technologies Ltd.',
