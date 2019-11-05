@@ -1,6 +1,7 @@
-from odoo import models, fields, api
+from odoo import models, fields
 
-class contact_method(models.Model):
+
+class ContactMethod(models.Model):
     _name = 'res.contact_method'
 
     _sql_constraints = [
