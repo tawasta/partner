@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2016 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2016 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,7 +21,7 @@
 {
     'name': 'Partner recursion',
     'summary': 'Adds a recursive partner search',
-    'version': '1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'CRM',
     'website': 'https://github.com/Tawasta/partner',
     'author': 'Oy Tawasta Technologies Ltd.',

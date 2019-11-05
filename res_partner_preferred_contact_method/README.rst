@@ -2,12 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-================================
-Name extension field for partner
-================================
+========================
+Preferred contact method
+========================
 
-* Adds a new field "Name extension" ("Nimitarkenne") to partners and invoices.
-* When a customer invoice is created either from Sale Order or Contract, the name extension is pulled from partner info
+Add preferred contact method for partners
 
 Configuration
 =============
@@ -27,8 +26,7 @@ Credits
 Contributors
 ------------
 
-* Valtteri Lattu <valtteri.lattu@tawasta.fi>
-* Timo Talvitie <timo.talvitie@tawasta.fi>
+* Joona Isoaho <joona.isoaho@tawasta.fi>
 
 Maintainer
 ----------

@@ -19,10 +19,10 @@
 ##############################################################################
 
 {
-    'name': 'Add transmit method to simple address tree view',
-    'summary': 'Add transmit method to simple address tree view',
+    'name': 'Defaults contact view to tree',
+    'summary': 'Defaults Contacts action to tree view',
     'version': '12.0.1.0.0',
-    'category': 'CRM',
+    'category': 'Contacts',
     'website': 'https://github.com/Tawasta/partner',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
@@ -33,11 +33,10 @@
         'bin': [],
     },
     'depends': [
-        'account_invoice_transmit_method',
-        'res_partner_addresses_simple',
+        'contacts',
     ],
     'data': [
-        'views/res_partner.xml',
+        'data/ir_model_action.xml',
     ],
     'demo': [
     ],
