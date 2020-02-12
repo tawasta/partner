@@ -21,7 +21,7 @@
 {
     'name': 'Simplify partner address management',
     'summary': 'Simplify partner address management',
-    'version': '12.0.1.1.1',
+    'version': '12.0.1.2.0',
     'category': 'CRM',
     'website': 'https://github.com/Tawasta/partner',
     'author': 'Oy Tawasta Technologies Ltd.',
