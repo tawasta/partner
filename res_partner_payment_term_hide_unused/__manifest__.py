@@ -19,25 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Hide unused payment term fields',
-    'summary': 'Hide payment term if partner is not a customer/supplier',
-    'version': '12.0.1.0.0',
-    'category': 'CRM',
-    'website': 'https://github.com/Tawasta/partner',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'account',
-    ],
-    'data': [
-        'views/res_partner.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Hide unused payment term fields",
+    "summary": "Hide payment term if partner is not a customer/supplier",
+    "version": "12.0.1.0.0",
+    "category": "CRM",
+    "website": "https://github.com/Tawasta/partner",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["account"],
+    "data": ["views/res_partner.xml"],
+    "demo": [],
 }

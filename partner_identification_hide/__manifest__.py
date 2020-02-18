@@ -19,25 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Hide partner identification page from partner',
-    'summary': 'Hide partner identification page from non-admins',
-    'version': '12.0.1.0.0',
-    'category': 'CRM',
-    'website': 'https://github.com/Tawasta/partner',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'partner_identification',
-    ],
-    'data': [
-        'views/res_partner.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Hide partner identification page from partner",
+    "summary": "Hide partner identification page from non-admins",
+    "version": "12.0.1.0.0",
+    "category": "CRM",
+    "website": "https://github.com/Tawasta/partner",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["partner_identification"],
+    "data": ["views/res_partner.xml"],
+    "demo": [],
 }

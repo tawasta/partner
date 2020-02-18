@@ -32,4 +32,3 @@ addon | version | summary
 [res_partner_tree_show_children](res_partner_tree_show_children/) | 12.0.1.0.0 | Show children in partner tree view
 
 [//]: # (end addons)
-

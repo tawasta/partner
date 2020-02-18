@@ -19,17 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Partner Latitude Longitude',
-    'summary': 'Adds latitude and longitude fields to partner',
-    'version': '12.0.1.0.0',
-    'category': 'CRM',
-    'website': 'https://github.com/Tawasta/partner',
-    'author': 'Tawasta',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [],
-    'data': [
-        'views/res_partner.xml',
-    ],
+    "name": "Partner Latitude Longitude",
+    "summary": "Adds latitude and longitude fields to partner",
+    "version": "12.0.1.0.0",
+    "category": "CRM",
+    "website": "https://github.com/Tawasta/partner",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [],
+    "data": ["views/res_partner.xml"],
 }

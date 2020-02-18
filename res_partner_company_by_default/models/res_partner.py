@@ -1,4 +1,3 @@
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -16,7 +15,7 @@ from openerp import fields, models
 class ResPartner(models.Model):
 
     # 1. Private attributes
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
     # 2. Fields declaration
     is_company = fields.Boolean(default=True)

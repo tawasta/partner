@@ -1,10 +1,9 @@
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from odoo import fields, models, api
+from odoo import api, fields, models
 
 # 4. Imports from Odoo modules:
 
@@ -15,17 +14,14 @@ from odoo import fields, models, api
 
 class ResPartner(models.Model):
 
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
     full_name = fields.Char(
-        string='Full name',
-        compute='_compute_full_name',
-        index=True,
-        store=True,
+        string="Full name", compute="_compute_full_name", index=True, store=True
     )
 
     @api.multi
-    @api.depends('name', 'parent_id')
+    @api.depends("name", "parent_id")
     def _compute_full_name(self):
         for record in self:
             name = self._get_recursive_name(record)
@@ -34,8 +30,9 @@ class ResPartner(models.Model):
     def _get_recursive_name(self, record):
         # Returns a recursive partner name
         if record.parent_id:
-            name = "%s, %s" % \
-                   (self._get_recursive_name(record.parent_id), record.name)
+            name = "{}, {}".format(
+                self._get_recursive_name(record.parent_id), record.name
+            )
         else:
             name = record.name
 
