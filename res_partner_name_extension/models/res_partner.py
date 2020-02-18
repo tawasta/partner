@@ -1,8 +1,8 @@
-from odoo import models, fields
+from odoo import fields, models
 
 
 class ResPartner(models.Model):
 
     _inherit = "res.partner"
 
-    name_extension = fields.Char('Name extension', size=128)
+    name_extension = fields.Char("Name extension", size=128)
