@@ -1,4 +1,3 @@
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -16,14 +15,14 @@ from odoo import fields, models
 class ResPartner(models.Model):
 
     # 1. Private attributes
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
     # 2. Fields declaration
     profession_ids = fields.Many2many(
-        comodel_name='res.profession',
-        relation='res_partner_res_profession_rel',
-        string='Professions',
-        help='Professions for partner',
+        comodel_name="res.profession",
+        relation="res_partner_res_profession_rel",
+        string="Professions",
+        help="Professions for partner",
     )
 
     # 3. Default methods

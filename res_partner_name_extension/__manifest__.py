@@ -19,28 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Name extension field for partner',
-    'summary': 'Name extension field for partner',
-    'version': '12.0.1.0.0',
-    'category': 'CRM',
-    'website': 'https://github.com/Tawasta/partner',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'base',
-        'sale',
-        'account',
-    ],
-    'data': [
-        'views/res_partner.xml',
-        'views/account_invoice.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Name extension field for partner",
+    "summary": "Name extension field for partner",
+    "version": "12.0.1.0.0",
+    "category": "CRM",
+    "website": "https://github.com/Tawasta/partner",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["base", "sale", "account"],
+    "data": ["views/res_partner.xml", "views/account_invoice.xml"],
+    "demo": [],
 }

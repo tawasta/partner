@@ -19,28 +19,21 @@
 ##############################################################################
 
 {
-    'name': 'Partner analysis: Projects and tasks',
-    'summary': 'Projects and tasks to partner analysis view',
-    'version': '12.0.1.0.2',
-    'category': 'CRM',
-    'website': 'https://github.com/Tawasta/partner',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'partner_analysis',
-        'project',
+    "name": "Partner analysis: Projects and tasks",
+    "summary": "Projects and tasks to partner analysis view",
+    "version": "12.0.1.0.2",
+    "category": "CRM",
+    "website": "https://github.com/Tawasta/partner",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["partner_analysis", "project"],
+    "data": [
+        "views/res_partner_analysis_form.xml",
+        "views/res_partner_analysis_search.xml",
+        "views/res_partner_analysis_tree.xml",
     ],
-    'data': [
-        'views/res_partner_analysis_form.xml',
-        'views/res_partner_analysis_search.xml',
-        'views/res_partner_analysis_tree.xml',
-    ],
-    'demo': [
-    ],
+    "demo": [],
 }

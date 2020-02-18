@@ -1,17 +1,11 @@
-from odoo import models, fields
+from odoo import fields, models
 
 
 class ContactMethod(models.Model):
-    _name = 'res.contact_method'
+    _name = "res.contact_method"
 
     _sql_constraints = [
-        ('name',
-         'unique(name)',
-         'Please use unique contact method names'),
+        ("name", "unique(name)", "Please use unique contact method names")
     ]
 
-    name = fields.Char(
-        string="Name",
-        required=True,
-        translate=True,
-    )
+    name = fields.Char(string="Name", required=True, translate=True)

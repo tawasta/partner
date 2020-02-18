@@ -19,25 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Defaults contact view to tree',
-    'summary': 'Defaults Contacts action to tree view',
-    'version': '12.0.1.0.0',
-    'category': 'Contacts',
-    'website': 'https://github.com/Tawasta/partner',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'contacts',
-    ],
-    'data': [
-        'data/ir_model_action.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Defaults contact view to tree",
+    "summary": "Defaults Contacts action to tree view",
+    "version": "12.0.1.0.0",
+    "category": "Contacts",
+    "website": "https://github.com/Tawasta/partner",
+    "author": "Tawasta",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["contacts"],
+    "data": ["data/ir_model_action.xml"],
+    "demo": [],
 }
