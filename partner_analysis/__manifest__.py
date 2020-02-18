@@ -24,7 +24,7 @@
     "version": "12.0.1.1.4",
     "category": "CRM",
     "website": "https://github.com/Tawasta/partner",
-    "author": "Oy Tawasta Technologies Ltd.",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,

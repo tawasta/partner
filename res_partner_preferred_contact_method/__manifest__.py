@@ -21,7 +21,7 @@
 {
     "name": "Preferred contact method",
     "summary": "Add preferred contact method for partners",
-    "author": "Oy Tawasta Technologies Ltd.",
+    "author": "Tawasta",
     "website": "https://github.com/Tawasta/partner",
     "license": "AGPL-3",
     "application": False,
