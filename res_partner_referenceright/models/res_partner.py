@@ -1,4 +1,3 @@
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -16,15 +15,14 @@ from odoo import fields, models
 class ResPartner(models.Model):
 
     # 1. Private attributes
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
     # 2. Fields declaration
     referenceright = fields.Many2many(
-        'res.partner.reference_right',
-        'res_partner_reference_right_rel'
-        '',
-        'id',
-        string='Reference right',
+        "res.partner.reference_right",
+        "res_partner_reference_right_rel" "",
+        "id",
+        string="Reference right",
         default=False,
     )
     # 3. Default methods

@@ -19,25 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Split partner addresses to separate pages',
-    'summary': 'Split partner (company) addresses to separate pages',
-    'version': '12.0.1.3.2',
-    'category': 'CRM',
-    'website': 'https://github.com/Tawasta/partner',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'base',
-    ],
-    'data': [
-        'views/res_partner.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Split partner addresses to separate pages",
+    "summary": "Split partner (company) addresses to separate pages",
+    "version": "12.0.1.3.2",
+    "category": "CRM",
+    "website": "https://github.com/Tawasta/partner",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["base"],
+    "data": ["views/res_partner.xml"],
+    "demo": [],
 }

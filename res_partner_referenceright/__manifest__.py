@@ -18,24 +18,21 @@
 #
 ##############################################################################
 {
-    'name': 'Partner Reference Right',
-    'summary': 'Adds a reference right field for partners',
-    'category': 'Sales',
-    'version': '12.0.1.0.0',
-    'website': 'https://github.com/Tawasta/partner',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'base',
-        'contacts',
+    "name": "Partner Reference Right",
+    "summary": "Adds a reference right field for partners",
+    "category": "Sales",
+    "version": "12.0.1.0.0",
+    "website": "https://github.com/Tawasta/partner",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["base", "contacts"],
+    "data": [
+        "data/reference_rights.xml",
+        "views/res_partner.xml",
+        "views/reference_right.xml",
+        "security/refright_security.xml",
+        "security/ir.model.access.csv",
     ],
-    'data': [
-        'data/reference_rights.xml',
-        'views/res_partner.xml',
-        'views/reference_right.xml',
-        'security/refright_security.xml',
-        'security/ir.model.access.csv',
-    ]
 }

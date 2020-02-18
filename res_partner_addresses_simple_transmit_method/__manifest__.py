@@ -19,26 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Add transmit method to simple address tree view',
-    'summary': 'Add transmit method to simple address tree view',
-    'version': '12.0.1.0.0',
-    'category': 'CRM',
-    'website': 'https://github.com/Tawasta/partner',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'account_invoice_transmit_method',
-        'res_partner_addresses_simple',
-    ],
-    'data': [
-        'views/res_partner.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Add transmit method to simple address tree view",
+    "summary": "Add transmit method to simple address tree view",
+    "version": "12.0.1.0.0",
+    "category": "CRM",
+    "website": "https://github.com/Tawasta/partner",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["account_invoice_transmit_method", "res_partner_addresses_simple"],
+    "data": ["views/res_partner.xml"],
+    "demo": [],
 }

@@ -19,27 +19,20 @@
 ##############################################################################
 
 {
-    'name': 'Partner analysis: Timesheets',
-    'summary': 'Task timesheets to partner analysis view',
-    'version': '12.0.1.0.1',
-    'category': 'CRM',
-    'website': 'https://github.com/Tawasta/partner',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'hr_timesheet',
-        'partner_analysis',
+    "name": "Partner analysis: Timesheets",
+    "summary": "Task timesheets to partner analysis view",
+    "version": "12.0.1.0.1",
+    "category": "CRM",
+    "website": "https://github.com/Tawasta/partner",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["hr_timesheet", "partner_analysis"],
+    "data": [
+        "views/res_partner_analysis_form.xml",
+        "views/res_partner_analysis_tree.xml",
     ],
-    'data': [
-        'views/res_partner_analysis_form.xml',
-        'views/res_partner_analysis_tree.xml',
-    ],
-    'demo': [
-    ],
+    "demo": [],
 }

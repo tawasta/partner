@@ -12,7 +12,7 @@
                 </tree>
             </field>
         </record>
-        
+
         <record id="action_partner_reference_rights" model="ir.actions.act_window">
             <field name="name">Reference rights</field>
             <field name="type">ir.actions.act_window</field>
@@ -20,8 +20,8 @@
             <field name="view_type">form</field>
             <field name="help">Click to create a new reference right</field>
         </record>
-        
+
         <menuitem action="action_partner_reference_rights" id="menu_reference_rights" parent="contacts.menu_contacts" sequence="50"/>
-        
+
     </data>
 </odoo>

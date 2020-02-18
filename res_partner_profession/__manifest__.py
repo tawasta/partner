@@ -19,21 +19,19 @@
 ##############################################################################
 
 {
-    'name': 'Professions for partners',
-    'summary': 'Adds professions to partners',
-    'version': '12.0.1.2.0',
-    'category': 'CRM',
-    'website': 'https://github.com/Tawasta/partner',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'base',
-    ],
-    'data': [
-        'security/ir.model.access.csv',
-        'views/res_profession.xml',
-        'views/res_partner.xml',
+    "name": "Professions for partners",
+    "summary": "Adds professions to partners",
+    "version": "12.0.1.2.0",
+    "category": "CRM",
+    "website": "https://github.com/Tawasta/partner",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["base"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/res_profession.xml",
+        "views/res_partner.xml",
     ],
 }

@@ -19,23 +19,20 @@
 ##############################################################################
 
 {
-    'name': 'Partner - Address Label',
-    'summary': 'Partner - Address Label',
-    'version': '12.0.1.0.0',
-    'category': 'CRM',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'partner_firstname',
-        'web',
-    ],
-    'data': [
-        'data/paperformat_european_a4_nomargin.xml',
-        'report/partner_label.xml',
-        'report/report_call_label.xml',
-        'report/template_for_report.xml',
+    "name": "Partner - Address Label",
+    "summary": "Partner - Address Label",
+    "version": "12.0.1.0.0",
+    "category": "CRM",
+    "website": "https://tawasta.fi",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["partner_firstname", "web"],
+    "data": [
+        "data/paperformat_european_a4_nomargin.xml",
+        "report/partner_label.xml",
+        "report/report_call_label.xml",
+        "report/template_for_report.xml",
     ],
 }

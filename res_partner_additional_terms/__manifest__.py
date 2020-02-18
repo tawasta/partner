@@ -19,27 +19,21 @@
 ##############################################################################
 
 {
-    'name': 'Additional Terms for Partner',
-    'summary': 'New model for storing customized clauses',
-    'version': '12.0.1.0.0',
-    'category': 'Contacts',
-    'website': 'https://github.com/Tawasta/partner',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'product',
+    "name": "Additional Terms for Partner",
+    "summary": "New model for storing customized clauses",
+    "version": "12.0.1.0.0",
+    "category": "Contacts",
+    "website": "https://github.com/Tawasta/partner",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["product"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/additional_term.xml",
+        "views/res_partner.xml",
     ],
-    'data': [
-        'security/ir.model.access.csv',
-        'views/additional_term.xml',
-        'views/res_partner.xml',
-    ],
-    'demo': [
-    ],
+    "demo": [],
 }

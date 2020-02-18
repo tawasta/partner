@@ -19,22 +19,20 @@
 ##############################################################################
 
 {
-    'name': "Preferred contact method",
-    'summary': "Add preferred contact method for partners",
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'website': 'https://github.com/Tawasta/partner',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'category': 'Dependency',
-    'version': '12.0.1.0.0',
-    'depends': [
+    "name": "Preferred contact method",
+    "summary": "Add preferred contact method for partners",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "website": "https://github.com/Tawasta/partner",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "category": "Dependency",
+    "version": "12.0.1.0.0",
+    "depends": [],
+    "data": [
+        "security/ir.model.access.csv",
+        "data/contact_methods.xml",
+        "views/views.xml",
     ],
-    'data': [
-        'security/ir.model.access.csv',
-        'data/contact_methods.xml',
-        'views/views.xml',
-    ],
-    'demo': [
-    ],
+    "demo": [],
 }
