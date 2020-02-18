@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,25 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Simplify partner address management',
-    'summary': 'Simplify partner address management',
-    'version': '12.0.1.2.0',
+    'name': 'Partner Latitude Longitude',
+    'summary': 'Adds latitude and longitude fields to partner',
+    'version': '12.0.1.0.0',
     'category': 'CRM',
     'website': 'https://github.com/Tawasta/partner',
     'author': 'Tawasta',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'base',
-    ],
+    'depends': [],
     'data': [
         'views/res_partner.xml',
-    ],
-    'demo': [
     ],
 }
