@@ -9,7 +9,7 @@
                     <td style="padding-bottom: 8px;">
                         <t t-if="not partner.is_company">
                             <t t-if="partner.firstname and partner.lastname">
-                                <span t-esc="partner.firstname + ', ' + partner.lastname"/>
+                                <span t-esc="partner.firstname + ' ' + partner.lastname"/>
                             </t>
                             <t t-if="partner.firstname and not partner.lastname">
                                 <span t-esc="partner.firstname"/>
