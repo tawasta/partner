@@ -63,17 +63,6 @@ class ResPartner(models.Model):
                 record.company_type = 'person'
 
     # 6. CRUD methods
-    def create(self, vals):
-        if 'type' in vals:
-            vals = self._get_address_type(vals)
-
-        return super(ResPartner, self).create(vals)
-
-    def write(self, vals):
-        if 'type' in vals:
-            vals = self._get_address_type(vals)
-
-        return super(ResPartner, self).write(vals)
 
     # 7. Action methods
     @api.multi
@@ -87,19 +76,4 @@ class ResPartner(models.Model):
                 'flags': {'form': {'action_buttons': True}}}
 
     # 8. Business methods
-    def _get_address_type(self, vals):
-        address_type = vals.get('type', False)
-        has_vat = bool(self.vat) or 'vat' in vals and vals['vat']
 
-        if address_type == 'contact':
-            if has_vat:
-                vals['is_company'] = True
-                vals['company_type'] = 'company'
-        elif address_type == 'other':
-            vals['is_company'] = True
-            vals['company_type'] = 'company'
-        else:
-            vals['is_company'] = False
-            vals['company_type'] = 'person'
-
-        return vals
