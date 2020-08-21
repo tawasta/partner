@@ -59,8 +59,7 @@
                 in core sale_crm, which won't work without correct structure
                 -->
                 <group name="type_selection"
-                     attrs="{'invisible': [('parent_id','=', False)]}"
-                     groups="base.group_no_one">
+                     attrs="{'invisible': [('parent_id','=', False)]}">
 
                     <group>
                         <field name="type"
