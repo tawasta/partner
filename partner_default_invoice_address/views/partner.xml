@@ -6,7 +6,10 @@
         <field name="arch" type="xml">
             <field name="child_ids" position="before">
                 <group>
-                    <field name="default_partner_invoice_id" />
+                    <group>
+                        <field name="default_partner_invoice_id" />
+                    </group>
+                    <group />
                 </group>
             </field>
         </field>
