@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,10 +19,10 @@
 ##############################################################################
 
 {
-    "name": "Simplify partner address management",
-    "summary": "Simplify partner address management",
-    "version": "12.0.1.2.2",
-    "category": "CRM",
+    "name": "Partner Default Delivery Address",
+    "summary": "Allows defining a default delivery address for partners",
+    "version": "12.0.1.0.0",
+    "category": "Sales",
     "website": "https://github.com/Tawasta/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
@@ -30,6 +30,6 @@
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["base"],
-    "data": ["views/res_partner.xml"],
+    "data": ["views/partner.xml"],
     "demo": [],
 }

@@ -83,7 +83,7 @@
                 <attribute name="invisible">1</attribute>
             </field>
 
-            <field name="child_ids" position="before">
+            <field name="child_ids" position="after">
                 <label for="contact_ids" />
                 <field name="contact_ids" mode="tree"
                    context="{
