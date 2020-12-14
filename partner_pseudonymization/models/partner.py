@@ -22,6 +22,7 @@ class ResPartner(models.Model):
             "phone": False,
             "mobile": False,
             "website": False,
+            "image": False,
         }
         # We leave city, zip and country be for reporting purposes
         # They aren't identifying information after other info is deleted
