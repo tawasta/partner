@@ -6,7 +6,7 @@
         <field name="arch" type="xml">
             <form string="Pseudonymize partners">
                 <p>Are you sure you want to pseudonymize the selected partner(s)?</p>
-                <p class="alert alert-danger">This action can not be reversed after confirming!</p>
+                <p class="alert alert-danger" role="alert">This action can not be reversed after confirming!</p>
                 <footer>
                     <button string="Confirm"
                         type="object"
