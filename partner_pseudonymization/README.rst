@@ -6,7 +6,21 @@
 Partner pseudonymization
 ========================
 
-Allows pseudonymizing partners
+Allows pseudonymizing partners.
+Pseudonymizes partner name with UUID string and deactivates them.
+
+Deletes following info:
+- Street
+- Street specifier
+- Email
+- Title
+- Phone
+- Mobile
+- Website
+- Image
+
+Country, City and Zip will NOT be deleted, as they are not identifiable
+information. They can be used for reporting purposes.
 
 Configuration
 =============
