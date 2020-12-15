@@ -10,6 +10,7 @@ Allows pseudonymizing partners.
 Pseudonymizes partner name with UUID string and deactivates them.
 
 Deletes following info:
+
 - Street
 - Street specifier
 - Email
