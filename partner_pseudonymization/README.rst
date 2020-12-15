@@ -7,7 +7,7 @@ Partner pseudonymization
 ========================
 
 Allows pseudonymizing partners.
-Pseudonymizes partner name with UUID string and deactivates them.
+Pseudonymizes partner name with UUID string and deactivates the partner.
 
 Deletes following info:
 
