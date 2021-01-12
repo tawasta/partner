@@ -27,7 +27,18 @@ class ResPartner(models.Model):
         # We leave city, zip and country be for reporting purposes
         # They aren't identifying information after other info is deleted
         for record in self:
-            values["name"] = uuid.uuid4()
+            hash = str(uuid.uuid4())
+
+            res_user = self.env["res.users"].sudo().search([
+                ('partner_id', '=', record.id)
+            ])
+            if res_user:
+                res_user.write({"active": False, "login": hash})
+            if record.mass_mailing_contact_ids:
+                for m in record.mass_mailing_contact_ids:
+                    m.unlink()
+
+            values["name"] = hash
             record.write(values)
 
             record.message_post(body=_("Partner pseudonymized"))

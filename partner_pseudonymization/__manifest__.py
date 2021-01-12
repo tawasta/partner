@@ -21,7 +21,7 @@
 {
     "name": "Partner pseudonymization",
     "summary": "Allows pseudonymizing partners",
-    "version": "12.0.1.1.4",
+    "version": "12.0.1.2.0",
     "category": "CRM",
     "website": "https://github.com/Tawasta/partner",
     "author": "Tawasta",
