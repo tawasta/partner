@@ -34,9 +34,11 @@ class ResPartner(models.Model):
             ])
             if res_user:
                 res_user.write({"active": False, "login": hash})
-            if record.mass_mailing_contact_ids:
-                for m in record.mass_mailing_contact_ids:
-                    m.unlink()
+
+            if hasattr(record, "mass_mailing_contact_ids"):
+                if record.mass_mailing_contact_ids:
+                    for m in record.mass_mailing_contact_ids:
+                        m.unlink()
 
             values["name"] = hash
             record.write(values)
