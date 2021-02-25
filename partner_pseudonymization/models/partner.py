@@ -29,9 +29,9 @@ class ResPartner(models.Model):
         for record in self:
             hash = str(uuid.uuid4())
 
-            res_user = self.env["res.users"].sudo().search([
-                ('partner_id', '=', record.id)
-            ])
+            res_user = (
+                self.env["res.users"].sudo().search([("partner_id", "=", record.id)])
+            )
             if res_user:
                 res_user.write({"active": False, "login": hash})
 
