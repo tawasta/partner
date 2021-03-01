@@ -57,12 +57,14 @@ class ResPartner(models.Model):
                 record.company_type = "person"
 
     # 6. CRUD methods
+    @api.model
     def create(self, vals):
         if "type" in vals:
             vals = self._get_address_type(vals)
 
         return super(ResPartner, self).create(vals)
 
+    @api.multi
     def write(self, vals):
         if "type" in vals:
             vals = self._get_address_type(vals)
