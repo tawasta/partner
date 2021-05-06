@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2015 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,17 +19,19 @@
 ##############################################################################
 
 {
-    "name": "Simplify partner address management",
-    "summary": "Simplify partner address management",
-    "version": "12.0.1.2.3",
+    "name": "Partner Guardians",
+    "summary": "Allows partner to have other partners guardians",
+    "version": "12.0.1.1.0",
     "category": "CRM",
     "website": "https://github.com/Tawasta/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ["base"],
-    "data": ["views/res_partner.xml"],
-    "demo": [],
+    "depends": ["partner_contact_personal_information_page"],
+    "data": [
+        "views/res_partner_form.xml",
+        "views/res_partner_tree.xml",
+        "views/res_partner_guardian_tree.xml",
+    ],
 }

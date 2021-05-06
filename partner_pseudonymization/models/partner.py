@@ -28,8 +28,6 @@ class ResPartner(models.Model):
         # They aren't identifying information after other info is deleted
         for record in self:
             hash = str(uuid.uuid4())
-            # print(hash)
-
             res_user = self.env["res.users"].sudo().search([
                 ('partner_id', '=', record.id)
             ])

@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2015 Oy Tawasta OS Technologies Ltd.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -14,22 +14,19 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
+#    along with this program. If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-
 {
-    "name": "Simplify partner address management",
-    "summary": "Simplify partner address management",
-    "version": "12.0.1.2.3",
+    "name": "Partner Multi-company tags",
+    "description": "Allows tagging a partner to multiple companies ",
+    "version": "12.0.1.1.7",
     "category": "CRM",
     "website": "https://github.com/Tawasta/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ["base"],
-    "data": ["views/res_partner.xml"],
-    "demo": [],
+    "depends": ["contacts"],
+    "data": ["views/res_partner.xml", "views/res_partner_search.xml"],
 }
