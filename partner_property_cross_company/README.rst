@@ -2,11 +2,26 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-================
-Partner analysis
-================
+========================
+Partner pseudonymization
+========================
 
-Base for partner analysis view
+Allows pseudonymizing partners.
+Pseudonymizes partner name with UUID string and deactivates the partner.
+
+Deletes following info:
+
+- Street
+- Street specifier
+- Email
+- Title
+- Phone
+- Mobile
+- Website
+- Image
+
+Country, City and Zip will NOT be deleted, as they are not identifiable
+information. They can be used for reporting purposes.
 
 Configuration
 =============

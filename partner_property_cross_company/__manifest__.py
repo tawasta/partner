@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Partner property sync",
-    "summary": "Sync parter property fields between companies",
+    "name": "Partner property cross company",
+    "summary": "Make partner properties accessible cross-company",
     "version": "12.0.1.0.0",
     "category": "CRM",
     "website": "https://github.com/Tawasta/partner",
@@ -29,7 +29,7 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["base"],
+    "depends": ["account"],
     "data": [],
     "demo": [],
 }
