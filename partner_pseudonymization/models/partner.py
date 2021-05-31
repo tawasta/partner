@@ -28,12 +28,21 @@ class ResPartner(models.Model):
         # They aren't identifying information after other info is deleted
         for record in self:
             hash = str(uuid.uuid4())
+            res_user = self.env["res.users"].sudo().search([
+                ('partner_id', '=', record.id)
+            ])
+            contract_ids = self.env["contract.contract"].sudo().search([
+                ('partner_id', '=', record.id)
+            ])
 
-            res_user = (
-                self.env["res.users"].sudo().search([("partner_id", "=", record.id)])
-            )
             if res_user:
                 res_user.write({"active": False, "login": hash})
+
+            if contract_ids:
+                for contract in contract_ids:
+                    splitted_name = contract.name.split(record.name)[1]
+                    new_name = hash + splitted_name
+                    contract.write({"name": new_name})
 
             if hasattr(record, "mass_mailing_contact_ids"):
                 if record.mass_mailing_contact_ids:
