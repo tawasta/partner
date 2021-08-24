@@ -18,8 +18,6 @@ class ResPartner(models.Model):
     _inherit = "res.partner"
 
     # 2. Fields declaration
-    type = fields.Selection(selection_add=[("other", _("Company"))])
-
     contact_ids = fields.One2many(
         comodel_name="res.partner",
         inverse_name="parent_id",
@@ -94,8 +92,8 @@ class ResPartner(models.Model):
                 vals["is_company"] = True
                 vals["company_type"] = "company"
         elif address_type == "other":
-            vals["is_company"] = True
-            vals["company_type"] = "company"
+            # Don't change the type
+            pass
         else:
             vals["is_company"] = False
             vals["company_type"] = "person"
