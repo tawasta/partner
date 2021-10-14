@@ -18,7 +18,6 @@ Deletes following info:
 - Phone
 - Mobile
 - Website
-- Image
 
 Country, City and Zip will NOT be deleted, as they are not identifiable
 information. They can be used for reporting purposes.
