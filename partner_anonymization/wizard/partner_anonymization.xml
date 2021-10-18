@@ -33,21 +33,4 @@
         <field name="binding_view_types">list</field>
     </record>
 
-   <!--  <record id="base_partner_merge_automatic_wizard_form" model="ir.ui.view">
-            <field name='name'>base.partner.merge.automatic.wizard.form</field>
-            <field name='model'>base.partner.merge.automatic.wizard</field>
-            <field name='arch' type='xml'>
-                <form string='Automatic Merge Wizard'>
-                    <sheet> -->
-
-   <!--  <act_window id="action_partner_anonymization"
-                name="Anonymize"
-                key2="client_action_multi"
-                res_model="partner.anonymization"
-                src_model="res.partner"
-                view_mode="form"
-                target="new"
-                view_type="form"
-                groups="base.group_partner_manager"/> -->
-
 </odoo>
