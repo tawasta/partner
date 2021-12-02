@@ -1,0 +1,80 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * res_partner_industry
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-02 09:48+0000\n"
+"PO-Revision-Date: 2021-12-02 09:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: res_partner_industry
+#: model:ir.model,name:res_partner_industry.model_res_partner
+msgid "Contact"
+msgstr "Kontakti"
+
+#. module: res_partner_industry
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_industry__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: res_partner_industry
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_industry__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: res_partner_industry
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_industry__display_name
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: res_partner_industry
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_industry__id
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_partner__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: res_partner_industry
+#: model:ir.ui.menu,name:res_partner_industry.menu_res_industry_sub
+msgid "Industries"
+msgstr "Toimialaluokitukset"
+
+#. module: res_partner_industry
+#: model:ir.actions.act_window,name:res_partner_industry.act_open_res_industry_view
+#: model:ir.model,name:res_partner_industry.model_res_industry
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_industry__name
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_partner__industry_id
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_users__industry_id
+#: model_terms:ir.ui.view,arch_db:res_partner_industry.industry_tree
+msgid "Industry"
+msgstr "Toimialaluokitus"
+
+#. module: res_partner_industry
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_industry____last_update
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: res_partner_industry
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_industry__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: res_partner_industry
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_industry__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: res_partner_industry
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_partner__other_industry_classification
+#: model:ir.model.fields,field_description:res_partner_industry.field_res_users__other_industry_classification
+msgid "Other Industry Classification"
+msgstr "Muu toimialaluokitus"
