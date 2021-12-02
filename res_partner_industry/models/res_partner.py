@@ -5,7 +5,7 @@ from odoo import models
 class ResPartner(models.Model):
     _inherit = "res.partner"
 
-    industry_id = fields.Many2one(
+    industry = fields.Many2one(
         comodel_name="res.industry", string="Industry"
     )
 
