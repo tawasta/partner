@@ -5,14 +5,8 @@
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <field name="category_id" position="after">
-                <field
-                    name="industry_id"
-                    attrs="{'invisible': [('is_company', '!=', False)]}"
-                />
-                <field
-                    name="other_industry_classification"
-                    attrs="{'invisible': [('is_company', '!=', False)]}"
-                />
+                <field name="industry_id" />
+                <field name="other_industry_classification" />
             </field>
         </field>
     </record>
