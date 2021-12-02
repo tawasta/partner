@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="partner_simple_firstname2_form" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="partner_firstname.view_partner_simple_form_firstname" />
+        <field name="arch" type="xml">
+            <field name="lastname" position="after">
+                <field
+                    name="firstname2"
+                    attrs="{'required': [('firstname', '=', False), ('lastname', '=', False), ('is_company', '=', False), ('type', '=', 'contact')]}"
+                />
+            </field>
+        </field>
+    </record>
+    <record id="partner_firstname2_form" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="partner_firstname.view_partner_form_firstname" />
+        <field name="arch" type="xml">
+            <field name="lastname" position="after">
+                <field
+                    name="firstname2"
+                    attrs="{'required': [('firstname', '=', False), ('lastname', '=', False), ('is_company', '=', False), ('type', '=', 'contact')]}"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>

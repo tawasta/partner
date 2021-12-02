@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <record id="industry_tree" model="ir.ui.view">
+      <field name="name">res.industry.tree</field>
+      <field name="model">res.industry</field>
+      <field name="priority" eval="8" />
+      <field name="arch" type="xml">
+        <tree string="Industry">
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_open_res_industry_view">
+      <field name="name">Industry</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">res.industry</field>
+      <field name="view_mode">form,tree,pivot,graph</field>
+    </record>
+
+  </data>
+</odoo>
