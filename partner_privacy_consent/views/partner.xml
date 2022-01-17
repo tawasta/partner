@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
 
             <field name="active" position="after">
-                <field name="privacy_consent_ids" widget="many2many_tags" optional="hide" />
+                <field name="accepted_privacy_consent_ids" widget="many2many_tags" optional="hide" />
             </field>
 
         </field>
@@ -20,7 +20,7 @@
         <field name="arch" type="xml">
 
             <field name="website" position="before">
-                <field name="privacy_consent_ids" widget="many2many_tags" readonly="True" />
+                <field name="accepted_privacy_consent_ids" widget="many2many_tags" readonly="True" />
             </field>
 
         </field>
@@ -33,7 +33,7 @@
         <field name="arch" type="xml">
 
             <field name="user_id" position="after">
-                <field name="privacy_consent_ids" />
+                <field name="accepted_privacy_consent_ids" />
             </field>
 
         </field>
