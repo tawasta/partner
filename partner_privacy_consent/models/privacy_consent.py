@@ -1,7 +1,6 @@
 from odoo import api
 from odoo import fields
 from odoo import models
-from odoo.osv import expression
 
 
 class PrivacyConsent(models.Model):

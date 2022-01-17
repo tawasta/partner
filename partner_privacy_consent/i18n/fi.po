@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#   * partner_anonymization
+# 	* partner_privacy_consent
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 14.0-20211220\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-14 09:11+0000\n"
-"PO-Revision-Date: 2021-10-14 09:11+0000\n"
+"POT-Creation-Date: 2022-01-17 07:26+0000\n"
+"PO-Revision-Date: 2022-01-17 07:26+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,87 +15,32 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: partner_anonymization
-#: model:ir.actions.act_window,name:partner_anonymization.action_partner_anonymization
-msgid "Anonymize"
-msgstr "Anonymisoi"
+#. module: partner_privacy_consent
+#: model:ir.model.fields,field_description:partner_privacy_consent.field_privacy_consent__activity_name
+msgid "Activity name"
+msgstr "Aktiviteetin nimi"
 
-#. module: partner_anonymization
-#: model:ir.model,name:partner_anonymization.model_partner_anonymization
-#: model_terms:ir.ui.view,arch_db:partner_anonymization.action_partner_anonymization_wizard_form
-msgid "Anonymize partners"
-msgstr "Anonymisoi partneri"
+#. module: partner_privacy_consent
+#: model:ir.model,name:partner_privacy_consent.model_privacy_consent
+msgid "Consent of data processing"
+msgstr "Datan käsittelyn hyväksyntä"
 
-#. module: partner_anonymization
-#: model_terms:ir.ui.view,arch_db:partner_anonymization.action_partner_anonymization_wizard_form
-msgid "Are you sure you want to anonymize the selected partner(s)?"
-msgstr "Oletko varma, että haluat anonymisoida valitut partnerit?"
-
-#. module: partner_anonymization
-#: model_terms:ir.ui.view,arch_db:partner_anonymization.action_partner_anonymization_wizard_form
-msgid "Cancel"
-msgstr "Peruuta"
-
-#. module: partner_anonymization
-#: model_terms:ir.ui.view,arch_db:partner_anonymization.action_partner_anonymization_wizard_form
-msgid "Confirm"
-msgstr "Vahvista"
-
-#. module: partner_anonymization
-#: model:ir.model,name:partner_anonymization.model_res_partner
-msgid "Contact"
-msgstr "Kontakti"
-
-#. module: partner_anonymization
-#: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization__create_uid
-msgid "Created by"
-msgstr ""
-
-#. module: partner_anonymization
-#: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization__create_date
-msgid "Created on"
-msgstr ""
-
-#. module: partner_anonymization
-#: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization__display_name
-#: model:ir.model.fields,field_description:partner_anonymization.field_res_partner__display_name
+#. module: partner_privacy_consent
+#: model:ir.model.fields,field_description:partner_privacy_consent.field_privacy_consent__display_name
 msgid "Display Name"
 msgstr "Näyttönimi"
 
-#. module: partner_anonymization
-#: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization__id
-#: model:ir.model.fields,field_description:partner_anonymization.field_res_partner__id
+#. module: partner_privacy_consent
+#: model:ir.model.fields,field_description:partner_privacy_consent.field_privacy_consent__id
 msgid "ID"
-msgstr "Tunniste (ID)"
+msgstr "ID"
 
-#. module: partner_anonymization
-#: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization____last_update
-#: model:ir.model.fields,field_description:partner_anonymization.field_res_partner____last_update
+#. module: partner_privacy_consent
+#: model:ir.model.fields,field_description:partner_privacy_consent.field_privacy_consent____last_update
 msgid "Last Modified on"
 msgstr "Viimeksi muokattu"
 
-#. module: partner_anonymization
-#: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization__write_uid
-msgid "Last Updated by"
-msgstr ""
-
-#. module: partner_anonymization
-#: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization__write_date
-msgid "Last Updated on"
-msgstr ""
-
-#. module: partner_anonymization
-#: code:addons/partner_anonymization/models/partner.py:0
-#, python-format
-msgid "Partner anonymized"
-msgstr "Partner anonymisoitu"
-
-#. module: partner_anonymization
-#: model_terms:ir.ui.view,arch_db:partner_anonymization.action_partner_anonymization_wizard_form
-msgid "This action can not be reversed after confirming!"
-msgstr "Tätä toimenpidettä ei voi peruuttaa jälkikäteen!"
-
-#. module: partner_anonymization
-#: model_terms:ir.ui.view,arch_db:partner_anonymization.action_partner_anonymization_wizard_form
-msgid "or"
-msgstr "tai"
+#. module: partner_privacy_consent
+#: model:ir.model.fields,field_description:partner_privacy_consent.field_privacy_consent__partner_name
+msgid "Partner name"
+msgstr "Kumppanin nimi"
