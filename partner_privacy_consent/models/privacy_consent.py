@@ -21,7 +21,7 @@ class PrivacyConsent(models.Model):
                 ("activity_name", operator, name),
                 ("partner_name", operator, name),
             ] + args
-        return self._search(args, limit=limit, access_rights_uid=name_get_uid)
+        return self.sudo()._search(args, limit=limit, access_rights_uid=name_get_uid)
 
     def name_get(self):
         res = []
