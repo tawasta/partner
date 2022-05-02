@@ -1,24 +1,24 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <odoo>
     <record id="view_partner_form_invoices" model="ir.ui.view">
         <field name="name">view.partner.form.invoices</field>
         <field name="model">res.partner</field>
-        <field eval="20" name="priority"/>
-        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field eval="20" name="priority" />
+        <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <notebook position="inside">
                 <page string="Invoices">
                     <field name="invoice_ids">
                         <tree>
-                            <field name="invoice_date" optional="show"/>
-                            <field name="name"/>
-                            <field name="payment_reference" optional="show"/>
-                            <field name="company_id" optional="show"/>
-                            <field name="user_id" optional="show"/>
-                            <field name="invoice_date_due" optional="show"/>
-                            <field name="amount_untaxed" optional="show"/>
-                            <field name="amount_total" optional="show"/>
-                            <field name="state" optional="show"/>
+                            <field name="invoice_date" optional="show" />
+                            <field name="name" />
+                            <field name="payment_reference" optional="show" />
+                            <field name="company_id" optional="show" />
+                            <field name="user_id" optional="show" />
+                            <field name="invoice_date_due" optional="show" />
+                            <field name="amount_untaxed" optional="show" />
+                            <field name="amount_total" optional="show" />
+                            <field name="state" optional="show" />
                         </tree>
                     </field>
                 </page>

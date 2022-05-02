@@ -22,7 +22,7 @@
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from odoo import _, api, fields, models
+from odoo import fields, models
 
 # 4. Imports from Odoo modules:
 
@@ -36,6 +36,4 @@ class ResPartner(models.Model):
     _inherit = "res.partner"
 
     # 2. Fields declaration
-    employer = fields.Char(
-        "Employer",
-    )
+    employer = fields.Char("Employer")

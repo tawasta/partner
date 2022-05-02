@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
 
     <record id="action_partner_anonymization_wizard_form" model="ir.ui.view">
@@ -8,16 +8,18 @@
             <form string="Anonymize partners">
                 <sheet>
                     <p>Are you sure you want to anonymize the selected partner(s)?</p>
-                    <p class="alert alert-danger" role="alert">This action can not be reversed after confirming!</p>
+                    <p
+                        class="alert alert-danger"
+                        role="alert">This action can not be reversed after confirming!</p>
                     <footer>
-                        <button string="Confirm"
+                        <button
+                            string="Confirm"
                             type="object"
                             class="oe_highlight"
-                            name="confirm"/>
+                            name="confirm"
+                        />
                         or
-                        <button string="Cancel"
-                            class="oe_link"
-                            special="cancel"/>
+                        <button string="Cancel" class="oe_link" special="cancel" />
                     </footer>
                 </sheet>
             </form>
@@ -29,7 +31,7 @@
         <field name="res_model">partner.anonymization</field>
         <field name="view_mode">form</field>
         <field name="target">new</field>
-        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_model_id" ref="base.model_res_partner" />
         <field name="binding_view_types">list</field>
     </record>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data noupdate="1">
         <record id="bsize_cat_sizes" model="business_size.category">
@@ -6,19 +6,19 @@
         </record>
         <record id="bsize_size_p" model="business_size.size">
             <field name="name">Small Businesses</field>
-            <field name="category" ref="bsize_cat_sizes"/>
+            <field name="category" ref="bsize_cat_sizes" />
         </record>
         <record id="bsize_size_k" model="business_size.size">
             <field name="name">Medium-sized Businesses</field>
-            <field name="category" ref="bsize_cat_sizes"/>
+            <field name="category" ref="bsize_cat_sizes" />
         </record>
         <record id="bsize_size_s" model="business_size.size">
             <field name="name">Large Businesses</field>
-            <field name="category" ref="bsize_cat_sizes"/>
+            <field name="category" ref="bsize_cat_sizes" />
         </record>
         <record id="bsize_size_u" model="business_size.size">
             <field name="name">Foreign Branches</field>
-            <field name="category" ref="bsize_cat_sizes"/>
+            <field name="category" ref="bsize_cat_sizes" />
         </record>
     </data>
 </odoo>

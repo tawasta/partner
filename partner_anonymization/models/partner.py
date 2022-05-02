@@ -1,6 +1,6 @@
 import uuid
-from odoo import _
-from odoo import models
+
+from odoo import _, models
 
 
 class ResPartner(models.Model):
@@ -27,12 +27,14 @@ class ResPartner(models.Model):
         # They aren't identifying information after other info is deleted
         for record in self:
             hash = str(uuid.uuid4())
-            res_user = self.env["res.users"].sudo().search([
-                ('partner_id', '=', record.id)
-            ])
-            contract_ids = self.env["contract.contract"].sudo().search([
-                ('partner_id', '=', record.id)
-            ])
+            res_user = (
+                self.env["res.users"].sudo().search([("partner_id", "=", record.id)])
+            )
+            contract_ids = (
+                self.env["contract.contract"]
+                .sudo()
+                .search([("partner_id", "=", record.id)])
+            )
 
             if res_user:
                 res_user.write({"active": False, "login": hash})

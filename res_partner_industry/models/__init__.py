@@ -1,2 +1,1 @@
-from . import res_industry
-from . import res_partner
+from . import res_industry, res_partner
