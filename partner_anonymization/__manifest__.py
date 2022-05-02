@@ -30,9 +30,6 @@
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["base"],
-    "data": [
-        "security/ir.model.access.csv",
-        "wizard/partner_anonymization.xml"
-    ],
+    "data": ["security/ir.model.access.csv", "wizard/partner_anonymization.xml"],
     "demo": [],
 }

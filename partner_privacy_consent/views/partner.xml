@@ -1,14 +1,21 @@
-<?xml version="1.0"?>
+<?xml version="1.0" ?>
 <odoo>
     <record id="view_partner_tree" model="ir.ui.view">
         <field name="name">res.partner.tree.privacy.consent</field>
         <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_partner_tree"/>
-        <field name="groups_id" eval="[(4, ref('privacy.group_data_protection_user'))]"/>
+        <field name="inherit_id" ref="base.view_partner_tree" />
+        <field
+            name="groups_id"
+            eval="[(4, ref('privacy.group_data_protection_user'))]"
+        />
         <field name="arch" type="xml">
 
             <field name="active" position="after">
-                <field name="accepted_privacy_consent_ids" widget="many2many_tags" optional="hide" />
+                <field
+                    name="accepted_privacy_consent_ids"
+                    widget="many2many_tags"
+                    optional="hide"
+                />
             </field>
 
         </field>
@@ -17,12 +24,19 @@
     <record id="view_partner_form" model="ir.ui.view">
         <field name="name">res.partner.form.privacy.consent</field>
         <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_partner_form"/>
-        <field name="groups_id" eval="[(4, ref('privacy.group_data_protection_user'))]"/>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field
+            name="groups_id"
+            eval="[(4, ref('privacy.group_data_protection_user'))]"
+        />
         <field name="arch" type="xml">
 
             <field name="website" position="before">
-                <field name="accepted_privacy_consent_ids" widget="many2many_tags" readonly="True" />
+                <field
+                    name="accepted_privacy_consent_ids"
+                    widget="many2many_tags"
+                    readonly="True"
+                />
             </field>
 
         </field>
@@ -31,8 +45,11 @@
     <record id="view_res_partner_filter" model="ir.ui.view">
         <field name="name">res.partner.select.privacy.consent</field>
         <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_res_partner_filter"/>
-        <field name="groups_id" eval="[(4, ref('privacy.group_data_protection_user'))]"/>
+        <field name="inherit_id" ref="base.view_res_partner_filter" />
+        <field
+            name="groups_id"
+            eval="[(4, ref('privacy.group_data_protection_user'))]"
+        />
         <field name="arch" type="xml">
 
             <field name="user_id" position="after">

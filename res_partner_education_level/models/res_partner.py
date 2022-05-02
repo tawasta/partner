@@ -1,5 +1,4 @@
-from odoo import fields
-from odoo import models
+from odoo import fields, models
 
 
 class ResPartner(models.Model):
@@ -9,4 +8,4 @@ class ResPartner(models.Model):
         comodel_name="res.education.level", string="Education level"
     )
 
-    other_education_or_degree = fields.Char(string="Other education or degree") 
+    other_education_or_degree = fields.Char(string="Other education or degree")

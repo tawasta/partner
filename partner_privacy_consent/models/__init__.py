@@ -1,2 +1,1 @@
-from . import partner
-from . import privacy_consent
+from . import partner, privacy_consent
