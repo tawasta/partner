@@ -1,21 +1,15 @@
-image: odoo:latest
+image: "python:3.8.1-buster"
 
 stages:
-  - build
   - test
 
-cache:
-  paths:
-    - node_modules/
-
-install_dependencies:
-  stage: build
-  script:
-    - npm install
-  artifacts:
-    paths:
-      - node_modules/
-
-test_with_lab:
+code-check:
   stage: test
-  script: npm test
+  variables:
+    PRE_COMMIT_HOME: ${CI_PROJECT_DIR}/.cache/pre-commit
+  cache:
+    paths:
+      - ${PRE_COMMIT_HOME}
+  script:
+    - pip3 install pre-commit
+    - pre-commit run --all-files
