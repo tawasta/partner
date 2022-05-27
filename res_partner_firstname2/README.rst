@@ -28,6 +28,7 @@ Contributors
 ------------
 
 * Valtteri Lattu <valtteri.lattu@tawasta.fi>
+
 Maintainer
 ----------
 

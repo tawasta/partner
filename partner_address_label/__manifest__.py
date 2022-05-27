@@ -23,7 +23,7 @@
     "summary": "Partner - Address Label",
     "version": "14.0.1.0.0",
     "category": "CRM",
-    "website": "https://gitlabe.com/tawasta/odoo/partner",
+    "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

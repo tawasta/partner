@@ -19,12 +19,12 @@
 ##############################################################################
 
 {
-    "name": "Res Partner Industry",
-    "summary": "Res Partner Industry",
+    "name": "Partner Industry",
+    "summary": "Partner Industry",
     "version": "14.0.1.0.0",
     "category": "CRM",
-    "website": "http://www.tawasta.fi",
-    "author": "Oy Tawasta Technologies Ltd.",
+    "website": "https://gitlab.com/tawasta/odoo/partner",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,

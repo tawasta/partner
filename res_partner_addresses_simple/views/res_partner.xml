@@ -4,7 +4,7 @@
     <record id="view_partner_tree_contact" model="ir.ui.view">
         <field name="name">res.partner.tree.child.ids</field>
         <field name="model">res.partner</field>
-        <field eval="20" name="priority" />
+        <field eval="120" name="priority" />
         <field name="arch" type="xml">
             <tree editable="bottom">
                 <field name="name" />
@@ -27,7 +27,7 @@
     <record id="view_partner_tree_address" model="ir.ui.view">
         <field name="name">res.partner.tree.child.ids</field>
         <field name="model">res.partner</field>
-        <field eval="20" name="priority" />
+        <field eval="120" name="priority" />
         <field name="arch" type="xml">
             <tree editable="bottom">
                 <field name="name" />
@@ -52,6 +52,7 @@
         <field name="name">res.partner.form.address</field>
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form" />
+        <field eval="120" name="priority" />
         <field name="arch" type="xml">
             <field name="type" position="replace" />
             <div name="button_box" position="before">
@@ -60,7 +61,8 @@
                 -->
                 <group
                     name="type_selection"
-                    attrs="{'invisible': [('parent_id','=', False)]}">
+                    attrs="{'invisible': [('parent_id','=', False)]}"
+                >
                     <group>
                         <field
                             name="type"
@@ -77,7 +79,8 @@
                 <attribute name="name">contacts</attribute>
                 <attribute name="string">Contacts</attribute>
                 <attribute
-                    name="attrs">{'invisible': [('type','=', 'contact'), ('is_company', '=', False)]}</attribute>
+                    name="attrs"
+                >{'invisible': [('type','=', 'contact'), ('is_company', '=', False)]}</attribute>
             </xpath>
             <field name="child_ids" position="attributes">
                 <attribute name="invisible">1</attribute>

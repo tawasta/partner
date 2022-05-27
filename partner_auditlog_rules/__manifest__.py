@@ -23,7 +23,7 @@
     "summary": "Adds audit log rules for res partner",
     "author": "Tawasta",
     "license": "AGPL-3",
-    "website": "https://gitlab.com/Tawasta/partner",
+    "website": "https://gitlab.com/tawasta/odoo/partner",
     "category": "Logging",
     "application": False,
     "installable": True,

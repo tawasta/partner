@@ -10,7 +10,8 @@
                     <p>Are you sure you want to anonymize the selected partner(s)?</p>
                     <p
                         class="alert alert-danger"
-                        role="alert">This action can not be reversed after confirming!</p>
+                        role="alert"
+                    >This action can not be reversed after confirming!</p>
                     <footer>
                         <button
                             string="Confirm"

@@ -23,7 +23,7 @@
     "summary": "Add edicode to simple address tree view",
     "version": "14.0.1.0.0",
     "category": "CRM",
-    "website": "https://github.com/Tawasta/partner",
+    "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

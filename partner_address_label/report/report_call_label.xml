@@ -6,7 +6,8 @@
                 class="page"
                 style="margin-left: -10px !important;
                                      padding-left: 1px;
-                                     margin-right: -9px !important;">
+                                     margin-right: -9px !important;"
+            >
                 <t t-foreach="docs" t-as="partner">
                     <t t-call="partner_address_label.report_simple_label" />
                 </t>
