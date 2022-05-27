@@ -3,7 +3,8 @@
     <template id="report_simple_label">
         <!--"width: 305px" represents width of 36mm and "height: 159px" represents height of 70mm-->
         <div
-            style="display: inline-block; width: 305px; height: 159px; padding: 0px; margin: 0;">
+            style="display: inline-block; width: 305px; height: 159px; padding: 0px; margin: 0;"
+        >
             <table class="table" style="padding: 16px;">
                 <tr>
                     <td style="padding-bottom: 8px;">

@@ -15,7 +15,8 @@
 
     <record
         id="contacts.action_contacts_view_kanban"
-        model="ir.actions.act_window.view">
+        model="ir.actions.act_window.view"
+    >
         <field name="sequence" eval="2" />
     </record>
 

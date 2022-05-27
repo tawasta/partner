@@ -19,12 +19,12 @@
 ##############################################################################
 
 {
-    "name": "Res Partner Education level",
-    "summary": "Res Partner Education level",
+    "name": "Partner Education level",
+    "summary": "Partner Education level",
     "version": "14.0.1.0.0",
     "category": "CRM",
-    "website": "http://www.tawasta.fi",
-    "author": "Oy Tawasta Technologies Ltd.",
+    "website": "https://gitlab.com/tawasta/odoo/partner",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,

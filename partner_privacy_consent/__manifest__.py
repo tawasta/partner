@@ -23,7 +23,7 @@
     "summary": "Adds privacy consent helpers for partner",
     "version": "14.0.1.1.1",
     "category": "CRM",
-    "website": "https://github.com/Tawasta/partner",
+    "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

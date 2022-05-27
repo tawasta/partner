@@ -5,9 +5,7 @@
 ================
 Partner employer
 ================
-
-
-
+Partner employer
 
 Configuration
 =============
@@ -26,8 +24,8 @@ Credits
 
 Contributors
 ------------
-
 * Valtteri Lattu <valtteri.lattu@tawasta.fi>
+
 Maintainer
 ----------
 
