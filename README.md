@@ -16,6 +16,7 @@ addon | version | maintainers | summary
 [partner_auditlog_rules](partner_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for res partner
 [partner_default_tree_view](partner_default_tree_view/) | 14.0.1.0.0 |  | Defaults Contacts action to tree view
 [partner_invoices_page](partner_invoices_page/) | 14.0.1.0.0 |  | Invoices page on partner form
+[partner_prh_avoindata](partner_prh_avoindata/) | 14.0.1.0.0 |  | Fetch partner information from PRH
 [partner_privacy_consent](partner_privacy_consent/) | 14.0.1.1.1 |  | Adds privacy consent helpers for partner
 [res_partner_addresses_simple](res_partner_addresses_simple/) | 14.0.1.0.0 |  | Simplify partner address management
 [res_partner_addresses_simple_transmit_method](res_partner_addresses_simple_transmit_method/) | 14.0.1.0.0 |  | Add transmit method to simple address tree view
