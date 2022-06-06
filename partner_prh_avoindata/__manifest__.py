@@ -21,7 +21,7 @@
 {
     "name": "Partner information from PRH Avoin data",
     "summary": "Fetch partner information from PRH",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "CRM",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",

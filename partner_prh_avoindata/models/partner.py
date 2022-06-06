@@ -7,10 +7,6 @@ class ResPartner(models.Model):
 
     _inherit = "res.partner"
 
-    @api.onchange("business_code")
-    def onchange_business_code_update_info(self):
-        self.action_update_info_from_prh()
-
     def action_update_info_from_prh(self):
         for record in self:
             if record.business_code:
