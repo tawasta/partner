@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [res_partner_employer](res_partner_employer/) | 14.0.1.0.0 |  | Partner employer
 [res_partner_firstname2](res_partner_firstname2/) | 14.0.1.0.0 |  | Partner firstname2
 [res_partner_industry](res_partner_industry/) | 14.0.1.0.0 |  | Partner Industry
+[res_partner_name_extension](res_partner_name_extension/) | 14.0.1.0.0 |  | Name extension field for partner
 
 
 Unported addons
