@@ -16,6 +16,7 @@ addon | version | maintainers | summary
 [partner_auditlog_rules](partner_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for res partner
 [partner_default_tree_view](partner_default_tree_view/) | 14.0.1.0.0 |  | Defaults Contacts action to tree view
 [partner_identification_hide](partner_identification_hide/) | 14.0.1.0.0 |  | Hide partner identification page from non-admins
+[partner_internal_reference_is_customer_number](partner_internal_reference_is_customer_number/) | 14.0.1.0.0 |  | Use Internal reference as Customer number
 [partner_invoices_page](partner_invoices_page/) | 14.0.1.0.0 |  | Invoices page on partner form
 [partner_prh_avoindata](partner_prh_avoindata/) | 14.0.1.0.1 |  | Fetch partner information from PRH
 [partner_privacy_consent](partner_privacy_consent/) | 14.0.1.1.1 |  | Adds privacy consent helpers for partner
@@ -27,6 +28,8 @@ addon | version | maintainers | summary
 [res_partner_employer](res_partner_employer/) | 14.0.1.0.0 |  | Partner employer
 [res_partner_firstname2](res_partner_firstname2/) | 14.0.1.0.0 |  | Partner firstname2
 [res_partner_industry](res_partner_industry/) | 14.0.1.0.0 |  | Partner Industry
+[res_partner_name_extension](res_partner_name_extension/) | 14.0.1.0.0 |  | Name extension field for partner
+[res_partner_tree_address_info](res_partner_tree_address_info/) | 14.0.1.0.0 |  | Street, city and zip are shown in the partner tree view
 
 
 Unported addons
