@@ -26,6 +26,7 @@ addon | version | maintainers | summary
 [res_partner_domicile](res_partner_domicile/) | 14.0.1.0.0 |  | Adds domicile field for partner
 [res_partner_education_level](res_partner_education_level/) | 14.0.1.0.0 |  | Partner Education level
 [res_partner_employer](res_partner_employer/) | 14.0.1.0.0 |  | Partner employer
+[res_partner_eori](res_partner_eori/) | 14.0.1.0.0 |  | Adds field for EORI number to res.partner and res.company
 [res_partner_firstname2](res_partner_firstname2/) | 14.0.1.0.0 |  | Partner firstname2
 [res_partner_industry](res_partner_industry/) | 14.0.1.0.0 |  | Partner Industry
 [res_partner_name_extension](res_partner_name_extension/) | 14.0.1.0.0 |  | Name extension field for partner
