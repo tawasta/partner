@@ -10,6 +10,6 @@ class AccountMove(models.Model):
 
     @api.onchange("partner_id")
     def _onchange_partner_id(self):
-        if self.partner_id:
+        if self.partner_id and self.partner_id.name_extension:
             self.name_extension = self.partner_id.name_extension
         return super(AccountMove, self)._onchange_partner_id
