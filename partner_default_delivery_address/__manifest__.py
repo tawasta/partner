@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Partner Default Invoice Address",
-    "summary": "Allows defining a default invoice address for partners",
-    "version": "14.0.1.0.1",
+    "name": "Partner Default Delivery Address",
+    "summary": "Allows defining a default delivery address for partners",
+    "version": "14.0.1.0.0",
     "category": "Sales",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",

@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===============================
-Partner Default Invoice Address
-===============================
+================================
+Partner Default Delivery Address
+================================
 
-Allows defining a default invoice address for partners
+Allows defining a default delivery address for partners
 
 Installation
 ============
