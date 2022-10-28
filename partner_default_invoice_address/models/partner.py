@@ -6,7 +6,7 @@ class Partner(models.Model):
     _inherit = "res.partner"
 
     default_partner_invoice_id = fields.Many2one(
-        comodel_name="res.partner", string="Default invoice address"
+        comodel_name="res.partner", string="Default Invoice Address"
     )
 
     def address_get(self, adr_pref=None):

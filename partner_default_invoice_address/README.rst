@@ -30,6 +30,7 @@ Credits
 Contributors
 ------------
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
+* Miika Nissi <miika.nissi@tawasta.fi>
 
 Maintainer
 ----------

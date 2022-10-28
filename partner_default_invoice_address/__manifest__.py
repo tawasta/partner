@@ -21,15 +21,13 @@
 {
     "name": "Partner Default Invoice Address",
     "summary": "Allows defining a default invoice address for partners",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Sales",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
     "depends": ["base"],
     "data": ["views/partner.xml"],
-    "demo": [],
 }
