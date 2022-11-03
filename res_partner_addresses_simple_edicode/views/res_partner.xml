@@ -11,7 +11,7 @@
         <field name="arch" type="xml">
             <field name="country_id" position="after">
                 <field name="edicode" />
-                <field name="einvoice_operator" />
+                <field name="einvoice_operator_id" />
             </field>
         </field>
     </record>

@@ -27,7 +27,7 @@
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
-    "installable": False,
+    "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["l10n_fi_edicode", "res_partner_addresses_simple"],
     "data": ["views/res_partner.xml"],
