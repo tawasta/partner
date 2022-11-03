@@ -23,6 +23,7 @@ addon | version | maintainers | summary
 [partner_prh_avoindata](partner_prh_avoindata/) | 14.0.1.0.1 |  | Fetch partner information from PRH
 [partner_privacy_consent](partner_privacy_consent/) | 14.0.1.1.1 |  | Adds privacy consent helpers for partner
 [res_partner_addresses_simple](res_partner_addresses_simple/) | 14.0.1.0.0 |  | Simplify partner address management
+[res_partner_addresses_simple_edicode](res_partner_addresses_simple_edicode/) | 14.0.1.0.0 |  | Add edicode to simple address tree view
 [res_partner_addresses_simple_transmit_method](res_partner_addresses_simple_transmit_method/) | 14.0.1.0.0 |  | Add transmit method to simple address tree view
 [res_partner_business_segment](res_partner_business_segment/) | 14.0.1.0.0 |  | Add multilayer business segments for partners
 [res_partner_domicile](res_partner_domicile/) | 14.0.1.0.0 |  | Adds domicile field for partner
@@ -33,12 +34,5 @@ addon | version | maintainers | summary
 [res_partner_industry](res_partner_industry/) | 14.0.1.0.0 |  | Partner Industry
 [res_partner_name_extension](res_partner_name_extension/) | 14.0.1.0.1 |  | Name extension field for partner
 [res_partner_tree_address_info](res_partner_tree_address_info/) | 14.0.1.0.0 |  | Street, city and zip are shown in the partner tree view
-
-
-Unported addons
----------------
-addon | version | maintainers | summary
---- | --- | --- | ---
-[res_partner_addresses_simple_edicode](res_partner_addresses_simple_edicode/) | 14.0.1.0.0 (unported) |  | Add edicode to simple address tree view
 
 [//]: # (end addons)
