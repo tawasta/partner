@@ -22,7 +22,9 @@ class ResPartner(models.Model):
             domain = [("company_id", "=", company.id)]
             if (
                 country_id
-                and not partner.with_company(company.id).property_account_position_id
+                and not partner.sudo()
+                .with_company(company.id)
+                .property_account_position_id
             ):
 
                 # Check if a selected country is a domestic country
@@ -43,7 +45,7 @@ class ResPartner(models.Model):
                 )
 
                 # Fiscal position is assigned within context of the looped company
-                partner.with_company(
+                partner.sudo().with_company(
                     company.id
                 ).property_account_position_id = fiscal_position
         return partner
