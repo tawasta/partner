@@ -1,3 +1,5 @@
+from collections import OrderedDict
+
 from odoo import _, models
 
 
@@ -10,12 +12,11 @@ class PartnerInformationXlsx(models.AbstractModel):
         """
         Export all partner information
         """
-
         for o in objects:
             # Export partner basic information
-            headers, rows = self._get_data_to_export(o)
+            columns = self._get_data_to_export(o)
 
-            self._add_sheet(o._description, workbook, headers, rows)
+            self._add_sheet(o._description, workbook, columns)
 
             # Export related records
             partner_model = (
@@ -32,11 +33,11 @@ class PartnerInformationXlsx(models.AbstractModel):
                         continue
 
                     records = model.search([(field.relation_field, "=", o.id)])
-                    headers, rows = self._get_data_to_export(records)
+                    columns = self._get_data_to_export(records)
 
-                    if rows:
+                    if columns:
                         self._add_sheet(
-                            model._description or model._name, workbook, headers, rows
+                            model._description or model._name, workbook, columns
                         )
 
             o.message_post(body=_("Partner information exported"))
@@ -45,11 +46,8 @@ class PartnerInformationXlsx(models.AbstractModel):
         """
         Get headers and rows to write in the XLXS-file
         """
-        headers = []
-        rows = []
-        first = True
+        columns = OrderedDict()
         for record in records:
-            values = []
             for field in record._fields:
                 key = field.split(":", maxsplit=1)[0]
                 if key[0] == "_":
@@ -61,32 +59,40 @@ class PartnerInformationXlsx(models.AbstractModel):
                     # They arguably could be included, but needs testing
                     continue
 
-                if key.startswith("message"):
-                    # Skip exporting message fields
+                if key.startswith("message_") or key.startswith("user_"):
+                    # Skip exporting message and user fields
                     continue
 
-                if first:
-                    headers.append(key)
+                if key not in columns:
+                    columns[key] = []
 
-                values.append(str(value))
+                columns[key].append(value)
 
-            first = False
-            rows.append(values)
+        return columns
 
-        return headers, rows
-
-    def _add_sheet(self, sheet_name, workbook, headers, rows):
+    def _add_sheet(self, sheet_name, workbook, columns):
         """
         Add a new sheet, headers and rows
         """
         sheet = workbook.add_worksheet(sheet_name)
 
         sheet.set_row(0, None, None, {"collapsed": 1})
-        sheet.write_row(0, 0, headers)
+        bold = workbook.add_format({"bold": True})
 
-        i = 1
-        for row in rows:
-            col = 0
-            for column in row:
-                sheet.write(i, col, column)
-                col += 1
+        # Write columns
+        c = 0
+        for header, values in columns.items():
+            if not all(values):
+                # Skip columns without values
+                continue
+
+            # Add header
+            sheet.write(0, c, header, bold)
+            # Start values from second row
+            r = 1
+            for value in values:
+                sheet.write(r, c, value)
+                r += 1
+
+            # Next value, next column
+            c += 1
