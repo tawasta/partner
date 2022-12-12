@@ -19,6 +19,7 @@ addon | version | maintainers | summary
 [partner_default_invoice_address](partner_default_invoice_address/) | 14.0.1.0.1 |  | Allows defining a default invoice address for partners
 [partner_default_tree_view](partner_default_tree_view/) | 14.0.1.0.0 |  | Defaults Contacts action to tree view
 [partner_identification_hide](partner_identification_hide/) | 14.0.1.0.0 |  | Hide partner identification page from non-admins
+[partner_information_export](partner_information_export/) | 14.0.1.0.0 |  | Allows exporting all partner information
 [partner_internal_reference_is_customer_number](partner_internal_reference_is_customer_number/) | 14.0.1.0.0 |  | Use Internal reference as Customer number
 [partner_invoices_page](partner_invoices_page/) | 14.0.1.0.0 |  | Invoices page on partner form
 [partner_prh_avoindata](partner_prh_avoindata/) | 14.0.1.0.1 |  | Fetch partner information from PRH
