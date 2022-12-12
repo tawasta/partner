@@ -23,6 +23,7 @@ class PartnerInformationXlsx(models.AbstractModel):
             )
             for field in partner_model.field_id:
                 # TODO: Support many2many records
+                # TODO: Support related "rows", e.g. sale order lines, invoice lines
                 if field.ttype == "one2many" and field.store is True:
                     model = self.env[field.relation]
 
@@ -58,6 +59,10 @@ class PartnerInformationXlsx(models.AbstractModel):
                 if not isinstance(value, (float, int, bool, str)):
                     # Skip relation fields for now
                     # They arguably could be included, but needs testing
+                    continue
+
+                if key.startswith("message"):
+                    # Skip exporting message fields
                     continue
 
                 if first:
