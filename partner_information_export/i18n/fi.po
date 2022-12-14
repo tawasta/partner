@@ -46,4 +46,4 @@ msgstr "Kumppanin tiedot"
 #: code:addons/partner_information_export/report/partner_information.py:0
 #, python-format
 msgid "Partner information exported"
-msgstr "Vietävät tiedot"
+msgstr "Kumppanin tiedot ladattu järjestelmästä"
