@@ -21,7 +21,7 @@
 {
     "name": "Partner anonymization",
     "summary": "Allows anonymization partners",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "category": "CRM",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",

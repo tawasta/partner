@@ -41,8 +41,11 @@ class ResPartner(models.Model):
 
             if contract_ids:
                 for contract in contract_ids:
-                    splitted_name = contract.name.split(record.name)[1]
-                    new_name = user_hash + splitted_name
+                    if record.name in contract.name:
+                        splitted_name = contract.name.split(record.name)[1]
+                        new_name = user_hash + splitted_name
+                    else:
+                        new_name = user_hash
                     contract.write({"name": new_name})
 
             if hasattr(record, "mass_mailing_contact_ids"):
@@ -54,3 +57,4 @@ class ResPartner(models.Model):
             record.write(values)
 
             record.message_post(body=_("Partner anonymized"))
+            record.action_archive()
