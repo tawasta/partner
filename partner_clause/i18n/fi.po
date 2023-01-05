@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-03 09:13+0000\n"
-"PO-Revision-Date: 2023-01-03 11:15+0200\n"
+"POT-Creation-Date: 2023-01-05 12:34+0000\n"
+"PO-Revision-Date: 2023-01-05 14:35+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -29,6 +29,11 @@ msgid "Clauses"
 msgstr "Lauseet"
 
 #. module: partner_clause
+#: model:ir.model,name:partner_clause.model_res_partner
+msgid "Contact"
+msgstr "Kontakti"
+
+#. module: partner_clause
 #: model:ir.model.fields,field_description:partner_clause.field_partner_clause__create_uid
 msgid "Created by"
 msgstr "Luonut"
@@ -40,11 +45,13 @@ msgstr "Luotu"
 
 #. module: partner_clause
 #: model:ir.model.fields,field_description:partner_clause.field_partner_clause__display_name
+#: model:ir.model.fields,field_description:partner_clause.field_res_partner__display_name
 msgid "Display Name"
 msgstr "Näyttönimi"
 
 #. module: partner_clause
 #: model:ir.model.fields,field_description:partner_clause.field_partner_clause__id
+#: model:ir.model.fields,field_description:partner_clause.field_res_partner__id
 msgid "ID"
 msgstr "Tunniste (ID)"
 
@@ -54,7 +61,19 @@ msgid "Invoice"
 msgstr "Lasku"
 
 #. module: partner_clause
+#: model:ir.model.fields,field_description:partner_clause.field_res_partner__invoice_clause
+#: model:ir.model.fields,field_description:partner_clause.field_res_users__invoice_clause
+msgid "Invoice clause"
+msgstr "Laskun lause"
+
+#. module: partner_clause
+#: model_terms:ir.ui.view,arch_db:partner_clause.view_partner_property_form
+msgid "Invoices"
+msgstr "Laskut"
+
+#. module: partner_clause
 #: model:ir.model.fields,field_description:partner_clause.field_partner_clause____last_update
+#: model:ir.model.fields,field_description:partner_clause.field_res_partner____last_update
 msgid "Last Modified on"
 msgstr "Viimeksi muokattu"
 
@@ -83,6 +102,12 @@ msgstr "Kontaktien lauseet"
 #: model:ir.model.fields.selection,name:partner_clause.selection__partner_clause__used_for__sale
 msgid "Sale"
 msgstr "Myynti"
+
+#. module: partner_clause
+#: model:ir.model.fields,field_description:partner_clause.field_res_partner__sale_clause
+#: model:ir.model.fields,field_description:partner_clause.field_res_users__sale_clause
+msgid "Sale clause"
+msgstr "Myyntilause"
 
 #. module: partner_clause
 #: model:ir.model.fields,help:partner_clause.field_partner_clause__used_for
