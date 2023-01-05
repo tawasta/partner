@@ -22,7 +22,11 @@
                 <sheet>
                     <group name="partner_clause_group">
                         <field name="name" />
-                        <field name="clause" />
+                        <field
+                            name="clause"
+                            required="1"
+                            placeholder="This is added to text-field."
+                        />
                         <field name="used_for" />
                     </group>
                 </sheet>
