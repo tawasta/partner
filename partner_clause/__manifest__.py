@@ -21,7 +21,7 @@
 {
     "name": "Partner Clause",
     "summary": "Partner clause records",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Contacts",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
@@ -29,10 +29,12 @@
     "application": False,
     "installable": True,
     "depends": [
+        "account",
         "contacts",
     ],
     "data": [
         "security/ir.model.access.csv",
         "views/partner_clause.xml",
+        "views/res_partner.xml",
     ],
 }
