@@ -50,7 +50,10 @@ class PartnerInformationXlsx(models.AbstractModel):
         for record in records:
             for field in record._fields:
                 odoo_field = record._fields[field]
-                if not odoo_field.groups or odoo_field.groups in self.env.user.groups_id:
+                if (
+                    not odoo_field.groups
+                    or odoo_field.groups in self.env.user.groups_id
+                ):
                     key = field.split(":", maxsplit=1)[0]
                     if key[0] == "_":
                         # Skip private attributes
