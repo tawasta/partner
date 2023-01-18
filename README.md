@@ -31,6 +31,7 @@ addon | version | maintainers | summary
 [res_partner_addresses_simple_edicode](res_partner_addresses_simple_edicode/) | 14.0.1.0.0 |  | Add edicode to simple address tree view
 [res_partner_addresses_simple_transmit_method](res_partner_addresses_simple_transmit_method/) | 14.0.1.0.0 |  | Add transmit method to simple address tree view
 [res_partner_business_segment](res_partner_business_segment/) | 14.0.1.0.0 |  | Add multilayer business segments for partners
+[res_partner_company_by_default](res_partner_company_by_default/) | 14.0.1.0.0 |  | New partners are companies by default
 [res_partner_domicile](res_partner_domicile/) | 14.0.1.0.0 |  | Adds domicile field for partner
 [res_partner_education_level](res_partner_education_level/) | 14.0.1.0.0 |  | Partner Education level
 [res_partner_employer](res_partner_employer/) | 14.0.1.0.0 |  | Partner employer
