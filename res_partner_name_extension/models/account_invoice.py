@@ -12,4 +12,4 @@ class AccountMove(models.Model):
     def _onchange_partner_id(self):
         if self.partner_id and self.partner_id.name_extension:
             self.name_extension = self.partner_id.name_extension
-        return super(AccountMove, self)._onchange_partner_id
+        return super()._onchange_partner_id()
