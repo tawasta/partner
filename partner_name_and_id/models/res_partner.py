@@ -22,8 +22,6 @@ class ResPartner(models.Model):
             name = name + "\n" + partner._display_address(without_company=True)
         name = name.replace('\n\n', '\n')
         name = name.replace('\n\n', '\n')
-        if self._context.get('partner_show_db_id'):
-            name = "%s (%s)" % (name, partner.id)
         if self._context.get('address_inline'):
             splitted_names = name.split("\n")
             name = ", ".join([n for n in splitted_names if n.strip()])
