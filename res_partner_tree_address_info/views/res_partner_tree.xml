@@ -7,7 +7,6 @@
             <field name="arch" type="xml">
                 <field name="email" position="after">
                     <field name="street" optional="show" />
-                    <field name="city" optional="show" />
                     <field name="zip" optional="show" />
                 </field>
             </field>
