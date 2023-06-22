@@ -21,7 +21,7 @@
 {
     "name": "Order Partners by is_company and customer_rank",
     "summary": "Order Partners by is_company and customer_rank",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Contacts",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
@@ -29,5 +29,5 @@
     "application": False,
     "installable": True,
     "depends": ["account", "base"],
-    "data": [],
+    "data": ["views/res_partner.xml", "views/sale_order.xml"],
 }
