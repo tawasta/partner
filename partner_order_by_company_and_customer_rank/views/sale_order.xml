@@ -6,8 +6,8 @@
         <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
             <field name="partner_id" position="after">
-                <field name="partner_customer_rank" />
-                <field name="partner_is_company" />
+                <field name="partner_customer_rank" invisible="1" />
+                <field name="partner_is_company" invisible="1" />
             </field>
             <field name="partner_id" position="attributes">
                 <attribute
