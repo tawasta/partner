@@ -7,7 +7,7 @@
         <field eval="120" name="priority" />
         <field name="arch" type="xml">
             <tree editable="bottom">
-                <field name="name" />
+                <field name="name" required="1" />
                 <field name="type" invisible="1" />
                 <field name="is_company" invisible="1" />
                 <field name="company_type" invisible="1" />
@@ -30,7 +30,7 @@
         <field eval="120" name="priority" />
         <field name="arch" type="xml">
             <tree editable="bottom">
-                <field name="name" />
+                <field name="name" required="1" />
                 <field name="type" />
                 <field name="is_company" invisible="1" />
                 <field name="company_type" invisible="1" />
