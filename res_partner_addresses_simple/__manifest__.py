@@ -21,7 +21,7 @@
 {
     "name": "Simplify partner address management",
     "summary": "Simplify partner address management",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "category": "CRM",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
