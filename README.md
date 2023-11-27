@@ -30,7 +30,7 @@ addon | version | maintainers | summary
 [partner_prh_avoindata](partner_prh_avoindata/) | 14.0.1.0.1 |  | Fetch partner information from PRH
 [partner_privacy_consent](partner_privacy_consent/) | 14.0.1.1.1 |  | Adds privacy consent helpers for partner
 [partner_tree_business_id](partner_tree_business_id/) | 14.0.1.0.0 |  | Res Partner Business ID
-[res_partner_addresses_simple](res_partner_addresses_simple/) | 14.0.1.0.1 |  | Simplify partner address management
+[res_partner_addresses_simple](res_partner_addresses_simple/) | 14.0.1.0.2 |  | Simplify partner address management
 [res_partner_addresses_simple_edicode](res_partner_addresses_simple_edicode/) | 14.0.1.0.0 |  | Add edicode to simple address tree view
 [res_partner_addresses_simple_transmit_method](res_partner_addresses_simple_transmit_method/) | 14.0.1.0.0 |  | Add transmit method to simple address tree view
 [res_partner_business_segment](res_partner_business_segment/) | 14.0.1.0.0 |  | Add multilayer business segments for partners
@@ -40,6 +40,7 @@ addon | version | maintainers | summary
 [res_partner_employer](res_partner_employer/) | 14.0.1.0.0 |  | Partner employer
 [res_partner_eori](res_partner_eori/) | 14.0.1.0.0 |  | Adds field for EORI number to res.partner and res.company
 [res_partner_firstname2](res_partner_firstname2/) | 14.0.1.0.0 |  | Partner firstname2
+[res_partner_full_name](res_partner_full_name/) | 14.0.1.0.0 |  | Adds a full recursive name for partners
 [res_partner_industry](res_partner_industry/) | 14.0.1.0.0 |  | Partner Industry
 [res_partner_name_extension](res_partner_name_extension/) | 14.0.1.0.2 |  | Name extension field for partner
 [res_partner_transmit_method_hide_unused](res_partner_transmit_method_hide_unused/) | 14.0.1.0.0 |  | Hide transmit_method if partner is not a customer/supplier
