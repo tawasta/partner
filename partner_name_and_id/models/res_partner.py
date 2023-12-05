@@ -37,6 +37,7 @@ class ResPartner(models.Model):
             not self._context.get("show_address_only")
             and not self._context.get("show_address")
             and not self._context.get("address_inline")
+            and not self._context.get("import_file")
         ):
             name = "%s ‒ %s" % (name, partner.id)
         return name
