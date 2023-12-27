@@ -25,7 +25,7 @@ addon | version | maintainers | summary
 [partner_information_export](partner_information_export/) | 14.0.1.1.0 |  | Allows exporting all partner information
 [partner_internal_reference_is_customer_number](partner_internal_reference_is_customer_number/) | 14.0.1.0.0 |  | Use Internal reference as Customer number
 [partner_invoices_page](partner_invoices_page/) | 14.0.1.0.0 |  | Invoices page on partner form
-[partner_name_and_id](partner_name_and_id/) | 14.0.1.0.0 |  | Partner name and ID
+[partner_name_and_id](partner_name_and_id/) | 14.0.1.1.0 |  | Partner name and ID
 [partner_order_by_company_and_customer_rank](partner_order_by_company_and_customer_rank/) | 14.0.1.0.3 |  | Order Partners by is_company and customer_rank
 [partner_prh_avoindata](partner_prh_avoindata/) | 14.0.1.0.1 |  | Fetch partner information from PRH
 [partner_privacy_consent](partner_privacy_consent/) | 14.0.1.1.1 |  | Adds privacy consent helpers for partner
