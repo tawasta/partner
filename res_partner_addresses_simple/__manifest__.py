@@ -20,14 +20,14 @@
 
 {
     "name": "Simplify partner address management",
-    "summary": "Simplify partner address management",
-    "version": "14.0.1.0.1",
+    "summary": "Show company addresses and contacts in list instead of cards",
+    "version": "14.0.1.1.0",
     "category": "CRM",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["base"],
+    "depends": ["contacts"],
     "data": ["views/res_partner.xml"],
 }

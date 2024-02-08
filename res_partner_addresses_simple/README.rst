@@ -6,6 +6,8 @@
 Simplify partner address management
 ===================================
 
+Show company addresses and contacts in list instead of cards
+
 Split partner address types to own fields: contacts and addresses
 
 The default view will be tree instead of kanban.
