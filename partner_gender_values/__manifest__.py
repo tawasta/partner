@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Partner name and ID",
-    "summary": "Partner name and ID",
+    "name": "Partner gender values",
+    "summary": "Partner gender values",
     "version": "14.0.1.1.0",
     "category": "CRM",
     "website": "https://gitlab.com/tawasta/odoo/partner",
@@ -28,5 +28,5 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account"],
+    "depends": ["partner_contact_gender"],
 }

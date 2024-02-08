@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,14 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Partner name and ID",
-    "summary": "Partner name and ID",
-    "version": "14.0.1.1.0",
+    "name": "Full recursive name for partners",
+    "summary": "Adds a full recursive name for partners",
+    "version": "14.0.1.0.0",
     "category": "CRM",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["account"],
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["base"],
+    "data": ["views/res_partner.xml"],
+    "demo": [],
 }

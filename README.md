@@ -21,11 +21,12 @@ addon | version | maintainers | summary
 [partner_default_invoice_address](partner_default_invoice_address/) | 14.0.1.0.1 |  | Allows defining a default invoice address for partners
 [partner_default_tree_view](partner_default_tree_view/) | 14.0.1.0.0 |  | Defaults Contacts action to tree view
 [partner_email_check_notification](partner_email_check_notification/) | 14.0.1.0.0 |  | Require partner email in views
+[partner_gender_values](partner_gender_values/) | 14.0.1.1.0 |  | Partner gender values
 [partner_identification_hide](partner_identification_hide/) | 14.0.1.0.0 |  | Hide partner identification page from non-admins
 [partner_information_export](partner_information_export/) | 14.0.1.1.0 |  | Allows exporting all partner information
 [partner_internal_reference_is_customer_number](partner_internal_reference_is_customer_number/) | 14.0.1.0.0 |  | Use Internal reference as Customer number
 [partner_invoices_page](partner_invoices_page/) | 14.0.1.0.0 |  | Invoices page on partner form
-[partner_name_and_id](partner_name_and_id/) | 14.0.1.0.0 |  | Partner name and ID
+[partner_name_and_id](partner_name_and_id/) | 14.0.1.1.0 |  | Partner name and ID
 [partner_order_by_company_and_customer_rank](partner_order_by_company_and_customer_rank/) | 14.0.1.0.3 |  | Order Partners by is_company and customer_rank
 [partner_prh_avoindata](partner_prh_avoindata/) | 14.0.1.0.1 |  | Fetch partner information from PRH
 [partner_privacy_consent](partner_privacy_consent/) | 14.0.1.1.1 |  | Adds privacy consent helpers for partner
@@ -40,6 +41,7 @@ addon | version | maintainers | summary
 [res_partner_employer](res_partner_employer/) | 14.0.1.0.0 |  | Partner employer
 [res_partner_eori](res_partner_eori/) | 14.0.1.0.0 |  | Adds field for EORI number to res.partner and res.company
 [res_partner_firstname2](res_partner_firstname2/) | 14.0.1.0.0 |  | Partner firstname2
+[res_partner_full_name](res_partner_full_name/) | 14.0.1.0.0 |  | Adds a full recursive name for partners
 [res_partner_industry](res_partner_industry/) | 14.0.1.0.0 |  | Partner Industry
 [res_partner_name_extension](res_partner_name_extension/) | 14.0.1.0.2 |  | Name extension field for partner
 [res_partner_transmit_method_hide_unused](res_partner_transmit_method_hide_unused/) | 14.0.1.0.0 |  | Hide transmit_method if partner is not a customer/supplier
