@@ -10,20 +10,14 @@ class ResPartner(models.Model):
         comodel_name="res.partner",
         inverse_name="parent_id",
         string="Contacts",
-        domain=[
-            ("type", "in", ["contact", "other"]),
-            ("is_company", "=", False),
-        ],
+        domain=[("type", "in", ["contact", "other"])],
     )
 
     address_ids = fields.One2many(
         comodel_name="res.partner",
         inverse_name="parent_id",
         string="Addresses",
-        domain=[
-            ("type", "!=", "contact"),
-            ("is_company", "=", True),
-        ],
+        domain=[("type", "not in", ["contact", "other"])],
     )
 
     # 3. Default methods
