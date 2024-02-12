@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Simplify partner address management",
-    "summary": "Show company addresses and contacts in list instead of cards",
+    "name": "Partner gender values",
+    "summary": "Partner gender values",
     "version": "14.0.1.1.0",
     "category": "CRM",
     "website": "https://gitlab.com/tawasta/odoo/partner",
@@ -28,6 +28,5 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["contacts"],
-    "data": ["views/res_partner.xml"],
+    "depends": ["partner_contact_gender"],
 }
