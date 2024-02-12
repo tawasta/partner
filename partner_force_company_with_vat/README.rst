@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==============================
-Partner force company with VAT
-==============================
-
+======================================
 Set partner as company if VAT is given
+======================================
+
+Set new partner fiscal position based on fiscal position rules.
 
 Credits
 =======

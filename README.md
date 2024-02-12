@@ -21,6 +21,7 @@ addon | version | maintainers | summary
 [partner_default_invoice_address](partner_default_invoice_address/) | 14.0.1.0.1 |  | Allows defining a default invoice address for partners
 [partner_default_tree_view](partner_default_tree_view/) | 14.0.1.0.0 |  | Defaults Contacts action to tree view
 [partner_email_check_notification](partner_email_check_notification/) | 14.0.1.0.0 |  | Require partner email in views
+[partner_force_company_with_vat](partner_force_company_with_vat/) | 14.0.1.0.0 |  | Set partner as company if VAT is given
 [partner_gender_values](partner_gender_values/) | 14.0.1.1.0 |  | Partner gender values
 [partner_identification_hide](partner_identification_hide/) | 14.0.1.0.0 |  | Hide partner identification page from non-admins
 [partner_information_export](partner_information_export/) | 14.0.1.1.0 |  | Allows exporting all partner information
