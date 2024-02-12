@@ -20,7 +20,7 @@
 
 {
     "name": "Set partner as company if VAT is given",
-    "summary": "Set partner as company if VAT is given",
+    "summary": "Force partner type to company when VAT is given",
     "version": "14.0.1.0.0",
     "category": "CRM",
     "website": "https://gitlab.com/tawasta/odoo/partner",

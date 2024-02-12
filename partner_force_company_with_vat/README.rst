@@ -6,7 +6,7 @@
 Set partner as company if VAT is given
 ======================================
 
-Set new partner fiscal position based on fiscal position rules.
+Force partner type to company when VAT is given
 
 Credits
 =======
