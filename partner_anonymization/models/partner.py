@@ -4,7 +4,6 @@ from odoo import _, models
 
 
 class ResPartner(models.Model):
-
     _inherit = "res.partner"
 
     def anonymize(self):
