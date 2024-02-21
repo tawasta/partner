@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2017 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,17 +19,21 @@
 ##############################################################################
 
 {
-    "name": "Partner anonymization",
-    "summary": "Allows anonymization partners",
+    "name": "Additional Terms for Partner",
+    "summary": "New model for storing customized clauses",
     "version": "17.0.1.0.0",
-    "category": "CRM",
+    "category": "Contacts",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["base"],
-    "data": ["security/ir.model.access.csv", "wizard/partner_anonymization.xml"],
+    "depends": ["product"],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/additional_term.xml",
+        "views/res_partner.xml",
+    ],
     "demo": [],
 }

@@ -11,6 +11,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[partner_anonymization](partner_anonymization/) | 14.0.1.1.0 |  | Allows anonymization partners
+[partner_anonymization](partner_anonymization/) | 17.0.1.0.0 |  | Allows anonymization partners
+[res_partner_additional_terms](res_partner_additional_terms/) | 17.0.1.0.0 |  | New model for storing customized clauses
 
 [//]: # (end addons)
