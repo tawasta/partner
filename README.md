@@ -13,5 +13,6 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [partner_anonymization](partner_anonymization/) | 17.0.1.0.0 |  | Allows anonymization partners
 [res_partner_additional_terms](res_partner_additional_terms/) | 17.0.1.0.0 |  | New model for storing customized clauses
+[res_partner_addresses_simple](res_partner_addresses_simple/) | 17.0.1.0.0 |  | Show company addresses and contacts in list instead of cards
 
 [//]: # (end addons)

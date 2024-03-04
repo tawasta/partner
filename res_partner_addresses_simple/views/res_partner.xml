@@ -1,0 +1,101 @@
+<?xml version="1.0" ?>
+<odoo>
+    <!-- Tree view for contact ids -->
+    <record id="view_partner_tree_contact" model="ir.ui.view">
+        <field name="name">res.partner.tree.child.ids</field>
+        <field name="model">res.partner</field>
+        <field eval="120" name="priority" />
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" required="1" />
+                <field name="type" column_invisible="True" />
+                <field name="is_company" column_invisible="True" />
+                <field name="company_type" column_invisible="True" />
+                <field name="phone" />
+                <field name="email" />
+                <field name="function" />
+                <button
+                    name="action_open_partner"
+                    type="object"
+                    string="Open"
+                    class="oe_link"
+                />
+            </tree>
+        </field>
+    </record>
+    <!-- Tree view for address ids -->
+    <record id="view_partner_tree_address" model="ir.ui.view">
+        <field name="name">res.partner.tree.child.ids</field>
+        <field name="model">res.partner</field>
+        <field eval="120" name="priority" />
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" required="1" />
+                <field name="type" />
+                <field name="is_company" column_invisible="True" />
+                <field name="company_type" column_invisible="True" />
+                <field name="street" />
+                <field name="street2" />
+                <field name="zip" />
+                <field name="city" />
+                <field name="country_id" />
+                <button
+                    name="action_open_partner"
+                    type="object"
+                    string="Open"
+                    class="oe_link"
+                />
+            </tree>
+        </field>
+    </record>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form.address</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field eval="120" name="priority" />
+        <field name="arch" type="xml">
+            <field name="type" position="replace" />
+            <div name="button_box" position="before">
+                <!-- NOTE: the funky //group/group -structure is due an inherit
+                in core sale_crm, which won't work without correct structure
+                -->
+                <group name="type_selection" invisible="not parent_id">
+                    <group>
+                        <field
+                            name="type"
+                            required="1"
+                            widget="radio"
+                            options="{'horizontal': true}"
+                        />
+                    </group>
+                </group>
+            </div>
+            <!-- We have to use page[1] to get the "Contacts & Addresses"
+            even if it's not foolproof, as we can't reference by string -->
+            <xpath expr="//page[1]" position="attributes">
+                <attribute name="name">contacts</attribute>
+                <attribute name="string">Contacts</attribute>
+                <attribute
+                    name="invisible"
+                >type == 'contact' and not is_company</attribute>
+            </xpath>
+            <field name="child_ids" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+            <field name="child_ids" position="after">
+                <label for="contact_ids" />
+                <field
+                    name="contact_ids"
+                    mode="tree"
+                    context="{'tree_view_ref': 'res_partner_addresses_simple.view_partner_tree_contact', 'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_lang': lang, 'default_type': 'contact', 'default_is_company': False, 'default_company_type': 'person'}"
+                />
+                <label for="address_ids" />
+                <field
+                    name="address_ids"
+                    mode="tree"
+                    context="{'tree_view_ref': 'res_partner_addresses_simple.view_partner_tree_address', 'default_parent_id': active_id, 'default_street': street, 'default_street2': street2, 'default_city': city, 'default_state_id': state_id, 'default_zip': zip, 'default_country_id': country_id, 'default_lang': lang, 'default_type': 'invoice', 'default_is_company': True, 'default_company_type': 'company'}"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
