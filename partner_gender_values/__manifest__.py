@@ -21,7 +21,7 @@
 {
     "name": "Partner gender values",
     "summary": "Partner gender values",
-    "version": "14.0.1.1.0",
+    "version": "14.0.1.1.1",
     "category": "CRM",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
