@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_partner_tree" model="ir.ui.view">
+        <field name="name">Guardians</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree" />
+        <field name="arch" type="xml">
+
+            <field name="parent_id" position="after">
+                <field name="guardian_ids" />
+                <field name="ward_ids" />
+            </field>
+
+        </field>
+    </record>
+</odoo>

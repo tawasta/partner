@@ -17,6 +17,7 @@ addon | version | maintainers | summary
 [partner_auditlog_rules](partner_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for res partner
 [partner_automatic_fiscal_position](partner_automatic_fiscal_position/) | 14.0.1.0.0 |  | Set new partner fiscal position based on fiscal position rules
 [partner_clause](partner_clause/) | 14.0.1.0.2 |  | Partner clause records
+[partner_contact_guardians](partner_contact_guardians/) | 14.0.1.1.0 |  | Allows partner to have other partners guardians
 [partner_country_fiscal_position](partner_country_fiscal_position/) | 14.0.1.0.0 |  | Automatically selects Partner's Fiscal Position based on its country
 [partner_default_delivery_address](partner_default_delivery_address/) | 14.0.1.0.0 |  | Allows defining a default delivery address for partners
 [partner_default_invoice_address](partner_default_invoice_address/) | 14.0.1.0.1 |  | Allows defining a default invoice address for partners
