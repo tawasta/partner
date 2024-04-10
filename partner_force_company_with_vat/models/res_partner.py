@@ -7,14 +7,14 @@ class ResPartner(models.Model):
 
     @api.model
     def create(self, vals):
-        if "vat" in vals:
+        if "vat" in vals and vals["vat"]:
             vals["is_company"] = True
             vals["company_type"] = "company"
 
         return super().create(vals)
 
     def write(self, vals):
-        if "vat" in vals:
+        if "vat" in vals and vals["vat"]:
             vals["is_company"] = True
             vals["company_type"] = "company"
 
