@@ -16,6 +16,7 @@ addon | version | maintainers | summary
 [partner_anonymization](partner_anonymization/) | 14.0.1.1.0 |  | Allows anonymization partners
 [partner_auditlog_rules](partner_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for res partner
 [partner_automatic_fiscal_position](partner_automatic_fiscal_position/) | 14.0.1.0.0 |  | Set new partner fiscal position based on fiscal position rules
+[partner_bank_account_name](partner_bank_account_name/) | 14.0.1.0.0 |  | Add a name for partner bank account
 [partner_clause](partner_clause/) | 14.0.1.0.2 |  | Partner clause records
 [partner_country_fiscal_position](partner_country_fiscal_position/) | 14.0.1.0.0 |  | Automatically selects Partner's Fiscal Position based on its country
 [partner_default_delivery_address](partner_default_delivery_address/) | 14.0.1.0.0 |  | Allows defining a default delivery address for partners
