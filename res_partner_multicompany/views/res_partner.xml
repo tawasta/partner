@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="res_partner_multicompany">
+        <field name="name">res.partner.form.multicompany</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+
+            <field name="vat" position="after">
+                <field
+                    name="customer_of"
+                    help="Which companies does the customer belong to"
+                    widget="many2many_tags"
+                    attrs="{'invisible': [('customer_rank', '&lt;', 1)]}"
+                />
+                <field
+                    name="supplier_of"
+                    help="Which companies does the supplier belong to"
+                    widget="many2many_tags"
+                    attrs="{'invisible': [('supplier_rank', '&lt;', 1)]}"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
