@@ -16,6 +16,7 @@ addon | version | maintainers | summary
 [partner_anonymization](partner_anonymization/) | 14.0.1.1.0 |  | Allows anonymization partners
 [partner_auditlog_rules](partner_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for res partner
 [partner_automatic_fiscal_position](partner_automatic_fiscal_position/) | 14.0.1.0.0 |  | Set new partner fiscal position based on fiscal position rules
+[partner_bank_account_name](partner_bank_account_name/) | 14.0.1.0.0 |  | Add a name for partner bank account
 [partner_clause](partner_clause/) | 14.0.1.0.2 |  | Partner clause records
 [partner_country_fiscal_position](partner_country_fiscal_position/) | 14.0.1.0.0 |  | Automatically selects Partner's Fiscal Position based on its country
 [partner_default_delivery_address](partner_default_delivery_address/) | 14.0.1.0.0 |  | Allows defining a default delivery address for partners
@@ -45,6 +46,7 @@ addon | version | maintainers | summary
 [res_partner_firstname2](res_partner_firstname2/) | 14.0.1.0.0 |  | Partner firstname2
 [res_partner_full_name](res_partner_full_name/) | 14.0.1.0.0 |  | Adds a full recursive name for partners
 [res_partner_industry](res_partner_industry/) | 14.0.1.0.0 |  | Partner Industry
+[res_partner_multicompany](res_partner_multicompany/) | 14.0.1.1.7 |  | Allows tagging a partner to multiple companies
 [res_partner_name_extension](res_partner_name_extension/) | 14.0.1.0.2 |  | Name extension field for partner
 [res_partner_transmit_method_hide_unused](res_partner_transmit_method_hide_unused/) | 14.0.1.0.0 |  | Hide transmit_method if partner is not a customer/supplier
 [res_partner_tree_address_info](res_partner_tree_address_info/) | 14.0.1.0.0 |  | Street, city and zip are shown in the partner tree view

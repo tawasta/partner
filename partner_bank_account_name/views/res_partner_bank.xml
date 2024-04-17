@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="view_partner_bank_form" model="ir.ui.view">
+        <field name="name">res.partner.bank.form.account.name</field>
+        <field name="model">res.partner.bank</field>
+        <field name="inherit_id" ref="base.view_partner_bank_form" />
+        <field eval="20" name="priority" />
+        <field name="arch" type="xml">
+            <field name="acc_number" position="after">
+                <field name="account_name" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_partner_bank_tree" model="ir.ui.view">
+        <field name="name">res.partner.bank.tree.account.name</field>
+        <field name="model">res.partner.bank</field>
+        <field name="inherit_id" ref="base.view_partner_bank_tree" />
+        <field eval="20" name="priority" />
+        <field name="arch" type="xml">
+            <field name="acc_number" position="after">
+                <field name="account_name" />
+            </field>
+        </field>
+    </record>
+
+</odoo>
