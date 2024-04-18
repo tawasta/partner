@@ -20,13 +20,13 @@
 {
     "name": "Partner Multi-company tags",
     "summary": "Allows tagging a partner to multiple companies ",
-    "version": "14.0.1.1.7",
+    "version": "14.0.1.1.8",
     "category": "CRM",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["contacts"],
+    "depends": ["account", "contacts"],
     "data": ["views/res_partner.xml", "views/res_partner_search.xml"],
 }
