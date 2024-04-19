@@ -7,6 +7,8 @@
         <field name="arch" type="xml">
 
             <field name="vat" position="after">
+                <field name="customer_rank" invisible="1" />
+                <field name="supplier_rank" invisible="1" />
                 <field
                     name="customer_of"
                     help="Which companies does the customer belong to"
@@ -16,6 +18,7 @@
                     name="supplier_of"
                     help="Which companies does the supplier belong to"
                     widget="many2many_tags"
+                    attrs="{'invisible': [('supplier_rank', '&lt;', 1)]}"
                 />
             </field>
         </field>
