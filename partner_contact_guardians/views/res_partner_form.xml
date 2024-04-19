@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="personal_information" model="ir.ui.view">
+        <field name="name">Contact Guardians</field>
+        <field name="model">res.partner</field>
+        <field
+            name="inherit_id"
+            ref="partner_contact_personal_information_page.personal_information"
+        />
+        <field eval="20" name="priority" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//group[@name='personal_information_group']">
+                <field
+                    name="guardian_ids"
+                    context="{'tree_view_ref': 'partner_contact_guardians.view_partner_guardian_tree','default_type': 'contact','default_is_company': False,'default_private_customer': True,'default_street': street,'default_street2': street2,'default_zip': zip,'default_city': city,}"
+                />
+
+                <field
+                    name="ward_ids"
+                    context="{'tree_view_ref': 'partner_contact_guardians.view_partner_guardian_tree','default_type': 'contact','default_is_company': False,'default_private_customer': True,'default_street': street,'default_street2': street2,'default_zip': zip,'default_city': city,
+                    }"
+                />
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
