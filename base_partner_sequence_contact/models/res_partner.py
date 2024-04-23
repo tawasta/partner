@@ -13,10 +13,9 @@ class ResPartner(models.Model):
 
     @api.model
     def _commercial_fields(self):
-        """
-        Make the partner reference a field that is propagated
-        to the partner's contacts
-        """
+        # Make ref a not commercial field
         res = super()._commercial_fields()
+
+        res.remove("ref")
 
         return res

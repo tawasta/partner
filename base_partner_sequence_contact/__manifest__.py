@@ -21,7 +21,7 @@
 {
     "name": "Always use a partner sequence",
     "summary": "Give unique partner sequence numbers for all partner types",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "CRM",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
