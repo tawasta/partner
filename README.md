@@ -13,6 +13,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [partner_anonymization](partner_anonymization/) | 17.0.1.0.0 |  | Allows anonymization partners
 [partner_auditlog_rules](partner_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for res partner
+[partner_default_tree_view](partner_default_tree_view/) | 17.0.1.0.0 |  | Defaults Contacts action to tree view
 [res_partner_additional_terms](res_partner_additional_terms/) | 17.0.1.0.0 |  | New model for storing customized clauses
 [res_partner_addresses_simple](res_partner_addresses_simple/) | 17.0.1.0.0 |  | Show company addresses and contacts in list instead of cards
 
