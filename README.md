@@ -18,5 +18,6 @@ addon | version | maintainers | summary
 [res_partner_additional_terms](res_partner_additional_terms/) | 17.0.1.0.0 |  | New model for storing customized clauses
 [res_partner_addresses_simple](res_partner_addresses_simple/) | 17.0.1.0.0 |  | Show company addresses and contacts in list instead of cards
 [res_partner_addresses_simple_edicode](res_partner_addresses_simple_edicode/) | 17.0.1.0.0 |  | Add edicode to simple address tree view
+[res_partner_full_name](res_partner_full_name/) | 17.0.1.0.0 |  | Adds a full recursive name for partners
 
 [//]: # (end addons)
