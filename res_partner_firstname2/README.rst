@@ -6,7 +6,7 @@
 Partner firstname2
 ==================
 
-
+Adds a new field to define second name for a partner.
 
 
 Configuration
@@ -15,7 +15,7 @@ Configuration
 
 Usage
 =====
-\-
+Select a partner and write the second name for that partner.
 
 Known issues / Roadmap
 ======================
@@ -28,6 +28,7 @@ Contributors
 ------------
 
 * Valtteri Lattu <valtteri.lattu@tawasta.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------
