@@ -19,6 +19,7 @@ addon | version | maintainers | summary
 [res_partner_addresses_simple](res_partner_addresses_simple/) | 17.0.1.0.0 |  | Show company addresses and contacts in list instead of cards
 [res_partner_addresses_simple_edicode](res_partner_addresses_simple_edicode/) | 17.0.1.0.0 |  | Add edicode to simple address tree view
 [res_partner_domicile](res_partner_domicile/) | 17.0.1.0.0 |  | Adds domicile field for partner
+[res_partner_education_level](res_partner_education_level/) | 17.0.1.0.0 |  | Create Education levels for partners
 [res_partner_employer](res_partner_employer/) | 17.0.1.0.0 |  | Adds Employer char-type field to partners
 [res_partner_firstname2](res_partner_firstname2/) | 17.0.1.0.0 |  | Adds a new field to define the second name for partners
 [res_partner_full_name](res_partner_full_name/) | 17.0.1.0.0 |  | Adds a full recursive name for partners
