@@ -1,0 +1,35 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_information_export
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20240126\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-10 10:45+0000\n"
+"PO-Revision-Date: 2024-07-10 13:46+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: partner_information_export
+#: model:ir.actions.report,name:partner_information_export.partner_export_xlsx
+msgid "Partner information"
+msgstr "Kumppanin tiedot"
+
+#. module: partner_information_export
+#: model:ir.model,name:partner_information_export.model_report_partner_information_export_partner_information_xlsx
+msgid "Partner information XLSX Report"
+msgstr "Kumppanin tietojen XLSX-raportti"
+
+#. module: partner_information_export
+#. odoo-python
+#: code:addons/partner_information_export/report/partner_information.py:0
+#, python-format
+msgid "Partner information exported"
+msgstr "Kumppanin tiedot ladattu järjestelmästä"
