@@ -30,8 +30,6 @@
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["privacy_consent"],
-    "data": [
-        "views/partner.xml"
-    ],
+    "data": ["views/partner.xml"],
     "demo": [],
 }

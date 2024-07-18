@@ -2,7 +2,6 @@ from odoo import api, fields, models
 
 
 class PrivacyConsent(models.Model):
-
     _inherit = "privacy.consent"
 
     activity_name = fields.Char(string="Activity name", related="activity_id.name")

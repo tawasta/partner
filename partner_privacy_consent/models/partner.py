@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class Partner(models.Model):
-
     _inherit = "res.partner"
 
     accepted_privacy_consent_ids = fields.One2many(
