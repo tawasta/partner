@@ -11,6 +11,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[base_partner_sequence_contact](base_partner_sequence_contact/) | 17.0.1.0.1 |  | Give unique partner sequence numbers for all partner types
 [partner_anonymization](partner_anonymization/) | 17.0.1.0.0 |  | Allows anonymization partners
 [partner_auditlog_rules](partner_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for res partner
 [partner_default_tree_view](partner_default_tree_view/) | 17.0.1.0.0 |  | Defaults Contacts action to tree view
@@ -26,5 +27,6 @@ addon | version | maintainers | summary
 [res_partner_firstname2](res_partner_firstname2/) | 17.0.1.0.0 |  | Adds a new field to define the second name for partners
 [res_partner_full_name](res_partner_full_name/) | 17.0.1.0.0 |  | Adds a full recursive name for partners
 [res_partner_industry_freetext_classification](res_partner_industry_freetext_classification/) | 17.0.1.0.0 |  | Add 'Other Industry Classification' freetext field for partners
+[res_partner_multicompany](res_partner_multicompany/) | 17.0.1.1.7 |  | Partner Multi-company tags
 
 [//]: # (end addons)
