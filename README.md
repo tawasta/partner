@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [res_partner_firstname2](res_partner_firstname2/) | 17.0.1.0.0 |  | Adds a new field to define the second name for partners
 [res_partner_full_name](res_partner_full_name/) | 17.0.1.0.0 |  | Adds a full recursive name for partners
 [res_partner_industry_freetext_classification](res_partner_industry_freetext_classification/) | 17.0.1.0.0 |  | Add 'Other Industry Classification' freetext field for partners
+[res_partner_industry_show_for_individuals](res_partner_industry_show_for_individuals/) | 17.0.1.0.0 |  | Shows the industry field also for individuals, not just companies
 [res_partner_multicompany](res_partner_multicompany/) | 17.0.1.1.7 |  | Partner Multi-company tags
 
 [//]: # (end addons)
