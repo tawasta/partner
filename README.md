@@ -29,5 +29,6 @@ addon | version | maintainers | summary
 [res_partner_industry_freetext_classification](res_partner_industry_freetext_classification/) | 17.0.1.0.0 |  | Add 'Other Industry Classification' freetext field for partners
 [res_partner_industry_show_for_individuals](res_partner_industry_show_for_individuals/) | 17.0.1.0.0 |  | Shows the industry field also for individuals, not just companies
 [res_partner_multicompany](res_partner_multicompany/) | 17.0.1.1.7 |  | Partner Multi-company tags
+[res_partner_name_extension](res_partner_name_extension/) | 17.0.1.0.0 |  | Name extension field for partner
 
 [//]: # (end addons)
