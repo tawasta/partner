@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2015 Oy Tawasta OS Technologies Ltd.
+#    Author: Futural Oy
+#    Copyright 2015 Futural Oy
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -22,8 +22,8 @@
     "description": "Allows tagging a partner to multiple companies ",
     "version": "17.0.1.1.7",
     "category": "CRM",
-    "website": "https://gitlab.com/tawasta/odoo/partner",
-    "author": "Tawasta",
+    "website": "https://github.com/tawasta/partner",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
