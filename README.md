@@ -22,6 +22,7 @@ addon | version | maintainers | summary
 [res_partner_additional_terms](res_partner_additional_terms/) | 17.0.1.0.0 |  | New model for storing customized clauses
 [res_partner_addresses_simple](res_partner_addresses_simple/) | 17.0.1.0.0 |  | Show company addresses and contacts in list instead of cards
 [res_partner_addresses_simple_edicode](res_partner_addresses_simple_edicode/) | 17.0.1.0.0 |  | Add edicode to simple address tree view
+[res_partner_company_by_default](res_partner_company_by_default/) | 17.0.1.0.0 |  | New partners are companies by default
 [res_partner_domicile](res_partner_domicile/) | 17.0.1.0.0 |  | Adds domicile field for partner
 [res_partner_education_level](res_partner_education_level/) | 17.0.1.0.0 |  | Create Education levels for partners
 [res_partner_employer](res_partner_employer/) | 17.0.1.0.0 |  | Adds Employer char-type field to partners
