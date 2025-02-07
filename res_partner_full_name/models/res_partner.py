@@ -17,9 +17,7 @@ class ResPartner(models.Model):
     def _get_recursive_name(self, record):
         """Returns a recursive partner name"""
         if record.parent_id:
-            name = "{}, {}".format(
-                self._get_recursive_name(record.parent_id), record.name
-            )
+            name = f"{self._get_recursive_name(record.parent_id)}, {record.name}"
         else:
             name = record.name
 
