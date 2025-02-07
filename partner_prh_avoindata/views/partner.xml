@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.prh.avoindata</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="parent_id" position="before">
+                <button
+                    name="action_update_info_from_prh"
+                    string="Update info"
+                    help="Update company info from 'PRH Avoin data'"
+                    type="object"
+                    class="btn-primary oe_edit_only"
+                    invisible="not vat and not company_registry and not name"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
