@@ -9,13 +9,15 @@ class ResPartner(models.Model):
     _inherit = "res.partner"
 
     def action_update_info_from_prh(self):
+        single_record = len(self) == 1
+
         for record in self:
             api_url = "https://avoindata.prh.fi/opendata-ytj-api/v3/companies?"
-            params = self._get_prh_search_params()
+            params = record._get_prh_search_params()
 
             if params:
                 search_url = f"{api_url}{urllib.parse.urlencode(params)}"
-            else:
+            elif single_record:
                 title = _("No search terms")
                 message = _("Please set name, company registry or VAT")
                 return {
@@ -47,18 +49,22 @@ class ResPartner(models.Model):
                 title = _("Company info updated!")
                 message = _(f"{update_string}")
 
-            return {
-                "type": "ir.actions.client",
-                "tag": "display_notification",
-                "params": {
-                    "title": title,
-                    "message": message,
-                    "sticky": True,
-                    "next": {
-                        "type": "ir.actions.act_window_close",
-                    },
+        if not single_record:
+            title = _("Company info updated!")
+            message = _("Updated info for %s records" % len(self))
+
+        return {
+            "type": "ir.actions.client",
+            "tag": "display_notification",
+            "params": {
+                "title": title,
+                "message": message,
+                "sticky": False,
+                "next": {
+                    "type": "ir.actions.act_window_close",
                 },
-            }
+            },
+        }
 
     def _get_prh_search_params(self):
         self.ensure_one()
@@ -123,9 +129,9 @@ class ResPartner(models.Model):
                 # Construct the street
                 values["street"] = " ".join(street)
 
-            # TODO: make configurable
-            use_industry = True
-
+            use_industry = (
+                self.env["ir.config_parameter"].sudo().get_param("prh.use_industry")
+            )
             business_line = company.get("mainBusinessLine")
             if use_industry and business_line:
                 values["industry_id"] = self._get_or_create_industry(business_line).id
@@ -137,11 +143,9 @@ class ResPartner(models.Model):
     def _get_or_create_industry(self, business_line):
         # Get or create an industry
 
-        # TODO: configurable code
-        # 1: finnish
-        # 2: swedish
-        # 3: english
-        language_code = str(1)
+        language_code = str(
+            self.env["ir.config_parameter"].sudo().get_param("prh.language_code")
+        )
         name = ""
 
         for desc in business_line.get("descriptions"):

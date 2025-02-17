@@ -30,6 +30,9 @@
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["base"],
-    "data": ["views/partner.xml"],
+    "data": [
+        "views/partner.xml",
+        "views/res_config_settings.xml",
+    ],
     "demo": [],
 }
