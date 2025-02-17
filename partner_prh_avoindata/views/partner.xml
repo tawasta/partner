@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Server actions -->
+    <record id="model_partner_action_update_info_from_prh" model="ir.actions.server">
+        <field name="name">Update info from PRH</field>
+        <field name="model_id" ref="base.model_res_partner" />
+        <field name="binding_model_id" ref="base.model_res_partner" />
+        <field name="binding_view_types">form,list</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_update_info_from_prh()</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.prh</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="30" />
+        <field name="inherit_id" ref="base.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//form" position="inside">
+                <app
+                    data-string="PRH Avoin data"
+                    string="PRH Avoin data"
+                    name="partner_prh_avoindata"
+                    groups="base.group_system"
+                >
+                    <block title="PRH Avoin data" name="prh_settings">
+                        <setting
+                            string="Use industry"
+                            help="Fetch industry from PRH and save it as partner industry"
+                            id="prh_avoin_data_use_industry"
+                        >
+                            <field name="prh_use_industry" />
+                        </setting>
+                        <setting
+                            string="Language"
+                            help="Which language to use for importing data"
+                            id="prh_avoin_data_language"
+                        >
+                            <field name="prh_language_code" />
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
