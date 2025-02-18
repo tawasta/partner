@@ -69,9 +69,6 @@ class ResPartner(models.Model):
     def _get_prh_search_params(self):
         self.ensure_one()
         params = {}
-        if self.name:
-            # Search by name
-            params["name"] = self.name
 
         company_registry = self.company_registry
         vat = self.vat
@@ -82,6 +79,10 @@ class ResPartner(models.Model):
 
         if company_registry:
             params["businessId"] = company_registry
+
+        if not company_registry and self.name:
+            # Search by name, if company registry is not available
+            params["name"] = self.name
 
         return params
 
