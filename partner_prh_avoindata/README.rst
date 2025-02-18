@@ -14,7 +14,8 @@ Configuration
 
 Usage
 =====
-\-
+On partner, click "Action->Update info from PRH".
+This also works in tree view, and can update multiple partners at once.
 
 Known issues / Roadmap
 ======================

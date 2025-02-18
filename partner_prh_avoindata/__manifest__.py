@@ -21,7 +21,7 @@
 {
     "name": "Partner information from PRH Avoin data",
     "summary": "Fetch partner information from PRH",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.0.2",
     "category": "CRM",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
