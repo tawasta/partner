@@ -23,6 +23,6 @@ class PrivacyConsent(models.Model):
     def name_get(self):
         res = []
         for record in self:
-            name = "{}: {}".format(record.partner_name, record.activity_name)
+            name = f"{record.partner_name}: {record.activity_name}"
             res.append((record.id, name))
         return res

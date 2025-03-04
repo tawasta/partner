@@ -59,7 +59,7 @@ class PartnerInformationXlsx(models.AbstractModel):
                         # Skip private attributes
                         continue
                     value = getattr(record, key)
-                    if not isinstance(value, (float, int, bool, str)):
+                    if not isinstance(value, float | int | bool | str):
                         # Skip relation fields for now
                         # They arguably could be included, but needs testing
                         continue
