@@ -26,6 +26,7 @@ addon | version | maintainers | summary
 [res_partner_domicile](res_partner_domicile/) | 17.0.1.0.0 |  | Adds domicile field for partner
 [res_partner_education_level](res_partner_education_level/) | 17.0.1.0.0 |  | Create Education levels for partners
 [res_partner_employer](res_partner_employer/) | 17.0.1.0.0 |  | Adds Employer char-type field to partners
+[res_partner_eori](res_partner_eori/) | 17.0.1.0.0 |  | Adds field for EORI number to res.partner and res.company
 [res_partner_firstname2](res_partner_firstname2/) | 17.0.1.0.0 |  | Adds a new field to define the second name for partners
 [res_partner_full_name](res_partner_full_name/) | 17.0.1.0.0 |  | Adds a full recursive name for partners
 [res_partner_industry_freetext_classification](res_partner_industry_freetext_classification/) | 17.0.1.0.0 |  | Add 'Other Industry Classification' freetext field for partners
