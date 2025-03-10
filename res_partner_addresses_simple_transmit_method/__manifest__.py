@@ -23,7 +23,7 @@
     "summary": "Add transmit method to simple address tree view",
     "version": "17.0.1.0.0",
     "category": "CRM",
-    "website": "https://gitlab.com/tawasta/odoo/partner",
+    "website": "https://github.com/tawasta/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

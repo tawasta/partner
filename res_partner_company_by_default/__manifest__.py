@@ -23,7 +23,7 @@
     "summary": "New partners are companies by default",
     "version": "17.0.1.0.0",
     "category": "CRM",
-    "website": "https://gitlab.com/tawasta/odoo/partner",
+    "website": "https://github.com/tawasta/partner",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
