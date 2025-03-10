@@ -23,7 +23,7 @@
     "summary": "Street, city and zip are shown in the partner tree view",
     "version": "17.0.1.0.0",
     "category": "Partner",
-    "website": "https://gitlab.com/tawasta/odoo/partner",
+    "website": "https://github.com/tawasta/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
