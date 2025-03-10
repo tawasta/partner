@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2018- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,23 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Company as default partner type",
-    "summary": "New partners are companies by default",
+    "name": "Add transmit method to simple address tree view",
+    "summary": "Add transmit method to simple address tree view",
     "version": "17.0.1.0.0",
     "category": "CRM",
     "website": "https://github.com/tawasta/partner",
-    "author": "Futural",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {
-        "python": [],
-        "bin": [],
-    },
-    "depends": [
-        "base",
-    ],
-    "data": [
-        "views/res_partner.xml",
-    ],
+    "depends": ["account_invoice_transmit_method", "res_partner_addresses_simple"],
+    "data": ["views/res_partner.xml"],
 }
