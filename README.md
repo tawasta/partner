@@ -16,6 +16,7 @@ addon | version | maintainers | summary
 [partner_auditlog_rules](partner_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for res partner
 [partner_default_invoice_address](partner_default_invoice_address/) | 17.0.1.0.1 |  | Allows defining a default invoice address for partners
 [partner_default_tree_view](partner_default_tree_view/) | 17.0.1.0.0 |  | Defaults Contacts action to tree view
+[partner_force_company_with_vat](partner_force_company_with_vat/) | 17.0.1.0.0 |  | Force partner type to company when VAT is given
 [partner_identification_hide](partner_identification_hide/) | 17.0.1.0.0 |  | Hide partner identification page from non-admins
 [partner_information_export](partner_information_export/) | 17.0.1.0.0 |  | Allows exporting all partner information
 [partner_prh_avoindata](partner_prh_avoindata/) | 17.0.1.0.2 |  | Fetch partner information from PRH
