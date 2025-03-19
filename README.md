@@ -16,13 +16,17 @@ addon | version | maintainers | summary
 [partner_auditlog_rules](partner_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for res partner
 [partner_default_invoice_address](partner_default_invoice_address/) | 17.0.1.0.1 |  | Allows defining a default invoice address for partners
 [partner_default_tree_view](partner_default_tree_view/) | 17.0.1.0.0 |  | Defaults Contacts action to tree view
+[partner_force_company_with_vat](partner_force_company_with_vat/) | 17.0.1.0.0 |  | Force partner type to company when VAT is given
 [partner_identification_hide](partner_identification_hide/) | 17.0.1.0.0 |  | Hide partner identification page from non-admins
 [partner_information_export](partner_information_export/) | 17.0.1.0.0 |  | Allows exporting all partner information
+[partner_internal_reference_is_customer_number](partner_internal_reference_is_customer_number/) | 17.0.1.0.0 |  | Use Internal reference as Customer number
 [partner_prh_avoindata](partner_prh_avoindata/) | 17.0.1.0.2 |  | Fetch partner information from PRH
 [partner_privacy_consent](partner_privacy_consent/) | 17.0.1.1.1 |  | Adds privacy consent helpers for partner
 [res_partner_additional_terms](res_partner_additional_terms/) | 17.0.1.0.0 |  | New model for storing customized clauses
 [res_partner_addresses_simple](res_partner_addresses_simple/) | 17.0.1.0.0 |  | Show company addresses and contacts in list instead of cards
 [res_partner_addresses_simple_edicode](res_partner_addresses_simple_edicode/) | 17.0.1.0.0 |  | Add edicode to simple address tree view
+[res_partner_addresses_simple_transmit_method](res_partner_addresses_simple_transmit_method/) | 17.0.1.0.0 |  | Add transmit method to simple address tree view
+[res_partner_company_by_default](res_partner_company_by_default/) | 17.0.1.0.0 |  | New partners are companies by default
 [res_partner_domicile](res_partner_domicile/) | 17.0.1.0.0 |  | Adds domicile field for partner
 [res_partner_education_level](res_partner_education_level/) | 17.0.1.0.0 |  | Create Education levels for partners
 [res_partner_employer](res_partner_employer/) | 17.0.1.0.0 |  | Adds Employer char-type field to partners
@@ -33,5 +37,6 @@ addon | version | maintainers | summary
 [res_partner_industry_show_for_individuals](res_partner_industry_show_for_individuals/) | 17.0.1.0.0 |  | Shows the industry field also for individuals, not just companies
 [res_partner_multicompany](res_partner_multicompany/) | 17.0.1.1.7 |  | Partner Multi-company tags
 [res_partner_name_extension](res_partner_name_extension/) | 17.0.1.0.0 |  | Name extension field for partner
+[res_partner_tree_address_info](res_partner_tree_address_info/) | 17.0.1.0.0 |  | Street, city and zip are shown in the partner tree view
 
 [//]: # (end addons)
