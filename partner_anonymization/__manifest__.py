@@ -21,7 +21,7 @@
 {
     "name": "Partner anonymization",
     "summary": "Allows anonymization partners",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.1",
     "category": "CRM",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
@@ -29,7 +29,13 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["base"],
-    "data": ["security/ir.model.access.csv", "wizard/partner_anonymization.xml"],
+    "depends": ["base_setup"],
+    "data": [
+        "data/ir_cron.xml",
+        "security/ir.model.access.csv",
+        "views/res_config_settings.xml",
+        "views/res_partner.xml",
+        "wizard/partner_anonymization.xml",
+    ],
     "demo": [],
 }
