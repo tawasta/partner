@@ -157,14 +157,11 @@ msgid "Last Updated on"
 msgstr "Viimeksi päivitetty"
 
 #. module: partner_anonymization
-<<<<<<< HEAD
-=======
 #: model:ir.model.fields,field_description:partner_anonymization.field_res_config_settings__partner_anonymization
 msgid "Partner anonymization"
 msgstr "Kontaktin anonymisointi"
 
 #. module: partner_anonymization
->>>>>>> origin/17.0
 #. odoo-python
 #: code:addons/partner_anonymization/models/partner.py:0
 #, python-format
