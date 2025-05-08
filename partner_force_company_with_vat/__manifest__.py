@@ -21,7 +21,7 @@
 {
     "name": "Set partner as company if VAT is given",
     "summary": "Force partner type to company when VAT is given",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "CRM",
     "website": "https://github.com/tawasta/partner",
     "author": "Tawasta",
