@@ -4,16 +4,49 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 17.0-20250428\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-16 07:07+0000\n"
-"PO-Revision-Date: 2025-04-16 07:07+0000\n"
+"POT-Creation-Date: 2025-05-06 13:26+0000\n"
+"PO-Revision-Date: 2025-05-06 16:31+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
+
+#. module: partner_anonymization
+#: model:ir.model.fields,field_description:partner_anonymization.field_res_partner__date_anonymized
+#: model:ir.model.fields,field_description:partner_anonymization.field_res_users__date_anonymized
+#, fuzzy
+msgid "Anonymization date"
+msgstr "Anonymisoinnin päivämäärä"
+
+#. module: partner_anonymization
+#: model:ir.model.fields,field_description:partner_anonymization.field_res_config_settings__partner_anonymization_domain
+msgid "Anonymization domain"
+msgstr "Anonymisoinnin rajaus"
+
+#. module: partner_anonymization
+#: model:ir.model.fields,field_description:partner_anonymization.field_res_config_settings__partner_anonymization_modification_delay
+#, fuzzy
+msgid "Anonymization modification delay (days)"
+msgstr "Anonymisoinnin muokkausviive (päivää)"
+
+#. module: partner_anonymization
+#: model:ir.model.fields,field_description:partner_anonymization.field_res_config_settings__partner_anonymization_remove_delay
+#, fuzzy
+msgid "Anonymization remove delay (days)"
+msgstr "Anonymisoinnin poistoviive (päivää)"
+
+#. module: partner_anonymization
+#: model:ir.model.fields,field_description:partner_anonymization.field_res_partner__date_to_be_anonymized
+#: model:ir.model.fields,field_description:partner_anonymization.field_res_users__date_to_be_anonymized
+#, fuzzy
+msgid "Anonymization schedule"
+msgstr "Anonymisoinnin aikataulu"
 
 #. module: partner_anonymization
 #: model:ir.actions.act_window,name:partner_anonymization.action_partner_anonymization
@@ -24,17 +57,28 @@ msgstr "Anonymisoi"
 #: model:ir.model,name:partner_anonymization.model_partner_anonymization
 #: model_terms:ir.ui.view,arch_db:partner_anonymization.action_partner_anonymization_wizard_form
 msgid "Anonymize partners"
-msgstr "Anonymisoi partneri"
+msgstr "Anonymisoi kontakti"
 
 #. module: partner_anonymization
 #: model_terms:ir.ui.view,arch_db:partner_anonymization.action_partner_anonymization_wizard_form
 msgid "Are you sure you want to anonymize the selected partner(s)?"
-msgstr "Oletko varma, että haluat anonymisoida valitut partnerit?"
+msgstr "Oletko varma, että haluat anonymisoida valitut kontaktit?"
+
+#. module: partner_anonymization
+#: model_terms:ir.ui.view,arch_db:partner_anonymization.res_config_settings_view_form
+msgid "Automatically anonymize contacts."
+msgstr "Anonymisoi kontaktit automaattisesti."
 
 #. module: partner_anonymization
 #: model_terms:ir.ui.view,arch_db:partner_anonymization.action_partner_anonymization_wizard_form
 msgid "Cancel"
 msgstr "Peruuta"
+
+#. module: partner_anonymization
+#: model:ir.model,name:partner_anonymization.model_res_config_settings
+#, fuzzy
+msgid "Config Settings"
+msgstr "Asetukset"
 
 #. module: partner_anonymization
 #: model_terms:ir.ui.view,arch_db:partner_anonymization.action_partner_anonymization_wizard_form
@@ -47,19 +91,54 @@ msgid "Contact"
 msgstr "Kontakti"
 
 #. module: partner_anonymization
+#: model_terms:ir.ui.view,arch_db:partner_anonymization.res_config_settings_view_form
+#, fuzzy
+msgid "Contact anonymization"
+msgstr "Yhteystietojen anonymisointi"
+
+#. module: partner_anonymization
+#: model:ir.actions.server,name:partner_anonymization.ir_cron_anonymize_partners_ir_actions_server
+#, fuzzy
+msgid "Contacts: Anonymize"
+msgstr "Yhteystiedot: Anonymisoi"
+
+#. module: partner_anonymization
+#: model:ir.actions.server,name:partner_anonymization.ir_cron_schedule_anonymize_partners_ir_actions_server
+#, fuzzy
+msgid "Contacts: Schedule anonymization"
+msgstr "Yhteystiedot: Ajoita anonymisointi"
+
+#. module: partner_anonymization
 #: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization__create_uid
 msgid "Created by"
-msgstr ""
+msgstr "Luonut"
 
 #. module: partner_anonymization
 #: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization__create_date
 msgid "Created on"
-msgstr ""
+msgstr "Luotu"
 
 #. module: partner_anonymization
 #: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization__display_name
 msgid "Display Name"
 msgstr "Näyttönimi"
+
+#. module: partner_anonymization
+#: model:ir.model.fields,help:partner_anonymization.field_res_config_settings__partner_anonymization_modification_delay
+msgid ""
+"Don't remove partners that have been modified recently. Use 0 for no delay"
+msgstr ""
+"Älä poista kontakteja, joita on muokattu äskettäin. Käytä 0:aa jos et halua "
+"käyttää asetusta"
+
+#. module: partner_anonymization
+#: model:ir.model.fields,help:partner_anonymization.field_res_config_settings__partner_anonymization_remove_delay
+msgid ""
+"How many days before auto-anonymizing partners that match the domain. Use 0 "
+"for no delay"
+msgstr ""
+"Kuinka monta päivää ennen rajausta vastaavien kumppaneiden automaattista "
+"anonymisointia. Käytä 0:aa jos et halua käyttää asetusta"
 
 #. module: partner_anonymization
 #: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization__id
@@ -69,24 +148,50 @@ msgstr "Tunniste (ID)"
 #. module: partner_anonymization
 #: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization__write_uid
 msgid "Last Updated by"
-msgstr ""
+msgstr "Viimeksi päivittänyt"
 
 #. module: partner_anonymization
 #: model:ir.model.fields,field_description:partner_anonymization.field_partner_anonymization__write_date
+#, fuzzy
 msgid "Last Updated on"
-msgstr ""
+msgstr "Viimeksi päivitetty"
 
 #. module: partner_anonymization
+<<<<<<< HEAD
+=======
+#: model:ir.model.fields,field_description:partner_anonymization.field_res_config_settings__partner_anonymization
+msgid "Partner anonymization"
+msgstr "Kontaktin anonymisointi"
+
+#. module: partner_anonymization
+>>>>>>> origin/17.0
 #. odoo-python
 #: code:addons/partner_anonymization/models/partner.py:0
 #, python-format
 msgid "Partner anonymized"
-msgstr "Partner anonymisoitu"
+msgstr "Kontakti anonymisoitu"
+
+#. module: partner_anonymization
+#: model:ir.model.fields,help:partner_anonymization.field_res_partner__date_to_be_anonymized
+#: model:ir.model.fields,help:partner_anonymization.field_res_users__date_to_be_anonymized
+msgid "Partner will be irreversibly anonymized on this date"
+msgstr "Kontakti anonymisoidaan peruuttamattomasti tänä päivänä"
+
+#. module: partner_anonymization
+#: model:ir.model.fields,help:partner_anonymization.field_res_config_settings__partner_anonymization_domain
+msgid "The domain to use when anonymizing partners"
+msgstr "Kontaktien anonymisoinnissa käytettävä rajaus"
 
 #. module: partner_anonymization
 #: model_terms:ir.ui.view,arch_db:partner_anonymization.action_partner_anonymization_wizard_form
 msgid "This action can not be reversed after confirming!"
 msgstr "Tätä toimenpidettä ei voi peruuttaa jälkikäteen!"
+
+#. module: partner_anonymization
+#: model_terms:ir.ui.view,arch_db:partner_anonymization.view_res_partner_filter
+#, fuzzy
+msgid "To be anonymized"
+msgstr "Anonymisointi"
 
 #. module: partner_anonymization
 #: model_terms:ir.ui.view,arch_db:partner_anonymization.action_partner_anonymization_wizard_form
