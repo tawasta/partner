@@ -5,7 +5,7 @@
         <field name="arch" type="xml">
             <tree>
                 <field name="name" />
-                <field name="filter_domain" />
+                <field name="filter_domain" optional="show" />
             </tree>
         </field>
     </record>
@@ -16,8 +16,17 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
+                    <widget
+                        name="web_ribbon"
+                        title="Archived"
+                        bg_color="text-bg-danger"
+                        invisible="active"
+                    />
                     <group>
+                        <field name="active" invisible="1" />
                         <field name="name" />
+                        <field name="color" widget="color_picker" />
+                        <field name="description" />
                         <field
                             name="filter_domain"
                             widget="domain"
