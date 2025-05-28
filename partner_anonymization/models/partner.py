@@ -24,6 +24,40 @@ class ResPartner(models.Model):
         :return:
         """
 
+        values = self._get_anonymize_values()
+        # We leave city, zip and country be for reporting purposes
+        # They aren't identifying information after other info is deleted
+        for record in self:
+            user_hash = str(uuid.uuid4())
+            res_user = (
+                self.env["res.users"].sudo().search([("partner_id", "=", record.id)])
+            )
+
+            # Disable user
+            if res_user:
+                res_user.write({"active": False, "login": user_hash})
+
+            values["name"] = user_hash
+            values["date_anonymized"] = fields.Datetime.now()
+            record.write(values)
+            record.message_post(body=_("Partner anonymized"))
+
+            # Anonymize mass mailing contacts, if they exist
+            record.anonymize_mass_mailing_contact_ids()
+
+            # Anonymize contracts, if they exist
+            record.anonymize_contract_ids()
+
+            # Anonymize subscriptions, if they exist
+            record.anonymize_subscription_ids()
+
+            # Anonymize tracking values
+            record.anonymize_mail_messages()
+
+            # Archive the anonymized partner
+            record.action_archive()
+
+    def _get_anonymize_values(self):
         values = {
             "street": False,
             "street2": False,
@@ -34,42 +68,59 @@ class ResPartner(models.Model):
             "mobile": False,
             "website": False,
         }
-        # We leave city, zip and country be for reporting purposes
-        # They aren't identifying information after other info is deleted
+
+        return values
+
+    def anonymize_mass_mailing_contact_ids(self):
+        if not hasattr(self, "mass_mailing_contact_ids"):
+            return
+
+        # Unlink mass mailing contacts
         for record in self:
-            user_hash = str(uuid.uuid4())
-            res_user = (
-                self.env["res.users"].sudo().search([("partner_id", "=", record.id)])
-            )
+            if record.mass_mailing_contact_ids:
+                for m in record.mass_mailing_contact_ids:
+                    m.unlink()
+
+    def anonymize_contract_ids(self):
+        if not hasattr(self, "contract_ids"):
+            return
+
+        for record in self:
             contract_ids = (
                 self.env["contract.contract"]
                 .sudo()
                 .search([("partner_id", "=", record.id)])
             )
 
-            if res_user:
-                res_user.write({"active": False, "login": user_hash})
+            contract_ids.write({"name": record.name})
 
-            if contract_ids:
-                for contract in contract_ids:
-                    if record.name in contract.name:
-                        splitted_name = contract.name.split(record.name)[1]
-                        new_name = user_hash + splitted_name
-                    else:
-                        new_name = user_hash
-                    contract.write({"name": new_name})
+    def anonymize_subscription_ids(self):
+        if not hasattr(self, "subscription_ids"):
+            return
 
-            if hasattr(record, "mass_mailing_contact_ids"):
-                if record.mass_mailing_contact_ids:
-                    for m in record.mass_mailing_contact_ids:
-                        m.unlink()
+        for record in self:
+            subscription_ids = (
+                self.env["sale.subscription"]
+                .sudo()
+                .search([("partner_id", "=", record.id)])
+            )
 
-            values["name"] = user_hash
-            values["date_anonymized"] = fields.Datetime.now()
-            record.write(values)
+            for subscription in subscription_ids:
+                # Recompute subscription names, if they include the partner name
+                subscription.sale_subscription_line_ids._compute_name()
 
-            record.message_post(body=_("Partner anonymized"))
-            record.action_archive()
+    def anonymize_mail_messages(self):
+        # Anonymize mail messages and mail tracking values
+        for record in self:
+            for message in record.message_ids:
+                message.tracking_value_ids.write(
+                    {
+                        "old_value_char": False,
+                        "new_value_char": False,
+                        "old_value_text": False,
+                        "new_value_text": False,
+                    }
+                )
 
     def _cron_schedule_anonymize_partners(self):
         config = self.env["ir.config_parameter"].sudo()
