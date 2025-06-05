@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20250520\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-28 12:03+0000\n"
-"PO-Revision-Date: 2025-05-28 15:05+0300\n"
+"POT-Creation-Date: 2025-05-28 13:10+0000\n"
+"PO-Revision-Date: 2025-05-28 16:10+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -18,6 +18,16 @@ msgstr ""
 "X-Generator: Poedit 3.6\n"
 
 #. module: partner_domain_filter
+#: model:ir.model.fields,field_description:partner_domain_filter.field_partner_domain_filter__active
+msgid "Active"
+msgstr "Aktiivinen"
+
+#. module: partner_domain_filter
+#: model:ir.model.fields,field_description:partner_domain_filter.field_partner_domain_filter__color
+msgid "Color"
+msgstr "Väri"
+
+#. module: partner_domain_filter
 #: model:ir.model.fields,field_description:partner_domain_filter.field_partner_domain_filter__create_uid
 msgid "Created by"
 msgstr "Luonut"
@@ -26,6 +36,11 @@ msgstr "Luonut"
 #: model:ir.model.fields,field_description:partner_domain_filter.field_partner_domain_filter__create_date
 msgid "Created on"
 msgstr "Luotu"
+
+#. module: partner_domain_filter
+#: model:ir.model.fields,field_description:partner_domain_filter.field_partner_domain_filter__description
+msgid "Description"
+msgstr "Kuvaus"
 
 #. module: partner_domain_filter
 #: model:ir.model.fields,field_description:partner_domain_filter.field_partner_domain_filter__display_name
@@ -44,7 +59,6 @@ msgstr "Suodin"
 
 #. module: partner_domain_filter
 #: model:ir.model.fields,field_description:partner_domain_filter.field_partner_domain_filter__id
-#, fuzzy
 msgid "ID"
 msgstr "ID"
 
@@ -55,7 +69,6 @@ msgstr "Viimeksi päivittänyt"
 
 #. module: partner_domain_filter
 #: model:ir.model.fields,field_description:partner_domain_filter.field_partner_domain_filter__write_date
-#, fuzzy
 msgid "Last Updated on"
 msgstr "Viimeksi päivitetty"
 
