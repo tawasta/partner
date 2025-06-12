@@ -1,33 +1,45 @@
-name: Sync 17.0 to 17.0-dev
+name: Create PR from 17.0 to 17.0-dev After Merge
 
 on:
   push:
     branches:
-      - 17.0  # Trigger on push (merge) to 17.0
+      - 17.0  # This runs when a PR is merged into 17.0
 
 jobs:
-  sync:
+  sync-to-dev:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Needed for full history
 
-      - name: Set up Git user
-        run: |
-          git config user.name "FuturalBot"
-          git config user.email "tuki@futural.fi"
+      - name: Install GitHub CLI
+        run: sudo apt-get install -y gh
 
-      - name: Fetch and check out 17.0-dev
-        run: |
-          git fetch origin
-          git checkout 17.0-dev
-          git merge origin/17.0 --no-edit || echo "No changes to merge"
+      - name: Authenticate GitHub CLI
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
 
-      - name: Push merged changes to 17.0-dev
-        env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check if PR from 17.0 to 17.0-dev exists
+        id: check_pr
         run: |
-          git push origin 17.0-dev
+          pr_url=$(gh pr list --base 17.0-dev --head 17.0 --json url --jq '.[0].url')
+          echo "pr_url=$pr_url" >> $GITHUB_OUTPUT
+
+      - name: Create PR if not exists
+        if: steps.check_pr.outputs.pr_url == ''
+        run: |
+          gh pr create \
+            --base 17.0-dev \
+            --head 17.0 \
+            --title "Sync 17.0 to 17.0-dev" \
+            --body "Auto-generated PR to sync latest changes from 17.0 into 17.0-dev."
+
+      - name: Comment on existing PR if already open
+        if: steps.check_pr.outputs.pr_url != ''
+        run: |
+          gh pr comment "${{ steps.check_pr.outputs.pr_url }}" \
+            --body "New changes were merged into 17.0 — this PR remains up-to-date."
