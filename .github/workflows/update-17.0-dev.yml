@@ -1,12 +1,13 @@
-name: Update 17.0-dev after merge
+name: Open PR from feature branch to 17.0-dev
 
 on:
-  push:
+  pull_request:
     branches:
-      - 17.0  # This runs when a PR is merged into 17.0
+      - 17.0
+    types: [opened, reopened, synchronize]
 
 jobs:
-  sync-to-dev:
+  open-pr-to-dev:
     runs-on: ubuntu-latest
 
     permissions:
@@ -23,23 +24,22 @@ jobs:
       - name: Authenticate GitHub CLI
         run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
 
-      - name: Check if PR from 17.0 to 17.0-dev exists
-        id: check_pr
+      - name: Create PR from feature branch to 17.0-dev
         run: |
-          pr_url=$(gh pr list --base 17.0-dev --head 17.0 --json url --jq '.[0].url')
-          echo "pr_url=$pr_url" >> $GITHUB_OUTPUT
+          SOURCE_BRANCH="${{ github.event.pull_request.head.ref }}"
+          echo "Creating/updating PR from $SOURCE_BRANCH to 17.0-dev"
 
-      - name: Create PR if not exists
-        if: steps.check_pr.outputs.pr_url == ''
-        run: |
-          gh pr create \
-            --base 17.0-dev \
-            --head 17.0 \
-            --title "Sync 17.0 to 17.0-dev" \
-            --body "Auto-generated PR to sync latest changes from 17.0 into 17.0-dev."
+          # Check if a PR already exists
+          pr_url=$(gh pr list --base 17.0-dev --head "$SOURCE_BRANCH" --json url --jq '.[0].url')
 
-      - name: Comment on existing PR if already open
-        if: steps.check_pr.outputs.pr_url != ''
-        run: |
-          gh pr comment "${{ steps.check_pr.outputs.pr_url }}" \
-            --body "New changes were merged into 17.0 — this PR remains up-to-date."
+          if [ -z "$pr_url" ]; then
+            gh pr create \
+              --base 17.0-dev \
+              --head "$SOURCE_BRANCH" \
+              --title "Sync $SOURCE_BRANCH to 17.0-dev" \
+              --body "Auto-generated PR to keep 17.0-dev updated with changes from $SOURCE_BRANCH."
+          else
+            echo "PR already exists: $pr_url"
+            gh pr comment "$pr_url" \
+              --body "🔄 Sync PR updated — new changes from $SOURCE_BRANCH."
+          fi
