@@ -1,4 +1,4 @@
-name: Create PR from 17.0 to 17.0-dev After Merge
+name: Update 17.0-dev after merge
 
 on:
   push:
