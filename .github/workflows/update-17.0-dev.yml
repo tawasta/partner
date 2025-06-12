@@ -1,13 +1,12 @@
-name: Create/Update Sync PR to 17.0-dev
+name: Create PR from 17.0 to 17.0-dev After Merge
 
 on:
-  pull_request:
+  push:
     branches:
-      - 17.0
-    types: [opened, reopened, synchronize]
+      - 17.0  # This runs when a PR is merged into 17.0
 
 jobs:
-  open-sync-pr:
+  sync-to-dev:
     runs-on: ubuntu-latest
 
     permissions:
@@ -24,19 +23,23 @@ jobs:
       - name: Authenticate GitHub CLI
         run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
 
-      - name: Create or update PR from 17.0 to 17.0-dev
+      - name: Check if PR from 17.0 to 17.0-dev exists
+        id: check_pr
         run: |
-          # Check if a PR already exists from 17.0 to 17.0-dev
           pr_url=$(gh pr list --base 17.0-dev --head 17.0 --json url --jq '.[0].url')
+          echo "pr_url=$pr_url" >> $GITHUB_OUTPUT
 
-          if [ -z "$pr_url" ]; then
-            echo "Creating new PR from 17.0 to 17.0-dev"
-            gh pr create \
-              --base 17.0-dev \
-              --head 17.0 \
-              --title "Sync 17.0 to 17.0-dev" \
-              --body "Automated PR to sync 17.0 into 17.0-dev after update from PR #${{ github.event.pull_request.number }}"
-          else
-            echo "PR already exists: $pr_url"
-            # You can optionally update or comment on the PR
-          fi
+      - name: Create PR if not exists
+        if: steps.check_pr.outputs.pr_url == ''
+        run: |
+          gh pr create \
+            --base 17.0-dev \
+            --head 17.0 \
+            --title "Sync 17.0 to 17.0-dev" \
+            --body "Auto-generated PR to sync latest changes from 17.0 into 17.0-dev."
+
+      - name: Comment on existing PR if already open
+        if: steps.check_pr.outputs.pr_url != ''
+        run: |
+          gh pr comment "${{ steps.check_pr.outputs.pr_url }}" \
+            --body "New changes were merged into 17.0 — this PR remains up-to-date."
