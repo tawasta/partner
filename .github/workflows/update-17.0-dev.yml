@@ -1,33 +1,42 @@
-name: Sync 17.0 to 17.0-dev
+name: Create/Update Sync PR to 17.0-dev
 
 on:
-  push:
+  pull_request:
     branches:
-      - 17.0  # Trigger on push (merge) to 17.0
+      - 17.0
+    types: [opened, reopened, synchronize]
 
 jobs:
-  sync:
+  open-sync-pr:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+      pull-requests: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # Needed for full history
 
-      - name: Set up Git user
-        run: |
-          git config user.name "FuturalBot"
-          git config user.email "tuki@futural.fi"
+      - name: Install GitHub CLI
+        run: sudo apt-get install -y gh
 
-      - name: Fetch and check out 17.0-dev
-        run: |
-          git fetch origin
-          git checkout 17.0-dev
-          git merge origin/17.0 --no-edit || echo "No changes to merge"
+      - name: Authenticate GitHub CLI
+        run: echo "${{ secrets.GITHUB_TOKEN }}" | gh auth login --with-token
 
-      - name: Push merged changes to 17.0-dev
-        env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create or update PR from 17.0 to 17.0-dev
         run: |
-          git push origin 17.0-dev
+          # Check if a PR already exists from 17.0 to 17.0-dev
+          pr_url=$(gh pr list --base 17.0-dev --head 17.0 --json url --jq '.[0].url')
+
+          if [ -z "$pr_url" ]; then
+            echo "Creating new PR from 17.0 to 17.0-dev"
+            gh pr create \
+              --base 17.0-dev \
+              --head 17.0 \
+              --title "Sync 17.0 to 17.0-dev" \
+              --body "Automated PR to sync 17.0 into 17.0-dev after update from PR #${{ github.event.pull_request.number }}"
+          else
+            echo "PR already exists: $pr_url"
+            # You can optionally update or comment on the PR
+          fi
