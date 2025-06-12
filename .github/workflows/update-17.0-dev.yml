@@ -1,0 +1,33 @@
+name: Sync 17.0 to 17.0-dev
+
+on:
+  push:
+    branches:
+      - 17.0  # Trigger on push (merge) to 17.0
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Needed for full history
+
+      - name: Set up Git user
+        run: |
+          git config user.name "FuturalBot"
+          git config user.email "tuki@futural.fi"
+
+      - name: Fetch and check out 17.0-dev
+        run: |
+          git fetch origin
+          git checkout 17.0-dev
+          git merge origin/17.0 --no-edit || echo "No changes to merge"
+
+      - name: Push merged changes to 17.0-dev
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git push origin 17.0-dev
