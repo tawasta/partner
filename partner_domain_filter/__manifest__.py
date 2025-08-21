@@ -29,10 +29,16 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["contacts"],
+    "depends": ["contacts", "website"],
     "data": [
         "security/ir_model_access.xml",
         "views/partner_domain_filter.xml",
+        "views/snippets/s_domain.xml",
     ],
+    "assets": {
+        "web.assets_frontend": [
+            "/partner_domain_filter/static/src/js/partner_domain.esm.js",
+        ],
+    },
     "demo": [],
 }
