@@ -19,20 +19,24 @@
 ##############################################################################
 
 {
-    "name": "Partner domain filter",
-    "summary": "Partner domain filters to be used in other modules",
+    "name": "Website Partner Domain Visibility",
+    "summary": "Conditional website snippet visibility based on partner domain filters",
     "version": "17.0.1.1.0",
-    "category": "CRM",
+    "category": "Website",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["contacts"],
+    "depends": ["partner_domain_filter", "website"],
     "data": [
-        "security/ir_model_access.xml",
-        "views/partner_domain_filter.xml",
+        "views/snippets/s_domain.xml",
     ],
+    "assets": {
+        "web.assets_frontend": [
+            "/website_partner_domain_visibility/static/src/js/partner_domain.esm.js",
+        ],
+    },
     "demo": [],
 }
