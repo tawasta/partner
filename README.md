@@ -42,5 +42,6 @@ addon | version | maintainers | summary
 [res_partner_name_extension](res_partner_name_extension/) | 17.0.1.0.0 |  | Name extension field for partner
 [res_partner_number_of_votes](res_partner_number_of_votes/) | 17.0.1.0.0 |  | Adds new numeric field to contacts
 [res_partner_tree_address_info](res_partner_tree_address_info/) | 17.0.1.0.0 |  | Street, city and zip are shown in the partner tree view
+[website_partner_domain_visibility](website_partner_domain_visibility/) | 17.0.1.1.0 |  | Conditional website snippet visibility based on partner domain filters
 
 [//]: # (end addons)

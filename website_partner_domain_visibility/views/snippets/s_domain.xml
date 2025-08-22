@@ -5,15 +5,18 @@
         id="s_dynamic_snippet_advertisement_options"
         inherit_id="website.snippet_options"
     >
-        <xpath expr="//div[@data-js='ConditionalVisibility']//we-collapse" position="inside">
+        <xpath
+            expr="//div[@data-js='ConditionalVisibility']//we-collapse"
+            position="inside"
+        >
             <!-- Partner Domain Visibility Option -->
             <t t-call="website.snippet_options_conditional_visibility">
                 <t t-set="option_name">Partner Domain</t>
-                <t t-set="attribute_rule" t-valuef="visibilityValuePartnerDomainRule"/>
-                <t t-set="save_attribute" t-valuef="visibilityValuePartnerDomain"/>
-                <t t-set="attribute_name" t-valuef="data-partner-domain"/>
-                <t t-set="model" t-valuef="partner.domain.filter"/>
-                <t t-set="call_with" t-valuef="name"/>
+                <t t-set="attribute_rule" t-valuef="visibilityValuePartnerDomainRule" />
+                <t t-set="save_attribute" t-valuef="visibilityValuePartnerDomain" />
+                <t t-set="attribute_name" t-valuef="data-partner-domain" />
+                <t t-set="model" t-valuef="partner.domain.filter" />
+                <t t-set="call_with" t-valuef="name" />
             </t>
         </xpath>
 

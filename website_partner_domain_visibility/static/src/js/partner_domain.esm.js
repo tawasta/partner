@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
 import publicWidget from "@web/legacy/js/public/public_widget";
-import { jsonrpc } from "@web/core/network/rpc_service";
+import {jsonrpc} from "@web/core/network/rpc_service";
 
 /**
  * PartnerDomainChecker
@@ -20,22 +20,26 @@ const PartnerDomainChecker = publicWidget.Widget.extend({
     selector: "[data-visibility-value-partner-domain]",
 
     /**
-     * start() ajetaan automaattisesti kun widget alustetaan DOM-elementille.
+     * Start() ajetaan automaattisesti kun widget alustetaan DOM-elementille.
      */
     async start() {
         await this._super(...arguments);
 
         const htmlEl = document.documentElement;
-        const filters = JSON.parse(this.el.dataset.visibilityValuePartnerDomain || "[]");
+        const filters = JSON.parse(
+            this.el.dataset.visibilityValuePartnerDomain || "[]"
+        );
 
         for (const f of filters) {
             if (!f.id) {
-                continue; // jos filterillä ei ole id:tä, ohitetaan
+                continue; // Jos filterillä ei ole id:tä, ohitetaan
             }
 
             try {
                 // Pyydetään serveriltä tieto, täsmääkö partner nykykäyttäjään
-                const res = await jsonrpc("/website/partner_domain_check", { filter_id: f.id });
+                const res = await jsonrpc("/website/partner_domain_check", {
+                    filter_id: f.id,
+                });
 
                 // Jos ehto täyttyy, tallennetaan domainin nimi datasettiin
                 if (res.matched) {
@@ -54,4 +58,4 @@ const PartnerDomainChecker = publicWidget.Widget.extend({
 // Rekisteröidään widget julkiselle puolelle
 publicWidget.registry.partner_domain_checker = PartnerDomainChecker;
 
-export { PartnerDomainChecker };
+export {PartnerDomainChecker};
