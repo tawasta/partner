@@ -1,7 +1,7 @@
 /** @odoo-module **/
 
 import publicWidget from "@web/legacy/js/public/public_widget";
-import { jsonrpc } from "@web/core/network/rpc_service";
+import {jsonrpc} from "@web/core/network/rpc_service";
 
 const PartnerDomainChecker = publicWidget.Widget.extend({
     selector: "[data-visibility-value-partner-domain]",
@@ -37,7 +37,6 @@ const PartnerDomainChecker = publicWidget.Widget.extend({
                         existing.push(res.name);
                     }
                     htmlEl.dataset.partnerDomain = existing.join(",");
-
                 }
             } catch (e) {
                 console.error("PartnerDomainChecker: Server-kutsu epäonnistui", e);
@@ -48,4 +47,4 @@ const PartnerDomainChecker = publicWidget.Widget.extend({
 
 publicWidget.registry.partner_domain_checker = PartnerDomainChecker;
 
-export { PartnerDomainChecker };
+export {PartnerDomainChecker};

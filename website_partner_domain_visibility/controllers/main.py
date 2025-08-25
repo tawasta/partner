@@ -1,9 +1,11 @@
 import logging
+
 from odoo import http
 from odoo.http import request
 from odoo.tools.safe_eval import safe_eval
 
 _logger = logging.getLogger(__name__)
+
 
 class WebsitePartnerDomain(http.Controller):
     @http.route("/website/partner_domain_check", type="json", auth="user")
