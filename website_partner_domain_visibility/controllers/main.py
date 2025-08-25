@@ -1,6 +1,10 @@
+import logging
+
 from odoo import http
 from odoo.http import request
 from odoo.tools.safe_eval import safe_eval
+
+_logger = logging.getLogger(__name__)
 
 
 class WebsitePartnerDomain(http.Controller):
@@ -10,11 +14,16 @@ class WebsitePartnerDomain(http.Controller):
         user_partner = request.env.user.partner_id
 
         if not filter_rec.exists() or not user_partner:
+            _logger.info(
+                "PartnerDomainCheck: Filter ei löytynyt tai ei partneria. filter_id=%s",
+                filter_id,
+            )
             return {"matched": False, "name": False}
 
         try:
             domain = safe_eval(filter_rec.filter_domain)
         except Exception:
+            _logger.warning("PartnerDomainCheck: filter_domain eval epäonnistui")
             domain = []
 
         matched = (
@@ -22,6 +31,15 @@ class WebsitePartnerDomain(http.Controller):
             .sudo()
             .search_count([("id", "=", user_partner.id)] + domain)
             > 0
+        )
+
+        _logger.info(
+            "PartnerDomainCheck: Käyttäjä %s, filter '%s' (%s), matched=%s, domain=%s",
+            user_partner.id,
+            filter_rec.name,
+            filter_rec.id,
+            matched,
+            domain,
         )
 
         return {
