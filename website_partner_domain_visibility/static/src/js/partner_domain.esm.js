@@ -30,16 +30,20 @@ const PartnerDomainChecker = publicWidget.Widget.extend({
             this.el.dataset.visibilityValuePartnerDomain || "[]"
         );
 
+        console.log("PartnerDomainChecker: Löydetyt filterit:", filters);
+
         for (const f of filters) {
             if (!f.id) {
                 continue; // Jos filterillä ei ole id:tä, ohitetaan
             }
 
             try {
+                console.log("PartnerDomainChecker: Tarkistetaan filter_id=", f.id);
                 // Pyydetään serveriltä tieto, täsmääkö partner nykykäyttäjään
                 const res = await jsonrpc("/website/partner_domain_check", {
                     filter_id: f.id,
                 });
+                console.log("PartnerDomainChecker: Serveriltä saatu vastaus:", res);
 
                 // Jos ehto täyttyy, tallennetaan domainin nimi datasettiin
                 if (res.matched) {
@@ -47,6 +51,11 @@ const PartnerDomainChecker = publicWidget.Widget.extend({
                     htmlEl.dataset.partnerDomain = existing
                         ? `${existing},${res.name}`
                         : res.name;
+
+                    console.log(
+                        "PartnerDomainChecker: Match löytyi! Lisättiin datasettiin:",
+                        htmlEl.dataset.partnerDomain
+                    );
                 }
             } catch (e) {
                 console.error("Partner domain check failed", e);
