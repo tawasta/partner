@@ -45,4 +45,5 @@ class WebsitePartnerDomain(http.Controller):
         return {
             "matched": matched,
             "name": filter_rec.name,
+            "filter_id": filter_rec.id,
         }
