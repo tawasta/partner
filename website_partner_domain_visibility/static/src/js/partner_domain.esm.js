@@ -24,7 +24,12 @@ const PartnerDomainChecker = publicWidget.Widget.extend({
             this.el.dataset.visibilityValuePartnerDomain || "[]"
         );
 
-        console.log("PartnerDomainChecker: Löydetyt filterit:", filters, "elementissä", this.el);
+        console.log(
+            "PartnerDomainChecker: Löydetyt filterit:",
+            filters,
+            "elementissä",
+            this.el
+        );
 
         for (const f of filters) {
             if (!f.id) continue;
