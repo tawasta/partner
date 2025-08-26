@@ -18,13 +18,15 @@
  */
 
 import publicWidget from "@web/legacy/js/public/public_widget";
-import { jsonrpc } from "@web/core/network/rpc_service";
+import {jsonrpc} from "@web/core/network/rpc_service";
 
 /* ==================== Pienet apurit ==================== */
 
 /** Siistii nimen/otsikon: poistaa turhat välilyönnit. */
 function normalizeToken(token) {
-    return String(token ?? "").replace(/\s+/g, " ").trim();
+    // Käytetään "" jos token on null tai undefined (ilman ?? -operaattoria)
+    const safe = token === null ? "" : token;
+    return String(safe).replace(/\s+/g, " ").trim();
 }
 
 /** Odota seuraava selainpiirto (auttaa, että CSS päivittyy). */
@@ -80,7 +82,7 @@ const QUEUE_KEY = "__pdcQueue";
 if (!window[QUEUE_KEY]) window[QUEUE_KEY] = Promise.resolve();
 function runSerial(taskFn) {
     const chain = window[QUEUE_KEY].then(taskFn, taskFn);
-    window[QUEUE_KEY] = chain.catch(() => {});
+    window[QUEUE_KEY] = chain.catch(Function.prototype);
     return chain;
 }
 
@@ -117,7 +119,8 @@ const PartnerDomainController = publicWidget.Widget.extend({
                 // 1) Lue elementtiin määritellyt filtterit (JSON-array attribuutissa)
                 let filters = [];
                 try {
-                    const raw = el.getAttribute("data-visibility-value-partner-domain") || "[]";
+                    const raw =
+                        el.getAttribute("data-visibility-value-partner-domain") || "[]";
                     const parsed = JSON.parse(raw);
                     filters = Array.isArray(parsed) ? parsed : [];
                 } catch {
@@ -134,9 +137,11 @@ const PartnerDomainController = publicWidget.Widget.extend({
 
                     try {
                         // Kysytään palvelimelta, täsmääkö tämä filtteri kävijään
-                        const res = await jsonrpc("/website/partner_domain_check", { filter_id: f.id });
+                        const res = await jsonrpc("/website/partner_domain_check", {
+                            filter_id: f.id,
+                        });
 
-                        const matched = !!(res && res.matched);
+                        const matched = Boolean(res && res.matched);
                         const name = normalizeToken(res && res.name);
 
                         if (!matched || !name) continue;
@@ -156,7 +161,7 @@ const PartnerDomainController = publicWidget.Widget.extend({
                         await settleFrames(1);
 
                         shown = true;
-                        break; // ensimmäinen täsmäys riittää
+                        break; // Ensimmäinen täsmäys riittää
                     } catch {
                         // Palvelinkutsu epäonnistui -> ohitetaan tämä filtteri hiljaisesti
                     }
@@ -177,4 +182,4 @@ const PartnerDomainController = publicWidget.Widget.extend({
 
 publicWidget.registry.partner_domain_checker = PartnerDomainController;
 
-export { PartnerDomainController };
+export {PartnerDomainController};
