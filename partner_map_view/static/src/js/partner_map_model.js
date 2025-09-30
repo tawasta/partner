@@ -1,10 +1,12 @@
 /** @odoo-module */
 
 import { KeepLast } from "@web/core/utils/concurrency";
+import { session } from "@web/session";
 
 export class PartnerMapModel {
-    constructor(orm, resModel, fields, archInfo, domain) {
+    constructor(orm, rpc, resModel, fields, archInfo, domain) {
         this.orm = orm;
+        this.rpc = rpc;
         this.resModel = resModel;
         const { text, latitude, longitude } = archInfo;
         this.text = text;
@@ -33,18 +35,10 @@ export class PartnerMapModel {
     }
 
     async load() {
-        // In the future the company locations should be used to center the map
-        // For now we center it to Tampere, Finland
-        this.company_location = {
-            latitude: 61.49911,
-            longitude: 23.78712
-        };
-        /*
-         * TODO: When there is company location module add it to dependencies
-         * and use the fields here
-        var company_result = await this.orm.webSearchRead("res.company", [
-            "active", "=", true
-        ],
+        const company_id = session.user_companies.current_company;
+        var company_result = await this.orm.webSearchRead(
+            "res.company",
+            [[ "id", "in", [company_id] ]],
             {
                 specification: {
                     name: {},
@@ -53,9 +47,19 @@ export class PartnerMapModel {
                 },
             }
         );
-        this.company_location.latitude = company_result.records[0].company_latitude;
-        this.company_location.longitude = company_result.records[0].company_longitude;
-        */
+        console.log(company_result);
+        if(company_result.length < 1) {
+            // No company found center the map to Tampere
+            this.company_location = {
+                latitude: 61.49911,
+                longitude: 23.78712
+            };
+        } else {
+            this.company_location = {
+                latitude: company_result.records[0].company_latitude,
+                longitude: company_result.records[0].company_longitude
+            };
+        }
 
         var result = await this.orm.webSearchRead(
             this.resModel,

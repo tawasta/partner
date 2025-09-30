@@ -10,9 +10,11 @@ export class PartnerMapController extends Component {
     static template = "partner_map_view.View";
     setup() {
         this.orm = useService("orm");
+        this.rpc = useService("rpc");
         this.model = useState(
             new this.props.Model(
                 this.orm,
+                this.rpc,
                 this.props.resModel,
                 this.props.fields,
                 this.props.archInfo,
@@ -21,6 +23,7 @@ export class PartnerMapController extends Component {
         );
 
         onWillStart(async () => {
+
             await this.model.load();
         });
     }
