@@ -6,7 +6,9 @@
 Partner Map View
 ================
 
-Adds map view for contacts.
+- Map view for contacts
+- Latitude and longitude fields for company
+
 
 Configuration
 =============
@@ -16,7 +18,13 @@ Usage
 =====
 
 The latitude longitude information is under Contacts -> CONTACT -> Partner
-Assignment. It needs to be manually updated.
+Assignment. It needs to be manually updated and comes from base_geolocation
+module.
+
+The starting point of a map is user companys location. This module adds
+latitude and longitude fields to the company which need to be set manually.
+They are under Settings -> Users & Companies -> Companies -> COMPANY ->
+Location (Tab)
 
 Known issues / Roadmap
 ======================
