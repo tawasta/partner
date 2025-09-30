@@ -14,7 +14,9 @@ Configuration
 
 Usage
 =====
-\-
+
+The latitude longitude information is under Contacts -> CONTACT -> Partner
+Assignment. It needs to be manually updated.
 
 Known issues / Roadmap
 ======================
