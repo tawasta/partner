@@ -11,7 +11,13 @@ export class PartnerMapRenderer extends Component {
                     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             }).addTo(this.map);
             this.props.records.forEach((record) => {
-                L.marker([record.latitude, record.longitude]).bindPopup(record.text).addTo(this.map);
+                let text = record.text
+                    + " <a href='https://www.google.com/maps?z=15&q="
+                    + record.latitude
+                    + ","
+                    + record.longitude
+                    + "' target='_blank'>Google Maps</a>";
+                L.marker([record.latitude, record.longitude]).bindPopup(text).addTo(this.map);
             });
         });
     }
