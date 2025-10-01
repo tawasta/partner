@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="partner_map_view" model="ir.ui.view">
+        <field name="name">Map</field>
+        <field name="type">partnerMapView</field>
+        <field name="model">res.partner</field>
+        <field name="arch" type="xml">
+            <partnerMapView
+                text="name"
+                latitude="partner_latitude"
+                longitude="partner_longitude"
+            />
+        </field>
+    </record>
+
+    <record id="contacts.action_contacts" model="ir.actions.act_window">
+        <field name="view_mode">kanban,tree,activity,partnerMapView</field>
+    </record>
+
+</odoo>
