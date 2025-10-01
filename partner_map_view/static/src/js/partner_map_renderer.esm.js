@@ -5,6 +5,7 @@ import {Component, onMounted} from "@odoo/owl";
 export class PartnerMapRenderer extends Component {
     setup() {
         onMounted(async () => {
+            // eslint-disable-next-line
             this.map = L.map("partner_map").setView(
                 [
                     this.props.company_location.latitude,
@@ -12,6 +13,7 @@ export class PartnerMapRenderer extends Component {
                 ],
                 13
             );
+            // eslint-disable-next-line
             L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
                 maxZoom: 19,
                 attribution:
@@ -25,6 +27,7 @@ export class PartnerMapRenderer extends Component {
                     "," +
                     record.longitude +
                     "' target='_blank'>Google Maps</a>";
+                // eslint-disable-next-line
                 L.marker([record.latitude, record.longitude])
                     .bindPopup(text)
                     .addTo(this.map);
