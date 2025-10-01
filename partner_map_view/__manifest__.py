@@ -35,7 +35,7 @@
         "web.assets_backend": [
             "partner_map_view/static/src/js/*.js",
             "partner_map_view/static/src/views/*.xml",
-         ],
+        ],
     },
     "demo": [],
 }

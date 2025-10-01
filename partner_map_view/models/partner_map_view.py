@@ -17,5 +17,7 @@ class IrActionsActWindowView(models.Model):
     """
 
     _inherit = 'ir.actions.act_window.view'
-    view_mode = fields.Selection(selection_add=[('partnerMapView', "Partner Map")],
-                                 ondelete={'partnerMapView': 'cascade'})
+    view_mode = fields.Selection(
+        selection_add=[('partnerMapView', "Partner Map")],
+        ondelete={'partnerMapView': 'cascade'},
+    )

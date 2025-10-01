@@ -52,7 +52,7 @@ export class PartnerMapModel {
             // No company found center the map to Tampere
             this.company_location = {
                 latitude: 61.49911,
-                longitude: 23.78712
+                longitude: 23.78712,
             };
         } else {
             this.company_location = {
