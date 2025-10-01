@@ -1,14 +1,14 @@
 /** @odoo-module */
 
-import { KeepLast } from "@web/core/utils/concurrency";
-import { session } from "@web/session";
+import {KeepLast} from "@web/core/utils/concurrency";
+import {session} from "@web/session";
 
 export class PartnerMapModel {
     constructor(orm, rpc, resModel, fields, archInfo, domain) {
         this.orm = orm;
         this.rpc = rpc;
         this.resModel = resModel;
-        const { text, latitude, longitude } = archInfo;
+        const {text, latitude, longitude} = archInfo;
         this.text = text;
         this.latitude = latitude;
         this.longitude = longitude;
@@ -22,13 +22,13 @@ export class PartnerMapModel {
         // are dynamic and passed from the view to map_arch_parser to
         // here
         var fields = {};
-        if(this.text != undefined) {
+        if (this.text != undefined) {
             fields[this.text] = {};
         }
-        if(this.latitude != undefined) {
+        if (this.latitude != undefined) {
             fields[this.latitude] = {};
         }
-        if(this.longitude != undefined) {
+        if (this.longitude != undefined) {
             fields[this.longitude] = {};
         }
         return fields;
@@ -38,7 +38,7 @@ export class PartnerMapModel {
         const company_id = session.user_companies.current_company;
         var company_result = await this.orm.webSearchRead(
             "res.company",
-            [[ "id", "in", [company_id] ]],
+            [["id", "in", [company_id]]],
             {
                 specification: {
                     name: {},
@@ -48,7 +48,7 @@ export class PartnerMapModel {
             }
         );
         console.log(company_result);
-        if(company_result.length < 1) {
+        if (company_result.length < 1) {
             // No company found center the map to Tampere
             this.company_location = {
                 latitude: 61.49911,
@@ -61,22 +61,21 @@ export class PartnerMapModel {
             };
         }
 
-        var result = await this.orm.webSearchRead(
-            this.resModel,
-            [],
-            { specification: this.getSpecification() });
+        var result = await this.orm.webSearchRead(this.resModel, [], {
+            specification: this.getSpecification(),
+        });
 
         this.records = [];
 
         result.records.forEach((record) => {
-            var marker = { text: "", latitude: 0, longitude: 0 };
-            if(this.text != undefined) {
+            var marker = {text: "", latitude: 0, longitude: 0};
+            if (this.text != undefined) {
                 marker.text = record[this.text];
             }
-            if(this.latitude != undefined) {
+            if (this.latitude != undefined) {
                 marker.latitude = record[this.latitude];
             }
-            if(this.longitude != undefined) {
+            if (this.longitude != undefined) {
                 marker.longitude = record[this.longitude];
             }
             this.records.push(marker);

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <templates xml:space="preserve">
     <t t-name="partner_map_view.View">
         <div t-ref="root" t-att-class="props.className">
@@ -6,7 +6,11 @@
                 <t t-set-slot="layout-actions">
                     <SearchBar />
                 </t>
-                <t t-component="props.Renderer" records="model.records" company_location="model.company_location" />
+                <t
+                    t-component="props.Renderer"
+                    records="model.records"
+                    company_location="model.company_location"
+                />
             </Layout>
         </div>
     </t>

@@ -1,10 +1,10 @@
 /** @odoo-module */
 
-import { registry } from "@web/core/registry";
-import { PartnerMapController } from "./partner_map_controller";
-import { PartnerMapArchParser } from "./partner_map_arch_parser";
-import { PartnerMapModel } from "./partner_map_model";
-import { PartnerMapRenderer } from "./partner_map_renderer";
+import {registry} from "@web/core/registry";
+import {PartnerMapController} from "./partner_map_controller";
+import {PartnerMapArchParser} from "./partner_map_arch_parser";
+import {PartnerMapModel} from "./partner_map_model";
+import {PartnerMapRenderer} from "./partner_map_renderer";
 
 export const partnerMapView = {
     type: "partnerMapView",
@@ -17,8 +17,8 @@ export const partnerMapView = {
     Renderer: PartnerMapRenderer,
 
     props(genericProps, view) {
-        const { ArchParser } = view;
-        const { arch } = genericProps;
+        const {ArchParser} = view;
+        const {arch} = genericProps;
         const archInfo = new ArchParser().parse(arch);
 
         return {

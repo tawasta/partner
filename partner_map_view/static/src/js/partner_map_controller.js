@@ -1,12 +1,12 @@
 /** @odoo-module */
 
-import { Layout } from "@web/search/layout";
-import { SearchBar } from "@web/search/search_bar/search_bar";
-import { useService } from "@web/core/utils/hooks";
-import { Component, onWillStart, useState} from "@odoo/owl";
+import {Layout} from "@web/search/layout";
+import {SearchBar} from "@web/search/search_bar/search_bar";
+import {useService} from "@web/core/utils/hooks";
+import {Component, onWillStart, useState} from "@odoo/owl";
 
 export class PartnerMapController extends Component {
-    static components = { Layout, SearchBar };
+    static components = {Layout, SearchBar};
     static template = "partner_map_view.View";
     setup() {
         this.orm = useService("orm");

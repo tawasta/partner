@@ -8,7 +8,7 @@ export class PartnerMapArchParser {
         return {
             text,
             latitude,
-            longitude
+            longitude,
         };
     }
 }
