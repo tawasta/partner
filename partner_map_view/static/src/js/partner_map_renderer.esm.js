@@ -18,7 +18,7 @@ export class PartnerMapRenderer extends Component {
                     "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>",
             }).addTo(this.map);
             this.props.records.forEach((record) => {
-                let text =
+                const text =
                     record.text +
                     " <a href='https://www.google.com/maps?z=15&q=" +
                     record.latitude +
