@@ -22,13 +22,13 @@ export class PartnerMapModel {
         // are dynamic and passed from the view to map_arch_parser to
         // here
         var fields = {};
-        if (this.text != undefined) {
+        if (this.text !== undefined) {
             fields[this.text] = {};
         }
-        if (this.latitude != undefined) {
+        if (this.latitude !== undefined) {
             fields[this.latitude] = {};
         }
-        if (this.longitude != undefined) {
+        if (this.longitude !== undefined) {
             fields[this.longitude] = {};
         }
         return fields;
@@ -69,13 +69,13 @@ export class PartnerMapModel {
 
         result.records.forEach((record) => {
             var marker = {text: "", latitude: 0, longitude: 0};
-            if (this.text != undefined) {
+            if (this.text !== undefined) {
                 marker.text = record[this.text];
             }
-            if (this.latitude != undefined) {
+            if (this.latitude !== undefined) {
                 marker.latitude = record[this.latitude];
             }
-            if (this.longitude != undefined) {
+            if (this.longitude !== undefined) {
                 marker.longitude = record[this.longitude];
             }
             this.records.push(marker);
