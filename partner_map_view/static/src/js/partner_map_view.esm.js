@@ -3,8 +3,8 @@
 import {PartnerMapArchParser} from "./partner_map_arch_parser";
 import {PartnerMapController} from "./partner_map_controller";
 import {PartnerMapModel} from "./partner_map_model";
-import {registry} from "@web/core/registry";
 import {PartnerMapRenderer} from "./partner_map_renderer";
+import {registry} from "@web/core/registry";
 
 export const partnerMapView = {
     type: "partnerMapView",
