@@ -1,9 +1,9 @@
 /** @odoo-module */
 
-import {PartnerMapArchParser} from "./partner_map_arch_parser";
-import {PartnerMapController} from "./partner_map_controller";
-import {PartnerMapModel} from "./partner_map_model";
-import {PartnerMapRenderer} from "./partner_map_renderer";
+import {PartnerMapArchParser} from "./partner_map_arch_parser.esm";
+import {PartnerMapController} from "./partner_map_controller.esm";
+import {PartnerMapModel} from "./partner_map_model.esm";
+import {PartnerMapRenderer} from "./partner_map_renderer.esm";
 import {registry} from "@web/core/registry";
 
 export const partnerMapView = {

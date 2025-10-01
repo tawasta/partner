@@ -33,7 +33,11 @@
     "data": ["views/map_view.xml", "views/res_company.xml", "data/data.xml"],
     "assets": {
         "web.assets_backend": [
-            "partner_map_view/static/src/js/*.js",
+            "partner_map_view/static/src/js/partner_map_arch_parser.esm.js",
+            "partner_map_view/static/src/js/partner_map_controller.esm.js",
+            "partner_map_view/static/src/js/partner_map_model.esm.js",
+            "partner_map_view/static/src/js/partner_map_renderer.esm.js",
+            "partner_map_view/static/src/js/partner_map_view.esm.js",
             "partner_map_view/static/src/views/*.xml",
         ],
     },
