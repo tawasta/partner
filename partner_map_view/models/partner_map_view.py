@@ -9,6 +9,7 @@ class View(models.Model):
     _inherit = 'ir.ui.view'
     type = fields.Selection(selection_add=[('partnerMapView', "Partner Map")])
 
+
 class IrActionsActWindowView(models.Model):
     """
     Extends the base 'ir.actions.act_window.view' model to include

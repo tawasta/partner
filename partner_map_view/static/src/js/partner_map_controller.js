@@ -28,3 +28,4 @@ export class PartnerMapController extends Component {
         });
     }
 }
+
