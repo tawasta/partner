@@ -3,7 +3,6 @@
 import {Component, onMounted} from "@odoo/owl";
 
 export class PartnerMapRenderer extends Component {
-    static template = "partner_map_view.Renderer";
     setup() {
         onMounted(async () => {
             this.map = L.map("partner_map").setView(
@@ -33,3 +32,5 @@ export class PartnerMapRenderer extends Component {
         });
     }
 }
+
+PartnerMapRenderer.template = "partner_map_view.Renderer";
