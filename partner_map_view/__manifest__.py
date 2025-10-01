@@ -30,11 +30,11 @@
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": [ "contacts", "web_leaflet_lib", "base_geolocalize" ],
-    "data": [ "views/map_view.xml", "views/res_company.xml" ],
-    'assets': {
-        'web.assets_backend': [
-            'partner_map_view/static/src/js/*.js',
-            'partner_map_view/static/src/views/*.xml',
+    "data": [ "views/map_view.xml", "views/res_company.xml" , "data/data.xml" ],
+    "assets": {
+        "web.assets_backend": [
+            "partner_map_view/static/src/js/*.js",
+            "partner_map_view/static/src/views/*.xml",
          ],
     },
     "demo": [],

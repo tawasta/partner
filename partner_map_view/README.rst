@@ -8,6 +8,9 @@ Partner Map View
 
 - Map view for contacts
 - Latitude and longitude fields for company
+- Automatic updating of contact latitude and longitude when adress changes
+- Adds a cron job that slowly populates Contact latitude and longitudes
+    - Active by default
 
 
 Configuration
@@ -18,8 +21,7 @@ Usage
 =====
 
 The latitude longitude information is under Contacts -> CONTACT -> Partner
-Assignment. It needs to be manually updated and comes from base_geolocation
-module.
+Assignment.
 
 The starting point of a map is user companys location. This module adds
 latitude and longitude fields to the company which need to be set manually.
