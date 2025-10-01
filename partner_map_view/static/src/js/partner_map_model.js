@@ -57,7 +57,7 @@ export class PartnerMapModel {
         } else {
             this.company_location = {
                 latitude: company_result.records[0].company_latitude,
-                longitude: company_result.records[0].company_longitude
+                longitude: company_result.records[0].company_longitude,
             };
         }
 

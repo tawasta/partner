@@ -9,16 +9,17 @@ export class PartnerMapRenderer extends Component {
             this.map = L.map("partner_map").setView(
                 [
                     this.props.company_location.latitude,
-                    this.props.company_location.longitude
+                    this.props.company_location.longitude,
                 ],
                 13
             );
             L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                    maxZoom: 19,
-                    attribution: "&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a>"
+                maxZoom: 19,
+                attribution: "&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a>"
             }).addTo(this.map);
             this.props.records.forEach((record) => {
-                let text = record.text +
+                let text =
+                    record.text +
                     " <a href=\"https://www.google.com/maps?z=15&q=" +
                     record.latitude +
                     "," +
@@ -31,4 +32,3 @@ export class PartnerMapRenderer extends Component {
         });
     }
 }
-

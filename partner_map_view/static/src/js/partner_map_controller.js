@@ -23,7 +23,6 @@ export class PartnerMapController extends Component {
         );
 
         onWillStart(async () => {
-
             await this.model.load();
         });
     }

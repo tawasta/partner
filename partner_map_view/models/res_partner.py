@@ -33,4 +33,3 @@ class ResPartner(models.Model):
             if partner.partner_latitude == 0.0 and partner.partner_longitude == 0.0:
                 partner.geo_localize()
                 break
-
