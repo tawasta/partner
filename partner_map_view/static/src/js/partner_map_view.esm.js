@@ -9,7 +9,7 @@ import {PartnerMapRenderer} from "./partner_map_renderer";
 export const partnerMapView = {
     type: "partnerMapView",
     display_name: "Map",
-    icon: "fa fa-picture-o", // the icon that will be displayed in the Layout panel
+    icon: "fa fa-picture-o",
     multiRecord: true,
     Controller: PartnerMapController,
     ArchParser: PartnerMapArchParser,
