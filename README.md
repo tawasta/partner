@@ -15,6 +15,7 @@ addon | version | maintainers | summary
 [partner_anonymization](partner_anonymization/) | 17.0.1.1.1 |  | Allows anonymization partners
 [partner_auditlog_rules](partner_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for res partner
 [partner_country_fiscal_position](partner_country_fiscal_position/) | 17.0.1.0.0 |  | Automatically selects Partner's Fiscal Position based on its country
+[partner_default_delivery_address](partner_default_delivery_address/) | 17.0.1.0.1 |  | Allows defining a default delivery address for partners
 [partner_default_invoice_address](partner_default_invoice_address/) | 17.0.1.0.1 |  | Allows defining a default invoice address for partners
 [partner_default_tree_view](partner_default_tree_view/) | 17.0.1.0.0 |  | Defaults Contacts action to tree view
 [partner_domain_filter](partner_domain_filter/) | 17.0.1.1.0 |  | Partner domain filters to be used in other modules
