@@ -6,13 +6,12 @@
         <field name="arch" type="xml">
             <field name="child_ids" position="after">
                 <separator />
-                <label for="default_partner_delivery_id" invisible="not child_ids" />
-                <div invisible="not child_ids">
+                <group invisible="not child_ids">
                     <field
                         name="default_partner_delivery_id"
                         options="{'no_open':True,'no_create': True}"
                     />
-                </div>
+                </group>
             </field>
         </field>
     </record>
