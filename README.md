@@ -13,7 +13,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [base_partner_sequence_contact](base_partner_sequence_contact/) | 17.0.1.0.1 |  | Give unique partner sequence numbers for all partner types
 [partner_anonymization](partner_anonymization/) | 17.0.1.1.1 |  | Allows anonymization partners
-[partner_auditlog_rules](partner_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for res partner
+[partner_auditlog_rules](partner_auditlog_rules/) | 17.0.1.1.0 |  | Adds audit log rules for res partner
 [partner_country_fiscal_position](partner_country_fiscal_position/) | 17.0.1.0.0 |  | Automatically selects Partner's Fiscal Position based on its country
 [partner_default_delivery_address](partner_default_delivery_address/) | 17.0.1.0.1 |  | Allows defining a default delivery address for partners
 [partner_default_invoice_address](partner_default_invoice_address/) | 17.0.1.0.1 |  | Allows defining a default invoice address for partners
