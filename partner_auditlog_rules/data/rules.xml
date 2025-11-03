@@ -4,5 +4,6 @@
         <field name="name">Res Partner</field>
         <field name="model_id" ref="base.model_res_partner" />
         <field name="state">subscribed</field>
+        <field name="log_type">fast</field>
     </record>
 </odoo>
