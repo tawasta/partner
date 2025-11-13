@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="portal_kannatusseura" inherit_id="portal.portal_my_details">
+        <xpath expr="//div[@class='row o_portal_details']//div[@class='row'][1]" position="inside">
+            <div class="mb-3 col-xl-6">
+                <label for="kannatusseura_id" class="form-label">Kannatusseura</label>
+                <select name="kannatusseura_id" id="kannatusseura_id" class="form-select">
+                    <t t-foreach="kannatusseurat" t-as="seura">
+                        <option t-att-value="seura.id" t-att-selected="seura.id == selected_kannatusseura_id">
+                            <t t-esc="seura.name"/>
+                        </option>
+                    </t>
+                </select>
+            </div>
+        </xpath>
+
+    </template>
+</odoo>

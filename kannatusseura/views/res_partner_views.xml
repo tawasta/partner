@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- support club form to the contacts-->
+    <record id="view_partner_form_inherit_kannatusseura" model="ir.ui.view">
+        <field name="name">res.partner.form.kannatusseura</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="title" position="after"> 
+                <field name="kannatusseura_id"/> 
+            </field> 
+        </field>
+    </record>
+
+
+    <record id="view_partner_search_inherit_kannatusseura" model="ir.ui.view">
+        <field name="name">res.partner.search.kannatusseura</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <filter name="has_kannatusseura" string="On kannatusseura"
+                        domain="[('kannatusseura_id','!=',False)]"/>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
