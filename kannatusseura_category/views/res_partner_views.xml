@@ -4,21 +4,16 @@
         <field name="model">kannatusseura.category</field>
         <field name="arch" type="xml">
             <form>
-                <xpath expr="//sheet/group" position="inside">
-                    <field name="name"/>
-                    <field name="code"/>
-                </xpath>
+
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                    </group>
+                </sheet>
 
             </form>
         </field>
     </record>
-
-    <!-- <record id="action_kannatusseura" model="ir.actions.act_window">
-        <field name="name">Kannatusseura</field>
-        <field name="res_model">kannatusseura.category</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-
-    <menuitem id="menu_kannatusseura_root" name="Kannatusseura"/> -->
 
 </odoo>

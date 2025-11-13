@@ -6,13 +6,18 @@
     <field name="model">res.partner</field>
     <field name="inherit_id" ref="base.view_partner_form"/>
     <field name="arch" type="xml">
-      <xpath expr="//field[@name='website']" position="after">
-
-          <field name="kannatusseura_name" string="Kannatusseura"/>
-          <field name="kannatusseura_code" string="" />
-          <field name="kan_kat" />
-
-      </xpath>
+      
+        
+        <xpath expr="//page[@name='sales_purchases']" position="after">
+            <page string="Kannatusseura">
+                <group>
+                    <field name="kannatusseura_name"/>
+                    <field name="kannatusseura_code"/>
+                    <field name="kan_cat"/>
+                </group>
+            </page>
+        </xpath>
+   
     </field>
   </record>
 
@@ -33,7 +38,7 @@
       <field name="inherit_id" ref="base.res_partner_kanban_view"/>
       <field name="arch" type="xml">
           <xpath expr="/kanban/field[@name='color']" position="after">
-              <field name="kannatusseura_name" />
+              <field string="Kannatusseura" name="kannatusseura_name" />
           </xpath>
       </field>
   </record>
