@@ -20,6 +20,7 @@ addon | version | maintainers | summary
 [partner_default_tree_view](partner_default_tree_view/) | 17.0.1.0.0 |  | Defaults Contacts action to tree view
 [partner_domain_filter](partner_domain_filter/) | 17.0.1.1.0 |  | Partner domain filters to be used in other modules
 [partner_force_company_with_vat](partner_force_company_with_vat/) | 17.0.1.1.0 |  | Force partner type to company when VAT is given
+[partner_generic_date_range_info](partner_generic_date_range_info/) | 17.0.1.0.0 |  | Enables logging info about user-defineable start/end dates for partners, e.g. join dates or perk eligibility dates
 [partner_identification_hide](partner_identification_hide/) | 17.0.1.0.0 |  | Hide partner identification page from non-admins
 [partner_information_export](partner_information_export/) | 17.0.1.0.0 |  | Allows exporting all partner information
 [partner_internal_reference_is_customer_number](partner_internal_reference_is_customer_number/) | 17.0.1.0.0 |  | Use Internal reference as Customer number
