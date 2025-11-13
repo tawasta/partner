@@ -2,8 +2,12 @@ from odoo import http
 from odoo.http import request
 from odoo.addons.portal.controllers.portal import CustomerPortal
 
-# Support club to my/account portal
 class PortalExtend(CustomerPortal):
+
+    def _get_optional_fields(self):
+        fields = super()._get_optional_fields()
+        fields.append('kannatusseura_id')
+        return fields
 
     def details_form_validate(self, data):
         error, error_message = super().details_form_validate(data)
