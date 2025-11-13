@@ -1,0 +1,158 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_generic_date_range_info
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250428\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-13 11:04+0000\n"
+"PO-Revision-Date: 2025-11-13 11:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range_type__active
+msgid "Active"
+msgstr "Aktiivinen"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range_type__code
+msgid "Code"
+msgstr "Koodi"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model,name:partner_generic_date_range_info.model_res_partner
+msgid "Contact"
+msgstr "Kontakti"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range__create_uid
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range_type__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range__create_date
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range_type__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: partner_generic_date_range_info
+#: model_terms:ir.ui.view,arch_db:partner_generic_date_range_info.view_partner_form_inherit_date_ranges
+msgid "Date Range Based Info"
+msgstr "Pvm-pohjaiset tiedot"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner__date_range_ids
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_users__date_range_ids
+msgid "Date Range Based Infos"
+msgstr "Pvm-pohjaiset tiedot"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range__display_name
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range_type__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range__date_end
+msgid "End Date"
+msgstr "Päättymispäivä"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range__id
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range_type__id
+msgid "ID"
+msgstr ""
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range__notes
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range_type__notes
+msgid "Internal Notes"
+msgstr "Sisäiset muistiinpanot"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range__write_uid
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range_type__write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range__write_date
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range_type__write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range_type__name
+msgid "Name"
+msgstr "Nimi"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range__partner_id
+msgid "Partner"
+msgstr "Kumppani"
+
+#. module: partner_generic_date_range_info
+#: model:ir.actions.act_window,name:partner_generic_date_range_info.action_res_partner_date_range
+#: model:ir.ui.menu,name:partner_generic_date_range_info.menu_action_res_partner_date_range
+#: model_terms:ir.ui.view,arch_db:partner_generic_date_range_info.view_res_partner_date_range_form
+msgid "Partner Date Range Based Information"
+msgstr "Kumppanien pvm-pohjaiset tiedot"
+
+#. module: partner_generic_date_range_info
+#: model:ir.actions.act_window,name:partner_generic_date_range_info.action_res_partner_date_range_type
+#: model:ir.ui.menu,name:partner_generic_date_range_info.menu_action_res_partner_date_range_types
+msgid "Partner Date Range Based Information Types"
+msgstr "Kumppanien pvm-pohjaisen tiedon tyypit"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model,name:partner_generic_date_range_info.model_res_partner_date_range
+msgid "Partner Date Range Information"
+msgstr "Kumppanien pvm-pohjaiset tiedot"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model,name:partner_generic_date_range_info.model_res_partner_date_range_type
+msgid "Partner Date Range Information Type"
+msgstr "Kumppanien pvm-pohjaisen tiedon tyyppi"
+
+#. module: partner_generic_date_range_info
+#: model_terms:ir.ui.view,arch_db:partner_generic_date_range_info.view_res_partner_date_range_type_form
+msgid "Partner Date Range Type"
+msgstr "Kumppanien pvm-pohjaisen tiedon tyyppi"
+
+#. module: partner_generic_date_range_info
+#: model:ir.ui.menu,name:partner_generic_date_range_info.menu_contacts_date_range_config_submenu
+msgid "Partner Date Ranges"
+msgstr "Kumppanien pvm-pohjaiset tiedot"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range__date_start
+msgid "Start Date"
+msgstr "Alkamispäivä"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,help:partner_generic_date_range_info.field_res_partner_date_range_type__code
+msgid ""
+"Technical helper field that can be set if you need to access date ranges of "
+"this type programmatically for e.g. calculations."
+msgstr ""
+"Tekninen apukenttä, joka voidaan asettaa, jos pvm-tietoja aiotaan hyödyntää "
+"esim. laskennoissa ohjelmallisesti"
+
+#. module: partner_generic_date_range_info
+#. odoo-python
+#: code:addons/partner_generic_date_range_info/models/res_partner_date_range_type.py:0
+#, python-format
+msgid "The code field cannot be changed after creation."
+msgstr "Koodia ei voi vaihtaa luonnin jälkeen"
+
+#. module: partner_generic_date_range_info
+#: model:ir.model.fields,field_description:partner_generic_date_range_info.field_res_partner_date_range__type_id
+msgid "Type"
+msgstr "Tyyppi"

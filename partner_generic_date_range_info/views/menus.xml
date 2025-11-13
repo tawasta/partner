@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="action_res_partner_date_range" model="ir.actions.act_window">
+        <field name="name">Partner Date Range Based Information</field>
+        <field name="res_model">res.partner.date.range</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_res_partner_date_range_type" model="ir.actions.act_window">
+        <field name="name">Partner Date Range Based Information Types</field>
+        <field name="res_model">res.partner.date.range.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_contacts_date_range_config_submenu"
+        parent="contacts.res_partner_menu_config"
+        name="Partner Date Ranges"
+    />
+
+    <menuitem
+        id="menu_action_res_partner_date_range_types"
+        parent="menu_contacts_date_range_config_submenu"
+        action="action_res_partner_date_range_type"
+    />
+    <menuitem
+        id="menu_action_res_partner_date_range"
+        parent="menu_contacts_date_range_config_submenu"
+        action="action_res_partner_date_range"
+    />
+
+</odoo>
