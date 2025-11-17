@@ -12,6 +12,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/res_partner_views.xml',
+        'views/kannatusseura_cat.xml',
     ],
     'demo': [
         'demo/demo.xml',

@@ -5,11 +5,24 @@
         <field name="arch" type="xml">
             <form>
                 <group>
-                    <field name="kannatusseura_cat_name" widget="many2one" />
+                    <field name="kannatusseura_cat_name"  />
                 </group>
 
             </form>
         </field>
+    </record>
+
+    <record id="kcat_hockey" model="kannatusseura.cat">
+        <field name="kannatusseura_cat_name">hockey</field>
+        <field name="kannatusseura_cat_code">HCK</field>
+    </record>
+    <record id="kcat_soccer" model="kannatusseura.cat">
+        <field name="kannatusseura_cat_name">soccer</field>
+        <field name="kannatusseura_cat_code">SOC</field>
+    </record>
+    <record id="kcat_formula1" model="kannatusseura.cat">
+        <field name="kannatusseura_cat_name">formula1</field>
+        <field name="kannatusseura_cat_code">FRM</field>
     </record>
 
 </odoo>

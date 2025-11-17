@@ -13,7 +13,8 @@ class KannatusseuraCat(models.Model):
             ('formula1', 'Formula 1'),
         ],
         string="Kannatusseura cat",
-        required=True
+        required=True,
+        readonly=False,
     )
 
     kannatusseura_cat_code = fields.Char(

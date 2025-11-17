@@ -1,53 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
+    <data>
 
-  <record id="view_partner_form_inherit_kannatusseura" model="ir.ui.view">
-    <field name="name">res.partner.form.inherit.kannatusseura</field>
-    <field name="model">res.partner</field>
-    <field name="inherit_id" ref="base.view_partner_form"/>
-    <field name="arch" type="xml">
-      
-        
-        <xpath expr="//page[@name='sales_purchases']" position="after">
+        <record id="view_partner_form_inherit_kannatusseura" model="ir.ui.view">
+            <field name="name">res.partner.form.inherit.kannatusseura</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+
+
+            <xpath expr="//page[@name='sales_purchases']" position="after">
             <page string="Kannatusseura">
                 <group>
                     <field name="kannatusseura_name"/>
                     <field name="kannatusseura_code"/>
-                    <field name="kan_cat"/>
+                    <field name="kannatusseura_kategoria"/>
                 </group>
             </page>
-        </xpath>
-   
-    </field>
-  </record>
+            </xpath>
 
-  <record id="view_partner_tree_inherit_kannatusseura" model="ir.ui.view">
-      <field name="name">res.partner.tree.inherit.kannatusseura</field>
-      <field name="model">res.partner</field>
-      <field name="inherit_id" ref="base.view_partner_tree"/>
-      <field name="arch" type="xml">
-          <tree string="Contacts">
-              <field name="kannatusseura_name"/>
-          </tree>
-      </field>
-  </record>
+        </field>
+        </record>
 
-  <record id="view_partner_kanban_kannatusseura" model="ir.ui.view">
-      <field name="name">res.partner.kanban.kannatusseura </field>
-      <field name="model">res.partner</field>    
-      <field name="inherit_id" ref="base.res_partner_kanban_view"/>
-      <field name="arch" type="xml">
-          <xpath expr="/kanban/field[@name='color']" position="after">
-              <field string="Kannatusseura" name="kannatusseura_name" />
-          </xpath>
-      </field>
-  </record>
+        <record id="view_partner_tree_inherit_kannatusseura" model="ir.ui.view">
+            <field name="name">res.partner.tree.inherit.kannatusseura</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <tree string="Contacts">
+                    <field name="kannatusseura_name"/>
+                </tree>
+            </field>
+        </record>
 
-  <record id="action_partner_kannatusseura" model="ir.actions.act_window">
-    <field name="name">Kannatusseura</field>
-    <field name="res_model">res.partner</field>
-    <field name="view_mode">tree,form,kanban</field>
-    <field name="domain">[]</field>
-  </record>
+        <record id="view_partner_kanban_kannatusseura" model="ir.ui.view">
+            <field name="name">res.partner.kanban.kannatusseura </field>
+            <field name="model">res.partner</field>
+            <field name="type">kanban</field>   
+            <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//ul/li[last()]" position="after">
+                    <t t-if="record.kannatusseura_name.raw_value">
+                        <li>
+                            <span>Kannatusseura: </span>
+                            <field name="kannatusseura_name" />
+                        </li>
+                    </t>
+                </xpath>
+
+                <!-- <xpath expr="//div[@class='oe_kanban_bottom_left']" position="after">
+                    <div>
+                        <t t-if="record.kannatusseura_name.raw_value">
+                            <span>Kannatusseura: </span>
+                            <field name="kannatusseura_name"/>
+                        </t>
+                    </div>
+                </xpath> -->
+
+                <!-- <field name="display_name" position="before">
+                    <kanban>
+                        <field name="kannatusseura_name"/>  
+                    </kanban>
+                </field> -->
+
+                <!-- <kanban>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_card">
+                                <div class="oe_kanban_content">
+                                    <strong>
+                                        <field name="kannatusseura_name"/>
+                                    </strong>
+                                    <br/>
+                                    <field name="name"/>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>    
+                </kanban>       -->
+            </field>
+        </record>
+
+        <record id="action_partner_kannatusseura" model="ir.actions.act_window">
+            <field name="name">Kannatusseura</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="domain">[]</field>
+            <field name="view_id" ref="view_partner_kanban_kannatusseura" />
+        </record>
+
+        
+        <record id="filter_kannatusseura_name_not_null" model="ir.filters"> 
+            <field name="name">Kannatusseurallinen</field>
+            <field name="model_id">res.partner</field>
+            <field name="domain">[('kannatusseura_name', '!=', False)]</field>
+            <field name="context">{}</field>
+            <field name="is_default" eval="False"/>
+            <field name="user_id" eval="False"/>
+        </record>
+<!-- 
+    <menuitem id="kannatusseura_menu"
+        name="Kannatusseura"
+        action="action_partner_kannatusseura"
+        parent="res.partner.view_partner_form"/> -->
+
+    </data>
+
 
 </odoo>
