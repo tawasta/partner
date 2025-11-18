@@ -2,6 +2,7 @@
 
 from odoo import models, fields, api # type: ignore
 import logging
+import xmlrpc.client
 
 
 class ResPartner(models.Model):
@@ -50,13 +51,24 @@ class ResPartner(models.Model):
 
     kannatusseura_kategoria = fields.Many2one("kannatusseura.cat", string="Kannatusseura cat")
 
+    #uutta
+
+    # url = "http://localhost:8069/"
+    # db = "db"
+    # username = 'admin'
+    # password = 'admin'
+
+    # uid = common.authenticate(db, username, password, {})
+
+    # models.execute_kw(db, None, password, 'res.partner', 'search', [[['kannatusseura_code', '=', True]]])
+    
+    #/uutta
 
     @api.model
     def name_search(self, name='', args=None, operator='ilike', limit=100):
         args = args or []
         domain = []
         if name:
-            # Add your custom field to the search
             domain = ['|', '|',
                       ('name', operator, name),
                       ('kannatusseura_name.name', operator, name),
