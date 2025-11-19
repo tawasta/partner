@@ -3,98 +3,44 @@
     <data>
 
         <!-- Kannatusseura page extending contacts form view-->
-        <record id="view_partner_form_inherit_kannatusseura" model="ir.ui.view">
-            <field name="name">res.partner.form.inherit.kannatusseura</field>
+        <record id="res_partner_kannatusseura" model="ir.ui.view">
+            <field name="name">res.partner.kannatusseura</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
-
-
-            <xpath expr="//page[@name='sales_purchases']" position="after">
-            <page string="Kannatusseura">
-                <group>
-                    <field name="kannatusseura_name"/>
-                    <field name="kannatusseura_code"/>
-                    <field name="kannatusseura_kategoria"/>
-                </group>
-            </page>
-            </xpath>
-
-        </field>
+                <xpath expr="//div[field[@name='email']]" position="after">
+                    <field name="user_kannatusseura"/>
+                </xpath>
+            </field>
         </record>
+    </data>
+</odoo>
 
-        <!-- Tree view, adds kannatusseura column to the contacts tree view-->
-        <record id="view_partner_tree_inherit_kannatusseura" model="ir.ui.view">
-            <field name="name">res.partner.tree.inherit.kannatusseura</field>
+
+ <!--        <record id="res_partner_kannatusseura_tree" model="ir.ui.view">
+            <field name="name">res.partner.kannatusseura.tree</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_tree"/>
             <field name="arch" type="xml">
-                <tree string="Contacts">
-                    <field name="kannatusseura_name"/>
-                </tree>
+                 <field name="nimi"/>
             </field>
         </record>
 
-        <!-- Kanban view, extending contacts kanban-->
-        <record id="view_partner_kanban_kannatusseura" model="ir.ui.view">
-            <field name="name">res.partner.kanban.kannatusseura </field>
+        <record id="res_partner_kannatusseura_kanban" model="ir.ui.view">
+            <field name="name">res.partner.kannatusseura.kanban</field>
             <field name="model">res.partner</field>
             <field name="type">kanban</field>   
             <field name="inherit_id" ref="base.res_partner_kanban_view"/>
             <field name="arch" type="xml">
 
-                <xpath expr="//ul/li[last()]" position="after">
-                    <t t-if="record.kannatusseura_name.raw_value">
-                        <li>
-                            <span>Kannatusseura: </span>
-                            <field name="kannatusseura_name" />
-                        </li>
-                    </t>
-                </xpath>
+                 <field name="nimi"/>
             </field>
-        </record>
+        </record> 
 
-        <!-- Kanban view of Kannatusseura module-->
-        <record id="view_independent_kanban_kannatusseura" model="ir.ui.view">
-            <field name="name">view.independent.kanban.kannatusseura</field>
-            <field name="model">res.partner</field>
-            <field name="type">kanban</field>
-            <field name="arch" type="xml">
-                <kanban>
-                    <templates>
-                        <t t-name="kanban-box">
-                            <t t-if ="record.kannatusseura_name.raw_value">
-                                <div>
-                                    <strong><field name="name"/></strong>
-                                    <br />
-                                    <span>Kannatusseura: </span>
-                                    <div>
-                                        <field name="kannatusseura_name"/>
-                                        <span>, </span>
-                                        <field name="kannatusseura_kategoria"/>
-                                    </div>
-                                </div>
-                            </t>
-                            <t t-else="">
-                                <div>
-                                    <strong><field name="name"></field></strong>
-                                    <br />
-                                    <!-- Idea: add button that leads to contact form of user with no kannatusseura-->
-                                    <span><i>No kannatusseura assigned</i></span>
-                                </div>
-                            </t>
-                        </t>
-                    </templates>
-                </kanban>
-            </field>
-        </record>
-
-
-        <!-- Actions-->
         <record id="action_partner_kannatusseura" model="ir.actions.act_window">
             <field name="name">Kannatusseura</field>
             <field name="res_model">res.partner</field>
-            <field name="view_mode">tree,form,kanban</field>
+            <field name="view_mode">form</field>
             <field name="domain">[]</field>
             <field name="view_id" ref="view_partner_kanban_kannatusseura" />
         </record>
@@ -109,8 +55,16 @@
             <field name="res_model">res.partner</field>
             <field name="view_mode">form</field>
         </record>
+        <record id="action_kannatusseura" model="ir.actions.act_window">
+            <field name="name">Kannatusseura</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="view_id" ref="view_partner_subform_kannatusseura"></field>
+            <field name="help" type="html">
+                <p>moi</p>
+            </field>
+        </record>
 
-        <!-- Premade filter, to find contacts with kannatusseura-->
         <record id="filter_kannatusseura_name_not_null" model="ir.filters"> 
             <field name="name">Kannatusseurallinen</field>
             <field name="model_id">res.partner</field>
@@ -120,10 +74,7 @@
             <field name="user_id" eval="False"/>
         </record>
 
-        <!-- Menuitems-->
-        <menuitem id="menu_kannatusseura_root" name="Kannatusseura"  action="action_kannatusseura_kanban"/>
-        <!-- <menuitem id="menu_kannatusseura_kanban" name="view_independent_kanban_kannatusseura" action="action_kannatusseura_kanban" /> -->
-    
-
-    </data>
-</odoo>
+        <menuitem id="menu_kannatusseura_root" name="Kannatusseura kanban" parent="res_partner_kannatusseura" action="action_kannatusseura_kanban"/>
+        <menuitem id="menu_kannatusseura_form" name="Kannatusseura" parent="contacts.menu_contacts" action="action_kannatusseura"/> 
+        <menuitem id="menu_kannatusseura_kanban" name="view_independent_kanban_kannatusseura" action="action_kannatusseura_kanban" /> 
+    -->
