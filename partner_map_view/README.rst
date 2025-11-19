@@ -23,10 +23,8 @@ Usage
 The latitude longitude information is under Contacts -> CONTACT -> Partner
 Assignment.
 
-The starting point of a map is user companys location. This module adds
-latitude and longitude fields to the company which need to be set manually.
-They are under Settings -> Users & Companies -> Companies -> COMPANY ->
-Location (Tab)
+The starting point of a map is user companys location. Which is taken from
+Contact associated with that company.
 
 Known issues / Roadmap
 ======================
