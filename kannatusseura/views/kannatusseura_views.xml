@@ -60,6 +60,17 @@
             </field>
         </record>
 
+        <!-- Adding the portal views-->
+        <!-- <template id="portal_my_details_inherit" inherit_id="portal.portal_my_details">
+            <xpath expr="//div[@id='wrap']" position="inside">
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="text" name="phone" t-att-value="request.env.user.phone"/>
+                </div>
+            </xpath>
+        </template> -->
+
+
         <!-- ACTIONS-->
         <record id="action_kannatusseura" model="ir.actions.act_window">
             <field name="name">Kannatusseura</field>
@@ -89,6 +100,11 @@
         </record>
 
         <!-- MENUS-->
-        <menuitem id="menu_kannatusseura_form" name="Kannatusseura" action="action_kannatusseura"/>
+        <menuitem id="menu_kannatusseura"
+                name="Kannatusseura"
+                parent="contacts.menu_contacts"
+                action="action_kannatusseura"
+                sequence="10"/>
+
     </data>
 </odoo>

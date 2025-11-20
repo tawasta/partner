@@ -11,10 +11,10 @@
     'depends': ['contacts'],
     'data': [
         'security/ir.model.access.csv',
+        'data/ir_cron.xml',
         'views/kannatusseura_views.xml',
         'views/kannatusseura_cat.xml',
         'views/res_partner_views.xml',
-
     ],
     'demo': [
         'demo/demo.xml',
