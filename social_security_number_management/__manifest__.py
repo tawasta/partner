@@ -23,7 +23,7 @@
     "summary": "Store SSN for partners in an encrypted format",
     "version": "17.0.1.0.0",
     "category": "Specific Industry Applications",
-    "website": "https://github.com/tawasta/odoo/partner",
+    "website": "https://github.com/tawasta/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

@@ -6,8 +6,8 @@
         <field name="arch" type="xml">
             <form string="Decrypt Personal ID">
                 <group>
-                    <field name="partner_id" invisible="1"/>
-                    <field name="key"/>
+                    <field name="partner_id" invisible="1" />
+                    <field name="key" />
                 </group>
                 <div>
                     <p class="text-muted">
@@ -24,7 +24,7 @@
                         name="decrypt_social_security_number"
                         class="btn-primary"
                     />
-                    <button string="Close" class="btn-secondary" special="cancel"/>
+                    <button string="Close" class="btn-secondary" special="cancel" />
                 </footer>
             </form>
         </field>
@@ -34,7 +34,7 @@
         <field name="name">Decrypt Personal ID</field>
         <field name="res_model">partner.ssn.decrypt.wizard</field>
         <field name="view_mode">form</field>
-        <field name="view_id" ref="view_partner_ssn_decrypt_wizard_form"/>
+        <field name="view_id" ref="view_partner_ssn_decrypt_wizard_form" />
         <field name="target">new</field>
     </record>
 </odoo>

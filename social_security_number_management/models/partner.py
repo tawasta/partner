@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import base64
 import binascii
 import hashlib
@@ -37,7 +36,6 @@ class ResPartner(models.Model):
 
     ssn_hash = fields.Char("SSN Hash", readonly=True, index=True)
 
-
     @api.constrains("social_security_number")
     def _check_social_security_number(self):
         for record in self:
@@ -49,10 +47,6 @@ class ResPartner(models.Model):
 
     @staticmethod
     def is_valid_social_security_number(social_security_number):
-        """
-        Tarkistus suomalaiselle henkilötunnukselle:
-        ppkkvv-XXXY, ppkkvv+XXXZ, ppkkvvAXXXW jne.
-        """
         pattern = r"^(\d{2})(0[1-9]|1[0-2])(\d{2})([-+A])(\d{3})([0-9A-Ya-y])$"
         match = re.match(pattern, social_security_number)
         if not match:
@@ -63,7 +57,6 @@ class ResPartner(models.Model):
         modulo_31 = int(number_to_check) % 31
         checksum_chars = "0123456789ABCDEFHJKLMNPRSTUVWXY"
         return checksum.upper() == checksum_chars[modulo_31]
-
 
     def _get_encryption_key(self):
         parameter_name = "social_security_number_encryption_key"
@@ -84,7 +77,9 @@ class ResPartner(models.Model):
             )
 
         if len(encoded_key) % 4 != 0:
-            raise ValueError(_("The length of the encryption key is not a multiple of four."))
+            raise ValueError(
+                _("The length of the encryption key is not a multiple of four.")
+            )
 
         try:
             return base64.b64decode(encoded_key)
@@ -102,11 +97,6 @@ class ResPartner(models.Model):
         return encrypted_data_base64
 
     def decrypt_social_security_number(self, encrypted_data_base64, input_key):
-        """
-        Dekryptaa henkilötunnuksen.
-
-        input_key: käyttäjän syöttämä base64-avain (sama mikä on järjestelmäparametrissa)
-        """
         if isinstance(encrypted_data_base64, memoryview):
             encrypted_data_base64 = encrypted_data_base64.tobytes()
         if isinstance(encrypted_data_base64, str):

@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import logging
 
 from odoo import _, fields, models
@@ -22,27 +21,22 @@ class PartnerSSNDecryptWizard(models.TransientModel):
         self.ensure_one()
         partner = self.partner_id
 
-        # Ei ole salattua hetua
         if not partner.encrypted_social_security_number:
             return {
                 "type": "ir.actions.client",
                 "tag": "display_notification",
                 "params": {
                     "title": _("No Personal Identification Number"),
-                    "message": _(
-                        "No encrypted personal identification number exists for this partner."
-                    ),
+                    "message": _("No encrypted personal identification number"),
                     "sticky": False,
                 },
             }
 
-        # Kutsutaan partnerin dekryptausmetodia – tämä EI loggaa hetua
         decrypted_id = partner.decrypt_social_security_number(
             partner.encrypted_social_security_number,
             self.key,
         )
 
-        # Jos palautus on virheilmoitus, näytetään se
         if decrypted_id in (
             _("The key you provided is incorrect."),
             _("Decryption failed"),
