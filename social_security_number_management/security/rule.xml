@@ -1,0 +1,10 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Luodaan uusi ryhmä henkilötunnuksen dekryptausta varten -->
+        <record id="group_decrypt_social_security_number" model="res.groups">
+            <field name="name">Allowed to show Student Personal ID</field>
+            <field name="category_id" ref="base.module_category_usability" />
+            <!-- Määritä tässä muita tarvittavia oikeuksia tai ryhmän asetuksia tarvittaessa -->
+        </record>
+    </data>
+</odoo>
