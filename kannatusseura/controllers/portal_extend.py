@@ -9,25 +9,42 @@ class PortalExtend(CustomerPortal):
         fields.append('kannatusseura_id')
         return fields
 
-    def details_form_validate(self, data):
-        error, error_message = super().details_form_validate(data)
-        return error, error_message
-
-    def details_form_save(self, values):
-        partner = request.env.user.partner_id.sudo()
-        kannatusseura_id = values.pop('kannatusseura_id', False)
-        if kannatusseura_id:
-            partner.write({'kannatusseura_id': int(kannatusseura_id)})
-        return super().details_form_save(values)
-
     @http.route(['/my/account'], type='http', auth='user', website=True)
     def account(self, redirect=None, **post):
+        if post:
+            error, error_message = self.details_form_validate(post)
+            if not error:
+                partner_fields = list(request.env['res.partner']._fields.keys())
+                values = {}
+                
+                for key in self.MANDATORY_BILLING_FIELDS:
+                    if key in post and key in partner_fields:
+                        values[key] = post.get(key)
+                
+                for key in self.OPTIONAL_BILLING_FIELDS:
+                    if key in post and key in partner_fields:
+                        values[key] = post.get(key)
+                
+                if 'kannatusseura_id' in post:
+                    try:
+                        values['kannatusseura_id'] = int(post['kannatusseura_id']) if post['kannatusseura_id'] else False
+                    except (ValueError, TypeError):
+                        values['kannatusseura_id'] = False
+                
+                if values:
+                    request.env.user.partner_id.sudo().write(values)
+                
+                if redirect:
+                    return request.redirect(redirect)
+                return request.redirect('/my/home')
+        
         response = super().account(redirect=redirect, **post)
         qcontext = response.qcontext
-
+        
         kannatusseurat = request.env['kannatusseura.kannatusseura'].sudo().search([], order="name ASC")
         qcontext.update({
-            'kannatusseurat': kannatusseurat,
-            'selected_kannatusseura_id': request.env.user.partner_id.kannatusseura_id.id or False,
+            "kannatusseurat": kannatusseurat,
+            "selected_kannatusseura_id": request.env.user.partner_id.kannatusseura_id.id,
         })
+        
         return response

@@ -5,6 +5,7 @@
             <div class="mb-3 col-xl-6">
                 <label for="kannatusseura_id" class="form-label">Kannatusseura</label>
                 <select name="kannatusseura_id" id="kannatusseura_id" class="form-select">
+                    <option value="">-- Valitse Kannatusseura --</option>
                     <t t-foreach="kannatusseurat" t-as="seura">
                         <option t-att-value="seura.id" t-att-selected="seura.id == selected_kannatusseura_id">
                             <t t-esc="seura.name"/>
@@ -13,6 +14,5 @@
                 </select>
             </div>
         </xpath>
-
     </template>
 </odoo>
