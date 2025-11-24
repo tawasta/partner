@@ -1,6 +1,6 @@
 /** @odoo-module */
 
-import {Component, onMounted, onRendered} from "@odoo/owl";
+import {Component, onMounted, onRendered, useState} from "@odoo/owl";
 
 export class PartnerMapRenderer extends Component {
     async render() {
@@ -35,8 +35,8 @@ export class PartnerMapRenderer extends Component {
             // eslint-disable-next-line
             this.map = L.map("partner_map").setView(
                 [
-                    this.props.company_location.latitude,
-                    this.props.company_location.longitude,
+                    this.props.company_latitude,
+                    this.props.company_longitude,
                 ],
                 13
             );

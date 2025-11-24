@@ -5,11 +5,7 @@
         <field name="type">partnerMapView</field>
         <field name="model">res.partner</field>
         <field name="arch" type="xml">
-            <partnerMapView
-                text="name"
-                latitude="partner_latitude"
-                longitude="partner_longitude"
-            />
+            <partnerMapView text="name" />
         </field>
     </record>
 
