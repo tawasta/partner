@@ -30,7 +30,7 @@ export class PartnerMapRenderer extends Component {
         }
     }
 
-    Setup() {
+    setup() {
         onMounted(async () => {
             // eslint-disable-next-line
             this.map = L.map("partner_map").setView(
