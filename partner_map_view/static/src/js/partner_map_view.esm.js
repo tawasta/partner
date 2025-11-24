@@ -9,7 +9,7 @@ import {registry} from "@web/core/registry";
 export const partnerMapView = {
     type: "partnerMapView",
     display_name: "Map",
-    icon: "fa fa-picture-o",
+    icon: "fa fa-map",
     multiRecord: true,
     Controller: PartnerMapController,
     ArchParser: PartnerMapArchParser,
