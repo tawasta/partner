@@ -28,7 +28,6 @@ export class PartnerMapController extends Component {
         onWillUpdateProps(async () => {
             await this.model.load();
         });
-
     }
 }
 
