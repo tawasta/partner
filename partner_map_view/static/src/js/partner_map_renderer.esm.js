@@ -46,7 +46,7 @@ export class PartnerMapRenderer extends Component {
                 {
                     maxZoom: 19,
                     attribution:
-                    "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>",
+                        "&copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a>",
                 }
             );
             this.map.addLayer(this.tileLayer);
