@@ -17,7 +17,7 @@ export class PartnerMapController extends Component {
                 this.env.searchModel,
                 this.props.fields,
                 this.props.archInfo,
-                this.props.domain,
+                this.props.domain
             )
         );
 

@@ -75,11 +75,11 @@ export class PartnerMapModel {
             console.log("HERE: ");
             console.log(record);
             var marker = {
-                partner_name: record['name'],
-                partner_id: record['id'],
+                partner_name: record.name,
+                partner_id: record.id,
                 text: "",
                 latitude: 0,
-                longitude: 0
+                longitude: 0,
             };
             if (this.text !== undefined) {
                 marker.text = record[this.text];
