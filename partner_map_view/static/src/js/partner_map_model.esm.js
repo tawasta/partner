@@ -72,8 +72,6 @@ export class PartnerMapModel {
         this.records = [];
 
         result.records.forEach((record) => {
-            console.log("HERE: ");
-            console.log(record);
             var marker = {
                 partner_name: record.name,
                 partner_id: record.id,
