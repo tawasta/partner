@@ -4,10 +4,11 @@ import {KeepLast} from "@web/core/utils/concurrency";
 import {session} from "@web/session";
 
 export class PartnerMapModel {
-    constructor(orm, rpc, resModel, fields, archInfo, domain) {
+    constructor(orm, rpc, resModel, searchModel, fields, archInfo, domain) {
         this.orm = orm;
         this.rpc = rpc;
         this.resModel = resModel;
+        this.searchModel = searchModel;
         const {text, latitude, longitude} = archInfo;
         this.text = text;
         this.latitude = latitude;
@@ -47,7 +48,6 @@ export class PartnerMapModel {
                 },
             }
         );
-        console.log(company_result);
         if (company_result.length < 1) {
             // No company found center the map to Tampere
             this.company_location = {
@@ -61,14 +61,26 @@ export class PartnerMapModel {
             };
         }
 
-        var result = await this.orm.webSearchRead(this.resModel, [], {
-            specification: this.getSpecification(),
-        });
+        var result = await this.orm.webSearchRead(
+            this.resModel,
+            this.searchModel._domain,
+            {
+                specification: this.getSpecification(),
+            }
+        );
 
         this.records = [];
 
         result.records.forEach((record) => {
-            var marker = {text: "", latitude: 0, longitude: 0};
+            console.log("HERE: ");
+            console.log(record);
+            var marker = {
+                partner_name: record.name,
+                partner_id: record.id,
+                text: "",
+                latitude: 0,
+                longitude: 0,
+            };
             if (this.text !== undefined) {
                 marker.text = record[this.text];
             }
