@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_res_partner_date_range_tree" model="ir.ui.view">
+        <field name="name">res.partner.date.range.tree</field>
+        <field name="model">res.partner.date.range</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="partner_id" />
+                <field name="type_id" />
+                <field name="date_start" />
+                <field name="date_end" />
+                <field name="notes" optional="show" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_res_partner_date_range_form" model="ir.ui.view">
+        <field name="name">res.partner.date.range.form</field>
+        <field name="model">res.partner.date.range</field>
+        <field name="arch" type="xml">
+            <form string="Partner Date Range Based Information">
+                <sheet>
+                    <group>
+                        <field name="partner_id" options='{"no_create": True}' />
+                        <field name="type_id" options='{"no_create": True}' />
+                    </group>
+                    <group>
+                        <field name="date_start" />
+                        <field name="date_end" />
+                    </group>
+                    <group>
+                        <field name="notes" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_partner_form_inherit_date_ranges" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.date.ranges</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='sales_purchases']" position="after">
+                <page string="Date Range Based Info" name="page_date_ranges">
+                    <field name="date_range_ids">
+                        <tree>
+                            <field name="type_id" />
+                            <field name="date_start" />
+                            <field name="date_end" />
+                            <field name="notes" optional="hide" />
+                        </tree>
+                        <form>
+                            <sheet>
+                                <group>
+                                    <field
+                                        name="type_id"
+                                        options='{"no_create": True}'
+                                    />
+                                    <field name="date_start" />
+                                    <field name="date_end" />
+                                </group>
+                                <group>
+                                    <field name="notes" />
+                                </group>
+                            </sheet>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
