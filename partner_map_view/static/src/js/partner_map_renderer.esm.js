@@ -1,6 +1,6 @@
 /** @odoo-module */
 
-import {Component, onMounted, onRendered, useState} from "@odoo/owl";
+import {Component, onMounted, onRendered} from "@odoo/owl";
 
 export class PartnerMapRenderer extends Component {
     async render() {
