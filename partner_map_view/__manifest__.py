@@ -38,7 +38,7 @@
             "partner_map_view/static/src/js/partner_map_model.esm.js",
             "partner_map_view/static/src/js/partner_map_renderer.esm.js",
             "partner_map_view/static/src/js/partner_map_view.esm.js",
-            "partner_map_view/static/src/views/*.xml"
+            "partner_map_view/static/src/views/*.xml",
         ],
     },
     "demo": [],
