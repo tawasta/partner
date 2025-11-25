@@ -8,7 +8,7 @@ class KannatusseuraModel(models.Model):
     _rec_code = 'kannatusseura_code'
 
     _sql_constraints = [
-                            ('unique_code_unique', 'unique(unique_code)', 'Code already in use, try a different one.')
+                            ('unique_code_unique', 'unique(kannatusseura_code)', 'Code already in use, try a different one.')
                         ]       
 
     kannatusseura_name = fields.Char(
@@ -27,7 +27,7 @@ class KannatusseuraModel(models.Model):
     def name_get(self):
         result = []
         for record in self:
-            display_name = f"{record.code} - {record.name}"
+            display_name = f"{record.kannatusseura_code} - {record.kannatusseura_name}"
             result.append((record.id, display_name))
         return result
 
@@ -38,8 +38,7 @@ class KannatusseuraModel(models.Model):
         domain = []
         if name:
             domain = ['|', '|',
-                    ('name', operator, name),
-                    ('kannatusseura_name.name', operator, name),
+                    ('kannatusseura_name', operator, name),
                     ('kannatusseura_code', operator, name)]
         partners = self.search(domain + args, limit=limit)
         return [(partner.id, partner.display_name) for partner in partners]
