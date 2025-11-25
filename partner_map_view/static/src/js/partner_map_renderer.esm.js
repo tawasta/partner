@@ -34,10 +34,7 @@ export class PartnerMapRenderer extends Component {
         onMounted(async () => {
             // eslint-disable-next-line
             this.map = L.map("partner_map").setView(
-                [
-                    this.props.company_location.latitude,
-                    this.props.company_location.longitude,
-                ],
+                [this.props.company_latitude, this.props.company_longitude],
                 13
             );
             // eslint-disable-next-line
