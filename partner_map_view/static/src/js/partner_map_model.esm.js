@@ -47,8 +47,8 @@ export class PartnerMapModel {
             this.company_latitude = 61.49911;
             this.company_longitude = 23.78712;
         } else {
-           this.company_latitude = company_partner_result.records[0].partner_latitude;
-           this.company_longitude = company_partner_result.records[0].partner_longitude;
+            this.company_latitude = company_partner_result.records[0].partner_latitude;
+            this.company_longitude = company_partner_result.records[0].partner_longitude;
         }
 
         var result = await this.orm.webSearchRead(
