@@ -5,7 +5,6 @@ import {
     onMounted,
     onWillStart,
     onWillUpdateProps,
-    useState,
 } from "@odoo/owl";
 import {Layout} from "@web/search/layout";
 import {SearchBar} from "@web/search/search_bar/search_bar";
