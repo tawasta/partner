@@ -57,6 +57,7 @@ export class PartnerMapModel {
             this.searchModel._domain,
             {
                 specification: {
+                    name: {},
                     partner_latitude: {},
                     partner_longitude: {},
                 },
