@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <template id="portal_my_kannatusseura_form_action" inherit_id="portal.portal_my_details">
+    <template
+        id="portal_my_kannatusseura_form_action"
+        inherit_id="portal.portal_my_details"
+    >
         <xpath expr="//form" position="attributes">
             <attribute name="action">/my/account/save</attribute>
         </xpath>
@@ -15,15 +18,17 @@
                 t-attf-class="form-group #{error.get('kannatusseura') and 'o_has_error' or ''} col-xl-6"
             >
                 <label class="col-form-label" for="kannatusseura">Kannatusseura</label>
-                
+
                 <select name="user_kannatusseura" class="form-control">
                     <t t-if="not partner.user_kannatusseura">
                         <option value="">Select...</option>
                     </t>
                     <t t-foreach="kannatusseurat" t-as="k">
-                        <option t-att-value="k.id"
-                                t-att-selected="partner.user_kannatusseura.id == k.id and 'selected' or None">
-                            <t t-esc="k.display_name"/>
+                        <option
+                            t-att-value="k.id"
+                            t-att-selected="partner.user_kannatusseura.id == k.id and 'selected' or None"
+                        >
+                            <t t-esc="k.display_name" />
                         </option>
                     </t>
                 </select>

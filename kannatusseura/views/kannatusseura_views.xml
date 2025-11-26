@@ -1,110 +1,100 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
-    <data>
-        <!-- VIEWS-->
-        <!-- form-->
-        <record id="kannatusseura_form" model="ir.ui.view">
-            <field name="name">kannatusseura.form</field>
-            <field name="model">kannatusseura.model</field>
-            <field name="type">form</field>
-            <field name="priority" eval="1"/>
-            <field name="arch" type="xml">
+    <!-- VIEWS-->
+    <!-- form-->
+    <record id="kannatusseura_form" model="ir.ui.view">
+        <field name="name">kannatusseura.form</field>
+        <field name="model">kannatusseura.model</field>
+        <field name="type">form</field>
+        <field name="priority" eval="1" />
+        <field name="arch" type="xml">
 
-                <form>
-                    <group>
-                        <field name="kannatusseura_name"/>
-                        <field name="kannatusseura_code"/>
-                        <field name="kannatusseura_kategoria"/>
-                    </group>
-                </form>
+            <form>
+                <group>
+                    <field name="kannatusseura_name" />
+                    <field name="kannatusseura_code" />
+                    <field name="kannatusseura_kategoria" />
+                </group>
+            </form>
 
-            </field>
-        </record>
-        <!-- Ind tree-->
-        <record id="kannatusseura_tree" model="ir.ui.view">
-            <field name="name">kannatusseura.tree</field>
-            <field name="model">kannatusseura.model</field>
-            <field name="arch" type="xml">
-                <tree>
-                    <field name="kannatusseura_name"/>
-                    <field name="kannatusseura_code"/>
-                    <field name="kannatusseura_kategoria"/>
-                </tree>
-            </field>
-        </record>
-        <!-- Kanban view of Kannatusseura module-->
-        <record id="kannatusseura_kanban" model="ir.ui.view">
-            <field name="name">kannatusseura.kanban</field>
-            <field name="model">kannatusseura.model</field>
-            <field name="type">kanban</field>
-            <field name="arch" type="xml">
-                <kanban>
-                    <templates>
-                        <t t-name="kanban-box">
-                            <div t-attf-class="oe_kanban_global_click">
-                                <div>
-                                    <strong><field name="kannatusseura_name"/></strong>
-                                    <t t-if="record.kannatusseura_code.raw_value != True">
-                                        <span>, </span>
-                                        <field name="kannatusseura_code"/> 
-                                    </t>
-                                    <t t-if="record.kannatusseura_kategoria.raw_value != True">
-                                        <span>, </span>
-                                        <field name="kannatusseura_kategoria"/>
-                                    </t>
-                                </div>
+        </field>
+    </record>
+    <!-- Ind tree-->
+    <record id="kannatusseura_tree" model="ir.ui.view">
+        <field name="name">kannatusseura.tree</field>
+        <field name="model">kannatusseura.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="kannatusseura_name" />
+                <field name="kannatusseura_code" />
+                <field name="kannatusseura_kategoria" />
+            </tree>
+        </field>
+    </record>
+    <!-- Kanban view of Kannatusseura module-->
+    <record id="kannatusseura_kanban" model="ir.ui.view">
+        <field name="name">kannatusseura.kanban</field>
+        <field name="model">kannatusseura.model</field>
+        <field name="type">kanban</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div>
+                                <strong><field name="kannatusseura_name" /></strong>
+                                <t t-if="record.kannatusseura_code.raw_value != True">
+                                    <span>, </span>
+                                    <field name="kannatusseura_code" />
+                                </t>
+                                <t
+                                    t-if="record.kannatusseura_kategoria.raw_value != True"
+                                >
+                                    <span>, </span>
+                                    <field name="kannatusseura_kategoria" />
+                                </t>
                             </div>
-                        </t>
-                    </templates>
-                </kanban>
-            </field>
-        </record>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
 
-        <!-- Adding the portal views-->
-        <!-- <template id="portal_my_details_inherit" inherit_id="portal.portal_my_details">
-            <xpath expr="//div[@id='wrap']" position="inside">
-                <div class="form-group">
-                    <label for="phone">Phone</label>
-                    <input type="text" name="phone" t-att-value="request.env.user.phone"/>
-                </div>
-            </xpath>
-        </template> -->
+    <!-- ACTIONS-->
+    <record id="action_kannatusseura" model="ir.actions.act_window">
+        <field name="name">Kannatusseura</field>
+        <field name="res_model">kannatusseura.model</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
 
+    <record id="action_kannatusseura_tree" model="ir.actions.act_window.view">
+        <field name="sequence" eval="1" />
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="kannatusseura_tree" />
+        <field name="act_window_id" ref="action_kannatusseura" />
+    </record>
 
-        <!-- ACTIONS-->
-        <record id="action_kannatusseura" model="ir.actions.act_window">
-            <field name="name">Kannatusseura</field>
-            <field name="res_model">kannatusseura.model</field>
-            <field name="view_mode">tree,form,kanban</field>
-        </record>
+    <record id="action_kannatusseura_form" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2" />
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="kannatusseura_form" />
+        <field name="act_window_id" ref="action_kannatusseura" />
+    </record>
 
-        <record id="action_kannatusseura_tree" model="ir.actions.act_window.view">
-            <field name="sequence" eval="1"/>
-            <field name="view_mode">tree</field>
-            <field name="view_id" ref="kannatusseura_tree"/>
-            <field name="act_window_id" ref="action_kannatusseura"/>
-        </record>
+    <record id="action_kannatusseura_kanban" model="ir.actions.act_window.view">
+        <field name="sequence" eval="3" />
+        <field name="view_mode">kanban</field>
+        <field name="view_id" ref="kannatusseura_kanban" />
+        <field name="act_window_id" ref="action_kannatusseura" />
+    </record>
 
-        <record id="action_kannatusseura_form" model="ir.actions.act_window.view">
-            <field name="sequence" eval="2"/>
-            <field name="view_mode">form</field>
-            <field name="view_id" ref="kannatusseura_form"/>
-            <field name="act_window_id" ref="action_kannatusseura"/>
-        </record>
-
-        <record id="action_kannatusseura_kanban" model="ir.actions.act_window.view">
-            <field name="sequence" eval="3"/>
-            <field name="view_mode">kanban</field>
-            <field name="view_id" ref="kannatusseura_kanban"/>
-            <field name="act_window_id" ref="action_kannatusseura"/>
-        </record>
-
-        <!-- MENUS-->
-        <menuitem id="menu_kannatusseura"
-                name="Kannatusseura"
-                parent="contacts.menu_contacts"
-                action="action_kannatusseura"
-                sequence="10"/>
-
-    </data>
+    <!-- MENUS-->
+    <menuitem
+        id="menu_kannatusseura"
+        name="Kannatusseura"
+        parent="contacts.menu_contacts"
+        action="action_kannatusseura"
+        sequence="10"
+    />
 </odoo>

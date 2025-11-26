@@ -1,27 +1,29 @@
 <odoo>
-    <data>
-        <record id="view_kannatusseura_cat_form" model="ir.ui.view">
-            <field name="name">kannatusseura.cat.form</field>
-            <field name="model">kannatusseura.cat</field>
-            <field name="arch" type="xml">
-                <form>
-                    <group>
-                        <field name="kannatusseura_cat_name"  string="Kannatusseura category name" />
-                        <field name="kannatusseura_cat_code"  string="Kannatusseura category code" />
-                    </group>
+    <!-- View-->
+    <record id="view_kannatusseura_cat_form" model="ir.ui.view">
+        <field name="name">kannatusseura.cat.form</field>
+        <field name="model">kannatusseura.cat</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field
+                        name="kannatusseura_cat_name"
+                        string="Kannatusseura category name"
+                    />
+                    <field
+                        name="kannatusseura_cat_code"
+                        string="Kannatusseura category code"
+                    />
+                </group>
 
-                </form>
-            </field>
-        </record>
+            </form>
+        </field>
+    </record>
 
-
-        <record id="action_kannatusseura_cat" model="ir.actions.act_window">
-            <field name="name">Kannatusseura Categories</field>
-            <field name="res_model">kannatusseura.cat</field>
-            <field name="view_mode">tree,form</field>
-        </record>
-        <!-- <menuitem id="menu_kannatusseura_cat" name="Categories" parent="menu_kannatusseura_root" action="action_kannatusseura_cat"/> -->
-
-    </data>
-
+    <!-- Action-->
+    <record id="action_kannatusseura_cat" model="ir.actions.act_window">
+        <field name="name">Kannatusseura Categories</field>
+        <field name="res_model">kannatusseura.cat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 </odoo>
