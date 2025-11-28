@@ -5,8 +5,11 @@
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <field name="category_id" position="after">
-                <field name="linkedin_url" widget="url"
-                               placeholder="https://www.linkedin.com/in/tunnus"/>
+                <field
+                    name="linkedin_url"
+                    widget="url"
+                    placeholder="https://www.linkedin.com/in/tunnus"
+                />
             </field>
         </field>
     </record>

@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [partner_identification_hide](partner_identification_hide/) | 17.0.1.0.0 |  | Hide partner identification page from non-admins
 [partner_information_export](partner_information_export/) | 17.0.1.0.0 |  | Allows exporting all partner information
 [partner_internal_reference_is_customer_number](partner_internal_reference_is_customer_number/) | 17.0.1.0.0 |  | Use Internal reference as Customer number
+[partner_linkedin](partner_linkedin/) | 17.0.1.0.0 |  | Adds a LinkedIn URL field to partners
 [partner_map_view](partner_map_view/) | 17.0.1.0.0 |  | Add map view for partners
 [partner_organization_primary_contact](partner_organization_primary_contact/) | 17.0.1.0.0 |  | Adds simple 'Primary Contact' checkbox to contacts
 [partner_prh_avoindata](partner_prh_avoindata/) | 17.0.1.0.2 |  | Fetch partner information from PRH
