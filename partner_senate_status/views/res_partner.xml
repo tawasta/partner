@@ -5,9 +5,7 @@
         <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
             <field name="category_id" position="after">
-                <field
-                    name="senate_member"
-                />
+                <field name="senate_member" />
             </field>
         </field>
     </record>
