@@ -9,7 +9,6 @@ class ResPartner(models.Model):
             ("no", "No"),
             ("yes", "Yes"),
         ],
-        string="Senate Member",
         default="no",
         help="Is this partner a member of the senate?",
     )
