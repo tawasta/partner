@@ -14,6 +14,7 @@ class ResPartner(models.Model):
         for record in self:
             api_url = "https://avoindata.prh.fi/opendata-ytj-api/v3/companies?"
             params = record._get_prh_search_params()
+            search_url = api_url
 
             if params:
                 search_url = f"{api_url}{urllib.parse.urlencode(params)}"
@@ -30,7 +31,7 @@ class ResPartner(models.Model):
                     },
                 }
 
-            response = requests.get(search_url).json()
+            response = requests.get(search_url, timeout=30).json()
             count = len(response.get("companies"))
 
             if count == 0:

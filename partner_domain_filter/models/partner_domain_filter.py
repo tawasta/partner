@@ -10,7 +10,6 @@ class PartnerDomainFilter(models.Model):
     color = fields.Integer()
     description = fields.Text()
     filter_domain = fields.Char(
-        string="Filter Domain",
         required=True,
         help="Enter a domain expression in string format, "
         "e.g. [('country_id', '=', 'US')]",
