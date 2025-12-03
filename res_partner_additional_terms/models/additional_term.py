@@ -9,7 +9,7 @@ class AdditionalTerm(models.Model):
     def _get_default_company(self):
         return self.env.user.company_id.id
 
-    name = fields.Char(string="Name", required=True)
+    name = fields.Char(required=True)
 
     contents = fields.Text(string="Term contents", required=True)
 

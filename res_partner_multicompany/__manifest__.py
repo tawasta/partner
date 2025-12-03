@@ -19,7 +19,7 @@
 ##############################################################################
 {
     "name": "Partner Multi-company tags",
-    "description": "Allows tagging a partner to multiple companies ",
+    "summary": "Allows tagging a partner to multiple companies ",
     "version": "17.0.1.1.7",
     "category": "CRM",
     "website": "https://github.com/tawasta/partner",
