@@ -1,0 +1,171 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* social_security_number_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20230925\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-06 10:34+0000\n"
+"PO-Revision-Date: 2025-02-06 10:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: social_security_number_management
+#: model_terms:ir.ui.view,arch_db:social_security_number_management.view_decrypt_wizard_form
+msgid "Cancel"
+msgstr "Annulera"
+
+#. module: social_security_number_management
+#: model:ir.model.fields,field_description:social_security_number_management.field_decrypt_wizard__create_uid
+msgid "Created by"
+msgstr "Skapad av"
+
+#. module: social_security_number_management
+#: model:ir.model.fields,field_description:social_security_number_management.field_decrypt_wizard__create_date
+msgid "Created on"
+msgstr "Skapad den"
+
+#. module: social_security_number_management
+#: model_terms:ir.ui.view,arch_db:social_security_number_management.view_decrypt_wizard_form
+msgid "Decrypt"
+msgstr "Dekryptera"
+
+#. module: social_security_number_management
+#: model:ir.actions.act_window,name:social_security_number_management.action_decrypt_wizard
+#: model:ir.model,name:social_security_number_management.model_decrypt_wizard
+#: model_terms:ir.ui.view,arch_db:social_security_number_management.view_decrypt_wizard_form
+msgid "Decrypt Personal ID"
+msgstr "Dekryptera Personal ID"
+
+#. module: social_security_number_management
+#: code:addons/social_security_number_management/wizards/decrypt_wizard.py:0
+#: code:addons/social_security_number_management/wizards/decrypt_wizard.py:0
+#, python-format
+msgid "Decrypted Personal Identification Number"
+msgstr "Dekrypterat personnummer"
+
+#. module: social_security_number_management
+#: code:addons/social_security_number_management/models/student.py:0
+#: code:addons/social_security_number_management/wizards/decrypt_wizard.py:0
+#, python-format
+msgid "Decryption failed"
+msgstr "Dekryptering misslyckades"
+
+#. module: social_security_number_management
+#: model:ir.model.fields,field_description:social_security_number_management.field_decrypt_wizard__display_name
+#: model:ir.model.fields,field_description:social_security_number_management.field_op_student__display_name
+msgid "Display Name"
+msgstr "Visningsnamn"
+
+#. module: social_security_number_management
+#: model:ir.model.fields,field_description:social_security_number_management.field_op_student__encrypted_social_security_number
+msgid "Encrypted Personal Identification Number"
+msgstr "Krypterat personligt ID-nummer"
+
+#. module: social_security_number_management
+#: model:ir.model.fields,field_description:social_security_number_management.field_decrypt_wizard__key
+msgid "Encryption Key"
+msgstr "Krypteringsnyckel"
+
+#. module: social_security_number_management
+#: model:ir.model.fields,field_description:social_security_number_management.field_decrypt_wizard__id
+#: model:ir.model.fields,field_description:social_security_number_management.field_op_student__id
+msgid "ID"
+msgstr ""
+
+#. module: social_security_number_management
+#: model:ir.model.fields,field_description:social_security_number_management.field_decrypt_wizard____last_update
+#: model:ir.model.fields,field_description:social_security_number_management.field_op_student____last_update
+msgid "Last Modified on"
+msgstr "Senast redigerad"
+
+#. module: social_security_number_management
+#: model:ir.model.fields,field_description:social_security_number_management.field_decrypt_wizard__write_uid
+msgid "Last Updated by"
+msgstr "Senast uppdaterad av"
+
+#. module: social_security_number_management
+#: model:ir.model.fields,field_description:social_security_number_management.field_decrypt_wizard__write_date
+msgid "Last Updated on"
+msgstr "Senast uppdaterad den"
+
+#. module: social_security_number_management
+#: code:addons/social_security_number_management/wizards/decrypt_wizard.py:0
+#, python-format
+msgid "No Personal Identification Number exists for the student"
+msgstr "Inget personnummer finns för studenten"
+
+#. module: social_security_number_management
+#: model:res.groups,name:social_security_number_management.group_decrypt_social_security_number
+msgid "Personal ID Decryptor"
+msgstr "Personligt ID Decryptor"
+
+#. module: social_security_number_management
+#: model_terms:ir.ui.view,arch_db:social_security_number_management.view_op_student_form
+msgid ""
+"Personal Identifaction Number entered here will be encrypted, and then "
+"viewable only by users who have the encryption key via the 'Show Personal "
+"Identification Number' button"
+msgstr ""
+"Personnumret som anges här kommer att krypteras och kan sedan endast visas "
+"av användare som har krypteringsnyckeln via knappen 'Visa personnummer'."
+
+#. module: social_security_number_management
+#: model:ir.model.fields,field_description:social_security_number_management.field_op_student__social_security_number
+msgid "Personal Identification Number"
+msgstr "Personnummer"
+
+#. module: social_security_number_management
+#: model:ir.model.fields,field_description:social_security_number_management.field_op_student__ssn_hash
+msgid "SSN Hash"
+msgstr "ID"
+
+#. module: social_security_number_management
+#: code:addons/social_security_number_management/models/student.py:0
+#: model:ir.model.constraint,message:social_security_number_management.constraint_op_student_ssn_hash_uniq
+#, python-format
+msgid "SSN must be unique per student."
+msgstr "Personnummer måste vara unikt per student."
+
+#. module: social_security_number_management
+#: model_terms:ir.ui.view,arch_db:social_security_number_management.view_op_student_form
+msgid "Show Personal Identification Number"
+msgstr "Visa Personnummer"
+
+#. module: social_security_number_management
+#: model_terms:ir.ui.view,arch_db:social_security_number_management.view_decrypt_wizard_form
+msgid ""
+"Showing Personal Identification Numbers requires a decryption key. You can "
+"request it from your system administrator."
+msgstr ""
+"Visning av personnummer kräver en dekrypteringsnyckel. Du kan begära den "
+"från din systemadministratör."
+
+#. module: social_security_number_management
+#: model:ir.model,name:social_security_number_management.model_op_student
+#: model:ir.model.fields,field_description:social_security_number_management.field_decrypt_wizard__student_id
+msgid "Student"
+msgstr ""
+
+#. module: social_security_number_management
+#: code:addons/social_security_number_management/models/student.py:0
+#, python-format
+msgid "The encryption key was not found or it is in the wrong format."
+msgstr "Krypteringsnyckeln hittades inte eller är i fel format."
+
+#. module: social_security_number_management
+#: code:addons/social_security_number_management/models/student.py:0
+#, python-format
+msgid "The format of the personal identification number is not valid."
+msgstr "Formatet på personnumret är inte giltigt."
+
+#. module: social_security_number_management
+#: code:addons/social_security_number_management/models/student.py:0
+#, python-format
+msgid "The key you provided is incorrect."
+msgstr "Krypteringsnyckeln du angav är felaktig."

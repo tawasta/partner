@@ -1,0 +1,6 @@
+<odoo noupdate="1">
+        <record id="group_decrypt_social_security_number" model="res.groups">
+            <field name="name">Allowed to show Student Personal ID</field>
+            <field name="category_id" ref="base.module_category_usability" />
+        </record>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <!-- Inherit res.partner form -->
+    <record id="view_res_partner_form_ssn" model="ir.ui.view">
+        <field name="name">res.partner.form.ssn.encrypted</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <!-- Lisää nappi headeriin vain ryhmälle -->
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button
+                    string="Show Personal ID"
+                    type="object"
+                    name="action_decrypt_social_security_number"
+                    groups="social_security_number_management.group_decrypt_social_security_number"
+                />
+            </xpath>
+
+            <!-- Laitetaan henkilötunnus syntymäpäivän jälkeen esim. contact tabissa -->
+            <xpath expr="//field[@name='email']" position="after">
+                <field name="social_security_number" />
+
+                <field name="encrypted_social_security_number" invisible="1" />
+                <field name="ssn_hash" invisible="1" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
