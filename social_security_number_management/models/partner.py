@@ -61,17 +61,6 @@ class ResPartner(models.Model):
     # ---- Key handling ----
 
     def _get_encryption_key(self) -> bytes:
-        """
-        Moodle compatibility mode (PHP/OpenSSL passphrase behavior):
-
-        Moodle uses openssl_encrypt/decrypt with $key set to the *string*
-        "3cbfISBZLXy/eOX2E0VNs1ElfHgnL5hoH8zAEHIGSVQ="
-        (not base64-decoded 32 bytes). OpenSSL then truncates/pads the string
-        to the needed key size (AES-256 => 32 bytes).
-
-        We emulate the same by taking the config parameter as a string and
-        trunc/padding with NUL bytes to 32 bytes.
-        """
         parameter_name = "social_security_number_encryption_key"
         s = (
             self.env["ir.config_parameter"]
@@ -89,7 +78,6 @@ class ResPartner(models.Model):
                 % parameter_name
             )
 
-        # OpenSSL-style: use the passphrase bytes, truncate/pad to 32 bytes
         key = s.encode("utf-8")  # safe: your key is ASCII anyway
         return (key + b"\x00" * 32)[:32]
 
@@ -99,7 +87,7 @@ class ResPartner(models.Model):
 
     def _encrypt_social_security_number(self, social_security_number: str) -> bytes:
         """
-        Payload format (matches your Moodle spec A):
+        Payload format:
           base64( nonce(12 bytes) || tag(16 bytes) || ciphertext )
         AES-256-GCM, AAD = b"".
         """
@@ -121,11 +109,6 @@ class ResPartner(models.Model):
         Decrypt payload format:
         base64( nonce(12) || tag(16) || ciphertext )
         AES-256-GCM, AAD = b"".
-
-        Moodle compatibility mode:
-        - System key is derived from the system parameter as passphrase-string,
-        trunc/pad to 32 bytes (OpenSSL behavior).
-        - User-provided key in wizard is compared using the same derivation.
         """
         # Normalize input types from Odoo field (bytes / memoryview) and wizard (str)
         if isinstance(encrypted_data_base64, memoryview):
@@ -135,7 +118,7 @@ class ResPartner(models.Model):
 
         system_key = self._get_encryption_key()
 
-        # Validate user-provided key equals system key (same OpenSSL-style derivation)
+        # Validate user-provided key equals system key
         input_s = (input_key or "").strip()
         if not input_s:
             _logger.error("User provided key is empty.")
@@ -161,21 +144,6 @@ class ResPartner(models.Model):
         nonce = raw[:12]
         tag = raw[12:28]
         ciphertext = raw[28:]
-
-        # Debug logs (safe: does not reveal plaintext)
-        _logger.error(
-            "SSN decrypt debug: raw_len=%s nonce_hex=%s tag_hex=%s ct_len=%s ct_hex=%s",
-            len(raw),
-            nonce.hex(),
-            tag.hex(),
-            len(ciphertext),
-            ciphertext.hex(),
-        )
-        _logger.error(
-            "SSN decrypt debug: system_key_len=%s system_key_b64=%s",
-            len(system_key),
-            base64.b64encode(system_key).decode("ascii"),
-        )
 
         aesgcm = AESGCM(system_key)
 
