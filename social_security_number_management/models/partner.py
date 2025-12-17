@@ -58,7 +58,10 @@ class ResPartner(models.Model):
         checksum_chars = "0123456789ABCDEFHJKLMNPRSTUVWXY"
         return checksum.upper() == checksum_chars[modulo_31]
 
-    def _get_encryption_key(self):
+    def _get_encryption_key(self) -> bytes:
+        """
+        System parameter must be base64 of 32 bytes (AES-256 key).
+        """
         parameter_name = "social_security_number_encryption_key"
         encoded_key = (
             self.env["ir.config_parameter"]
@@ -82,21 +85,43 @@ class ResPartner(models.Model):
             )
 
         try:
-            return base64.b64decode(encoded_key)
+            key = base64.b64decode(encoded_key)
         except binascii.Error as e:
             _logger.error("Error decoding the encryption key: %s", e)
             raise ValueError(_("Decoding of the encryption key failed.")) from e
 
-    def _encrypt_social_security_number(self, social_security_number):
+        if len(key) != 32:
+            raise ValueError(
+                _("Invalid encryption key length: expected 32 bytes, got %s.")
+                % len(key)
+            )
+        return key
+
+    def _encrypt_social_security_number(self, social_security_number: str) -> bytes:
+        """
+        Moodle/Odoo agreed payload format:
+          base64( nonce(12 bytes) + tag(16 bytes) + ciphertext(11 bytes) )
+        AES-256-GCM, AAD = b"".
+        """
         key = self._get_encryption_key()
         aesgcm = AESGCM(key)
         nonce = os.urandom(12)
-        encrypted_data = aesgcm.encrypt(nonce, social_security_number.encode(), None)
-        encrypted_data_with_nonce = nonce + encrypted_data
-        encrypted_data_base64 = base64.b64encode(encrypted_data_with_nonce)
-        return encrypted_data_base64
+
+        # cryptography returns ciphertext||tag (tag last)
+        ct_and_tag = aesgcm.encrypt(nonce, social_security_number.encode("utf-8"), b"")
+        ciphertext = ct_and_tag[:-16]
+        tag = ct_and_tag[-16:]
+
+        payload = nonce + tag + ciphertext
+        return base64.b64encode(payload)
 
     def decrypt_social_security_number(self, encrypted_data_base64, input_key):
+        """
+        Decrypt payload in format:
+          base64( nonce(12) + tag(16) + ciphertext(11) )
+        AES-256-GCM, AAD = b"".
+        """
+        # Normalize input types
         if isinstance(encrypted_data_base64, memoryview):
             encrypted_data_base64 = encrypted_data_base64.tobytes()
         if isinstance(encrypted_data_base64, str):
@@ -104,8 +129,9 @@ class ResPartner(models.Model):
 
         system_key = self._get_encryption_key()
 
+        # Validate user-provided key equals system key
         try:
-            input_key_bytes = base64.b64decode(input_key.strip())
+            input_key_bytes = base64.b64decode((input_key or "").strip())
         except Exception:
             _logger.error("User provided decryption key is not valid base64.")
             return _("The key you provided is incorrect.")
@@ -114,15 +140,29 @@ class ResPartner(models.Model):
             _logger.error("The key you provided does not match the system-defined key.")
             return _("The key you provided is incorrect.")
 
+        # Decode stored payload
         try:
-            encrypted_data_with_nonce = base64.b64decode(encrypted_data_base64)
-            nonce = encrypted_data_with_nonce[:12]
-            encrypted_data = encrypted_data_with_nonce[12:]
-            aesgcm = AESGCM(system_key)
-            decrypted_data = aesgcm.decrypt(nonce, encrypted_data, None)
-            return decrypted_data.decode()
+            raw = base64.b64decode(encrypted_data_base64)
         except Exception as e:
-            _logger.error("Error decrypting the personal identification number: %s", e)
+            _logger.error("Stored encrypted data is not valid base64: %r", e)
+            return _("Decryption failed")
+
+        # Speksi: 12 + 16 + 11 = 39
+        if len(raw) != 39:
+            _logger.error("Invalid encrypted payload length: expected 39, got %s", len(raw))
+            return _("Decryption failed")
+
+        nonce = raw[:12]
+        tag = raw[12:28]
+        ciphertext = raw[28:]  # 11 bytes
+
+        aesgcm = AESGCM(system_key)
+        try:
+            # cryptography expects ciphertext||tag
+            pt = aesgcm.decrypt(nonce, ciphertext + tag, b"")
+            return pt.decode("utf-8")
+        except Exception as e:
+            _logger.error("AESGCM decrypt failed: %r", e)
             return _("Decryption failed")
 
     @api.model
@@ -134,11 +174,8 @@ class ResPartner(models.Model):
                     _("The format of the personal identification number is not valid.")
                 )
 
-            encrypted_data_base64 = self._encrypt_social_security_number(ssn)
-            ssn_hash = hashlib.sha256(ssn.encode()).hexdigest()
-            vals["encrypted_social_security_number"] = encrypted_data_base64
-            vals["ssn_hash"] = ssn_hash
-            # Älä koskaan tallenna selväkielisenä:
+            vals["encrypted_social_security_number"] = self._encrypt_social_security_number(ssn)
+            vals["ssn_hash"] = hashlib.sha256(ssn.encode()).hexdigest()
             vals.pop("social_security_number", None)
 
         return super().create(vals)
@@ -151,10 +188,8 @@ class ResPartner(models.Model):
                     _("The format of the personal identification number is not valid.")
                 )
 
-            encrypted_data_base64 = self._encrypt_social_security_number(ssn)
-            ssn_hash = hashlib.sha256(ssn.encode()).hexdigest()
-            vals["encrypted_social_security_number"] = encrypted_data_base64
-            vals["ssn_hash"] = ssn_hash
+            vals["encrypted_social_security_number"] = self._encrypt_social_security_number(ssn)
+            vals["ssn_hash"] = hashlib.sha256(ssn.encode()).hexdigest()
             vals.pop("social_security_number", None)
 
         return super().write(vals)
@@ -169,3 +204,4 @@ class ResPartner(models.Model):
             "target": "new",
             "context": {"default_partner_id": self.id},
         }
+
