@@ -62,18 +62,25 @@ class ResPartner(models.Model):
 
     def _get_encryption_key(self) -> bytes:
         """
-        System parameter 'social_security_number_encryption_key' must be base64 of 32 bytes (AES-256 key).
-        This MUST match Moodle: base64_decode("3cbfISBZLXy/eOX2E0VNs1ElfHgnL5hoH8zAEHIGSVQ=") -> 32 bytes.
+        Moodle compatibility mode (PHP/OpenSSL passphrase behavior):
+
+        Moodle uses openssl_encrypt/decrypt with $key set to the *string*
+        "3cbfISBZLXy/eOX2E0VNs1ElfHgnL5hoH8zAEHIGSVQ="
+        (not base64-decoded 32 bytes). OpenSSL then truncates/pads the string
+        to the needed key size (AES-256 => 32 bytes).
+
+        We emulate the same by taking the config parameter as a string and
+        trunc/padding with NUL bytes to 32 bytes.
         """
         parameter_name = "social_security_number_encryption_key"
-        encoded_key = (
+        s = (
             self.env["ir.config_parameter"]
             .sudo()
             .get_param(parameter_name, default="")
             .strip()
         )
 
-        if not encoded_key:
+        if not s:
             raise ValueError(
                 _(
                     "The encryption key was not found or it is empty. "
@@ -82,20 +89,11 @@ class ResPartner(models.Model):
                 % parameter_name
             )
 
-        # Add missing padding (tolerant)
-        encoded_key += "=" * (-len(encoded_key) % 4)
+        # OpenSSL-style: use the passphrase bytes, truncate/pad to 32 bytes
+        key = s.encode("utf-8")  # safe: your key is ASCII anyway
+        return (key + b"\x00" * 32)[:32]
 
-        try:
-            key = base64.b64decode(encoded_key)
-        except binascii.Error as e:
-            _logger.error("Error decoding the encryption key: %r", e)
-            raise ValueError(_("Decoding of the encryption key failed.")) from e
 
-        if len(key) != 32:
-            raise ValueError(
-                _("Invalid encryption key length: expected 32 bytes, got %s.") % len(key)
-            )
-        return key
 
     # ---- Encrypt ----
 
@@ -121,11 +119,13 @@ class ResPartner(models.Model):
     def decrypt_social_security_number(self, encrypted_data_base64, input_key: str):
         """
         Decrypt payload format:
-          base64( nonce(12) || tag(16) || ciphertext )
+        base64( nonce(12) || tag(16) || ciphertext )
         AES-256-GCM, AAD = b"".
 
-        Also logs a deterministic debug line to confirm bytes (nonce/tag/ct) and that
-        the *system key* equals the user-provided key.
+        Moodle compatibility mode:
+        - System key is derived from the system parameter as passphrase-string,
+        trunc/pad to 32 bytes (OpenSSL behavior).
+        - User-provided key in wizard is compared using the same derivation.
         """
         # Normalize input types from Odoo field (bytes / memoryview) and wizard (str)
         if isinstance(encrypted_data_base64, memoryview):
@@ -135,27 +135,25 @@ class ResPartner(models.Model):
 
         system_key = self._get_encryption_key()
 
-        # Validate user-provided key equals system key
-        try:
-            input_key_b64 = (input_key or "").strip()
-            input_key_b64 += "=" * (-len(input_key_b64) % 4)
-            input_key_bytes = base64.b64decode(input_key_b64)
-        except Exception as e:
-            _logger.error("User provided decryption key is not valid base64: %r", e)
+        # Validate user-provided key equals system key (same OpenSSL-style derivation)
+        input_s = (input_key or "").strip()
+        if not input_s:
+            _logger.error("User provided key is empty.")
             return _("The key you provided is incorrect.")
 
+        input_key_bytes = (input_s.encode("utf-8") + b"\x00" * 32)[:32]
         if input_key_bytes != system_key:
             _logger.error("Provided key != system key.")
             return _("The key you provided is incorrect.")
 
-        # Decode stored payload
+        # Decode stored payload (standard base64)
         try:
             raw = base64.b64decode(encrypted_data_base64)
         except Exception as e:
             _logger.error("Stored encrypted data is not valid base64: %r", e)
             return _("Decryption failed")
 
-        # Validate minimum (nonce+tag+ct>=1) and accept exact 39 if hetu is 11 bytes.
+        # Validate minimum (nonce+tag+ct>=1)
         if len(raw) < 12 + 16 + 1:
             _logger.error("Encrypted payload too short: %s bytes", len(raw))
             return _("Decryption failed")
@@ -189,7 +187,6 @@ class ResPartner(models.Model):
             _logger.error("AESGCM decrypt failed (layout A nonce||tag||ct): %r", e)
 
         # Fallback layout B: nonce || ciphertext || tag
-        # (This makes it immediately obvious if Moodle is actually using B.)
         try:
             nonce_b = raw[:12]
             ciphertext_b = raw[12:-16]
@@ -200,6 +197,7 @@ class ResPartner(models.Model):
         except Exception as e:
             _logger.error("AESGCM decrypt failed (layout B nonce||ct||tag): %r", e)
             return _("Decryption failed")
+
 
     # ---- ORM hooks ----
 
