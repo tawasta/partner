@@ -29,7 +29,7 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["base"],
+    "depends": ["base", "contacts"],
     "data": [
         "security/ir.model.access.csv",
         "views/education_level.xml",
