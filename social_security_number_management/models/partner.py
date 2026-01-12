@@ -1,5 +1,4 @@
 import base64
-import binascii
 import hashlib
 import logging
 import os
@@ -46,9 +45,9 @@ class ResPartner(models.Model):
                 )
 
     @staticmethod
-    def is_valid_social_security_number(social_security_number):
+    def is_valid_social_security_number(social_security_number: str) -> bool:
         pattern = r"^(\d{2})(0[1-9]|1[0-2])(\d{2})([-+A])(\d{3})([0-9A-Ya-y])$"
-        match = re.match(pattern, social_security_number)
+        match = re.match(pattern, (social_security_number or "").strip())
         if not match:
             return False
 
@@ -58,16 +57,18 @@ class ResPartner(models.Model):
         checksum_chars = "0123456789ABCDEFHJKLMNPRSTUVWXY"
         return checksum.upper() == checksum_chars[modulo_31]
 
-    def _get_encryption_key(self):
+    # ---- Key handling ----
+
+    def _get_encryption_key(self) -> bytes:
         parameter_name = "social_security_number_encryption_key"
-        encoded_key = (
+        s = (
             self.env["ir.config_parameter"]
             .sudo()
             .get_param(parameter_name, default="")
             .strip()
         )
 
-        if not encoded_key:
+        if not s:
             raise ValueError(
                 _(
                     "The encryption key was not found or it is empty. "
@@ -76,54 +77,95 @@ class ResPartner(models.Model):
                 % parameter_name
             )
 
-        if len(encoded_key) % 4 != 0:
-            raise ValueError(
-                _("The length of the encryption key is not a multiple of four.")
-            )
+        key = s.encode("utf-8")  # safe: your key is ASCII anyway
+        return (key + b"\x00" * 32)[:32]
 
-        try:
-            return base64.b64decode(encoded_key)
-        except binascii.Error as e:
-            _logger.error("Error decoding the encryption key: %s", e)
-            raise ValueError(_("Decoding of the encryption key failed.")) from e
+    # ---- Encrypt ----
 
-    def _encrypt_social_security_number(self, social_security_number):
+    def _encrypt_social_security_number(self, social_security_number: str) -> bytes:
+        """
+        Payload format:
+          base64( nonce(12 bytes) || tag(16 bytes) || ciphertext )
+        AES-256-GCM, AAD = b"".
+        """
         key = self._get_encryption_key()
         aesgcm = AESGCM(key)
         nonce = os.urandom(12)
-        encrypted_data = aesgcm.encrypt(nonce, social_security_number.encode(), None)
-        encrypted_data_with_nonce = nonce + encrypted_data
-        encrypted_data_base64 = base64.b64encode(encrypted_data_with_nonce)
-        return encrypted_data_base64
 
-    def decrypt_social_security_number(self, encrypted_data_base64, input_key):
+        ct_and_tag = aesgcm.encrypt(nonce, social_security_number.encode("utf-8"), b"")
+        ciphertext = ct_and_tag[:-16]
+        tag = ct_and_tag[-16:]
+
+        payload = nonce + tag + ciphertext
+        return base64.b64encode(payload)
+
+    # ---- Decrypt ----
+
+    def decrypt_social_security_number(self, encrypted_data_base64, input_key: str):
+        """
+        Decrypt payload format:
+        base64( nonce(12) || tag(16) || ciphertext )
+        AES-256-GCM, AAD = b"".
+        """
+        # Normalize input types from Odoo field (bytes / memoryview) and wizard (str)
         if isinstance(encrypted_data_base64, memoryview):
             encrypted_data_base64 = encrypted_data_base64.tobytes()
         if isinstance(encrypted_data_base64, str):
-            encrypted_data_base64 = encrypted_data_base64.encode()
+            encrypted_data_base64 = encrypted_data_base64.encode("utf-8")
 
         system_key = self._get_encryption_key()
 
-        try:
-            input_key_bytes = base64.b64decode(input_key.strip())
-        except Exception:
-            _logger.error("User provided decryption key is not valid base64.")
+        # Validate user-provided key equals system key
+        input_s = (input_key or "").strip()
+        if not input_s:
+            _logger.error("User provided key is empty.")
             return _("The key you provided is incorrect.")
 
+        input_key_bytes = (input_s.encode("utf-8") + b"\x00" * 32)[:32]
         if input_key_bytes != system_key:
-            _logger.error("The key you provided does not match the system-defined key.")
+            _logger.error("Provided key != system key.")
             return _("The key you provided is incorrect.")
 
+        # Decode stored payload (standard base64)
         try:
-            encrypted_data_with_nonce = base64.b64decode(encrypted_data_base64)
-            nonce = encrypted_data_with_nonce[:12]
-            encrypted_data = encrypted_data_with_nonce[12:]
-            aesgcm = AESGCM(system_key)
-            decrypted_data = aesgcm.decrypt(nonce, encrypted_data, None)
-            return decrypted_data.decode()
+            raw = base64.b64decode(encrypted_data_base64)
         except Exception as e:
-            _logger.error("Error decrypting the personal identification number: %s", e)
+            _logger.error("Stored encrypted data is not valid base64: %r", e)
             return _("Decryption failed")
+
+        # Validate minimum (nonce+tag+ct>=1)
+        if len(raw) < 12 + 16 + 1:
+            _logger.error("Encrypted payload too short: %s bytes", len(raw))
+            return _("Decryption failed")
+
+        nonce = raw[:12]
+        tag = raw[12:28]
+        ciphertext = raw[28:]
+
+        aesgcm = AESGCM(system_key)
+
+        # Layout A: nonce || tag || ciphertext  (cryptography expects ciphertext||tag)
+        try:
+            pt = aesgcm.decrypt(nonce, ciphertext + tag, b"")
+            return pt.decode("utf-8")
+        except Exception as e:
+            _logger.error("AESGCM decrypt failed (layout A nonce||tag||ct): %r", e)
+
+        # Fallback layout B: nonce || ciphertext || tag
+        try:
+            nonce_b = raw[:12]
+            ciphertext_b = raw[12:-16]
+            tag_b = raw[-16:]
+            pt = aesgcm.decrypt(nonce_b, ciphertext_b + tag_b, b"")
+            _logger.error(
+                "AESGCM decrypt succeeded with fallback layout B (nonce||ct||tag)"
+            )
+            return pt.decode("utf-8")
+        except Exception as e:
+            _logger.error("AESGCM decrypt failed (layout B nonce||ct||tag): %r", e)
+            return _("Decryption failed")
+
+    # ---- ORM hooks ----
 
     @api.model
     def create(self, vals):
@@ -133,14 +175,11 @@ class ResPartner(models.Model):
                 raise exceptions.ValidationError(
                     _("The format of the personal identification number is not valid.")
                 )
-
-            encrypted_data_base64 = self._encrypt_social_security_number(ssn)
-            ssn_hash = hashlib.sha256(ssn.encode()).hexdigest()
-            vals["encrypted_social_security_number"] = encrypted_data_base64
-            vals["ssn_hash"] = ssn_hash
-            # Älä koskaan tallenna selväkielisenä:
+            vals[
+                "encrypted_social_security_number"
+            ] = self._encrypt_social_security_number(ssn)
+            vals["ssn_hash"] = hashlib.sha256(ssn.encode("utf-8")).hexdigest()
             vals.pop("social_security_number", None)
-
         return super().create(vals)
 
     def write(self, vals):
@@ -150,13 +189,11 @@ class ResPartner(models.Model):
                 raise exceptions.ValidationError(
                     _("The format of the personal identification number is not valid.")
                 )
-
-            encrypted_data_base64 = self._encrypt_social_security_number(ssn)
-            ssn_hash = hashlib.sha256(ssn.encode()).hexdigest()
-            vals["encrypted_social_security_number"] = encrypted_data_base64
-            vals["ssn_hash"] = ssn_hash
+            vals[
+                "encrypted_social_security_number"
+            ] = self._encrypt_social_security_number(ssn)
+            vals["ssn_hash"] = hashlib.sha256(ssn.encode("utf-8")).hexdigest()
             vals.pop("social_security_number", None)
-
         return super().write(vals)
 
     def action_decrypt_social_security_number(self):
