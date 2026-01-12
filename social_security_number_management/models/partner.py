@@ -1,5 +1,4 @@
 import base64
-import binascii
 import hashlib
 import logging
 import os
@@ -81,8 +80,6 @@ class ResPartner(models.Model):
         key = s.encode("utf-8")  # safe: your key is ASCII anyway
         return (key + b"\x00" * 32)[:32]
 
-
-
     # ---- Encrypt ----
 
     def _encrypt_social_security_number(self, social_security_number: str) -> bytes:
@@ -160,12 +157,13 @@ class ResPartner(models.Model):
             ciphertext_b = raw[12:-16]
             tag_b = raw[-16:]
             pt = aesgcm.decrypt(nonce_b, ciphertext_b + tag_b, b"")
-            _logger.error("AESGCM decrypt succeeded with fallback layout B (nonce||ct||tag)")
+            _logger.error(
+                "AESGCM decrypt succeeded with fallback layout B (nonce||ct||tag)"
+            )
             return pt.decode("utf-8")
         except Exception as e:
             _logger.error("AESGCM decrypt failed (layout B nonce||ct||tag): %r", e)
             return _("Decryption failed")
-
 
     # ---- ORM hooks ----
 
@@ -177,7 +175,9 @@ class ResPartner(models.Model):
                 raise exceptions.ValidationError(
                     _("The format of the personal identification number is not valid.")
                 )
-            vals["encrypted_social_security_number"] = self._encrypt_social_security_number(ssn)
+            vals[
+                "encrypted_social_security_number"
+            ] = self._encrypt_social_security_number(ssn)
             vals["ssn_hash"] = hashlib.sha256(ssn.encode("utf-8")).hexdigest()
             vals.pop("social_security_number", None)
         return super().create(vals)
@@ -189,7 +189,9 @@ class ResPartner(models.Model):
                 raise exceptions.ValidationError(
                     _("The format of the personal identification number is not valid.")
                 )
-            vals["encrypted_social_security_number"] = self._encrypt_social_security_number(ssn)
+            vals[
+                "encrypted_social_security_number"
+            ] = self._encrypt_social_security_number(ssn)
             vals["ssn_hash"] = hashlib.sha256(ssn.encode("utf-8")).hexdigest()
             vals.pop("social_security_number", None)
         return super().write(vals)

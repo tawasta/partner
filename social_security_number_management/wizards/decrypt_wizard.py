@@ -30,7 +30,7 @@ class PartnerSSNDecryptWizard(models.TransientModel):
                     "sticky": False,
                 },
             }
-        
+
         param_name = "social_security_number_encryption_key"
         configured = (
             self.env["ir.config_parameter"]
