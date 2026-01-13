@@ -12,9 +12,9 @@ class ResPartnerDateRangeType(models.Model):
 
     code = fields.Char(
         help="Technical helper field that can be set if you need to access "
-        "date ranges of this type programmatically for e.g. calculations.",
-        groups="base.group_no_one",
+        "date ranges of this type programmatically for e.g. calculations."
     )
+
     notes = fields.Text(string="Internal Notes")
 
     def write(self, vals):
