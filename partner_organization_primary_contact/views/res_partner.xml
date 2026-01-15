@@ -13,4 +13,32 @@
             </field>
         </field>
     </record>
+
+    <record id="view_partner_tree" model="ir.ui.view">
+        <field name="name">res.partner.tree.inherit.primary.contact</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree" />
+        <field name="arch" type="xml">
+            <field name="country_id" position="after">
+                <field name="is_primary_contact" optional="show" />
+            </field>
+        </field>
+    </record>
+
+     <record id="view_partner_search" model="ir.ui.view">
+        <field name="name">res.partner.search.inherit.primary.contact</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter" />
+        <field name="arch" type="xml">
+            <filter name="type_company" position="after">
+                <separator />
+                <filter
+                    name="filter_is_primary_contact"
+                    string="Is Primary Contact"
+                    domain="[('is_primary_contact', '=', True)]"
+                />
+            </filter>
+        </field>
+      </record>
+
 </odoo>

@@ -1,4 +1,4 @@
-from odoo import _, api, fields, models
+from odoo import _, fields, models
 from odoo.exceptions import UserError
 
 
@@ -6,16 +6,15 @@ class ResPartnerDateRangeType(models.Model):
     _name = "res.partner.date.range.type"
     _description = "Partner Date Range Information Type"
 
-    name = fields.Char(string="Name", required=True)
+    name = fields.Char(required=True)
 
     active = fields.Boolean(default=True)
 
     code = fields.Char(
-        string="Code",
         help="Technical helper field that can be set if you need to access "
-        "date ranges of this type programmatically for e.g. calculations.",
-        groups="base.group_no_one",
+        "date ranges of this type programmatically for e.g. calculations."
     )
+
     notes = fields.Text(string="Internal Notes")
 
     def write(self, vals):

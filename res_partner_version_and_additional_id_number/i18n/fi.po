@@ -1,0 +1,35 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* res_partner_version_and_additional_id_number
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-01-15 07:19+0000\n"
+"PO-Revision-Date: 2026-01-15 09:20+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#. module: res_partner_version_and_additional_id_number
+#: model:ir.model,name:res_partner_version_and_additional_id_number.model_res_partner
+msgid "Contact"
+msgstr "Kontakti"
+
+#. module: res_partner_version_and_additional_id_number
+#: model:ir.model.fields,field_description:res_partner_version_and_additional_id_number.field_res_partner__id_number_info
+#: model:ir.model.fields,field_description:res_partner_version_and_additional_id_number.field_res_users__id_number_info
+msgid "ID info"
+msgstr "ID info"
+
+#. module: res_partner_version_and_additional_id_number
+#: model:ir.model.fields,field_description:res_partner_version_and_additional_id_number.field_res_partner__version_number
+#: model:ir.model.fields,field_description:res_partner_version_and_additional_id_number.field_res_users__version_number
+msgid "Version"
+msgstr "Versio"

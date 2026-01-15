@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2025- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2026 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,9 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Partner: Generic Date Range Info Field",
-    "summary": "Enables logging info about user-defineable start/end dates for "
-    "partners, e.g. join dates or perk eligibility dates",
+    "name": "Version number and an additional ID info of partners",
+    "summary": "Version number and an additional ID info of partners",
     "version": "17.0.1.0.0",
     "category": "Contacts",
     "website": "https://github.com/tawasta/partner",
@@ -29,12 +28,10 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["contacts"],
+    "depends": [
+        "base",
+    ],
     "data": [
-        "security/ir_model_access.xml",
-        "views/res_partner_views.xml",
-        "views/res_partner_date_range_type_views.xml",
-        "views/res_partner_date_range_views.xml",
-        "views/menus.xml",
+        "views/res_partner.xml",
     ],
 }
