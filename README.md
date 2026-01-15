@@ -48,6 +48,7 @@ addon | version | maintainers | summary
 [res_partner_name_extension](res_partner_name_extension/) | 17.0.1.0.0 |  | Name extension field for partner
 [res_partner_number_of_votes](res_partner_number_of_votes/) | 17.0.1.0.0 |  | Adds new numeric field to contacts
 [res_partner_tree_address_info](res_partner_tree_address_info/) | 17.0.1.0.0 |  | Street, city and zip are shown in the partner tree view
+[res_partner_version_and_additional_id_number](res_partner_version_and_additional_id_number/) | 17.0.1.0.0 |  | Version number and an additional ID info of partners
 [social_security_number_management](social_security_number_management/) | 17.0.1.0.0 |  | Store SSN for partners in an encrypted format
 [website_partner_domain_visibility](website_partner_domain_visibility/) | 17.0.1.1.0 |  | Conditional website snippet visibility based on partner domain filters
 
