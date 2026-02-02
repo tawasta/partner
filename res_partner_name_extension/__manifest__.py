@@ -21,7 +21,7 @@
 {
     "name": "Name Extension Field for Partner",
     "summary": "Name extension field for partner",
-    "version": "17.0.1.0.0",
+    "version": "19.0.1.0.0",
     "category": "CRM",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
