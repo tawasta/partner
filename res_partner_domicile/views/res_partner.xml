@@ -11,7 +11,7 @@
     </field>
   </record>
   <record id="view_partner_tree_domicile" model="ir.ui.view">
-    <field name="name">res.partner.tree.domicile</field>
+    <field name="name">res.partner.list.domicile</field>
     <field name="model">res.partner</field>
     <field name="inherit_id" ref="base.view_partner_tree" />
     <field name="arch" type="xml">
