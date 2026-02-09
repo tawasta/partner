@@ -37,6 +37,7 @@ addon | version | maintainers | summary
 [res_partner_company_by_default](res_partner_company_by_default/) | 17.0.1.0.0 |  | New partners are companies by default
 [res_partner_company_registry_required_for_companies](res_partner_company_registry_required_for_companies/) | 17.0.1.0.0 |  | If partner is a company, the company ID field must be filled in
 [res_partner_domicile](res_partner_domicile/) | 17.0.1.0.0 |  | Adds domicile field for partner
+[res_partner_economic_development_centre](res_partner_economic_development_centre/) | 17.0.1.0.0 |  | Adds option to create economic development centres and link them to partners
 [res_partner_education_level](res_partner_education_level/) | 17.0.1.0.0 |  | Create Education levels for partners
 [res_partner_employer](res_partner_employer/) | 17.0.1.0.0 |  | Adds Employer char-type field to partners
 [res_partner_eori](res_partner_eori/) | 17.0.1.0.0 |  | Adds field for EORI number to res.partner and res.company

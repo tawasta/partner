@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_econ_devel_centre_all,access_econ_devel_centre_all,model_economic_development_centre,,1,1,1,1

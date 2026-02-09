@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_economic_development_centre_tree" model="ir.ui.view">
+        <field name="name">economic.development.centre.view.tree</field>
+        <field name="model">economic.development.centre</field>
+        <field name="priority" eval="8" />
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" />
+                <field name="code" />
+            </tree>
+        </field>
+    </record>
+
+    <record
+        model="ir.actions.act_window"
+        id="act_open_economic_development_centre_view"
+    >
+        <field name="name">Economic Development Centres</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">economic.development.centre</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="menu_economic_development_centre_sub"
+        name="Economic Development Centres"
+        parent="contacts.res_partner_menu_config"
+        sequence="70"
+        action="act_open_economic_development_centre_view"
+    />
+</odoo>
