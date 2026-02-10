@@ -29,9 +29,7 @@
     "application": False,
     "installable": True,
     "depends": ["base", "contacts"],
-    "external_dependencies": {
-        "python": ["cryptography.hazmat.primitives.ciphers.aead"]
-    },
+    "external_dependencies": {"python": ["cryptography"]},
     "data": [
         "data/config_parameter.xml",
         "security/rule.xml",
