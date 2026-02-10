@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+    <record id="economic_development_centre_1" model="economic.development.centre">
+      <field name="code">04</field>
+      <field name="name">Sisä-Suomen elinvoimakeskus</field>
+    </record>
+    <record id="economic_development_centre_2" model="economic.development.centre">
+      <field name="code">07</field>
+      <field name="name">Etelä-Pohjanmaan elinvoimakeskus</field>
+    </record>
+    <record id="economic_development_centre_3" model="economic.development.centre">
+      <field name="code">09</field>
+      <field name="name">Pohjois-Suomen elinvoimakeskus</field>
+    </record>
+    <record id="economic_development_centre_4" model="economic.development.centre">
+      <field name="code">03</field>
+      <field name="name">Kaakkois-Suomen elinvoimakeskus</field>
+    </record>
+    <record id="economic_development_centre_5" model="economic.development.centre">
+      <field name="code">01</field>
+      <field name="name">Uudenmaan elinvoimakeskus</field>
+    </record>
+    <record id="economic_development_centre_6" model="economic.development.centre">
+      <field name="code">02</field>
+      <field name="name">Lounais-Suomen elinvoimakeskus</field>
+    </record>
+    <record id="economic_development_centre_7" model="economic.development.centre">
+      <field name="code">06</field>
+      <field name="name">Itä-Suomen elinvoimakeskus</field>
+    </record>
+    <record id="economic_development_centre_8" model="economic.development.centre">
+      <field name="code">10</field>
+      <field name="name">Lapin elinvoimakeskus</field>
+    </record>
+    <record id="economic_development_centre_9" model="economic.development.centre">
+      <field name="code">08</field>
+      <field name="name">Pohjanmaan elinvoimakeskus</field>
+    </record>
+    <record id="economic_development_centre_10" model="economic.development.centre">
+      <field name="code">05</field>
+      <field name="name">Keski-Suomen elinvoimakeskus</field>
+    </record>
+</odoo>

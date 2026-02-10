@@ -37,11 +37,13 @@ addon | version | maintainers | summary
 [res_partner_company_by_default](res_partner_company_by_default/) | 17.0.1.0.0 |  | New partners are companies by default
 [res_partner_company_registry_required_for_companies](res_partner_company_registry_required_for_companies/) | 17.0.1.0.0 |  | If partner is a company, the company ID field must be filled in
 [res_partner_domicile](res_partner_domicile/) | 17.0.1.0.0 |  | Adds domicile field for partner
+[res_partner_economic_development_centre](res_partner_economic_development_centre/) | 17.0.1.0.0 |  | Adds option to create economic development centres and link them to partners
 [res_partner_education_level](res_partner_education_level/) | 17.0.1.0.0 |  | Create Education levels for partners
 [res_partner_employer](res_partner_employer/) | 17.0.1.0.0 |  | Adds Employer char-type field to partners
 [res_partner_eori](res_partner_eori/) | 17.0.1.0.0 |  | Adds field for EORI number to res.partner and res.company
 [res_partner_firstname2](res_partner_firstname2/) | 17.0.1.0.0 |  | Adds a new field to define the second name for partners
 [res_partner_full_name](res_partner_full_name/) | 17.0.1.0.0 |  | Adds a full recursive name for partners
+[res_partner_geographic_region](res_partner_geographic_region/) | 17.0.1.0.0 |  | Adds option to define geographic regions and link partners to them
 [res_partner_industry_freetext_classification](res_partner_industry_freetext_classification/) | 17.0.1.0.0 |  | Add 'Other Industry Classification' freetext field for partners
 [res_partner_industry_show_for_individuals](res_partner_industry_show_for_individuals/) | 17.0.1.0.0 |  | Shows the industry field also for individuals, not just companies
 [res_partner_multicompany](res_partner_multicompany/) | 17.0.1.1.7 |  | Allows tagging a partner to multiple companies
