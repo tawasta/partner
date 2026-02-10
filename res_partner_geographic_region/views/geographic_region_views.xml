@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_geographic_region_tree" model="ir.ui.view">
+        <field name="name">geographic.region.view.tree</field>
+        <field name="model">geographic.region</field>
+        <field name="priority" eval="8" />
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_open_geographic_region_view">
+        <field name="name">Geographic Regions</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">geographic.region</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="menu_geographic_region_sub"
+        name="Geographic Regions"
+        parent="contacts.res_partner_menu_config"
+        sequence="65"
+        action="act_open_geographic_region_view"
+    />
+</odoo>
