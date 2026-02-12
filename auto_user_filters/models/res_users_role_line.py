@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 import datetime as py_datetime
 
 from odoo import api, models
@@ -9,7 +8,7 @@ class ResUsersRoleLine(models.Model):
 
     @staticmethod
     def _is_line_enabled(date_from, date_to, today):
-        """Same enable logic as the addon (date_from/date_to)."""
+        """Return whether a role line is enabled for the given date."""
         if date_from and date_from > today:
             return False
         if date_to and today > date_to:
@@ -22,7 +21,9 @@ class ResUsersRoleLine(models.Model):
         today = py_datetime.date.today()
 
         lines = RoleLine.search([("user_id", "in", users.ids)])
-        enabled_lines = lines.filtered(lambda l: self._is_line_enabled(l.date_from, l.date_to, today))
+        enabled_lines = [
+            li for li in lines if self._is_line_enabled(li.date_from, li.date_to, today)
+        ]
 
         result = {u.id: self.env["res.users.role"] for u in users}
         for line in enabled_lines:
@@ -30,12 +31,10 @@ class ResUsersRoleLine(models.Model):
         return result
 
     def _apply_role_rules(self, users, roles_scope=None):
-        """
-        Create/update/deactivate auto-managed ir.filters for users.
+        """Create/update/deactivate auto-managed ir.filters for users.
 
-        roles_scope:
-          - If provided: only rules belonging to these roles are considered for apply/deactivate
-            (perfect for role line create/write/unlink).
+        If ``roles_scope`` is provided, only rules belonging to these roles are
+        considered for apply/deactivate (ideal for role line create/write/unlink).
         """
         users = users.sudo()
         Rule = self.env["role.irfilter.rule"].sudo()
@@ -43,27 +42,34 @@ class ResUsersRoleLine(models.Model):
 
         enabled_roles_map = self._enabled_roles_for_users(users)
 
-        # Rules in scope (also includes inactive for cleanup)
-        scope_rules = Rule.search([("role_id", "in", roles_scope.ids)]) if roles_scope else Rule.search([])
-        active_scope_rules = scope_rules.filtered(lambda r: r.active)
+        if roles_scope:
+            scope_rules = Rule.search([("role_id", "in", roles_scope.ids)])
+        else:
+            scope_rules = Rule.search([])
+
+        active_scope_rules = scope_rules.filtered_domain([("active", "=", True)])
 
         for user in users:
             enabled_roles = enabled_roles_map.get(user.id, self.env["res.users.role"])
             if roles_scope:
                 enabled_roles = enabled_roles & roles_scope
 
-            # 1) Apply active rules for enabled roles
-            applicable_rules = active_scope_rules.filtered(lambda r: r.role_id in enabled_roles)
+            # Apply active rules for enabled roles (avoid lambda capturing loop var)
+            applicable_rules = active_scope_rules.filtered_domain(
+                [("role_id", "in", enabled_roles.ids)]
+            )
             applicable_rule_ids = set(applicable_rules.ids)
 
             for rule in applicable_rules:
                 company_ids = rule._user_company_ids(user)
 
                 if not company_ids:
-                    IrFilters.search([
-                        ("user_id", "=", user.id),
-                        ("auto_rule_id", "=", rule.id),
-                    ]).write({"active": False, "is_default": False})
+                    IrFilters.search(
+                        [
+                            ("user_id", "=", user.id),
+                            ("auto_rule_id", "=", rule.id),
+                        ]
+                    ).write({"active": False, "is_default": False})
                     continue
 
                 domain = rule._render_domain(user)
@@ -82,19 +88,23 @@ class ResUsersRoleLine(models.Model):
                 }
                 IrFilters.create_or_replace(vals)
 
-            # 2) Deactivate filters (only ours) that are no longer applicable in this scope
+            # Deactivate filters (only ours) not applicable anymore in this scope
             domain_filters = [
                 ("user_id", "=", user.id),
                 ("auto_rule_id", "!=", False),
                 ("auto_rule_id", "in", scope_rules.ids),
             ]
             existing = IrFilters.search(domain_filters)
-            to_disable = existing.filtered(lambda f: f.auto_rule_id.id not in applicable_rule_ids)
+
+            # Avoid lambda capturing loop var by binding as default argument
+            to_disable = existing.filtered(
+                lambda f, ids=applicable_rule_ids: f.auto_rule_id.id not in ids
+            )
             if to_disable:
                 to_disable.write({"active": False, "is_default": False})
 
     def _refresh_for_self_scope(self):
-        """Convenience: refresh filters for the users/roles touched by these lines."""
+        """Refresh filters for the users/roles touched by these lines."""
         users = self.mapped("user_id")
         roles = self.mapped("role_id")
         if users and roles:
@@ -117,6 +127,6 @@ class ResUsersRoleLine(models.Model):
         roles = self.mapped("role_id")
         res = super().unlink()
         if users and roles:
-            # After unlink, refresh filters in that role scope -> deactivates removed role filters
+            # Refresh filters in the removed role scope -> disables removed role filters
             self._apply_role_rules(users.sudo(), roles_scope=roles.sudo())
         return res
