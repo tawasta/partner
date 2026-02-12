@@ -11,6 +11,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[auto_user_filters](auto_user_filters/) | 17.0.1.0.0 |  | Role Auto IR Filters
 [base_partner_sequence_contact](base_partner_sequence_contact/) | 17.0.1.0.1 |  | Give unique partner sequence numbers for all partner types
 [partner_anonymization](partner_anonymization/) | 17.0.1.1.1 |  | Allows anonymization partners
 [partner_auditlog_rules](partner_auditlog_rules/) | 17.0.1.1.0 |  | Adds audit log rules for res partner
