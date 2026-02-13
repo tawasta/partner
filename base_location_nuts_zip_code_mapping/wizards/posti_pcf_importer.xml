@@ -1,0 +1,48 @@
+<odoo>
+
+    <record id="view_posti_import_wizard" model="ir.ui.view">
+        <field name="name">posti.pcf.importer.wizard.form</field>
+        <field name="model">posti.pcf.importer.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Import Posti Postal Codes">
+
+                <p class="text-muted">
+                    Upload one of the PCF files found in https://www.posti.fi/webpcode.
+                    Use an extracted DAT file.
+                </p>
+                <group>
+                    <field name="file_data" filename="file_name" />
+                    <field name="clear_existing_mappings" />
+                    <field name="recompute_partner_nuts_items" />
+                </group>
+
+                <footer>
+                    <button
+                        name="action_parse_posti_pcf_file"
+                        type="object"
+                        string="Import and Parse Posti PCF File"
+                        class="btn-primary"
+                    />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="action_posti_import_wizard" model="ir.actions.act_window">
+        <field name="name">Import Posti Zip Codes</field>
+        <field name="res_model">posti.pcf.importer.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem
+        id="menu_posti_import"
+        name="Import Posti Zip Codes"
+        parent="contacts.menu_localisation"
+        action="action_posti_import_wizard"
+        sequence="80"
+    />
+
+</odoo>
