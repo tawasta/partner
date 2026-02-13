@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Partner: Economic Development Centres",
-    "summary": "Adds option to create economic development centres "
-    "and links them to partners based on partner zip codes",
+    "name": "NUTS Regions: zip code mappings + Finnish postcode importer",
+    "summary": "Map country zip codes to NUTS items, enabling automatic "
+    "NUTS level selections for contacts. Support for importing Finnish postcode data",
     "version": "17.0.1.0.0",
     "category": "CRM",
     "website": "https://github.com/tawasta/partner",
@@ -29,14 +29,11 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["base_location_nuts_zip_code_mapping"],
+    "depends": ["base", "base_location_nuts"],
     "data": [
         "security/ir.model.access.csv",
-        "views/economic_development_centre_views.xml",
-        "views/municipality_code_edc_code_mapping_views.xml",
-        "views/res_partner.xml",
-        "data/economic_development_centre_data.xml",
-        "data/municipality_code_edc_code_mapping_data.xml",
+        "views/zip_code_nuts_item_mapping.xml",
+        "wizards/posti_pcf_importer.xml",
     ],
     "demo": [],
 }

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_nuts_zip_mapping_all,access_nuts_zip_mapping_all,model_res_zip_code_nuts_item_mapping,,1,1,1,1
+access_posti_import_wizard_all,access_posti_import_wizard_all,model_posti_pcf_importer_wizard,,1,1,1,1

@@ -1,0 +1,2159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record
+        id="municipality_edc_mapping_020"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">020</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_005"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">005</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_009"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">009</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_010"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">010</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_016"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">016</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_018"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">018</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_019"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">019</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_035"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">035</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_043"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">043</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_046"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">046</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_047"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">047</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_049"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">049</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_050"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">050</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_051"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">051</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_052"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">052</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_060"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">060</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_061"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">061</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_062"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">062</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_065"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">065</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_069"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">069</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_071"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">071</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_072"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">072</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_074"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">074</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_075"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">075</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_076"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">076</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_077"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">077</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_078"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">078</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_079"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">079</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_081"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">081</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_082"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">082</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_086"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">086</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_111"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">111</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_090"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">090</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_091"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">091</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_097"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">097</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_098"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">098</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_102"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">102</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_103"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">103</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_105"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">105</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_106"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">106</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_108"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">108</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_109"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">109</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_139"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">139</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_140"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">140</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_142"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">142</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_143"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">143</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_145"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">145</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_146"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">146</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_153"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">153</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_148"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">148</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_149"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">149</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_151"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">151</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_152"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">152</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_165"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">165</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_167"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">167</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_169"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">169</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_170"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">170</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_171"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">171</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_172"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">172</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_176"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">176</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_177"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">177</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_178"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">178</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_179"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">179</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_181"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">181</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_182"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">182</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_186"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">186</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_202"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">202</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_204"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">204</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_205"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">205</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_208"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">208</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_211"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">211</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_213"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">213</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_214"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">214</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_216"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">216</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_217"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">217</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_218"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">218</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_224"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">224</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_226"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">226</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_230"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">230</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_231"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">231</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_232"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">232</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_233"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">233</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_235"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">235</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_236"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">236</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_239"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">239</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_240"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">240</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_320"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">320</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_241"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">241</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_322"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">322</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_244"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">244</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_245"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">245</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_249"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">249</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_250"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">250</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_256"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">256</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_257"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">257</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_260"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">260</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_261"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">261</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_263"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">263</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_265"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">265</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_271"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">271</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_272"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">272</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_273"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">273</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_275"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">275</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_276"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">276</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_280"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">280</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_284"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">284</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_285"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">285</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_286"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">286</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_287"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">287</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_288"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">288</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_290"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">290</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_291"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">291</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_295"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">295</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_297"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">297</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_300"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">300</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_301"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">301</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_304"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">304</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_305"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">305</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_312"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">312</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_316"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">316</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_317"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">317</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_318"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">318</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_398"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">398</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_399"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">399</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_400"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">400</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_407"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">407</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_402"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">402</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_403"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">403</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_405"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">405</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_408"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">408</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_410"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">410</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_416"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">416</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_417"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">417</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_418"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">418</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_420"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">420</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_421"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">421</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_422"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">422</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_423"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">423</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_425"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">425</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_426"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">426</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_444"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">444</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_430"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">430</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_433"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">433</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_434"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">434</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_435"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">435</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_436"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">436</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_438"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">438</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_440"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">440</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_441"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">441</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_475"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">475</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_478"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">478</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_480"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">480</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_481"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">481</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_483"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">483</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_484"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">484</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_489"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">489</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_491"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">491</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_494"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">494</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_495"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">495</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_498"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">498</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_499"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">499</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_500"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">500</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_503"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">503</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_504"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">504</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_505"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">505</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_508"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">508</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_507"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">507</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_529"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">529</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_531"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">531</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_535"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">535</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_536"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">536</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_538"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">538</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_541"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">541</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_543"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">543</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_545"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">545</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_560"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">560</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_561"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">561</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_562"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">562</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_563"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">563</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_564"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">564</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_309"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">309</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_576"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">576</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_577"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">577</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_578"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">578</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_445"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">445</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_580"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">580</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_581"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">581</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_599"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">599</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_583"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">583</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_854"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">854</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_584"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">584</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_592"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">592</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_593"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">593</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_595"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">595</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_598"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">598</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_601"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">601</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_604"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">604</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_607"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">607</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_608"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">608</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_609"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">609</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_611"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">611</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_638"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">638</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_614"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">614</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_615"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">615</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_616"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">616</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_619"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">619</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_620"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">620</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_623"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">623</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_624"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">624</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_625"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">625</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_626"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">626</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_630"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">630</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_631"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">631</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_635"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">635</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_636"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">636</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_678"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">678</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_710"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">710</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_680"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">680</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_681"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">681</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_683"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">683</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_684"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">684</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_686"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">686</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_687"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">687</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_689"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">689</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_691"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">691</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_694"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">694</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_697"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">697</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_698"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">698</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_700"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">700</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_702"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">702</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_704"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">704</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_707"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">707</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_729"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">729</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_732"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">732</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_734"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">734</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_736"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">736</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_790"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">790</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_738"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">738</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_739"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">739</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_740"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">740</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_742"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">742</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_743"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">743</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_746"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">746</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_747"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">747</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_748"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">748</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_791"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">791</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_749"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">749</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_751"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">751</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_753"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">753</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_755"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">755</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_758"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">758</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_759"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">759</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_761"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">761</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_762"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">762</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_765"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">765</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_766"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">766</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_768"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">768</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_771"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">771</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_777"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">777</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_778"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">778</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_781"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">781</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_783"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">783</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_831"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">831</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_832"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">832</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_833"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">833</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_834"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">834</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_837"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">837</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_844"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">844</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_845"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">845</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_846"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">846</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_848"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">848</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_849"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">849</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_850"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">850</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_851"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">851</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_853"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">853</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_857"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">857</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_858"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">858</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_859"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">859</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_886"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">886</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_887"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">887</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_889"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">889</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_890"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">890</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_892"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">892</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_893"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">893</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_895"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">895</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_785"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">785</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_905"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">905</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_908"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">908</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_092"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">092</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_915"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">915</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_918"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">918</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_921"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">921</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_922"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">922</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_924"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">924</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_925"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">925</field>
+        <field name="economic_development_centre_code">06</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_927"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">927</field>
+        <field name="economic_development_centre_code">01</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_931"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">931</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_934"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">934</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_935"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">935</field>
+        <field name="economic_development_centre_code">03</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_936"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">936</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_941"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">941</field>
+        <field name="economic_development_centre_code">02</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_946"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">946</field>
+        <field name="economic_development_centre_code">08</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_976"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">976</field>
+        <field name="economic_development_centre_code">10</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_977"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">977</field>
+        <field name="economic_development_centre_code">09</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_980"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">980</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_981"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">981</field>
+        <field name="economic_development_centre_code">04</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_989"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">989</field>
+        <field name="economic_development_centre_code">07</field>
+    </record>
+    <record
+        id="municipality_edc_mapping_992"
+        model="res.municipalicy_code_edc_code_mapping"
+    >
+        <field name="municipality_code">992</field>
+        <field name="economic_development_centre_code">05</field>
+    </record>
+</odoo>
