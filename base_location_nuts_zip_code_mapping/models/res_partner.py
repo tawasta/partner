@@ -13,6 +13,8 @@ class ResPartner(models.Model):
         # Try to find a matching Country+ZIP <--> NUTS L4 mapping.
         # If found, auto-populate the partner's NUTS L1-L4 fields
 
+        _logger.info("edc NUTS reached")
+
         zip_nuts_mapping_obj = self.env["res.zip_code_nuts_item_mapping"]
 
         for record in self:

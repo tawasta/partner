@@ -8,8 +8,11 @@ Partner: Economic Development Centres
 
 * Adds option to create economic development centres (elinvoimakeskukset
   in Finnis) and link them to partners
+* Utilizes the mappings of base_location_nuts_zip_code_mapping to automatically
+  set the centre for a partner when their zip code or country changes.
 * Creates the 10 Finnish economic development centres (as of start of 2026)
-  when module installs.
+  when module installs, and creates a mapping table of how the EDC codes
+  map to Finnish municipality codes (as of start of 2026)  
 
 Configuration
 =============
@@ -22,12 +25,12 @@ Usage
 
 Known issues / Roadmap
 ======================
-* Finnish municipalities are linked to development centres and
-  this mapping data is available at
-  https://stat.fi/fi/luokitukset/corrmaps/kunta_1_20260101%23evk_1_20260101
-* If needed, a possible development could be to auto-map a contact
-  to the suitable economic development centre based on the contact's municipality.
-
+* Pull municipality code -  development centres mapping data periodically from
+  https://stat.fi/fi/luokitukset/corrmaps/kunta_1_20260101%23evk_1_20260101 ,
+* Currently the mappings tables are just "dumb" code pair tables, could consider
+  setting up actual relations for more convenient lookups, but that will 
+  require managing e.g. municipalities as Odoo records instead.
+  
 Credits
 =======
 

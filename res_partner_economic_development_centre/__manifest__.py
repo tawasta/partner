@@ -21,7 +21,7 @@
 {
     "name": "Partner: Economic Development Centres",
     "summary": "Adds option to create economic development centres "
-    "and link them to partners",
+    "and links them to partners based on partner zip codes",
     "version": "17.0.1.0.0",
     "category": "CRM",
     "website": "https://github.com/tawasta/partner",
@@ -29,12 +29,14 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["base"],
+    "depends": ["base_location_nuts_zip_code_mapping"],
     "data": [
         "security/ir.model.access.csv",
         "views/economic_development_centre_views.xml",
+        "views/municipality_code_edc_code_mapping_views.xml",
         "views/res_partner.xml",
         "data/economic_development_centre_data.xml",
+        "data/municipality_code_edc_code_mapping_data.xml",
     ],
     "demo": [],
 }
