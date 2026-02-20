@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_zip_code_nuts_item_mapping_tree" model="ir.ui.view">
+        <field name="name">res.zip_code_nuts_item_mapping.view.tree</field>
+        <field name="model">res.zip_code_nuts_item_mapping</field>
+        <field name="priority" eval="8" />
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field
+                    name="country_id"
+                    options="{ 'no_create': True, 'no_create_edit': True }"
+                />
+                <field name="zip_code" />
+                <field name="municipality_code" />
+                <field name="municipality_name" />
+                <field name="region_name" />
+                <field
+                    name="nuts_item_id"
+                    options="{ 'no_create': True, 'no_create_edit': True }"
+                />
+                <field name="imported_from_posti_pcf_file" optional="hide" />
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_zip_code_nuts_item_mapping_search" model="ir.ui.view">
+        <field name="name">res.zip_code_nuts_item_mapping.search</field>
+        <field name="model">res.zip_code_nuts_item_mapping</field>
+        <field name="arch" type="xml">
+
+            <search string="Zip Code NUTS Mapping">
+
+                <field name="zip_code" />
+                <field name="municipality_name" />
+                <field name="region_name" />
+                <field name="municipality_code" />
+
+                <separator />
+
+                <filter
+                    name="posti_imported"
+                    string="Imported from Posti"
+                    domain="[('imported_from_posti_pcf_file','!=',False)]"
+                />
+
+                <filter
+                    name="manual_entries"
+                    string="Manual Entries"
+                    domain="[('imported_from_posti_pcf_file','=',False)]"
+                />
+
+
+                <separator />
+                <field name="country_id" />
+
+
+                <group expand="0" string="Group By">
+
+                    <filter
+                        string="Country"
+                        name="group_country"
+                        context="{'group_by':'country_id'}"
+                    />
+
+                    <filter
+                        string="Region"
+                        name="group_region"
+                        context="{'group_by':'region_name'}"
+                    />
+
+                    <filter
+                        string="Municipality Name"
+                        name="group_municipality"
+                        context="{'group_by':'municipality_name'}"
+                    />
+
+                    <filter
+                        string="Municipality Code"
+                        name="group_municipality_code"
+                        context="{'group_by':'municipality_code'}"
+                    />
+
+                    <filter
+                        string="NUTS Item"
+                        name="group_nuts"
+                        context="{'group_by':'nuts_item_id'}"
+                    />
+
+                </group>
+
+            </search>
+
+        </field>
+    </record>
+
+
+
+
+
+    <record model="ir.actions.act_window" id="act_open_zip_code_nuts_item_mapping_view">
+        <field name="name">Zip Code NUTS Item Mappings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.zip_code_nuts_item_mapping</field>
+        <field name="view_mode">tree</field>
+    </record>
+
+    <menuitem
+        id="menu_zip_code_nuts_item_mapping_sub"
+        name="Zip Code NUTS Item Mappings"
+        parent="contacts.menu_localisation"
+        sequence="70"
+        action="act_open_zip_code_nuts_item_mapping_view"
+    />
+</odoo>

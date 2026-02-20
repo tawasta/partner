@@ -25,7 +25,7 @@
     <menuitem
         id="menu_economic_development_centre_sub"
         name="Economic Development Centres"
-        parent="contacts.res_partner_menu_config"
+        parent="contacts.menu_localisation"
         sequence="70"
         action="act_open_economic_development_centre_view"
     />
