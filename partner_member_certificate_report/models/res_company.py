@@ -15,4 +15,7 @@ class ResCompany(models.Model):
     member_certificate_signatory_title = fields.Char(
         string="Member certificate signatory title",
     )
+    member_certificate_signatory_place = fields.Char(
+        string="Member certificate signatory place",
+    )
     footer_company_definition = fields.Text(string="Footer company definition")
