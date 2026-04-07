@@ -9,6 +9,7 @@ Partner: Member Certificate Report
 * Adds a button to print member certificate report for partners with active
  subscriptions.
 * Adds some fields to company for customizing the report.
+  company / member certificate
 
 Configuration
 =============
