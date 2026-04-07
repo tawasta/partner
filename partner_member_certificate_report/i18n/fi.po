@@ -18,17 +18,17 @@ msgstr ""
 #. module: partner_member_certificate_report
 #: model_terms:ir.ui.view,arch_db:partner_member_certificate_report.res_partner_view_form
 msgid "<span class=\"o_stat_text\">Print member certificate</span>"
-msgstr "Tulosta jäsenyystodistus"
+msgstr "<span class=\"o_stat_text\">Tulosta jäsenyystodistus</span>"
 
 #. module: partner_member_certificate_report
 #: model_terms:ir.ui.view,arch_db:partner_member_certificate_report.member_certificate
 msgid "<span>Certificate of Membership</span>"
-msgstr "Jäsenyystodistus"
+msgstr "<span>Jäsenyystodistus</span>"
 
 #. module: partner_member_certificate_report
 #: model_terms:ir.ui.view,arch_db:partner_member_certificate_report.member_certificate
 msgid "<u>Member of divisions:</u>"
-msgstr "Jaostojen jäsenyydet"
+msgstr "<u>Jaostojen jäsenyydet:</u>"
 
 #. module: partner_member_certificate_report
 #: model_terms:ir.ui.view,arch_db:partner_member_certificate_report.view_company_form_inherit_member_certificate
@@ -48,7 +48,7 @@ msgstr "Kontakti"
 #. module: partner_member_certificate_report
 #: model:ir.model.fields,field_description:partner_member_certificate_report.field_res_company__footer_company_definition
 msgid "Footer company definition"
-msgstr ""
+msgstr "Footer lisämäärittely"
 
 #. module: partner_member_certificate_report
 #: model:ir.model.fields,field_description:partner_member_certificate_report.field_res_partner__has_subscriptions
