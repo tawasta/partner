@@ -12,6 +12,7 @@
                             <field name="member_certificate_signature" widget="image" />
                             <field name="member_certificate_signatory_name" />
                             <field name="member_certificate_signatory_title" />
+                            <field name="member_certificate_signatory_place" />
                             <field name="footer_company_definition" />
                         </group>
                     </group>
