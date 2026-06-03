@@ -77,4 +77,5 @@ class ResPartner(models.Model):
             record.write(values)
 
             record._delete_chatter_messages()
+            record.message_post(body=_("Partner anonymized"))
             record.action_archive()
