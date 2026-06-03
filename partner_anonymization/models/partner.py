@@ -1,6 +1,6 @@
 import uuid
 
-from odoo import _, models
+from odoo import models
 
 
 class ResPartner(models.Model):
@@ -73,10 +73,8 @@ class ResPartner(models.Model):
                     for m in record.mass_mailing_contact_ids:
                         m.unlink()
 
-            record._delete_chatter_messages()
-
             values["name"] = user_hash
             record.write(values)
 
-            record.message_post(body=_("Partner anonymized"))
+            record._delete_chatter_messages()
             record.action_archive()
