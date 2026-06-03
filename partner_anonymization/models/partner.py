@@ -74,7 +74,7 @@ class ResPartner(models.Model):
                         m.unlink()
 
             values["name"] = user_hash
-            record.write(values)
+            record.with_context(tracking_disable=True).write(values)
 
             record._delete_chatter_messages()
             record.message_post(body=_("Partner anonymized"))
