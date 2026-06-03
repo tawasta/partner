@@ -1,6 +1,6 @@
 import uuid
 
-from odoo import models
+from odoo import _, models
 
 
 class ResPartner(models.Model):
