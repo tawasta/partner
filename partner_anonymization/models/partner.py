@@ -7,6 +7,26 @@ class ResPartner(models.Model):
 
     _inherit = "res.partner"
 
+    def _get_chatter_messages_domain(self):
+        self.ensure_one()
+        return [
+            "|",
+            "|",
+            "&",
+            ("model", "=", "res.partner"),
+            ("res_id", "=", self.id),
+            ("author_id", "=", self.id),
+            ("partner_ids", "in", [self.id]),
+        ]
+
+    def _delete_chatter_messages(self):
+        self.ensure_one()
+        messages = self.env["mail.message"].sudo().search(
+            self._get_chatter_messages_domain()
+        )
+        if messages:
+            messages.unlink()
+
     def anonymize(self):
         """
         Anonymize a partner
@@ -52,6 +72,8 @@ class ResPartner(models.Model):
                 if record.mass_mailing_contact_ids:
                     for m in record.mass_mailing_contact_ids:
                         m.unlink()
+
+            record._delete_chatter_messages()
 
             values["name"] = user_hash
             record.write(values)
