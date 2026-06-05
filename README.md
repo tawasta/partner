@@ -30,6 +30,7 @@ addon | version | maintainers | summary
 [partner_linkedin](partner_linkedin/) | 17.0.1.0.0 |  | Adds a LinkedIn URL field to partners
 [partner_map_view](partner_map_view/) | 17.0.1.0.0 |  | Add map view for partners
 [partner_membership_data_card](partner_membership_data_card/) | 17.0.1.0.0 |  | Membership data card printing for contacts
+[partner_member_certificate_report](partner_member_certificate_report/) | 17.0.1.0.1 |  | Partner member certificate report
 [partner_organization_primary_contact](partner_organization_primary_contact/) | 17.0.1.0.0 |  | Adds simple 'Primary Contact' checkbox to contacts
 [partner_prh_avoindata](partner_prh_avoindata/) | 17.0.1.0.2 |  | Fetch partner information from PRH
 [partner_privacy_consent](partner_privacy_consent/) | 17.0.1.1.1 |  | Adds privacy consent helpers for partner
