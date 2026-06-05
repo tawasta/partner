@@ -28,11 +28,11 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["contacts"],
+    "depends": ["contacts", "portal"],
     "data": [
-        "views/res_partner.xml",
         "reports/partner_card_template.xml",
         "reports/report.xml",
+        "views/res_partner.xml",
         "views/portal_template.xml",
     ],
 }
