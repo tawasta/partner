@@ -35,7 +35,20 @@
                             <span
                                 style="display:inline-block; width:180px;"
                             >Membership status:</span>
-                            <!-- <span t-field="partner.x_field_1"/> -->
+                            <t
+                                t-set="active_sub"
+                                t-value="env['sale.subscription'].search_count([
+                                ('partner_id', '=', partner.id),
+                                ('stage_id.name', '=', 'In progress')
+                            ])"
+                            />
+
+                            <t t-if="active_sub">
+                                <span>Active</span>
+                            </t>
+                            <t t-else="">
+                                <span>Inactive</span>
+                            </t>
                         </p>
                         <p>
                             <span
