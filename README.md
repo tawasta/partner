@@ -11,7 +11,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[base_partner_sequence_contact](base_partner_sequence_contact/) | 14.0.1.0.0 |  | Give unique partner sequence numbers for all partner types
+[base_partner_sequence_contact](base_partner_sequence_contact/) | 14.0.1.0.1 |  | Give unique partner sequence numbers for all partner types
 [partner_address_label](partner_address_label/) | 14.0.1.0.0 |  | Partner - Address Label
 [partner_anonymization](partner_anonymization/) | 14.0.1.1.0 |  | Allows anonymization partners
 [partner_auditlog_rules](partner_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for res partner
