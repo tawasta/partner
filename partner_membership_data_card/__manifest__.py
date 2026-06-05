@@ -31,8 +31,8 @@
     "depends": ["contacts"],
     "data": [
         "views/res_partner.xml",
-        "reports/report.xml",
         "reports/partner_card_template.xml",
+        "reports/report.xml",
         "views/portal_template.xml",
     ],
 }
