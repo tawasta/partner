@@ -197,7 +197,7 @@
                                 <t t-foreach="positions" t-as="position">
                                     <tr>
                                         <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="position.type_id" />
+                                            <span t-field="position.description" />
                                         </td>
                                         <td style="border: 1px solid; text-align:left;">
                                             <span t-field="position.company_id" />
@@ -313,10 +313,10 @@
                                             <span t-field="activity.description" />
                                         </td>
                                         <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.year" />
+                                            <span t-field="activity.company_id" />
                                         </td>
                                         <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.company_id" />
+                                            <span t-field="activity.year" />
                                         </td>
                                         <td style="border: 1px solid; text-align:left;">
                                             <span t-field="activity.note" />
@@ -369,9 +369,6 @@
                                         </td>
                                         <td style="border: 1px solid; text-align:left;">
                                             <span t-field="activity.year" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.company_id" />
                                         </td>
                                         <td style="border: 1px solid; text-align:left;">
                                             <span t-field="activity.note" />
@@ -507,10 +504,10 @@
                                 <t t-foreach="awards" t-as="award">
                                     <tr>
                                         <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="award.description" />
+                                            <span t-field="award.year" />
                                         </td>
                                         <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="award.year" />
+                                            <span t-field="award.description" />
                                         </td>
                                     </tr>
                                 </t>
