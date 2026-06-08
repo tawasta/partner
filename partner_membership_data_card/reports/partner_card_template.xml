@@ -29,20 +29,29 @@
                     </p>
                     <br />
                     <h3>Personal information</h3>
+                    <style>
+                    .member-details {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        column-gap: 20px;
+                    }
 
-                    <div>
+                    .member-details p {
+                        margin: 0 0 6px 0;
+                    }
+                    </style>
+                    <div class="member-details">
                         <p>
                             <span
                                 style="display:inline-block; width:180px;"
                             >Membership status:</span>
                             <t
                                 t-set="active_sub"
-                                t-value="env['sale.subscription'].search_count([
+                                t-value="env['sale.subscription'].with_context(lang='en_US').search_count([
                                 ('partner_id', '=', partner.id),
                                 ('stage_id.name', '=', 'In progress')
                             ])"
                             />
-
                             <t t-if="active_sub">
                                 <span>Active</span>
                             </t>
@@ -105,7 +114,7 @@
                             <span
                                 style="display:inline-block; width:180px;"
                             >Birth place:</span>
-                            <!-- missä? -->
+                            <!-- no field -->
                         </p>
                         <p>
                             <span
@@ -141,13 +150,13 @@
                             <span
                                 style="display:inline-block; width:180px;"
                             >Companion:</span>
-                            <!-- missä? -->
+                            <!-- no field -->
                         </p>
                         <p>
                             <span
                                 style="display:inline-block; width:180px;"
                             >Number of children:</span>
-                            <!-- missä? -->
+                            <!-- no field -->
                         </p>
                         <p>
                             <span
@@ -394,14 +403,6 @@
                                         INSTRUCTOR IN TRAINING SESSIONS
                                     </th>
                                 </tr>
-                                <tr>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Year
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Training session
-                                    </th>
-                                </tr>
                             </thead>
                             <tbody>
                                 <t
@@ -437,14 +438,6 @@
                                         font-size:18px;"
                                     >
                                         OTHER ACTIVITIES
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Year
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Activity
                                     </th>
                                 </tr>
                             </thead>
@@ -485,14 +478,6 @@
                                         REWARDS AND ACHIEVEMENTS
                                     </th>
                                 </tr>
-                                <tr>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Year
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Reward or achievement
-                                    </th>
-                                </tr>
                             </thead>
                             <tbody>
                                 <t
@@ -528,14 +513,6 @@
                                         font-size:18px;"
                                     >
                                         PROJECTS
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Year
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Project
                                     </th>
                                 </tr>
                             </thead>

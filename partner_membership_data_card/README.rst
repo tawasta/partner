@@ -16,6 +16,7 @@ Configuration
 Usage
 =====
 * Used to print user's activity and other information on .pdf report.
+* Print functionality is available on the res.partner form and in the portal.
 
 Known issues / Roadmap
 ======================

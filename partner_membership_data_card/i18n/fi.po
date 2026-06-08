@@ -1,0 +1,224 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_membership_data_card
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20260528\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-08 04:53+0000\n"
+"PO-Revision-Date: 2026-06-08 04:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Address:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Osoite:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Birth date:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Syntymäaika:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Birth place:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Syntymäpaikka:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Companion:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Seuralainen:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Company:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Yritys:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Education:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Koulutus:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Email:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Sähköposti:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Job position:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Työnimike:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Membership ID:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Jäsennumero:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid ""
+"<span style=\"display:inline-block; width:180px;\">Membership status:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Jäsenstatus:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Mobile phone:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Matkapuhelin:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Name:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Nimi:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid ""
+"<span style=\"display:inline-block; width:180px;\">Number of "
+"children:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Lapset:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Work address:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Työosoite:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Year joined:</span>"
+msgstr "<span style=\"display:inline-block; width:180px;\">Liittymisvuosi:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span>Active</span>"
+msgstr "<span>Jäsen</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span>Inactive</span>"
+msgstr "<span>Ei jäsen</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "ACTIVITIES IN REGIONAL, NATIONAL OR INTERNATIONAL TASKS"
+msgstr "TOIMINTA ALUEELLISISSA, KANSALLISISSA TAI KANSAINVÄLISISSÄ TEHTÄVISSÄ"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "ACTIVITITY WITHIN THE BRANCH"
+msgstr "TOIMINTA KAMARISSA"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Activity"
+msgstr "Aktiivisuus"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Additional information"
+msgstr "Lisätiedot"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Branch"
+msgstr "Kamari"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Branch info"
+msgstr "Kamaritiedot"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.portal_home_membership_card
+msgid "Download Membership Data Card"
+msgstr "Lataa kantakortti"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "INSTRUCTOR IN TRAINING SESSIONS"
+msgstr "KOULUTTAJANA TOIMIMINEN"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Information verified (date and signature):"
+msgstr "Tiedot tarkistettu (päivämäärä ja allekirjoitus)"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "JCI OR SNKK TRAINING"
+msgstr "JCI TAI SNKK VIRALLISET KOULUTUKSET"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Job"
+msgstr "Virka"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "MEETING ATTENDANCE"
+msgstr "KOKOUSOSALLISTUMINEN"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Membership data certificate"
+msgstr "Jäsenkantakortti"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "OTHER ACTIVITIES"
+msgstr "MUU SUORITUS"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "PROJECTS"
+msgstr "PROJEKTIT"
+
+#. module: partner_membership_data_card
+#: model:ir.actions.report,name:partner_membership_data_card.partner_card_report
+msgid "Partner Card"
+msgstr ""
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Personal information"
+msgstr "Henkilötiedot"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.res_partner_view_form
+msgid "Print data card"
+msgstr "Tulosta kantakortti"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Project"
+msgstr "Projekti"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "REWARDS AND ACHIEVEMENTS"
+msgstr "PALKINNOT JA MUUT SAAVUTUKSET"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Reward or achievement"
+msgstr ""
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Training"
+msgstr ""
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Training session"
+msgstr ""
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Year"
+msgstr "Vuosi"
