@@ -2,6 +2,6 @@
 <odoo>
     <record id="group_role_auto_irfilter_manager" model="res.groups">
         <field name="name">Manage Role Auto Filters</field>
-        <field name="category_id" ref="base.module_category_contacts"/>
+        <field name="category_id" ref="base.module_category_contacts" />
     </record>
 </odoo>
