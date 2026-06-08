@@ -8,20 +8,12 @@
     </record>
 
     <menuitem
-        id="menu_role_auto_irfilters_root"
-        name="Role Auto Filters"
-        parent="base.menu_administration"
-        sequence="90"
-        groups="base.group_system"
-    />
-
-    <menuitem
         id="menu_role_irfilter_rule"
-        name="Rules"
-        parent="menu_role_auto_irfilters_root"
+        name="Role Auto Filters"
+        parent="contacts.menu_contacts"
         action="action_role_irfilter_rule"
-        sequence="10"
-        groups="base.group_system"
+        sequence="90"
+        groups="group_role_auto_irfilter_manager"
     />
 
     <record id="view_role_irfilter_rule_tree" model="ir.ui.view">
