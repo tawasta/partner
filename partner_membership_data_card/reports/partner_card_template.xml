@@ -110,12 +110,12 @@
                             >Birth date:</span>
                             <span t-field="partner.birthdate_date" />
                         </p>
-                        <p>
+                        <!-- <p>
                             <span
                                 style="display:inline-block; width:180px;"
                             >Birth place:</span>
-                            <!-- no field -->
-                        </p>
+                            <span t-field="partner.birthplace" />
+                        </p> -->
                         <p>
                             <span
                                 style="display:inline-block; width:180px;"
@@ -146,18 +146,18 @@
                             >Job position:</span>
                             <span t-field="partner.function" />
                         </p>
-                        <p>
+                        <!-- <p>
                             <span
                                 style="display:inline-block; width:180px;"
                             >Companion:</span>
-                            <!-- no field -->
-                        </p>
-                        <p>
+                            <span t-field="partner.companion" />
+                        </p> -->
+                        <!-- <p>
                             <span
                                 style="display:inline-block; width:180px;"
                             >Number of children:</span>
-                            <!-- no field -->
-                        </p>
+                            <span t-field="partner.children_count" />
+                        </p> -->
                         <p>
                             <span
                                 style="display:inline-block; width:180px;"
@@ -189,7 +189,7 @@
                                         Job
                                     </th>
                                     <th style="border: 1px solid; text-align:left;">
-                                        Branch
+                                        Branch / Area
                                     </th>
                                     <th style="border: 1px solid; text-align:left;">
                                         Year
@@ -243,7 +243,7 @@
                                         Year
                                     </th>
                                     <th style="border: 1px solid; text-align:left;">
-                                        Branch
+                                        Branch / Area
                                     </th>
                                     <th style="border: 1px solid; text-align:left;">
                                         Additional information
@@ -298,7 +298,7 @@
                                         Job
                                     </th>
                                     <th style="border: 1px solid; text-align:left;">
-                                        Branch
+                                        Branch / Area
                                     </th>
                                     <th style="border: 1px solid; text-align:left;">
                                         Year
