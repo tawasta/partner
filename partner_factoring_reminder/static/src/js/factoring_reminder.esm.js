@@ -1,9 +1,9 @@
 /** @odoo-module **/
 
-import { patch } from "@web/core/utils/patch";
-import { FormController } from "@web/views/form/form_controller";
-import { ConfirmationDialog } from "@web/core/confirmation_dialog/confirmation_dialog";
-import { _t } from "@web/core/l10n/translation";
+import {patch} from "@web/core/utils/patch";
+import {FormController} from "@web/views/form/form_controller";
+import {ConfirmationDialog} from "@web/core/confirmation_dialog/confirmation_dialog";
+import {_t} from "@web/core/l10n/translation";
 
 patch(FormController.prototype, {
     async saveButtonClicked(params = {}) {
