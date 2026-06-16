@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<odoo>
+
+    <!-- action-->
+    <record id="action_kannatusseura" model="ir.actions.act_window">
+        <field name="name">Kannatusseurat</field>
+        <field name="res_model">kannatusseura.kannatusseura</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <record id="action_kannatusseura_kategoria" model="ir.actions.act_window">
+        <field name="name">Kannatusseuran kategoriat</field>
+        <field name="res_model">kannatusseura.category</field>
+        <field name="view_mode">tree,form,kanban</field>
+    </record>
+
+    <!-- Tree view-->
+    <record id="view_kannatusseura_tree" model="ir.ui.view">
+        <field name="name">kannatusseura.tree</field>
+        <field name="model">kannatusseura.kannatusseura</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="category_id"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_kannatusseura_category_tree" model="ir.ui.view">
+        <field name="name">kannatusseura.category.tree</field>
+        <field name="model">kannatusseura.category</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="code"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- form view-->
+    <record id="view_kannatusseura_form" model="ir.ui.view">
+        <field name="name">kannatusseura.form</field>
+        <field name="model">kannatusseura.kannatusseura</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="category_id"/>
+                        <field name="code"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_kannatusseura_category_form" model="ir.ui.view">
+        <field name="name">kannatusseura.category.form</field>
+        <field name="model">kannatusseura.category</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Kanban view-->
+    <record id="kannatusseura_kanban_view" model="ir.ui.view">
+        <field name="name">kannatusseura.kanban.view</field>
+        <field name="model">kannatusseura.kannatusseura</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" sample="1">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="row">
+                            <div class="oe_kanban_global_click">
+                                <ul>
+                                    <li>Nimi: <field class="fw-bolder" name="name" /></li>
+                                    <li>Kategoria: <field class="fw-bolder" name="category_id" /></li>
+                                    <li>Code: <field class="fw-bolder" name="code"/></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>    
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="kannatusseura_category_kanban_view" model="ir.ui.view">
+        <field name="name">kannatusseura.category.kanban.view</field>
+        <field name="model">kannatusseura.category</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" sample="1">
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="row">
+                            <div class="oe_kanban_global_click">
+                                <ul>
+                                    <li>Nimi: <field class="fw-bolder" name="name" /></li>
+                                    <li>Code: <field class="fw-bolder" name="code"/></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>    
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+
+    <menuitem id="menu_kannatusseura_root"
+        name="Kannatusseurat"
+        parent="contacts.menu_contacts"
+        sequence="3"/>
+
+    <menuitem id="menu_kannatusseura"
+        name="Kannatusseurat"
+        parent="menu_kannatusseura_root"
+        action="action_kannatusseura"
+        sequence="1"/>
+
+    <menuitem id="menu_kannatusseura_kategoriat"
+        name="Kategoriat"
+        parent="menu_kannatusseura_root"
+        action="action_kannatusseura_kategoria"
+        sequence="2"/>
+</odoo>
