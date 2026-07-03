@@ -7,7 +7,9 @@ class ResPartnerAlias(models.Model):
     _order = "name, id"
     _rec_name = "name"
 
-    name = fields.Char(required=True,)
+    name = fields.Char(
+        required=True,
+    )
 
     partner_id = fields.Many2one(
         "res.partner",
