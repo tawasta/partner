@@ -81,7 +81,7 @@ msgstr "Näyttönimi"
 #: model:ir.model.fields,field_description:partner_alias_search.field_res_partner__id
 #: model:ir.model.fields,field_description:partner_alias_search.field_res_partner_alias__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: partner_alias_search
 #: model:ir.model.fields,field_description:partner_alias_search.field_res_partner_alias__write_uid
