@@ -14,7 +14,7 @@ addon | version | maintainers | summary
 [auto_user_filters](auto_user_filters/) | 17.0.1.0.0 |  | Role Auto IR Filters
 [base_location_nuts_zip_code_mapping](base_location_nuts_zip_code_mapping/) | 17.0.1.0.0 |  | Map country zip codes to NUTS items, enabling automatic NUTS level selections for contacts. Support for importing Finnish postcode data
 [base_partner_sequence_contact](base_partner_sequence_contact/) | 17.0.1.0.1 |  | Give unique partner sequence numbers for all partner types
-[partner_anonymization](partner_anonymization/) | 17.0.1.1.1 |  | Allows anonymization partners
+[partner_anonymization](partner_anonymization/) | 17.0.1.1.2 |  | Allows anonymization partners
 [partner_auditlog_rules](partner_auditlog_rules/) | 17.0.1.1.0 |  | Adds audit log rules for res partner
 [partner_country_fiscal_position](partner_country_fiscal_position/) | 17.0.1.0.0 |  | Automatically selects Partner's Fiscal Position based on its country
 [partner_default_delivery_address](partner_default_delivery_address/) | 17.0.1.0.1 |  | Allows defining a default delivery address for partners
