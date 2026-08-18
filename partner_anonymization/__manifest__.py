@@ -21,7 +21,7 @@
 {
     "name": "Partner anonymization",
     "summary": "Allows anonymization partners",
-    "version": "17.0.1.1.1",
+    "version": "17.0.1.1.2",
     "category": "CRM",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
