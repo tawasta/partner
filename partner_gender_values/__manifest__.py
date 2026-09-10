@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2020 Futural Oy (https://futural.fi)
+#    Copyright 2026 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,23 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Partner anonymization",
-    "summary": "Allows anonymization partners",
-    "version": "17.0.1.1.2",
+    "name": "Partner gender values",
+    "summary": "Partner gender values",
+    "version": "17.0.1.0.0",
     "category": "CRM",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ["base_setup"],
-    "data": [
-        "data/ir_cron.xml",
-        "security/ir.model.access.csv",
-        "views/res_config_settings.xml",
-        "views/res_partner.xml",
-        "wizard/partner_anonymization.xml",
-    ],
+    "depends": ["partner_contact_gender"],
     "demo": [],
 }
