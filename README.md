@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [partner_email_secondary](partner_email_secondary/) | 17.0.1.0.0 |  | Add a field for storing contact's secondary e-mail address
 [partner_factoring_reminder](partner_factoring_reminder/) | 17.0.1.0.1 |  | Partner Factoring Reminder
 [partner_force_company_with_vat](partner_force_company_with_vat/) | 17.0.1.1.0 |  | Force partner type to company when VAT is given
+[partner_gender_values](partner_gender_values/) | 17.0.1.0.0 |  | Partner gender values
 [partner_generic_date_range_info](partner_generic_date_range_info/) | 17.0.1.0.0 |  | Enables logging info about user-defineable start/end dates for partners, e.g. join dates or perk eligibility dates
 [partner_identification_hide](partner_identification_hide/) | 17.0.1.0.0 |  | Hide partner identification page from non-admins
 [partner_information_export](partner_information_export/) | 17.0.1.0.0 |  | Allows exporting all partner information
