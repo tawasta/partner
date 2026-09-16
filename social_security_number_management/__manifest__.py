@@ -21,7 +21,7 @@
 {
     "name": "Partner: Social Security Number Management",
     "summary": "Store SSN for partners in an encrypted format",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Specific Industry Applications",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
