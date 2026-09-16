@@ -12,7 +12,6 @@ class PartnerSSNDecryptWizard(models.TransientModel):
     key = fields.Char(
         string="Decryption Key",
         required=True,
-        password=True,
     )
     partner_id = fields.Many2one("res.partner", string="Partner", required=True)
 
