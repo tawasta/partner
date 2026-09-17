@@ -8,10 +8,15 @@
                     class="page"
                     style="position: relative;                     min-height: 1120px;                     font-family: Times New Roman, Arial, Helvetica, sans-serif;                     color: #111111;                     margin-left: 30px;"
                 >
+                    <t
+                        t-set="company"
+                        t-value="env['res.company'].search([('name', 'ilike', 'suomen nuorkauppakamarit ry')], limit=1)"
+                    />
+
                     <img
-                        t-if="partner.company_id.logo"
-                        t-att-src="'data:image/png;base64,%s' % o.company_id.logo.decode('utf-8')"
-                        style="max-height: 80px; max-width: 200px;"
+                        t-if="company.logo"
+                        t-att-src="image_data_uri(company.logo)"
+                        style="max-height: 80px; max-width: 200px; margin: 0 auto 50px auto; display: block;"
                     />
                     <h2>Membership data certificate</h2>
                     <br />
@@ -89,10 +94,14 @@
                                     t-set="subscription"
                                     t-value="env['sale.subscription'].search([                                     ('partner_id', '=', partner.id),                                     ('company_id.name', 'ilike', 'nuorkauppakamari')                                 ], limit=1)"
                                 />
-                                <t t-if="subscription.date_start">
-                                    <span
-                                        t-esc="subscription.date_start.strftime('%Y')"
+                                <t
+                                    t-if="subscription and subscription.sale_subscription_line_ids"
+                                >
+                                    <t
+                                        t-set="start"
+                                        t-value="subscription.sale_subscription_line_ids[:1].date_start"
                                     />
+                                    <span t-esc="start.strftime('%Y')" />
                                 </t>
                             </span>
                         </p>
@@ -176,7 +185,7 @@
                     <div>
                         <t
                             t-set="activities"
-                            t-value="env['pam.partner.activity'].search([                                     ('partner_id', '=', partner.id),                                     ('category_id', 'ilike', 'toiminta alueellisissa, kansallisissa'),                                 ])"
+                            t-value="env['partner.position'].search([                                     ('partner_id', '=', partner.id),                                 ])"
                         />
                         <t t-if="activities">
                             <table
@@ -196,10 +205,10 @@
                                             Year
                                         </th>
                                         <th style="border: 1px solid; text-align:left;">
-                                            Job
+                                            Description
                                         </th>
                                         <th style="border: 1px solid; text-align:left;">
-                                            Type
+                                            Category
                                         </th>
                                         <th style="border: 1px solid; text-align:left;">
                                             Branch / Area
@@ -223,7 +232,7 @@
                                             <td
                                                 style="border: 1px solid; text-align:left;"
                                             >
-                                                <span t-field="activity.type" />
+                                                <span t-field="activity.category_id" />
                                             </td>
                                             <td
                                                 style="border: 1px solid; text-align:left;"
@@ -260,14 +269,14 @@
                                             Year
                                         </th>
                                         <th style="border: 1px solid; text-align:left;">
-                                            Job
+                                            Type
                                         </th>
                                         <th style="border: 1px solid; text-align:left;">
-                                            Branch / Area
+                                            Description
                                         </th>
 
                                         <th style="border: 1px solid; text-align:left;">
-                                            Type
+                                            Branch / Area
                                         </th>
                                     </tr>
                                 </thead>
@@ -283,18 +292,18 @@
                                             <td
                                                 style="border: 1px solid; text-align:left;"
                                             >
-                                                <span t-field="activity.description" />
+                                                <span t-field="activity.type_id" />
                                             </td>
                                             <td
                                                 style="border: 1px solid; text-align:left;"
                                             >
-                                                <span t-field="activity.company_id" />
+                                                <span t-field="activity.description" />
                                             </td>
 
                                             <td
                                                 style="border: 1px solid; text-align:left;"
                                             >
-                                                <span t-field="activity.type_id" />
+                                                <span t-field="activity.company_id" />
                                             </td>
                                         </tr>
                                     </t>
@@ -315,7 +324,7 @@
                                 <thead>
                                     <tr>
                                         <th
-                                            colspan="3"
+                                            colspan="4"
                                             style="text-align:center;                                         border: 1px solid;                                         font-size:18px;"
                                         >
                                             JCI OR SNKK TRAINING
@@ -326,11 +335,14 @@
                                             Year
                                         </th>
                                         <th style="border: 1px solid; text-align:left;">
-                                            Training
+                                            Type
                                         </th>
 
                                         <th style="border: 1px solid; text-align:left;">
-                                            Type
+                                            Description
+                                        </th>
+                                        <th style="border: 1px solid; text-align:left;">
+                                            Branch / Area
                                         </th>
                                     </tr>
                                 </thead>
@@ -346,13 +358,18 @@
                                             <td
                                                 style="border: 1px solid; text-align:left;"
                                             >
-                                                <span t-field="activity.description" />
+                                                <span t-field="activity.type_id" />
                                             </td>
 
                                             <td
                                                 style="border: 1px solid; text-align:left;"
                                             >
-                                                <span t-field="activity.type_id" />
+                                                <span t-field="activity.description" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.company_id" />
                                             </td>
                                         </tr>
                                     </t>
@@ -392,7 +409,7 @@
                                             <td
                                                 style="border: 1px solid; text-align:left;"
                                             >
-                                                <span t-field="trainer.description" />
+                                                <span t-field="trainer.name" />
                                             </td>
                                         </tr>
                                     </t>
@@ -435,7 +452,7 @@
                                             <td
                                                 style="border: 1px solid; text-align:left;"
                                             >
-                                                <span t-field="activity.description" />
+                                                <span t-field="activity.name" />
                                             </td>
                                         </tr>
                                     </t>
@@ -456,7 +473,7 @@
                                 <thead>
                                     <tr>
                                         <th
-                                            colspan="3"
+                                            colspan="2"
                                             style="text-align:center;                                         border: 1px solid;                                         font-size:18px;"
                                         >
                                             REWARDS AND ACHIEVEMENTS
@@ -496,7 +513,7 @@
                                 <thead>
                                     <tr>
                                         <th
-                                            colspan="3"
+                                            colspan="2"
                                             style="text-align:center;                                         border: 1px solid;                                         font-size:18px;"
                                         >
                                             PROJECTS
@@ -515,7 +532,7 @@
                                             <td
                                                 style="border: 1px solid; text-align:left;"
                                             >
-                                                <span t-field="project.description" />
+                                                <span t-field="project.name" />
                                             </td>
                                         </tr>
                                     </t>
