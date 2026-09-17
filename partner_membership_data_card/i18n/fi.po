@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0-20260528\n"
+"Project-Id-Version: Odoo Server 17.0-20250401\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-06-08 10:52+0000\n"
-"PO-Revision-Date: 2026-06-08 10:52+0000\n"
+"POT-Creation-Date: 2026-09-17 06:48+0000\n"
+"PO-Revision-Date: 2026-09-17 06:48+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -68,6 +68,12 @@ msgstr "<span style=\"display:inline-block; width:180px;\">Nimi:</span>"
 
 #. module: partner_membership_data_card
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span style=\"display:inline-block; width:180px;\">Senator number:</span>"
+msgstr ""
+"<span style=\"display:inline-block; width:180px;\">Senaattorinumero:</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
 msgid "<span style=\"display:inline-block; width:180px;\">Work address:</span>"
 msgstr "<span style=\"display:inline-block; width:180px;\">Työosoite:</span>"
 
@@ -83,6 +89,11 @@ msgstr "<span>Jäsen</span>"
 
 #. module: partner_membership_data_card
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span>Date: </span>"
+msgstr "<span>Päivämäärä: </span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
 msgid "<span>Inactive</span>"
 msgstr "<span>Ei jäsen</span>"
 
@@ -93,16 +104,6 @@ msgstr "TOIMINTA ALUEELLISISSA, KANSALLISISSA TAI KANSAINVÄLISISSÄ TEHTÄVISS�
 
 #. module: partner_membership_data_card
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
-msgid "ACTIVITITY WITHIN THE BRANCH"
-msgstr "TOIMINTA ALUEELLISISSA, KANSALLISISSA TAI KANSAINVÄLISISSÄ TEHTÄVISSÄ"
-
-#. module: partner_membership_data_card
-#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
-msgid "Additional information"
-msgstr "Lisätiedot"
-
-#. module: partner_membership_data_card
-#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
 msgid "Branch / Area"
 msgstr "Kamari / Alue"
 
@@ -110,6 +111,16 @@ msgstr "Kamari / Alue"
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
 msgid "Branch info"
 msgstr "Kamaritiedot"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Category"
+msgstr "Kategoria"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "Description"
+msgstr "Kuvaus"
 
 #. module: partner_membership_data_card
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.portal_home_membership_card
@@ -123,18 +134,8 @@ msgstr "KOULUTTAJANA TOIMIMINEN"
 
 #. module: partner_membership_data_card
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
-msgid "Information verified (date and signature):"
-msgstr "Tiedot tarkistettu (päivämäärä ja allekirjoitus)"
-
-#. module: partner_membership_data_card
-#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
 msgid "JCI OR SNKK TRAINING"
 msgstr "JCI TAI SNKK VIRALLISET KOULUTUKSET"
-
-#. module: partner_membership_data_card
-#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
-msgid "Job"
-msgstr "Virka"
 
 #. module: partner_membership_data_card
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
@@ -159,7 +160,7 @@ msgstr "PROJEKTIT"
 #. module: partner_membership_data_card
 #: model:ir.actions.report,name:partner_membership_data_card.partner_card_report
 msgid "Partner Card"
-msgstr ""
+msgstr "Kantakortti"
 
 #. module: partner_membership_data_card
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
@@ -178,8 +179,8 @@ msgstr "PALKINNOT JA MUUT SAAVUTUKSET"
 
 #. module: partner_membership_data_card
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
-msgid "Training"
-msgstr ""
+msgid "Type"
+msgstr "Tyyppi"
 
 #. module: partner_membership_data_card
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template

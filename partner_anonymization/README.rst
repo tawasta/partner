@@ -22,6 +22,13 @@ Deletes following info:
 Country, City and Zip will NOT be deleted, as they are not identifiable
 information. They can be used for reporting purposes.
 
+If the ``mass_mailing_partner`` module is installed, any ``mailing.contact``
+linked to the partner is removed as part of anonymization, before the
+partner's own email is cleared. This order matters:
+``mass_mailing_partner`` has its own constraint that forbids clearing a
+partner's email while a mailing contact is still linked to it, so the link
+has to go first.
+
 Configuration
 =============
 \-

@@ -37,13 +37,16 @@ class ResPartner(models.Model):
             if res_user:
                 res_user.write({"active": False, "login": user_hash})
 
+            # Anonymize mass mailing contacts first: mass_mailing_partner's
+            # own constraint forbids clearing the partner's email while a
+            # mailing.contact is still linked to it, so the link must be
+            # removed before the write() below clears the email.
+            record.anonymize_mass_mailing_contact_ids()
+
             values["name"] = user_hash
             values["date_anonymized"] = fields.Datetime.now()
             record.write(values)
             record.message_post(body=_("Partner anonymized"))
-
-            # Anonymize mass mailing contacts, if they exist
-            record.anonymize_mass_mailing_contact_ids()
 
             # Anonymize contracts, if they exist
             record.anonymize_contract_ids()
@@ -77,9 +80,7 @@ class ResPartner(models.Model):
 
         # Unlink mass mailing contacts
         for record in self:
-            if record.mass_mailing_contact_ids:
-                for m in record.mass_mailing_contact_ids:
-                    m.unlink()
+            record.mass_mailing_contact_ids.unlink()
 
     def anonymize_contract_ids(self):
         if not hasattr(self, "contract_ids"):

@@ -6,12 +6,13 @@
             <t t-foreach="docs" t-as="partner">
                 <div
                     class="page"
-                    style="position: relative;
-                    min-height: 1120px;
-                    font-family: Times New Roman, Arial, Helvetica, sans-serif;
-                    color: #111111;
-                    margin-left: 30px;"
+                    style="position: relative;                     min-height: 1120px;                     font-family: Times New Roman, Arial, Helvetica, sans-serif;                     color: #111111;                     margin-left: 30px;"
                 >
+                    <img
+                        t-if="partner.company_id.logo"
+                        t-att-src="'data:image/png;base64,%s' % o.company_id.logo.decode('utf-8')"
+                        style="max-height: 80px; max-width: 200px;"
+                    />
                     <h2>Membership data certificate</h2>
                     <br />
                     <br />
@@ -19,10 +20,7 @@
                     <p>
                         <t
                             t-set="subscription"
-                            t-value="env['sale.subscription'].search([
-                            ('partner_id', '=', partner.id),
-                            ('company_id.name', 'ilike', 'nuorkauppakamari')
-                        ], limit=1)"
+                            t-value="env['sale.subscription'].search([                             ('partner_id', '=', partner.id),                             ('company_id.name', 'ilike', 'nuorkauppakamari')                         ], limit=1)"
                         />
 
                         <span t-esc="subscription.company_id.name" />
@@ -47,10 +45,7 @@
                             >Membership status:</span>
                             <t
                                 t-set="active_sub"
-                                t-value="env['sale.subscription'].with_context(lang='en_US').search_count([
-                                ('partner_id', '=', partner.id),
-                                ('stage_id.name', '=', 'In progress')
-                            ])"
+                                t-value="env['sale.subscription'].with_context(lang='en_US').search_count([                                 ('partner_id', '=', partner.id),                                 ('stage_id.name', '=', 'In progress')                             ])"
                             />
                             <t t-if="active_sub">
                                 <span>Active</span>
@@ -65,6 +60,16 @@
                             >Membership ID:</span>
                             <span t-field="partner.ref" />
                         </p>
+                        <t t-if="partner.senator_number">
+                            <p>
+                                <span
+                                    style="display:inline-block; width:180px;"
+                                >Senator number:</span>
+                                <span>
+                                    <span t-field="partner.senator_number" />
+                                </span>
+                            </p>
+                        </t>
                         <p>
                             <span
                                 style="display:inline-block; width:180px;"
@@ -82,10 +87,7 @@
                             <span>
                                 <t
                                     t-set="subscription"
-                                    t-value="env['sale.subscription'].search([
-                                    ('partner_id', '=', partner.id),
-                                    ('company_id.name', 'ilike', 'nuorkauppakamari')
-                                ], limit=1)"
+                                    t-value="env['sale.subscription'].search([                                     ('partner_id', '=', partner.id),                                     ('company_id.name', 'ilike', 'nuorkauppakamari')                                 ], limit=1)"
                                 />
                                 <t t-if="subscription.date_start">
                                     <span
@@ -167,388 +169,365 @@
                                 <span t-field="partner.company_id.zip" />
                             </span>
                         </p>
+
                     </div>
+
                     <br />
                     <div>
-                        <table
-                            style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
-                        >
-                            <thead>
-                                <tr>
-                                    <th
-                                        colspan="3"
-                                        style="text-align:center;
-                                        border: 1px solid;
-                                        font-size:18px;"
-                                    >
-                                        ACTIVITITY WITHIN THE BRANCH
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Job
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Branch / Area
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Year
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <t
-                                    t-set="positions"
-                                    t-value="env['partner.position'].search([
-                                    ('partner_id', '=', partner.id)
-                                ])"
-                                />
-                                <t t-foreach="positions" t-as="position">
+                        <t
+                            t-set="activities"
+                            t-value="env['pam.partner.activity'].search([                                     ('partner_id', '=', partner.id),                                     ('category_id', 'ilike', 'toiminta alueellisissa, kansallisissa'),                                 ])"
+                        />
+                        <t t-if="activities">
+                            <table
+                                style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
+                            >
+                                <thead>
                                     <tr>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="position.description" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="position.company_id" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="position.year" />
-                                        </td>
+                                        <th
+                                            colspan="4"
+                                            style="text-align:center;                                         border: 1px solid;                                         font-size:18px;"
+                                        >
+                                            ACTIVITIES IN REGIONAL, NATIONAL OR INTERNATIONAL TASKS
+                                        </th>
                                     </tr>
-                                </t>
-                            </tbody>
-                        </table>
-                    </div>
-                    <br />
-                    <div>
-                        <table
-                            style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
-                        >
-                            <thead>
-                                <tr>
-                                    <th
-                                        colspan="4"
-                                        style="text-align:center;
-                                        border: 1px solid;
-                                        font-size:18px;"
-                                    >
-                                        ACTIVITIES IN REGIONAL, NATIONAL OR INTERNATIONAL TASKS
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Job
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Year
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Branch / Area
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Additional information
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <t
-                                    t-set="activities"
-                                    t-value="env['partner.position'].search([
-                                    ('partner_id', '=', partner.id),
-                                    ('category_id', 'ilike', 'toiminta alueellisissa, kansallisissa'),
-                                ])"
-                                />
-                                <t t-foreach="activities" t-as="activity">
                                     <tr>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.description" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.year" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.company_id" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.note" />
-                                        </td>
+                                        <th style="border: 1px solid; text-align:left;">
+                                            Year
+                                        </th>
+                                        <th style="border: 1px solid; text-align:left;">
+                                            Job
+                                        </th>
+                                        <th style="border: 1px solid; text-align:left;">
+                                            Type
+                                        </th>
+                                        <th style="border: 1px solid; text-align:left;">
+                                            Branch / Area
+                                        </th>
                                     </tr>
-                                </t>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+
+                                    <t t-foreach="activities" t-as="activity">
+                                        <tr>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.year" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.description" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.type" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.company_id" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
                     </div>
                     <br />
                     <div>
-                        <table
-                            style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
-                        >
-                            <thead>
-                                <tr>
-                                    <th
-                                        colspan="4"
-                                        style="text-align:center;
-                                        border: 1px solid;
-                                        font-size:18px;"
-                                    >
-                                        MEETING ATTENDANCE
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Job
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Branch / Area
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Year
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Additional information
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <t
-                                    t-set="activities"
-                                    t-value="env['pam.partner.activity'].search([
-                                    ('partner_id', '=', partner.id),
-                                    ('category_id', 'ilike', 'kokousosallistuminen'),
-                                ])"
-                                />
-                                <t t-foreach="activities" t-as="activity">
+                        <t
+                            t-set="activities"
+                            t-value="env['pam.partner.activity'].search([                                     ('partner_id', '=', partner.id),                                     ('category_id', 'ilike', 'kokousosallistuminen'),                                 ])"
+                        />
+                        <t t-if="activities">
+                            <table
+                                style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
+                            >
+                                <thead>
                                     <tr>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.description" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.company_id" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.year" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.note" />
-                                        </td>
+                                        <th
+                                            colspan="4"
+                                            style="text-align:center;                                         border: 1px solid;                                         font-size:18px;"
+                                        >
+                                            MEETING ATTENDANCE
+                                        </th>
                                     </tr>
-                                </t>
-                            </tbody>
-                        </table>
-                    </div>
-                    <br />
-                    <div>
-                        <table
-                            style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
-                        >
-                            <thead>
-                                <tr>
-                                    <th
-                                        colspan="3"
-                                        style="text-align:center;
-                                        border: 1px solid;
-                                        font-size:18px;"
-                                    >
-                                        JCI OR SNKK TRAINING
-                                    </th>
-                                </tr>
-                                <tr>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Training
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Year
-                                    </th>
-                                    <th style="border: 1px solid; text-align:left;">
-                                        Additional information
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <t
-                                    t-set="activities"
-                                    t-value="env['partner.position'].search([
-                                    ('partner_id', '=', partner.id),
-                                    ('category_id', 'ilike', 'jci tai snkk viralliset'),
-                                ])"
-                                />
-                                <t t-foreach="activities" t-as="activity">
                                     <tr>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.description" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.year" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.note" />
-                                        </td>
+                                        <th style="border: 1px solid; text-align:left;">
+                                            Year
+                                        </th>
+                                        <th style="border: 1px solid; text-align:left;">
+                                            Job
+                                        </th>
+                                        <th style="border: 1px solid; text-align:left;">
+                                            Branch / Area
+                                        </th>
+
+                                        <th style="border: 1px solid; text-align:left;">
+                                            Type
+                                        </th>
                                     </tr>
-                                </t>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+
+                                    <t t-foreach="activities" t-as="activity">
+                                        <tr>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.year" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.description" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.company_id" />
+                                            </td>
+
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.type_id" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
                     </div>
                     <br />
                     <div>
-                        <table
-                            style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
-                        >
-                            <thead>
-                                <tr>
-                                    <th
-                                        colspan="2"
-                                        style="text-align:center;
-                                        border: 1px solid;
-                                        font-size:18px;"
-                                    >
-                                        INSTRUCTOR IN TRAINING SESSIONS
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <t
-                                    t-set="trainer_ins"
-                                    t-value="env['partner.trainer.activity'].search([
-                                    ('partner_id', '=', partner.id),
-                                ])"
-                                />
-                                <t t-foreach="trainer_ins" t-as="trainer">
+                        <t
+                            t-set="activities"
+                            t-value="env['partner.official.training'].search([                                     ('partner_id', '=', partner.id),                                     ])"
+                        />
+                        <t t-if="activities">
+                            <table
+                                style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
+                            >
+                                <thead>
                                     <tr>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="trainer.year" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="trainer.description" />
-                                        </td>
+                                        <th
+                                            colspan="3"
+                                            style="text-align:center;                                         border: 1px solid;                                         font-size:18px;"
+                                        >
+                                            JCI OR SNKK TRAINING
+                                        </th>
                                     </tr>
-                                </t>
-                            </tbody>
-                        </table>
-                    </div>
-                    <br />
-                    <div>
-                        <table
-                            style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
-                        >
-                            <thead>
-                                <tr>
-                                    <th
-                                        colspan="2"
-                                        style="text-align:center;
-                                        border: 1px solid;
-                                        font-size:18px;"
-                                    >
-                                        OTHER ACTIVITIES
-                                    </th>
-                                </tr>
-                            </thead>
-                           <tbody>
-                                <t
-                                    t-set="other_activities"
-                                    t-value="env['pam.partner.activity'].search([
-                                    ('partner_id', '=', partner.id),
-                                    ('category_id', 'ilike', 'muu suoritus'),
-                                ])"
-                                />
-                                <t t-foreach="other_activities" t-as="activity">
                                     <tr>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.year" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="activity.description" />
-                                        </td>
+                                        <th style="border: 1px solid; text-align:left;">
+                                            Year
+                                        </th>
+                                        <th style="border: 1px solid; text-align:left;">
+                                            Training
+                                        </th>
+
+                                        <th style="border: 1px solid; text-align:left;">
+                                            Type
+                                        </th>
                                     </tr>
-                                </t>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+
+                                    <t t-foreach="activities" t-as="activity">
+                                        <tr>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.year" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.description" />
+                                            </td>
+
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.type_id" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
                     </div>
                     <br />
                     <div>
-                        <table
-                            style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
-                        >
-                            <thead>
-                                <tr>
-                                    <th
-                                        colspan="3"
-                                        style="text-align:center;
-                                        border: 1px solid;
-                                        font-size:18px;"
-                                    >
-                                        REWARDS AND ACHIEVEMENTS
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <t
-                                    t-set="awards"
-                                    t-value="env['partner.position'].search([
-                                    ('partner_id', '=', partner.id),
-                                ])"
-                                />
-                                <t t-foreach="awards" t-as="award">
+                        <t
+                            t-set="trainer_ins"
+                            t-value="env['partner.trainer.activity'].search([                                     ('partner_id', '=', partner.id),                                 ])"
+                        />
+                        <t t-if="trainer_ins">
+                            <table
+                                style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
+                            >
+                                <thead>
                                     <tr>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="award.year" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="award.description" />
-                                        </td>
+                                        <th
+                                            colspan="2"
+                                            style="text-align:center;                                         border: 1px solid;                                         font-size:18px;"
+                                        >
+                                            INSTRUCTOR IN TRAINING SESSIONS
+                                        </th>
                                     </tr>
-                                </t>
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody>
+
+                                    <t t-foreach="trainer_ins" t-as="trainer">
+                                        <tr>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="trainer.year" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="trainer.description" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
                     </div>
                     <br />
                     <div>
-                        <table
-                            style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
-                        >
-                            <thead>
-                                <tr>
-                                    <th
-                                        colspan="3"
-                                        style="text-align:center;
-                                        border: 1px solid;
-                                        font-size:18px;"
-                                    >
-                                        PROJECTS
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <t
-                                    t-set="projects"
-                                    t-value="env['partner.project'].search([
-                                    ('partner_id', '=', partner.id),
-                                ])"
-                                />
-                                <t t-foreach="projects" t-as="project">
+                        <t
+                            t-set="other_activities"
+                            t-value="env['partner.other.completions'].search([                                     ('partner_id', '=', partner.id),                                     ])"
+                        />
+                        <t t-if="other_activities">
+                            <table
+                                style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
+                            >
+                                <thead>
                                     <tr>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="project.year" />
-                                        </td>
-                                        <td style="border: 1px solid; text-align:left;">
-                                            <span t-field="project.description" />
-                                        </td>
+                                        <th
+                                            colspan="2"
+                                            style="text-align:center;                                         border: 1px solid;                                         font-size:18px;"
+                                        >
+                                            OTHER ACTIVITIES
+                                        </th>
                                     </tr>
-                                </t>
-                            </tbody>
-                        </table>
+                                </thead>
+                               <tbody>
+                                    <t
+                                        t-set="other_activities"
+                                        t-value="env['partner.other.completions'].search([                                     ('partner_id', '=', partner.id),                                     ])"
+                                    />
+                                    <t t-foreach="other_activities" t-as="activity">
+                                        <tr>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.year" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.description" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
+                    </div>
+                    <br />
+                    <div>
+                        <t
+                            t-set="awards"
+                            t-value="env['partner.award'].search([                                     ('partner_id', '=', partner.id),                                 ])"
+                        />
+                        <t t-if="awards">
+                            <table
+                                style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
+                            >
+                                <thead>
+                                    <tr>
+                                        <th
+                                            colspan="3"
+                                            style="text-align:center;                                         border: 1px solid;                                         font-size:18px;"
+                                        >
+                                            REWARDS AND ACHIEVEMENTS
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <t t-foreach="awards" t-as="award">
+                                        <tr>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="award.year" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="award.description" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
+                    </div>
+                    <br />
+                    <div>
+                        <t
+                            t-set="projects"
+                            t-value="env['partner.project'].search([                                     ('partner_id', '=', partner.id),                                 ])"
+                        />
+                        <t t-if="projects">
+                            <table
+                                style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
+                            >
+                                <thead>
+                                    <tr>
+                                        <th
+                                            colspan="3"
+                                            style="text-align:center;                                         border: 1px solid;                                         font-size:18px;"
+                                        >
+                                            PROJECTS
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <t t-foreach="projects" t-as="project">
+                                        <tr>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="project.year" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="project.description" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </t>
                     </div>
                     <br />
                     <br />
                     <div>
-                        <p>
-                            Information verified (date and signature):
-                        </p>
-                        <table style="width:100%; border-collapse:collapse;">
-                            <tr>
-                                <td style="border-bottom:1px solid #000; width:20%;" />
-                                <td style="width:5%; text-align:center;">/</td>
-                                <td style="border-bottom:1px solid #000; width:75%;" />
-                            </tr>
-                        </table>
+                        <span>Date: </span>
+                        <span t-esc="datetime.date.today().strftime('%d.%m.%Y')" />
                     </div>
                 </div>
             </t>
