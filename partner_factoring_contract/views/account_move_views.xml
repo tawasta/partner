@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="account_move_view_form" model="ir.ui.view">
+        <field name="name">account.move.view.form.factoring.contract</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//group[@name='sale_info_group']/field[@name='delivery_date']"
+                position="after"
+            >
+                <field
+                    name="factoring_contract_id"
+                    groups="account.group_account_invoice"
+                    readonly="state != 'draft'"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
