@@ -7,6 +7,7 @@ class AccountMove(models.Model):
     factoring_contract_id = fields.Many2one(
         comodel_name="factoring.contract",
         string="Factoring Contract",
+        tracking=True
     )
 
     @api.model_create_multi
