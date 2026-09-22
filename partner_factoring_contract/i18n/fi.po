@@ -1,0 +1,87 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_factoring_contract
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-22 00:00+0000\n"
+"PO-Revision-Date: 2026-09-22 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_factoring_contract
+#: model:ir.model,name:partner_factoring_contract.model_factoring_contract
+msgid "Factoring Contract"
+msgstr "Factoring-sopimus"
+
+#. module: partner_factoring_contract
+#: model:ir.actions.act_window,name:partner_factoring_contract.factoring_contract_action
+#: model:ir.ui.menu,name:partner_factoring_contract.factoring_contract_menu
+msgid "Factoring Contracts"
+msgstr "Factoring-sopimukset"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__name
+msgid "Name"
+msgstr "Nimi"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__identifier
+msgid "Identifier"
+msgstr "Tunniste"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__identifier
+msgid "Factoring agreement identifier, as agreed with the factoring company."
+msgstr "Factoring-sopimuksen tunniste, kuten factoring-yhtiön kanssa on sovittu."
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__type_code
+msgid "Type Code"
+msgstr "Tyyppikoodi"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__type_code
+msgid ""
+"Factoring type code, as required by the factoring company or "
+"e-invoicing operator."
+msgstr ""
+"Factoring-tyyppikoodi, kuten factoring-yhtiö tai verkkolaskuoperaattori "
+"vaatii."
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__bank_account_id
+msgid "Bank Account"
+msgstr "Pankkitili"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__bank_account_id
+msgid "The bank account factoring payments are collected to."
+msgstr "Pankkitili, jolle factoring-maksut kerätään."
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__company_id
+msgid "Company"
+msgstr "Yritys"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__active
+msgid "Active"
+msgstr "Aktiivinen"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_res_partner__factoring_contract_id
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_account_move__factoring_contract_id
+msgid "Factoring Contract"
+msgstr "Factoring-sopimus"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,help:partner_factoring_contract.field_res_partner__factoring_contract_id
+msgid "Default factoring contract for invoices to this partner."
+msgstr "Tämän kumppanin laskujen oletusarvoinen factoring-sopimus."
