@@ -37,6 +37,7 @@ addon | version | maintainers | summary
 [partner_reference_improved_view](partner_reference_improved_view/) | 17.0.1.0.0 |  | Show Reference in tree and form views more clearly
 [partner_senate_status](partner_senate_status/) | 17.0.1.0.0 |  | Partner senate field
 [partner_senator_number](partner_senator_number/) | 17.0.1.0.0 |  | Partner senator number field
+[partner_tags_contact_form](partner_tags_contact_form/) | 17.0.1.0.0 |  | Adds partner tags field to the contact form view
 [res_partner_additional_terms](res_partner_additional_terms/) | 17.0.1.0.0 |  | New model for storing customized clauses
 [res_partner_addresses_simple](res_partner_addresses_simple/) | 17.0.1.0.0 |  | Show company addresses and contacts in list instead of cards
 [res_partner_addresses_simple_edicode](res_partner_addresses_simple_edicode/) | 17.0.1.0.0 |  | Add edicode to simple address tree view
