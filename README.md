@@ -38,6 +38,7 @@ addon | version | maintainers | summary
 [partner_reference_improved_view](partner_reference_improved_view/) | 17.0.1.0.0 |  | Show Reference in tree and form views more clearly
 [partner_senate_status](partner_senate_status/) | 17.0.1.0.0 |  | Partner senate field
 [partner_senator_number](partner_senator_number/) | 17.0.1.0.0 |  | Partner senator number field
+[partner_tags_contact_form](partner_tags_contact_form/) | 17.0.1.0.0 |  | Adds partner tags field to the contact form view
 [res_partner_additional_terms](res_partner_additional_terms/) | 17.0.1.0.0 |  | New model for storing customized clauses
 [res_partner_addresses_simple](res_partner_addresses_simple/) | 17.0.1.0.0 |  | Show company addresses and contacts in list instead of cards
 [res_partner_addresses_simple_edicode](res_partner_addresses_simple_edicode/) | 17.0.1.0.0 |  | Add edicode to simple address tree view
@@ -59,7 +60,7 @@ addon | version | maintainers | summary
 [res_partner_number_of_votes](res_partner_number_of_votes/) | 17.0.1.0.0 |  | Adds new numeric field to contacts
 [res_partner_tree_address_info](res_partner_tree_address_info/) | 17.0.1.0.0 |  | Street, city and zip are shown in the partner tree view
 [res_partner_version_and_additional_id_number](res_partner_version_and_additional_id_number/) | 17.0.1.0.0 |  | Version number and an additional ID info of partners
-[social_security_number_management](social_security_number_management/) | 17.0.1.0.0 |  | Store SSN for partners in an encrypted format
+[social_security_number_management](social_security_number_management/) | 17.0.1.0.1 |  | Store SSN for partners in an encrypted format
 [website_partner_domain_visibility](website_partner_domain_visibility/) | 17.0.1.1.0 |  | Conditional website snippet visibility based on partner domain filters
 
 [//]: # (end addons)

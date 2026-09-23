@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2023 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2026- Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,22 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Partner: Social Security Number Management",
-    "summary": "Store SSN for partners in an encrypted format",
-    "version": "17.0.1.0.1",
-    "category": "Specific Industry Applications",
+    "name": "Partner tags to contact form",
+    "summary": "Adds partner tags field to the contact form view",
+    "version": "17.0.1.0.0",
+    "category": "Partner",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["base", "contacts"],
-    "external_dependencies": {"python": ["cryptography"]},
-    "data": [
-        "data/config_parameter.xml",
-        "security/rule.xml",
-        "security/ir.model.access.csv",
-        "views/partner.xml",
-        "wizards/decrypt_wizard_views.xml",
-    ],
+    "depends": [],
+    "data": ["views/res_partner_views.xml"],
 }
