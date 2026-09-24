@@ -606,7 +606,7 @@
         inherit_id="partner_membership_data_card.partner_card_template"
     >
         <xpath expr="//div[@class='details']" position="before">
-            <t t-if="context.get('with_photo') and partner.image_1920">
+            <t t-if="env.context.get('with_photo', False) and partner.image_1920">
                 <img
                     t-att-src="image_data_uri(partner.image_1920)"
                     style="max-width: 150px; max-height: 150px;"

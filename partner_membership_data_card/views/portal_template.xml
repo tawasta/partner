@@ -7,6 +7,9 @@
             <a href="/my/membership-card" class="btn btn-primary mt-3">
                 Download Membership Data Card
             </a>
+            <a href="/my/membership-card?photo=1" class="btn btn-primary mt-3">
+                Download Membership Data Card with Photo
+            </a>
 
         </xpath>
 
