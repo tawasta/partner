@@ -552,11 +552,17 @@
 
     </template>
 
-    <template id="partner_card_template_with_photo" inherit_id="partner_membership_data_card.partner_card_template">
+    <template
+        id="partner_card_template_with_photo"
+        inherit_id="partner_membership_data_card.partner_card_template"
+    >
         <xpath expr="//div[@class='page']" position="inside">
             <t t-if="context.get('with_photo') and partner.image_1920">
                 <xpath expr="//div[@class='member-details']" position="after">
-                    <img t-att-src="image_data_uri(partner.image_1920)" style="max-width: 150px; max-height: 150px;" />
+                    <img
+                        t-att-src="image_data_uri(partner.image_1920)"
+                        style="max-width: 150px; max-height: 150px;"
+                    />
                 </xpath>
             </t>
         </xpath>
