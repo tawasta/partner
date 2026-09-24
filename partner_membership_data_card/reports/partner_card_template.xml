@@ -182,7 +182,7 @@
                     </div>
 
                     <br />
-                    <div>
+                    <div class="details">
                         <t
                             t-set="activities"
                             t-value="env['partner.position'].search([                                     ('partner_id', '=', partner.id),                                 ])"
@@ -241,6 +241,7 @@
                                             </td>
                                         </tr>
                                     </t>
+
                                 </tbody>
                             </table>
                         </t>
@@ -317,6 +318,10 @@
                             t-set="activities"
                             t-value="env['partner.official.training'].search([                                     ('partner_id', '=', partner.id),                                     ])"
                         />
+                        <t
+                            t-set="more_activities"
+                            t-value="env['pam.partner.activity'].search([  ('partner_id', '=', partner.id), ('category_id', 'ilike', 'jci tai snkk virallinen koulutussuoritus')])"
+                        />
                         <t t-if="activities">
                             <table
                                 style="width:100%; border-collapse:collapse; font-family:Arial, sans-serif;"
@@ -369,10 +374,49 @@
                                             <td
                                                 style="border: 1px solid; text-align:left;"
                                             >
-                                                <span t-field="activity.company_id" />
+                                                <t t-if="activity.company_id">
+                                                    <span
+                                                        t-field="activity.company_id"
+                                                    />
+                                                </t>
+                                                <t t-else="">
+                                                    <span>Branch</span>
+                                                </t>
                                             </td>
                                         </tr>
                                     </t>
+                                    <t t-foreach="more_activities" t-as="activity">
+                                        <tr>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.year" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.type_id" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="activity.note" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <t t-if="activity.company_id">
+                                                    <span
+                                                        t-field="activity.company_id"
+                                                    />
+                                                </t>
+                                                <t t-else="">
+                                                    <span>Branch</span>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                    </t>
+
                                 </tbody>
                             </table>
                         </t>
@@ -513,7 +557,7 @@
                                 <thead>
                                     <tr>
                                         <th
-                                            colspan="2"
+                                            colspan="3"
                                             style="text-align:center;                                         border: 1px solid;                                         font-size:18px;"
                                         >
                                             PROJECTS
@@ -533,6 +577,11 @@
                                                 style="border: 1px solid; text-align:left;"
                                             >
                                                 <span t-field="project.name" />
+                                            </td>
+                                            <td
+                                                style="border: 1px solid; text-align:left;"
+                                            >
+                                                <span t-field="project.description" />
                                             </td>
                                         </tr>
                                     </t>
@@ -556,14 +605,12 @@
         id="partner_card_template_with_photo"
         inherit_id="partner_membership_data_card.partner_card_template"
     >
-        <xpath expr="//div[@class='page']" position="inside">
+        <xpath expr="//div[@class='details']" position="before">
             <t t-if="context.get('with_photo') and partner.image_1920">
-                <xpath expr="//div[@class='member-details']" position="after">
-                    <img
-                        t-att-src="image_data_uri(partner.image_1920)"
-                        style="max-width: 150px; max-height: 150px;"
-                    />
-                </xpath>
+                <img
+                    t-att-src="image_data_uri(partner.image_1920)"
+                    style="max-width: 150px; max-height: 150px;"
+                />
             </t>
         </xpath>
     </template>

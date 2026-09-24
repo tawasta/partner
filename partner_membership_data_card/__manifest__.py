@@ -21,7 +21,7 @@
 {
     "name": "Partner: Membership Data Card",
     "summary": "Membership data card printing for contacts",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Contacts",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",

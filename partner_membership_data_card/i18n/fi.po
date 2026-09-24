@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20250401\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-17 06:48+0000\n"
-"PO-Revision-Date: 2026-09-17 06:48+0000\n"
+"POT-Creation-Date: 2026-09-24 13:35+0000\n"
+"PO-Revision-Date: 2026-09-24 13:35+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -86,6 +86,11 @@ msgstr "<span style=\"display:inline-block; width:180px;\">Liittymisvuosi:</span
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
 msgid "<span>Active</span>"
 msgstr "<span>Jäsen</span>"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
+msgid "<span>Branch</span>"
+msgstr "<span>Kamari</span>"
 
 #. module: partner_membership_data_card
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
@@ -171,6 +176,11 @@ msgstr "Henkilötiedot"
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.res_partner_view_form
 msgid "Print data card"
 msgstr "Tulosta kantakortti"
+
+#. module: partner_membership_data_card
+#: model_terms:ir.ui.view,arch_db:partner_membership_data_card.res_partner_view_form
+msgid "Print data card with a photo"
+msgstr "Tulosta kantakortti kuvalla"
 
 #. module: partner_membership_data_card
 #: model_terms:ir.ui.view,arch_db:partner_membership_data_card.partner_card_template
