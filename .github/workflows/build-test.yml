@@ -1,12 +1,7 @@
 name: Build test
 
 on:
-  pull_request:
-    branches:
-      - "17.0*"
-  push:
-    branches:
-      - "17.0"
+  workflow_dispatch:
 
 jobs:
   run-tests:

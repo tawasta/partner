@@ -13,7 +13,9 @@ class MembershipPortal(http.Controller):
             .sudo()
             .with_context(with_photo=with_photo)
             ._render_qweb_pdf(
-                "partner_membership_data_card.partner_card_template", partner.ids
+                "partner_membership_data_card.partner_card_template",
+                partner.ids,
+                data={"with_photo": with_photo},
             )
         )
 

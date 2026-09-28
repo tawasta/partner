@@ -29,7 +29,6 @@ class ResPartner(models.Model):
 
     encrypted_social_security_number = fields.Binary(
         "Encrypted Personal Identification Number",
-        invisible=True,
         readonly=True,
     )
 

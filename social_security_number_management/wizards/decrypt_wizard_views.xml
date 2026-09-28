@@ -7,7 +7,7 @@
             <form string="Decrypt Personal ID">
                 <group>
                     <field name="partner_id" invisible="1" />
-                    <field name="key" />
+                    <field name="key" password="1" />
                 </group>
                 <div>
                     <p class="text-muted">
