@@ -25,7 +25,7 @@ class MembershipPortal(http.Controller):
                 ("Content-Type", "application/pdf"),
                 (
                     "Content-Disposition",
-                    f'attachment; filename="membership_card_{partner.id}.pdf"',
+                    'attachment; filename="Kantakortti.pdf"',
                 ),
             ],
         )
