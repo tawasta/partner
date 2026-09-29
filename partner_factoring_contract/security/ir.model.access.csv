@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_factoring_contract_invoice_user,factoring.contract.invoice.user,model_factoring_contract,account.group_account_invoice,1,1,1,0
+access_factoring_contract_account_manager,factoring.contract.account.manager,model_factoring_contract,account.group_account_manager,1,1,1,1
