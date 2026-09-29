@@ -4,19 +4,78 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 19.0\n"
+"Project-Id-Version: Odoo Server 19.0-20260817\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-22 00:00+0000\n"
-"PO-Revision-Date: 2026-09-22 00:00+0000\n"
+"POT-Creation-Date: 2026-09-29 08:57+0000\n"
+"PO-Revision-Date: 2026-09-29 12:03+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.9\n"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__active
+msgid "Active"
+msgstr "Aktiivinen"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__bank_account_id
+msgid "Bank Account"
+msgstr "Pankkitili"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__company_id
+msgid "Company"
+msgstr "Yritys"
+
+#. module: partner_factoring_contract
+#: model:ir.model,name:partner_factoring_contract.model_res_partner
+msgid "Contact"
+msgstr "Yhteystiedot"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,help:partner_factoring_contract.field_res_partner__factoring_contract_id
+#: model:ir.model.fields,help:partner_factoring_contract.field_res_users__factoring_contract_id
+msgid "Default factoring contract for invoices to this partner."
+msgstr "Tämän kumppanin laskujen oletusarvoinen factoring-sopimus."
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_account_move__display_name
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__display_name
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__endorsement_clause_code
+msgid "Endorsement Clause Code"
+msgstr "Endorsement clause code"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__endorsement_clause_code
+msgid "Endorsement clause code, if required by the factoring company."
+msgstr "Endorsement clause code, jos factoring-yhtiö sitä vaatii."
 
 #. module: partner_factoring_contract
 #: model:ir.model,name:partner_factoring_contract.model_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_account_bank_statement_line__factoring_contract_id
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_account_move__factoring_contract_id
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_res_partner__factoring_contract_id
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_res_users__factoring_contract_id
 msgid "Factoring Contract"
 msgstr "Factoring-sopimus"
 
@@ -27,9 +86,41 @@ msgid "Factoring Contracts"
 msgstr "Factoring-sopimukset"
 
 #. module: partner_factoring_contract
-#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__name
-msgid "Name"
-msgstr "Nimi"
+#: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__identifier
+msgid "Factoring agreement identifier, as agreed with the factoring company."
+msgstr ""
+"Factoring-sopimuksen tunniste, joka on sovittu factoring-yhtiön kanssa."
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__party_name
+msgid "Factoring party name, if not static"
+msgstr "Factoring-osapuolen nimi, ellei ole staattinen"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__type_code
+msgid ""
+"Factoring type code, as required by the factoring company or e-invoicing "
+"operator."
+msgstr "Factoring-tyyppikoodi, jos factoring-yhtiö sitä vaatii."
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__free_text
+msgid "Free Text"
+msgstr "Vapaa teksti"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__free_text
+msgid "Free text field for additional information to relay for the customer"
+msgstr ""
+"Vapaamuotoinen tekstikenttä, johon voi kirjoittaa asiakkaalle välitettävät "
+"lisätiedot"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_account_move__id
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__id
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_res_partner__id
+msgid "ID"
+msgstr "Tunnus"
 
 #. module: partner_factoring_contract
 #: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__identifier
@@ -37,28 +128,39 @@ msgid "Identifier"
 msgstr "Tunniste"
 
 #. module: partner_factoring_contract
-#: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__identifier
-msgid "Factoring agreement identifier, as agreed with the factoring company."
-msgstr "Factoring-sopimuksen tunniste, kuten factoring-yhtiön kanssa on sovittu."
+#: model:ir.model,name:partner_factoring_contract.model_account_move
+msgid "Journal Entry"
+msgstr "Päiväkirjan kirjaus"
 
 #. module: partner_factoring_contract
-#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__type_code
-msgid "Type Code"
-msgstr "Tyyppikoodi"
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__write_uid
+msgid "Last Updated by"
+msgstr "Viimeisin muokkaaja"
 
 #. module: partner_factoring_contract
-#: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__type_code
-msgid ""
-"Factoring type code, as required by the factoring company or "
-"e-invoicing operator."
-msgstr ""
-"Factoring-tyyppikoodi, kuten factoring-yhtiö tai verkkolaskuoperaattori "
-"vaatii."
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
 
 #. module: partner_factoring_contract
-#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__bank_account_id
-msgid "Bank Account"
-msgstr "Pankkitili"
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__name
+msgid "Name"
+msgstr "Nimi"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__party_identifier
+msgid "Party Identifier"
+msgstr "Party Identifier"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__party_name
+msgid "Party Name"
+msgstr "Party Name"
+
+#. module: partner_factoring_contract
+#: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__party_identifier
+msgid "Party identifier, if required by the factoring company."
+msgstr "Osapuolen tunniste, jos factoring-yhtiö sitä vaatii."
 
 #. module: partner_factoring_contract
 #: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__bank_account_id
@@ -66,22 +168,16 @@ msgid "The bank account factoring payments are collected to."
 msgstr "Pankkitili, jolle factoring-maksut kerätään."
 
 #. module: partner_factoring_contract
-#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__company_id
-msgid "Company"
-msgstr "Yritys"
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__transmission_list_identifier
+msgid "Transmission List Identifier"
+msgstr "Transmission List Identifier"
 
 #. module: partner_factoring_contract
-#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__active
-msgid "Active"
-msgstr "Aktiivinen"
+#: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__transmission_list_identifier
+msgid "Transmission list identifier, if required by the factoring company."
+msgstr "Transmission list identifier, jos factoring-yhtiö sitä vaatii."
 
 #. module: partner_factoring_contract
-#: model:ir.model.fields,field_description:partner_factoring_contract.field_res_partner__factoring_contract_id
-#: model:ir.model.fields,field_description:partner_factoring_contract.field_account_move__factoring_contract_id
-msgid "Factoring Contract"
-msgstr "Factoring-sopimus"
-
-#. module: partner_factoring_contract
-#: model:ir.model.fields,help:partner_factoring_contract.field_res_partner__factoring_contract_id
-msgid "Default factoring contract for invoices to this partner."
-msgstr "Tämän kumppanin laskujen oletusarvoinen factoring-sopimus."
+#: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__type_code
+msgid "Type Code"
+msgstr "Tyyppikoodi"

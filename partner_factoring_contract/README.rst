@@ -3,7 +3,7 @@
    :alt: License: AGPL-3
 
 ==========================
-Partner Factoring Contract
+Invoice Factoring Contract
 ==========================
 
 A generic, e-invoicing-operator-independent factoring contract on

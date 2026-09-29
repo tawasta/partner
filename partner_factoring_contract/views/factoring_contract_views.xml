@@ -10,6 +10,11 @@
             <field name="name" />
             <field name="identifier" />
             <field name="type_code" />
+            <field name="transmission_list_identifier" />
+            <field name="endorsement_clause_code" />
+            <field name="party_identifier" />
+            <field name="party_name" />
+            <field name="free_text" />
             <field name="bank_account_id" />
             <field name="company_id" groups="base.group_multi_company" />
             <field name="active" invisible="1" />
@@ -42,7 +47,7 @@
     id="factoring_contract_menu"
     name="Factoring Contracts"
     action="factoring_contract_action"
-    parent="account.menu_finance_configuration"
+    parent="account.account_invoicing_menu"
     groups="account.group_account_manager"
     sequence="60"
   />
