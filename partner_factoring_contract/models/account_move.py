@@ -18,9 +18,20 @@ class AccountMove(models.Model):
                 and move.partner_id.factoring_contract_id
             ):
                 move.factoring_contract_id = move.partner_id.factoring_contract_id
+                move._onchange_factoring_contract_id()
         return moves
 
     @api.onchange("partner_id")
     def _onchange_partner_id_factoring_contract(self):
         for move in self:
             move.factoring_contract_id = move.partner_id.factoring_contract_id
+
+    @api.onchange("factoring_contract_id")
+    def _onchange_factoring_contract_id(self):
+        for move in self:
+            contract = move.factoring_contract_id
+            if contract.bank_account_id:
+                move.partner_bank_id = contract.bank_account_id
+
+            if contract.free_text and not move.narration:
+                move.narration = contract.free_text
