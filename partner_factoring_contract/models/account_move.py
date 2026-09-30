@@ -35,3 +35,17 @@ class AccountMove(models.Model):
 
             if contract.free_text and not move.narration:
                 move.narration = contract.free_text
+
+    def _get_alerts(self):
+        alerts = super()._get_alerts()
+
+        if self.state == "draft" and self.factoring_contract_id:
+            alerts["account_factoring_contract"] = {
+                "level": "info",
+                "message": self.env._(
+                    "The invoice will be sent to %s for factoring",
+                    self.factoring_contract_id.name,
+                ),
+            }
+
+        return alerts
