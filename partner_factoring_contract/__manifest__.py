@@ -21,7 +21,7 @@
 {
     "name": "Invoice Factoring Contract",
     "summary": "Generic factoring contract on partners and invoices",
-    "version": "19.0.1.1.0",
+    "version": "19.0.1.1.1",
     "category": "Invoicing",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",

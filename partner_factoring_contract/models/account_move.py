@@ -39,7 +39,7 @@ class AccountMove(models.Model):
     def _get_alerts(self):
         alerts = super()._get_alerts()
 
-        if self.state == "draft" and self.factoring_contract_id:
+        if self.factoring_contract_id and not self.is_move_sent:
             alerts["account_factoring_contract"] = {
                 "level": "info",
                 "message": self.env._(
