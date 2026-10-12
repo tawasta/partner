@@ -11,6 +11,12 @@ class FactoringContract(models.Model):
         required=True,
         help="Factoring agreement identifier, as agreed with the factoring company.",
     )
+    identifier_in_payment_reference = fields.Boolean(
+        string="Identifier in Payment Reference",
+        help="Indicates whether the factoring agreement identifier "
+        "should be prefixed to the payment reference.",
+    )
+
     type_code = fields.Char(
         help="Factoring type code, as required by the factoring company or "
         "e-invoicing operator.",
