@@ -49,14 +49,3 @@ class AccountMove(models.Model):
             }
 
         return alerts
-
-    def _get_invoice_computed_reference(self):
-        reference = super()._get_invoice_computed_reference()
-        if (
-            self.factoring_contract_id
-            and self.factoring_contract_id.identifier_in_payment_reference
-            and self.factoring_contract_id.identifier
-        ):
-            identifier = self.factoring_contract_id.identifier
-            reference = f"{identifier.ljust(6, '0')}{reference}"
-        return reference
