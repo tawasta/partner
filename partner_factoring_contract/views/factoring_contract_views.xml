@@ -9,6 +9,7 @@
           <group>
             <field name="name" />
             <field name="identifier" />
+            <field name="identifier_in_payment_reference" invisible="not identifier" />
             <field name="type_code" />
             <field name="transmission_list_identifier" />
             <field name="endorsement_clause_code" />
