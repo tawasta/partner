@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+  <record id="res_partner_alias_view_tree" model="ir.ui.view">
+    <field name="name">res.partner.alias.list</field>
+    <field name="model">res.partner.alias</field>
+    <field name="arch" type="xml">
+      <list string="Contact Aliases">
+        <field name="name" />
+        <field name="partner_id" />
+        <field name="active" />
+      </list>
+    </field>
+  </record>
+
+  <record id="res_partner_alias_view_form" model="ir.ui.view">
+    <field name="name">res.partner.alias.form</field>
+    <field name="model">res.partner.alias</field>
+    <field name="arch" type="xml">
+      <form string="Contact Alias">
+        <sheet>
+          <group>
+            <field name="name" />
+            <field name="partner_id" />
+            <field name="active" />
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="res_partner_alias_action" model="ir.actions.act_window">
+    <field name="name">Contact Aliases</field>
+    <field name="res_model">res.partner.alias</field>
+    <field name="view_mode">list,form</field>
+    <field name="context">{'search_default_active': 1}</field>
+  </record>
+
+  <menuitem
+    id="res_partner_alias_menu"
+    name="Contact Aliases"
+    parent="contacts.menu_contacts"
+    action="res_partner_alias_action"
+    sequence="60"
+  />
+</odoo>
