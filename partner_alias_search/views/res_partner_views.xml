@@ -10,7 +10,7 @@
           <field name="alias_ids" context="{'default_partner_id': id}">
             <list editable="bottom">
               <field name="name" />
-              <field name="active" />
+              <field name="active" widget="boolean_toggle" />
             </list>
           </field>
         </page>

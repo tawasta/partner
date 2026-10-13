@@ -21,7 +21,7 @@
 {
     "name": "Contact Alias Search",
     "summary": "Alternative names for contacts alias matching",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "category": "CRM",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
