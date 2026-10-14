@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 19.0-20260817\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-30 13:33+0000\n"
-"PO-Revision-Date: 2026-09-30 16:34+0300\n"
+"POT-Creation-Date: 2026-10-14 13:44+0000\n"
+"PO-Revision-Date: 2026-10-14 16:44+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.9\n"
+"X-Generator: Poedit 3.10\n"
 
 #. module: partner_factoring_contract
 #: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__active
@@ -89,7 +89,7 @@ msgstr "Factoring-sopimukset"
 #: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__identifier
 msgid "Factoring agreement identifier, as agreed with the factoring company."
 msgstr ""
-"Factoring-sopimuksen tunniste, joka on sovittu factoring-yhtiön kanssa."
+"Factoring-sopimuksen tunniste, kuten factoring-yhtiön kanssa on sovittu."
 
 #. module: partner_factoring_contract
 #: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__party_name
@@ -102,7 +102,8 @@ msgid ""
 "Factoring type code, as required by the factoring company or e-invoicing "
 "operator."
 msgstr ""
-"Factoring-tyyppikoodi, jos factoring-yhtiö sitä vaatii."
+"Factoring-tyyppikoodi, kuten factoring-yhtiö tai verkkolaskuoperaattori "
+"vaatii."
 
 #. module: partner_factoring_contract
 #: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__free_text
@@ -156,7 +157,7 @@ msgstr "Party Identifier"
 #. module: partner_factoring_contract
 #: model:ir.model.fields,field_description:partner_factoring_contract.field_factoring_contract__party_name
 msgid "Party Name"
-msgstr "Party Name"
+msgstr "Osapuolen nimi"
 
 #. module: partner_factoring_contract
 #: model:ir.model.fields,help:partner_factoring_contract.field_factoring_contract__party_identifier

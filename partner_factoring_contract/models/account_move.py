@@ -21,6 +21,18 @@ class AccountMove(models.Model):
                 move._onchange_factoring_contract_id()
         return moves
 
+    def write(self, vals):
+        for move in self:
+            if "factoring_contract_id" in vals and not vals["factoring_contract_id"]:
+                # Remove the factoring contract free text from the narration
+                # We are doing this in write instead of onchange, because
+                # we need to access the old factoring contract free text
+                old_contract_id = move.factoring_contract_id
+                move.narration = move.narration.replace(old_contract_id.free_text, "")
+        res = super().write(vals)
+
+        return res
+
     @api.onchange("partner_id")
     def _onchange_partner_id_factoring_contract(self):
         for move in self:
@@ -30,11 +42,18 @@ class AccountMove(models.Model):
     def _onchange_factoring_contract_id(self):
         for move in self:
             contract = move.factoring_contract_id
-            if contract.bank_account_id:
-                move.partner_bank_id = contract.bank_account_id
+            if contract:
+                # Change bank account
+                if contract.bank_account_id:
+                    move.partner_bank_id = contract.bank_account_id
 
-            if contract.free_text and not move.narration:
-                move.narration = contract.free_text
+                # Add free text to narration if not already present
+                free_text = contract.free_text
+                if free_text and free_text not in move.narration:
+                    move.narration = f"{move.narration}\n{free_text}"
+            else:
+                # Set the default bank account
+                move._compute_partner_bank_id()
 
     def _get_alerts(self):
         alerts = super()._get_alerts()
