@@ -1,0 +1,18 @@
+<odoo>
+
+    <template id="portal_home_membership_card" inherit_id="portal.portal_my_home">
+
+        <xpath expr="//div[contains(@class, 'o_portal_docs')]" position="inside">
+
+            <a href="/my/membership-card" class="btn btn-primary mt-3">
+                Download Membership Data Card
+            </a>
+            <a href="/my/membership-card?photo=1" class="btn btn-primary mt-3">
+                Download Membership Data Card with Photo
+            </a>
+
+        </xpath>
+
+    </template>
+
+</odoo>

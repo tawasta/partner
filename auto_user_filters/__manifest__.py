@@ -31,6 +31,7 @@
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["base", "base_user_role"],
     "data": [
+        "security/groups.xml",
         "security/ir.model.access.csv",
         "views/role_irfilter_rule_views.xml",
     ],
