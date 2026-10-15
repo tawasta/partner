@@ -40,7 +40,12 @@ class RoleIrFilterRule(models.Model):
         ),
     )
 
-    domain_template = fields.Text(
+    model_name = fields.Char(
+        related="model_id.model",
+        help="Technical model name used by the domain editor.",
+    )
+
+    domain_template = fields.Char(
         required=True,
         default='[("subscription_ids.company_id", "in", user_company_ids)]',
         help=(

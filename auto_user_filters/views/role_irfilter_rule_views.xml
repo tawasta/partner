@@ -64,7 +64,13 @@
                     </group>
 
                     <group string="Domain Template">
-                        <field name="domain_template" />
+                        <field name="model_name" invisible="1" />
+                        <field
+                            name="domain_template"
+                            widget="domain"
+                            options="{'model': 'model_name', 'allow_expressions': true}"
+                            context="{'user_company_ids': []}"
+                        />
                     </group>
 
                     <group string="Help">
