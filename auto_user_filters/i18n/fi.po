@@ -1,0 +1,155 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* auto_user_filters
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-15 00:00+0000\n"
+"PO-Revision-Date: 2026-10-15 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,field_description:auto_user_filters.field_role_irfilter_rule__action_id
+msgid "Action"
+msgstr "Toiminto"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,field_description:auto_user_filters.field_role_irfilter_rule__active
+msgid "Active"
+msgstr "Aktiivinen"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,field_description:auto_user_filters.field_ir_filters__auto_rule_id
+msgid "Auto rule"
+msgstr "Automaattinen sääntö"
+
+#. module: auto_user_filters
+#: model:ir.model,name:auto_user_filters.model_role_irfilter_rule
+msgid "Auto ir.filters rule per user role"
+msgstr "Automaattinen ir.filters-sääntö käyttäjäroolia kohti"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,help:auto_user_filters.field_role_irfilter_rule__domain_template
+msgid ""
+"Python domain template. Available variables:\n"
+"- user_company_ids: list[int]\n"
+"\n"
+"Example:\n"
+"[('subscription_ids.company_id', 'in', user_company_ids)]"
+msgstr ""
+"Python-domain-pohja. Käytettävissä olevat muuttujat:\n"
+"- user_company_ids: list[int]\n"
+"\n"
+"Esimerkki:\n"
+"[('subscription_ids.company_id', 'in', user_company_ids)]"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,help:auto_user_filters.field_role_irfilter_rule__action_id
+msgid ""
+"Optional. If set, the filter applies only in this action context. If empty, "
+"it is global for the model."
+msgstr ""
+"Valinnainen. Jos asetettu, suodatin koskee vain tätä toimintoa. Jos tyhjä, "
+"suodatin on yleinen mallille."
+
+#. module: auto_user_filters
+#: model:ir.model.fields,help:auto_user_filters.field_ir_filters__auto_rule_id
+msgid "If set, this filter is managed automatically by Role Auto IR Filters."
+msgstr ""
+"Jos asetettu, tätä suodatinta hallitsee automaattisesti Role Auto IR "
+"Filters -moduuli."
+
+#. module: auto_user_filters
+#: model:ir.model.fields,help:auto_user_filters.field_role_irfilter_rule__only_leaf_companies
+msgid ""
+"If enabled, uses only companies that are not parents (no child_ids). "
+"Example: AAA (parent) + BBB (child) -> only BBB used."
+msgstr ""
+"Jos käytössä, käytetään vain yrityksiä, jotka eivät ole emoyrityksiä (ei "
+"alayrityksiä). Esimerkki: AAA (emo) + BBB (ala) -> käytetään vain BBB:tä."
+
+#. module: auto_user_filters
+#: model:ir.model.fields,field_description:auto_user_filters.field_role_irfilter_rule__domain_template
+#: model_terms:ir.ui.view,arch_db:auto_user_filters.view_role_irfilter_rule_form
+msgid "Domain Template"
+msgstr "Domain-pohja"
+
+#. module: auto_user_filters
+#: model_terms:ir.ui.view,arch_db:auto_user_filters.view_role_irfilter_rule_form
+msgid "Filter"
+msgstr "Suodatin"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,field_description:auto_user_filters.field_role_irfilter_rule__filter_name
+msgid "Filter Name"
+msgstr "Suotimen nimi"
+
+#. module: auto_user_filters
+#: model_terms:ir.ui.view,arch_db:auto_user_filters.view_role_irfilter_rule_form
+msgid "Help"
+msgstr "Apua"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,field_description:auto_user_filters.field_role_irfilter_rule__is_default
+msgid "Is Default"
+msgstr "Oletus"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,field_description:auto_user_filters.field_role_irfilter_rule__model_id
+msgid "Model"
+msgstr "Malli"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,field_description:auto_user_filters.field_role_irfilter_rule__model_name
+msgid "Model Name"
+msgstr "Mallin nimi"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,help:auto_user_filters.field_role_irfilter_rule__model_name
+msgid "Technical model name used by the domain editor."
+msgstr "Domain-editorin käyttämä mallin tekninen nimi."
+
+#. module: auto_user_filters
+#: model:ir.model.fields,field_description:auto_user_filters.field_role_irfilter_rule__name
+msgid "Name"
+msgstr "Nimi"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,field_description:auto_user_filters.field_role_irfilter_rule__only_leaf_companies
+msgid "Only Leaf Companies"
+msgstr "Vain alimman tason yritykset"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,field_description:auto_user_filters.field_role_irfilter_rule__role_id
+msgid "Role"
+msgstr "Rooli"
+
+#. module: auto_user_filters
+#: model:ir.actions.act_window,name:auto_user_filters.action_role_irfilter_rule
+#: model:ir.ui.menu,name:auto_user_filters.menu_role_auto_irfilters_root
+msgid "Role Auto Filters"
+msgstr "Roolien automaattiset suodattimet"
+
+#. module: auto_user_filters
+#: model:ir.ui.menu,name:auto_user_filters.menu_role_irfilter_rule
+msgid "Rules"
+msgstr "Säännöt"
+
+#. module: auto_user_filters
+#: model:ir.model.fields,field_description:auto_user_filters.field_role_irfilter_rule__sequence
+msgid "Sequence"
+msgstr "Järjestys"
+
+#. module: auto_user_filters
+#: model_terms:ir.ui.view,arch_db:auto_user_filters.view_role_irfilter_rule_form
+msgid "Use variable: <code>user_company_ids</code> (list of company IDs)."
+msgstr ""
+"Käytä muuttujaa: <code>user_company_ids</code> (luettelo yritysten "
+"tunnuksista)."
