@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_role_irfilter_rule_system,role.irfilter.rule system,model_role_irfilter_rule,base.group_system,1,1,1,1
+access_role_irfilter_rule_manager,role.irfilter.rule manager,model_role_irfilter_rule,group_role_auto_irfilter_manager,1,1,1,1
