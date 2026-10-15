@@ -49,8 +49,9 @@ class AccountMove(models.Model):
 
                 # Add free text to narration if not already present
                 free_text = contract.free_text
-                if free_text and free_text not in move.narration:
-                    move.narration = f"{move.narration}\n{free_text}"
+                narration = move.narration or ""
+                if not narration or (free_text and free_text not in narration):
+                    move.narration = f"{narration}\n{free_text}"
             else:
                 # Set the default bank account
                 move._compute_partner_bank_id()
