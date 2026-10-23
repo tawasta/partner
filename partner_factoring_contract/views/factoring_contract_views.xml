@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="factoring_contract_view_form" model="ir.ui.view">
+        <field name="name">factoring.contract.view.form</field>
+        <field name="model">factoring.contract</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" />
+                        <field name="identifier" />
+                        <field name="type_code" />
+                        <field name="bank_account_id" />
+                        <field name="company_id" groups="base.group_multi_company" />
+                        <field name="active" invisible="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="factoring_contract_view_tree" model="ir.ui.view">
+        <field name="name">factoring.contract.view.tree</field>
+        <field name="model">factoring.contract</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="identifier" />
+                <field name="type_code" />
+                <field name="bank_account_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="factoring_contract_action" model="ir.actions.act_window">
+        <field name="name">Factoring Contracts</field>
+        <field name="res_model">factoring.contract</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="factoring_contract_menu"
+        name="Factoring Contracts"
+        action="factoring_contract_action"
+        parent="account.menu_finance_configuration"
+        groups="account.group_account_manager"
+        sequence="60"
+    />
+</odoo>
