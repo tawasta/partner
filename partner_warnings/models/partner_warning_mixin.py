@@ -21,10 +21,8 @@ class PartnerWarningMixin(models.AbstractModel):
     _name = "partner.warning.mixin"
     _description = "Partner Warning Mixin"
 
-    def __init__(self, *args, **kwargs):
-        _warning_message_field = None
-        _warning_level_field = None
-        super().__init__(*args, **kwargs)
+    _warning_message_field = None
+    _warning_level_field = None
 
     @api.onchange("partner_id")
     def _onchange_partner_id_popup_warning(self):

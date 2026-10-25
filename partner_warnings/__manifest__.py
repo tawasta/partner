@@ -21,7 +21,7 @@
 {
     "name": "Partner Warnings",
     "summary": "Generic popup and blocking warnings from the partner of a document",
-    "version": "19.0.1.0.1",
+    "version": "19.0.1.0.2",
     "category": "Contacts",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
