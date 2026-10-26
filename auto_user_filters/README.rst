@@ -41,6 +41,10 @@ The domain template can use the variable::
 
 which contains the applicable company IDs for the user.
 
+The domain template is edited with the standard domain editor. The code editor
+of the domain editor, where the ``user_company_ids`` variable can be written,
+is available in debug mode.
+
 Usage
 =====
 Assign or modify user roles normally using the user role functionality.
@@ -67,6 +71,7 @@ Contributors
 ------------
 
 * Valtteri Lattu <valtteri.lattu@tawasta.fi>
+* Valtteri Lattu <valtteri.lattu@futural.fi>
 
 Maintainer
 ----------

@@ -21,7 +21,7 @@
 {
     "name": "Role Auto IR Filters",
     "summary": "Role Auto IR Filters",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "Futural EDU",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
@@ -31,6 +31,7 @@
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["base", "base_user_role"],
     "data": [
+        "security/groups.xml",
         "security/ir.model.access.csv",
         "views/role_irfilter_rule_views.xml",
     ],
