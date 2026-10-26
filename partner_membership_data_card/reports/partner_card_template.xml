@@ -4,21 +4,24 @@
         <t t-call="web.html_container">
             <meta charset="utf-8" />
             <t t-foreach="docs" t-as="partner">
-                <div
-                    class="page"
-                    style="position: relative;                     min-height: 1120px;                     font-family: Times New Roman, Arial, Helvetica, sans-serif;                     color: #111111;                     margin-left: 30px;"
-                >
+                <div class="header">
                     <t
                         t-set="company"
                         t-value="env['res.company'].search([('name', 'ilike', 'suomen nuorkauppakamarit ry')], limit=1)"
                     />
-
                     <img
                         t-if="company.logo"
                         t-att-src="image_data_uri(company.logo)"
-                        style="max-height: 80px; max-width: 200px; margin: 0 auto 50px auto; display: block;"
+                        style="max-height: 80px; max-width: 200px; float: right;"
                     />
-                    <h2>Membership data certificate</h2>
+                </div>
+                <div
+                    class="page"
+                    style="position: relative;                     min-height: 1120px;                     font-family: Times New Roman, Arial, Helvetica, sans-serif;                     color: #111111;                     margin-left: 30px;"
+                >
+
+
+                    <h2 style="clear: both;">Membership data certificate</h2>
                     <br />
                     <br />
                     <h3>Branch info</h3>
@@ -43,143 +46,162 @@
                         margin: 0 0 6px 0;
                     }
                     </style>
-                    <div class="member-details">
-                        <p>
-                            <span
-                                style="display:inline-block; width:180px;"
-                            >Membership status:</span>
-                            <t
-                                t-set="active_sub"
-                                t-value="env['sale.subscription'].with_context(lang='en_US').search_count([                                 ('partner_id', '=', partner.id),                                 ('stage_id.name', '=', 'In progress')                             ])"
-                            />
-                            <t t-if="active_sub">
-                                <span>Active</span>
-                            </t>
-                            <t t-else="">
-                                <span>Inactive</span>
-                            </t>
-                        </p>
-                        <p>
-                            <span
-                                style="display:inline-block; width:180px;"
-                            >Membership ID:</span>
-                            <span t-field="partner.ref" />
-                        </p>
-                        <t t-if="partner.senator_number">
-                            <p>
-                                <span
-                                    style="display:inline-block; width:180px;"
-                                >Senator number:</span>
-                                <span>
-                                    <span t-field="partner.senator_number" />
-                                </span>
-                            </p>
-                        </t>
-                        <p>
-                            <span
-                                style="display:inline-block; width:180px;"
-                            >Name:</span>
-                            <span>
-                                <span t-field="partner.firstname" /> <span
-                                    t-field="partner.lastname"
-                                />
-                            </span>
-                        </p>
-                        <p>
-                            <span
-                                style="display:inline-block; width:180px;"
-                            >Year joined:</span>
-                            <span>
-                                <t
-                                    t-set="subscription"
-                                    t-value="env['sale.subscription'].search([                                     ('partner_id', '=', partner.id),                                     ('company_id.name', 'ilike', 'nuorkauppakamari')                                 ], limit=1)"
-                                />
-                                <t
-                                    t-if="subscription and subscription.sale_subscription_line_ids"
-                                >
-                                    <t
-                                        t-set="start"
-                                        t-value="subscription.sale_subscription_line_ids[:1].date_start"
-                                    />
-                                    <span t-esc="start.strftime('%Y')" />
-                                </t>
-                            </span>
-                        </p>
-                        <p>
-                            <span
-                                style="display:inline-block; width:180px;"
-                            >Address:</span>
-                            <span>
-                                <span t-field="partner.street" /> <span
-                                    t-field="partner.zip"
-                                />
-                            </span>
-                        </p>
-                        <p>
-                            <span
-                                style="display:inline-block; width:180px;"
-                            >Birth date:</span>
-                            <span t-field="partner.birthdate_date" />
-                        </p>
-                        <!-- <p>
-                            <span
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr>
+                            <td style="width: 60%; vertical-align: top;">
+                                <div class="member-details">
+                                    <p>
+                                        <span
+                                            style="display:inline-block; width:180px;"
+                                        >Membership status:</span>
+                                        <t
+                                            t-set="active_sub"
+                                            t-value="env['sale.subscription'].with_context(lang='en_US').search_count([                                 ('partner_id', '=', partner.id),                                 ('stage_id.name', '=', 'In progress')                             ])"
+                                        />
+                                        <t t-if="active_sub">
+                                            <span>Active</span>
+                                        </t>
+                                        <t t-else="">
+                                            <span>Inactive</span>
+                                        </t>
+                                    </p>
+                                    <p>
+                                        <span
+                                            style="display:inline-block; width:180px;"
+                                        >Membership ID:</span>
+                                        <span t-field="partner.ref" />
+                                    </p>
+                                    <t t-if="partner.senator_number">
+                                        <p>
+                                            <span
+                                                style="display:inline-block; width:180px;"
+                                            >Senator number:</span>
+                                            <span>
+                                                <span
+                                                    t-field="partner.senator_number"
+                                                />
+                                            </span>
+                                        </p>
+                                    </t>
+                                    <p>
+                                        <span
+                                            style="display:inline-block; width:180px;"
+                                        >Name:</span>
+                                        <span>
+                                            <span t-field="partner.firstname" /> <span
+                                                t-field="partner.lastname"
+                                            />
+                                        </span>
+                                    </p>
+                                    <p>
+                                        <span
+                                            style="display:inline-block; width:180px;"
+                                        >Year joined:</span>
+                                        <span>
+                                            <t
+                                                t-set="subscription"
+                                                t-value="env['sale.subscription'].search([                                     ('partner_id', '=', partner.id),                                     ('company_id.name', 'ilike', 'nuorkauppakamari')                                 ], limit=1)"
+                                            />
+                                            <t
+                                                t-if="subscription and subscription.sale_subscription_line_ids"
+                                            >
+                                                <t
+                                                    t-set="start"
+                                                    t-value="subscription.sale_subscription_line_ids[:1].date_start"
+                                                />
+                                                <span t-esc="start.strftime('%Y')" />
+                                            </t>
+                                        </span>
+                                    </p>
+                                    <div>
+                                        <span
+                                            style="display: inline-block; width: 180px; vertical-align: top;"
+                                        >
+                                            Address:
+                                        </span>
+                                        <span
+                                            style="display: inline-block; vertical-align: top;"
+                                        >
+                                          <span t-field="partner.street" />
+                                          <br />
+                                          <span t-field="partner.zip" />
+                                          <span t-field="partner.city" />
+                                        </span>
+                                    </div>
+
+                                    <p>
+                                        <span
+                                            style="display:inline-block; width:180px;"
+                                        >Birth date:</span>
+                                        <span t-field="partner.birthdate_date" />
+                                    </p>
+                                    <!-- <p>
+                                        <span
                                 style="display:inline-block; width:180px;"
                             >Birth place:</span>
-                            <span t-field="partner.birthplace" />
-                        </p> -->
-                        <p>
-                            <span
-                                style="display:inline-block; width:180px;"
-                            >Email:</span>
-                            <span t-field="partner.email" />
-                        </p>
-                        <p>
-                            <span
-                                style="display:inline-block; width:180px;"
-                            >Education:</span>
-                            <span t-field="partner.education_level_id.name" />
-                        </p>
-                        <p>
-                            <span
-                                style="display:inline-block; width:180px;"
-                            >Mobile phone:</span>
-                            <span t-field="partner.mobile" />
-                        </p>
-                        <p>
-                            <span
-                                style="display:inline-block; width:180px;"
-                            >Company:</span>
-                            <span t-field="partner.company_id.name" />
-                        </p>
-                        <p>
-                            <span
-                                style="display:inline-block; width:180px;"
-                            >Job position:</span>
-                            <span t-field="partner.function" />
-                        </p>
-                        <!-- <p>
-                            <span
+                                        <span t-field="partner.birthplace" />
+                                    </p> -->
+                                    <p>
+                                        <span
+                                            style="display:inline-block; width:180px;"
+                                        >Email:</span>
+                                        <span t-field="partner.email" />
+                                    </p>
+                                    <p>
+                                        <span
+                                            style="display:inline-block; width:180px;"
+                                        >Education:</span>
+                                        <span
+                                            t-field="partner.education_level_id.name"
+                                        />
+                                    </p>
+                                    <p>
+                                        <span
+                                            style="display:inline-block; width:180px;"
+                                        >Mobile phone:</span>
+                                        <span t-field="partner.mobile" />
+                                    </p>
+                                    <p>
+                                        <span
+                                            style="display:inline-block; width:180px;"
+                                        >Company:</span>
+                                        <span t-field="partner.company_id.name" />
+                                    </p>
+                                    <p>
+                                        <span
+                                            style="display:inline-block; width:180px;"
+                                        >Job position:</span>
+                                        <span t-field="partner.function" />
+                                    </p>
+                                    <!-- <p>
+                                        <span
                                 style="display:inline-block; width:180px;"
                             >Companion:</span>
-                            <span t-field="partner.companion" />
-                        </p> -->
-                        <!-- <p>
-                            <span
+                                        <span t-field="partner.companion" />
+                                    </p> -->
+                                    <!-- <p>
+                                        <span
                                 style="display:inline-block; width:180px;"
                             >Number of children:</span>
-                            <span t-field="partner.children_count" />
-                        </p> -->
-                        <p>
-                            <span
-                                style="display:inline-block; width:180px;"
-                            >Work address:</span>
-                            <span>
-                                <span t-field="partner.company_id.street" />
-                                <span t-field="partner.company_id.zip" />
-                            </span>
-                        </p>
-
-                    </div>
+                                        <span t-field="partner.children_count" />
+                                    </p> -->
+                                    <p>
+                                        <span
+                                            style="display:inline-block; width:180px;"
+                                        >Work address:</span>
+                                        <span>
+                                            <span t-field="partner.company_id.street" />
+                                            <span t-field="partner.company_id.zip" />
+                                        </span>
+                                    </p>
+                                </div>
+                            </td>
+                            <td
+                                class="member-photo"
+                                style="width: 40%; vertical-align: top;"
+                            />
+                        </tr>
+                    </table>
 
                     <br />
                     <div class="details">
@@ -605,7 +627,7 @@
         id="partner_card_template_with_photo"
         inherit_id="partner_membership_data_card.partner_card_template"
     >
-        <xpath expr="//div[@class='details']" position="before">
+        <xpath expr="//td[@class='member-photo']" position="inside">
             <t
                 t-if="(with_photo or env.context.get('with_photo', False)) and partner.image_1920"
             >
@@ -613,8 +635,6 @@
                     t-att-src="image_data_uri(partner.image_1920)"
                     style="max-width: 150px; max-height: 150px;"
                 />
-                <br />
-                <br />
             </t>
         </xpath>
     </template>
