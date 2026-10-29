@@ -32,6 +32,8 @@ Contributors
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
 * Miika Nissi <miika.nissi@tawasta.fi>
 
+* Jussi-Pekka Ruusunen <jussi-pekka.ruusunen@avoin.systems>
+
 Maintainer
 ----------
 
