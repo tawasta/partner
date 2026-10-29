@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2026 Futural Oy. (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,13 +21,13 @@
 {
     "name": "Partner Clause",
     "summary": "Partner clause records",
-    "version": "14.0.1.0.2",
+    "version": "19.0.1.0.0",
     "category": "Contacts",
     "website": "https://gitlab.com/tawasta/odoo/partner",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
-    "installable": False,
+    "installable": True,
     "depends": [
         "account",
         "contacts",

@@ -12,7 +12,6 @@ class ResPartner(models.Model):
         default=False,
         domain=[("used_for", "=", "invoice")],
     )
-
     sale_clause = fields.Many2one(
         "partner.clause",
         string="Sale clause",
