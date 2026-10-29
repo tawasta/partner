@@ -1,0 +1,29 @@
+<odoo>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="name">res.partner.form.default.partner.delivery</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <field name="child_ids" position="after">
+                <separator />
+                <group invisible="not child_ids">
+                    <field
+                        name="default_partner_delivery_id"
+                        options="{'no_open':True,'no_create': True}"
+                    />
+                </group>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_partner_tree" model="ir.ui.view">
+        <field name="name">res.partner.tree.default.partner.delivery</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree" />
+        <field name="arch" type="xml">
+            <field name="parent_id" position="after">
+                <field name="default_partner_delivery_id" optional="hide" />
+            </field>
+        </field>
+    </record>
+</odoo>
