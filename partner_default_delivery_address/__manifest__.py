@@ -14,20 +14,20 @@
 #    GNU Affero General Public License for more details.
 #
 #    You should have received a copy of the GNU Affero General Public License
-#    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
+#    along with this program. If not, see http://www.gnu.org/licenses/agpl.html.
 #
 ##############################################################################
 
 {
     "name": "Partner Default Delivery Address",
     "summary": "Allows defining a default delivery address for partners",
-    "version": "17.0.1.0.1",
+    "version": "19.0.1.0.0",
     "category": "Sales",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
-    "installable": False,
+    "installable": True,
     "depends": ["base"],
     "data": ["views/partner.xml"],
 }
