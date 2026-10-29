@@ -33,6 +33,8 @@ Contributors
 * Miika Nissi <miika.nissi@futural.fi>
 * Timo Talvitie <timo.talvitie@futural.fi>
 
+* Jussi-Pekka Ruusunen <jussi-pekka.ruusunen@avoin.systems>
+
 Maintainer
 ----------
 
