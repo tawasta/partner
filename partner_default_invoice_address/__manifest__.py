@@ -21,13 +21,13 @@
 {
     "name": "Partner Default Invoice Address",
     "summary": "Allows defining a default invoice address for partners",
-    "version": "17.0.1.0.1",
+    "version": "19.0.1.0.0",
     "category": "Sales",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
-    "installable": False,
+    "installable": True,
     "depends": ["base"],
     "data": ["views/partner.xml"],
 }
