@@ -21,7 +21,7 @@
 {
     "name": "Partner Education level",
     "summary": "Create Education levels for partners",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "CRM",
     "website": "https://github.com/tawasta/partner",
     "author": "Futural",

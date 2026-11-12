@@ -15,6 +15,6 @@
         <field name="name">Education level</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">res.education.level</field>
-        <field name="view_mode">form,tree,pivot,graph</field>
+        <field name="view_mode">tree,form,pivot,graph</field>
     </record>
 </odoo>
